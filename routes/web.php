@@ -10,10 +10,11 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\IndexController;
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+//Route::get('/', function () { return view('index'); })->name('index');
+
+Route::get ('/' , [IndexController::class, 'index'])->name('index');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware(['auth', 'verified'])
