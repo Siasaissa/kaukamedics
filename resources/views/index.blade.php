@@ -128,7 +128,7 @@
                                     <h1>Reliable Medical <br>Supplies</h1>
                                     <p>We are dedicated to providing high-quality medical equipment and healthcare solutions that empower hospitals, clinics, and professionals to deliver better patient care.</p>
                                     <div class="add-bag d-flex align-items-center">
-                                        <a class="add-btn" href="#"><span class="lnr lnr-cross text-primary"></span></a>
+                                        <a class="add-btn" href="#"><span class="lnr lnr-cross "></span></a>
                                         <span class="add-text text-uppercase">Explore Products</span>
                                     </div>
                                 </div>
