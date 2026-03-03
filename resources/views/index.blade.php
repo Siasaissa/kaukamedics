@@ -314,6 +314,8 @@
                 </div>
                 <div class="row">
                     <!-- single product -->
+                     @foreach ( $products as $product)
+
                     <div class="col-lg-3 col-md-6">
                         <div class="single-product">
                             <img class="img-fluid" src="img/product/p1.jpg" alt="Diagnostic Tool">
@@ -344,6 +346,7 @@
                             </div>
                         </div>
                     </div>
+                     @endforeach
                     <!-- single product -->
                     
                 </div>
