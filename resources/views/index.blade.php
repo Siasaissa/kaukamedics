@@ -95,9 +95,8 @@
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
 
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-    {{ session('cart') ? count(session('cart')) : 0 }}
-</span>
+                            <li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
+                            
                             <li class="nav-item">
                                 <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
                             </li>
