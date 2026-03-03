@@ -365,8 +365,7 @@
                 <div class="row">
                     <!-- single product -->
                      @foreach ($products1 as $produ)
-                     
-                    
+
                     <div class="col-lg-3 col-md-6">
                         <div class="single-product">
                             <img class="img-fluid" src="img/product/p5.jpg" alt="Protective Mask">
