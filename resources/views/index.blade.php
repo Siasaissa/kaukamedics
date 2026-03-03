@@ -439,7 +439,7 @@
     <div class="container copyright text-center mt-4"><p>© <strong>Kauka Medics</strong> All Rights Reserved</p><div class="credits">Designed by <a href="https://www.instagram.com/rugaza_prime/">Rugaza Prime</a></div></div>
   </footer>
 
-  <a href="#" id="scroll-top" class="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
+   <!-- <a href="#" id="scroll-top" class="scroll-top"><i class="bi bi-arrow-up-short"></i></a>-->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
