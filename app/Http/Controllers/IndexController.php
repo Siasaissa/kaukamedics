@@ -10,7 +10,7 @@ class IndexController extends Controller
     public function index(){
 
         $products = Product::orderByDesc('id')
-                            ->latest(4)
+                            ->take(4)
                             ->get();
         return view('index', compact('products'));
     }
