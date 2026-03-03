@@ -95,7 +95,13 @@
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
 
-                            <li class="nav-item"><a href="#" class="cart"><span class="ti-bag badge rounded-pill bg-danger">{{ session('cart') ? count(session('cart')) : 0 }}</span></a></li>
+                            <li class="nav-item">
+    <a href="#" class="cart">
+        <span class="ti-bag badge rounded-pill bg-danger">
+            {{ session('cart') ? count(session('cart')) : 0 }}
+        </span>
+    </a>
+</li>
                             <li class="nav-item">
                                 <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
                             </li>
