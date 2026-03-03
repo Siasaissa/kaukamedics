@@ -70,7 +70,7 @@
       </nav>
 
       <!-- CTA unchanged -->
-      <a class="btn-getstarted" href="#contact">Request quotes</a>
+      <a class="btn-getstarted" href="#contact">Request quote</a>
     </div>
   </header>
 
