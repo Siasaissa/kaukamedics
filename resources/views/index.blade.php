@@ -32,634 +32,229 @@
     <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/main.css">
-    <!-- Additional CSS for medical theme (can be merged into main.css) -->
     
+    <!-- No additional CSS added - using only existing styles -->
 </head>
 
 <body>
 
-    <!-- Topbar Start (from includes) -->
-    <!-- Topbar placeholder - replace with actual topbar content -->
-    <div class="topbar-area">
-        <!-- Topbar content here -->
+    <!-- Topbar Start (Kauka original topbar content) -->
+    <div class="container-fluid bg-secondary top-bar wow fadeIn" data-wow-delay="0.1s" style="background-color: #f8f9fa; padding: 10px 0;">
+        <div class="row align-items-center" style="min-height: 120px;">
+            <div class="col-lg-4 text-center text-lg-start d-flex align-items-center justify-content-center justify-content-lg-start" style="height: 120px;">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Kauka Medics" class="img-fluid" style="height: 150px; width: auto;">
+                </a>
+            </div>
+            <div class="col-lg-8 d-none d-lg-block">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="d-flex justify-content-end">
+                            <div class="flex-shrink-0 btn-square bg-primary">
+                                <i class="fa fa-phone-alt text-white"></i>
+                            </div>
+                            <div class="ms-2">
+                                <h6 class="text-primary mb-0">Call Us</h6>
+                                <span>+255 625 726 051</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-flex justify-content-end">
+                            <div class="flex-shrink-0 btn-square bg-primary">
+                                <i class="fa fa-envelope-open text-white"></i>
+                            </div>
+                            <div class="ms-2">
+                                <h6 class="text-primary mb-0">Mail Us</h6>
+                                <span>info@kaukamedics.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-flex justify-content-end">
+                            <div class="flex-shrink-0 btn-square bg-primary">
+                                <i class="fa fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div class="ms-2">
+                                <h6 class="text-primary mb-0">Address</h6>
+                                <span>Magomeni kanisani</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Topbar End -->
 
-    <!-- Navbar Start (integrated with header area) -->
-    <header class="header_area sticky-header">
-        <div class="main_menu">
-            <nav class="navbar navbar-expand-lg navbar-light main_box">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="#"><img src="#" alt="Kauka Company Logo"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                 aria-expanded="false">Products</a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="#">Medical Equipment</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Hospital Consumables</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Patient Care</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Pharmaceuticals</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                 aria-expanded="false">Services</a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="#">Medical Logistics</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Hospital Setup</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Equipment Maintenance</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                 aria-expanded="false">About Us</a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Our Team</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">News & Events</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
-                            <li class="nav-item">
-                                <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
-                            </li>
-                        </ul>
+    <!-- Navbar Start (Kauka original navbar) -->
+    <div class="container-fluid bg-secondary px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="nav-bar">
+            <nav class="navbar navbar-expand-lg bg-primary navbar-dark px-4 py-lg-0">
+                <h4 class="d-lg-none m-0">Menu</h4>
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav me-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="products.html" class="nav-item nav-link">Products</a>
+                    </div>
+                    <div class="d-flex ms-auto align-items-center">
+                        <a class="btn btn-square btn-dark ms-2" href="https://www.facebook.com/ambwenekauka/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-dark ms-2" href="https://www.instagram.com/kauka_medical_supplies/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </nav>
         </div>
-        <div class="search_input" id="search_input_box">
-            <div class="container">
-                <form class="d-flex justify-content-between">
-                    <input type="text" class="form-control" id="search_input" placeholder="Search products...">
-                    <button type="submit" class="btn"></button>
-                    <span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
-                </form>
-            </div>
-        </div>
-    </header>
+    </div>
     <!-- Navbar End -->
 
-    <!-- start banner Area (Carousel Start) -->
-    <section class="banner-area">
-        <div class="container">
-            <div class="row fullscreen align-items-center justify-content-start">
-                <div class="col-lg-12">
-                    <div class="active-banner-slider owl-carousel">
-                        <!-- single-slide 1 -->
-                        <div class="row single-slide align-items-center d-flex">
-                            <div class="col-lg-5 col-md-6">
-                                <div class="banner-content">
-                                    <h1>Reliable Medical <br>Supplies</h1>
-                                    <p>We are dedicated to providing high-quality medical equipment and healthcare solutions that empower hospitals, clinics, and professionals to deliver better patient care.</p>
-                                    <div class="add-bag d-flex align-items-center">
-                                        <a class="add-btn" href="#"><span class="lnr lnr-cross"></span></a>
-                                        <span class="add-text text-uppercase">Explore Products</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-7">
-                                <div class="banner-img">
-                                    <img class="img-fluid" src="img/KAUKA QMPQNI_page-0001.jpg" alt="Medical Equipment">
-                                </div>
-                            </div>
+    <!-- Carousel Start (Kauka original carousel with all images) -->
+    <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="owl-carousel header-carousel py-5">
+            <!-- Slide 1 -->
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="carousel-text">
+                            <h1 class="display-1 text-uppercase mb-3">Reliable Medical Supplies for a Healthier Tomorrow</h1>
+                            <p class="fs-5 mb-5">We are dedicated to providing high-quality medical equipment and healthcare solutions that empower hospitals, clinics, and professionals to deliver better patient care.</p>
                         </div>
-                        <!-- single-slide 2 -->
-                        <div class="row single-slide">
-                            <div class="col-lg-5">
-                                <div class="banner-content">
-                                    <h1>Supplying Care, <br>Saving Lives</h1>
-                                    <p>From essential hospital tools to advanced diagnostic devices, we ensure reliable access to quality medical supplies that help healthcare providers perform at their best.</p>
-                                    <div class="add-bag d-flex align-items-center">
-                                        <a class="add-btn" href="#"><span class="lnr lnr-cross"></span></a>
-                                        <span class="add-text text-uppercase">View Collection</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-7">
-                                <div class="banner-img">
-                                    <img class="img-fluid" src="img/kauka company profile  pdf_page-0002.jpg" alt="Healthcare Supplies">
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="carousel-img">
+                            <img class="w-100" src="img/KAUKA QMPQNI_page-0001.jpg" alt="Medical Equipment">
                         </div>
-                        <!-- single-slide 3 -->
-                        <div class="row single-slide">
-                            <div class="col-lg-5">
-                                <div class="banner-content">
-                                    <h1>Quality You <br>Can Trust</h1>
-                                    <p>Our mission is to enhance healthcare delivery by providing innovative, affordable, and reliable medical supplies that meet international quality standards.</p>
-                                    <div class="add-bag d-flex align-items-center">
-                                        <a class="add-btn" href="#"><span class="lnr lnr-cross"></span></a>
-                                        <span class="add-text text-uppercase">About Us</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-7">
-                                <div class="banner-img">
-                                    <img class="img-fluid" src="img/kauka company profile  pdf_page-0003.jpg" alt="Healthcare Professionals">
-                                </div>
-                            </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="carousel-text">
+                            <h1 class="display-1 text-uppercase mb-3">Supplying Care, Saving Lives</h1>
+                            <p class="fs-5 mb-5">From essential hospital tools to advanced diagnostic devices, we ensure reliable access to quality medical supplies that help healthcare providers perform at their best.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="carousel-img">
+                            <img class="w-100" src="img/kauka company profile  pdf_page-0002.jpg" alt="Healthcare Supplies">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="carousel-text">
+                            <h1 class="display-1 text-uppercase mb-3">Quality You Can Trust</h1>
+                            <p class="fs-5 mb-5">Our mission is to enhance healthcare delivery by providing innovative, affordable, and reliable medical supplies that meet international quality standards.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="carousel-img">
+                            <img class="w-100" src="img/kauka company profile  pdf_page-0003.jpg" alt="Healthcare Professionals">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="carousel-text">
+                            <h1 class="display-1 text-uppercase mb-3">Advanced Diagnostic Solutions</h1>
+                            <p class="fs-5 mb-5">State-of-the-art diagnostic equipment for accurate and timely patient assessment, trusted by leading healthcare facilities.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="carousel-img">
+                            <img class="w-100" src="img/kauka company profile  pdf_page-0004.jpg" alt="Diagnostic Equipment">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="carousel-text">
+                            <h1 class="display-1 text-uppercase mb-3">Laboratory Excellence</h1>
+                            <p class="fs-5 mb-5">Comprehensive lab equipment and reagents for accurate testing and research, supporting healthcare professionals with reliable results.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="carousel-img">
+                            <img class="w-100" src="img/kauka company profile  pdf_page-0005.jpg" alt="Laboratory Equipment">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 6 -->
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="carousel-text">
+                            <h1 class="display-1 text-uppercase mb-3">Hospital Furniture & Equipment</h1>
+                            <p class="fs-5 mb-5">Durable, comfortable hospital beds, stretchers, and patient care furniture designed for optimal healthcare delivery.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="carousel-img">
+                            <img class="w-100" src="img/kauka company profile  pdf_page-0006.jpg" alt="Hospital Furniture">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 7 -->
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="carousel-text">
+                            <h1 class="display-1 text-uppercase mb-3">Essential Medical Consumables</h1>
+                            <p class="fs-5 mb-5">High-quality gloves, syringes, bandages, and disposables always in stock for your everyday medical needs.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="carousel-img">
+                            <img class="w-100" src="img/kauka company profile  pdf_page-0007.jpg" alt="Medical Consumables">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 8 -->
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="carousel-text">
+                            <h1 class="display-1 text-uppercase mb-3">Complete Healthcare Solutions</h1>
+                            <p class="fs-5 mb-5">From surgical instruments to patient monitoring systems, we provide everything your facility needs to deliver exceptional care.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="carousel-img">
+                            <img class="w-100" src="img/kauka company profile  pdf_page-0008.jpg" alt="Complete Healthcare">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- End banner Area -->
+    </div>
+    <!-- Carousel End -->
 
-    <!-- start features Area (Why Choose Us / Features) -->
-    <section class="features-area section_gap">
-        <div class="container">
-            <div class="row features-inner">
-                <!-- single features -->
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-features">
-                        <div class="f-icon">
-                            <img src="img/features/f-icon1.png" alt="">
-                        </div>
-                        <h6>Certified Products</h6>
-                        <p>All products meet international quality standards</p>
-                    </div>
-                </div>
-                <!-- single features -->
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-features">
-                        <div class="f-icon">
-                            <img src="img/features/f-icon2.png" alt="">
-                        </div>
-                        <h6>Reliable Logistics</h6>
-                        <p>Efficient distribution network nationwide</p>
-                    </div>
-                </div>
-                <!-- single features -->
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-features">
-                        <div class="f-icon">
-                            <img src="img/features/f-icon3.png" alt="">
-                        </div>
-                        <h6>24/7 Support</h6>
-                        <p>Dedicated customer service team</p>
-                    </div>
-                </div>
-                <!-- single features -->
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-features">
-                        <div class="f-icon">
-                            <img src="img/features/f-icon4.png" alt="">
-                        </div>
-                        <h6>Secure Payment</h6>
-                        <p>Safe and flexible payment options</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end features Area -->
-
-    <!-- Start category Area (What We Offer / Services) -->
-    <section class="category-area">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-12">
-                    <div class="row">
-                        <div class="col-lg-8 col-md-8">
-                            <div class="single-deal">
-                                <div class="overlay"></div>
-                                <img class="img-fluid w-100" src="img/category/c1.jpg" alt="Medical Equipment">
-                                <a href="img/category/c1.jpg" class="img-pop-up" target="_blank">
-                                    <div class="deal-details">
-                                        <h6 class="deal-title">Medical Equipment</h6>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="single-deal">
-                                <div class="overlay"></div>
-                                <img class="img-fluid w-100" src="img/category/c2.jpg" alt="Hospital Consumables">
-                                <a href="img/category/c2.jpg" class="img-pop-up" target="_blank">
-                                    <div class="deal-details">
-                                        <h6 class="deal-title">Hospital Consumables</h6>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="single-deal">
-                                <div class="overlay"></div>
-                                <img class="img-fluid w-100" src="img/category/c3.jpg" alt="Patient Care Products">
-                                <a href="img/category/c3.jpg" class="img-pop-up" target="_blank">
-                                    <div class="deal-details">
-                                        <h6 class="deal-title">Patient Care Products</h6>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-8">
-                            <div class="single-deal">
-                                <div class="overlay"></div>
-                                <img class="img-fluid w-100" src="img/category/c4.jpg" alt="Pharmaceutical Supplies">
-                                <a href="img/category/c4.jpg" class="img-pop-up" target="_blank">
-                                    <div class="deal-details">
-                                        <h6 class="deal-title">Pharmaceutical Supplies</h6>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-deal">
-                        <div class="overlay"></div>
-                        <img class="img-fluid w-100" src="img/category/c5.jpg" alt="Medical Logistics">
-                        <a href="img/category/c5.jpg" class="img-pop-up" target="_blank">
-                            <div class="deal-details">
-                                <h6 class="deal-title">Medical Logistics</h6>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End category Area -->
-
-    <!-- start product Area (Our Products) -->
-    <section class="owl-carousel active-product-area section_gap">
-        <!-- single product slide - Featured Products -->
-        <div class="single-product-slider">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 text-center">
-                        <div class="section-title">
-                            <h1>Featured Medical Supplies</h1>
-                            <p>Discover our selection of high-quality medical products trusted by healthcare professionals.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- single product -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="img/product/p1.jpg" alt="Diagnostic Tool">
-                            <div class="product-details">
-                                <h6>Advanced Diagnostic Stethoscope</h6>
-                                <div class="price">
-                                    <h6>$189.00</h6>
-                                    <h6 class="l-through">$210.00</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="#" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">Inquire</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Save</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">Compare</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">Details</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="img/product/p2.jpg" alt="Patient Monitor">
-                            <div class="product-details">
-                                <h6>Digital Patient Monitor</h6>
-                                <div class="price">
-                                    <h6>$1,250.00</h6>
-                                    <h6 class="l-through">$1,400.00</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="#" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">Inquire</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Save</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">Compare</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">Details</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="img/product/p3.jpg" alt="Surgical Kit">
-                            <div class="product-details">
-                                <h6>Sterile Surgical Kit</h6>
-                                <div class="price">
-                                    <h6>$340.00</h6>
-                                    <h6 class="l-through">$380.00</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="#" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">Inquire</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Save</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">Compare</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">Details</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="img/product/p4.jpg" alt="Hospital Bed">
-                            <div class="product-details">
-                                <h6>Adjustable Hospital Bed</h6>
-                                <div class="price">
-                                    <h6>$2,450.00</h6>
-                                    <h6 class="l-through">$2,700.00</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="#" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">Inquire</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Save</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">Compare</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">Details</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- single product slide - More Products -->
-        <div class="single-product-slider">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 text-center">
-                        <div class="section-title">
-                            <h1>Essential Healthcare Items</h1>
-                            <p>Reliable supplies for everyday medical needs, always in stock.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- single product -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="img/product/p5.jpg" alt="Protective Mask">
-                            <div class="product-details">
-                                <h6>N95 Protective Masks (Box of 50)</h6>
-                                <div class="price">
-                                    <h6>$45.00</h6>
-                                    <h6 class="l-through">$55.00</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="#" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">Inquire</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Save</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">Compare</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">Details</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="img/product/p6.jpg" alt="Infusion Pump">
-                            <div class="product-details">
-                                <h6>Infusion Pump</h6>
-                                <div class="price">
-                                    <h6>$890.00</h6>
-                                    <h6 class="l-through">$950.00</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="#" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">Inquire</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Save</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">Compare</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">Details</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="img/product/p7.jpg" alt="First Aid Kit">
-                            <div class="product-details">
-                                <h6>Comprehensive First Aid Kit</h6>
-                                <div class="price">
-                                    <h6>$120.00</h6>
-                                    <h6 class="l-through">$135.00</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="#" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">Inquire</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Save</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">Compare</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">Details</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single product -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="img/product/p8.jpg" alt="Wheelchair">
-                            <div class="product-details">
-                                <h6>Standard Wheelchair</h6>
-                                <div class="price">
-                                    <h6>$320.00</h6>
-                                    <h6 class="l-through">$350.00</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="#" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">Inquire</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Save</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">Compare</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">Details</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end product Area -->
-
-    <!-- Start exclusive deal Area (About / Mission) -->
-    <section class="exclusive-deal-area">
-        <div class="container-fluid">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-lg-6 no-padding exclusive-left">
-                    <div class="row clock_sec clockdiv" id="clockdiv">
-                        <div class="col-lg-12">
-                            <h1>Our Mission: Quality Healthcare for All</h1>
-                            <p>Partner with us to access reliable medical solutions that keep your healthcare facility equipped and efficient.</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="row clock-wrap">
-                                <div class="col clockinner1 clockinner">
-                                    <h1 class="days">120</h1>
-                                    <span class="smalltext">Staff</span>
-                                </div>
-                                <div class="col clockinner clockinner1">
-                                    <h1 class="hours">25</h1>
-                                    <span class="smalltext">Years</span>
-                                </div>
-                                <div class="col clockinner clockinner1">
-                                    <h1 class="minutes">3000</h1>
-                                    <span class="smalltext">Products</span>
-                                </div>
-                                <div class="col clockinner clockinner1">
-                                    <h1 class="seconds">1500</h1>
-                                    <span class="smalltext">Clients</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class="primary-btn">Learn More About Us</a>
-                </div>
-                <div class="col-lg-6 no-padding exclusive-right">
-                    <div class="active-exclusive-product-slider">
-                        <!-- single exclusive carousel -->
-                        <div class="single-exclusive-slider">
-                            <img class="img-fluid" src="img/product/e-p1.png" alt="Team">
-                            <div class="product-details">
-                                <div class="price">
-                                    <h6>Professional Team</h6>
-                                </div>
-                                <h4>Dedicated experts committed to serving your medical supply needs.</h4>
-                                <div class="add-bag d-flex align-items-center justify-content-center">
-                                    <a class="add-btn" href="#"><span class="ti-user"></span></a>
-                                    <span class="add-text text-uppercase">Meet the Team</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single exclusive carousel -->
-                        <div class="single-exclusive-slider">
-                            <img class="img-fluid" src="img/product/e-p1.png" alt="Logistics">
-                            <div class="product-details">
-                                <div class="price">
-                                    <h6>Reliable Logistics</h6>
-                                </div>
-                                <h4>Efficient distribution network ensuring timely delivery.</h4>
-                                <div class="add-bag d-flex align-items-center justify-content-center">
-                                    <a class="add-btn" href="#"><span class="ti-truck"></span></a>
-                                    <span class="add-text text-uppercase">Our Services</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End exclusive deal Area -->
-
-    <!-- Start Video / Company Overview (from provided content) -->
+    <!-- Video Start (Kauka original video section) -->
     <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container">
             <div class="row g-0">
                 <div class="col-lg-11">
                     <div class="h-100 py-5 d-flex align-items-center">
-                        <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="img/video1.mp4" data-bs-target="#videoModal">
+                        <button type="button" class="btn-play" data-bs-toggle="modal" data-src="img/video1.mp4" data-bs-target="#videoModal">
                             <span></span>
                         </button>
                         <h3 class="ms-5 mb-0 text-white">Delivering trusted medical supplies that empower healthcare professionals to save lives every day.</h3>
@@ -673,6 +268,7 @@
             </div>
         </div>
     </div>
+    <!-- Video End -->
 
     <!-- Video Modal Start -->
     <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -693,122 +289,285 @@
             </div>
         </div>
     </div>
-    <!-- Video End -->
+    <!-- Video Modal End -->
 
-    <!-- Start brand Area (Partner Brands) -->
-    <section class="brand-area section_gap">
+    <!-- About Start (Kauka original about section) -->
+    <div class="container-fluid py-5">
         <div class="container">
-            <div class="row">
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="img/brand/1.png" alt="Partner">
-                </a>
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="img/brand/2.png" alt="Partner">
-                </a>
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="img/brand/3.png" alt="Partner">
-                </a>
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="img/brand/4.png" alt="Partner">
-                </a>
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="img/brand/5.png" alt="Partner">
-                </a>
-            </div>
-        </div>
-    </section>
-    <!-- End brand Area -->
-
-    <!-- Start related-product Area (Deals of the Week / Latest News) -->
-    <section class="related-product-area section_gap_bottom">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 text-center">
-                    <div class="section-title">
-                        <h1>Latest News & Events</h1>
-                        <p>Stay updated with our participation in medical exhibitions and latest offerings.</p>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.2s">
+                    <div class="about-img">
+                        <img class="img-fluid w-100" src="img/about.jpg" alt="About Medical Supplies Company">
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-9">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/r1.jpg" alt="Event"></a>
-                                <div class="desc">
-                                    <a href="#" class="title">Medical Expo 2025</a>
-                                    <p>March 10-15, Dar es Salaam</p>
-                                </div>
+                <div class="col-lg-6">
+                    <p class="section-title bg-white text-start text-primary pe-3">About Us</p>
+                    <h1 class="display-6 mb-4 wow fadeIn" data-wow-delay="0.2s">Delivering Quality Healthcare Solutions</h1>
+                    <p class="mb-4 wow fadeIn" data-wow-delay="0.3s">
+                        We are a trusted provider of medical equipment, hospital supplies, and healthcare solutions 
+                        dedicated to improving the quality of care across hospitals, clinics, and medical institutions. 
+                        Our goal is to make reliable medical products accessible to those who save lives every day.
+                    </p>
+                    <div class="row g-4 pt-2">
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                            <div class="h-100">
+                                <h3>Our Mission</h3>
+                                <p>
+                                    To enhance healthcare delivery by providing innovative, affordable, and reliable 
+                                    medical supplies that meet international quality standards.
+                                </p>
+                                <p class="text-dark"><i class="fa fa-check text-primary me-2"></i>Ensuring quality and reliability in every product.</p>
+                                <p class="text-dark"><i class="fa fa-check text-primary me-2"></i>Partnering with healthcare providers to improve outcomes.</p>
+                                <p class="text-dark mb-0"><i class="fa fa-check text-primary me-2"></i>Committed to advancing medical care across Africa.</p>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/r2.jpg" alt="News"></a>
-                                <div class="desc">
-                                    <a href="#" class="title">New Product Launch</a>
-                                    <p>Advanced patient monitors</p>
-                                </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="h-100 bg-primary p-4 text-center">
+                                <p class="fs-5 text-dark">
+                                    Partner with us to access reliable medical solutions that keep your healthcare facility equipped and efficient.
+                                </p>
+                                <a class="btn btn-secondary py-2 px-4" href="contact.html">Contact Us</a>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/r3.jpg" alt="Training"></a>
-                                <div class="desc">
-                                    <a href="#" class="title">Staff Training</a>
-                                    <p>Equipment handling session</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/r5.jpg" alt="Partnership"></a>
-                                <div class="desc">
-                                    <a href="#" class="title">New Partnership</a>
-                                    <p>With leading global supplier</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/r6.jpg" alt="Community"></a>
-                                <div class="desc">
-                                    <a href="#" class="title">Health Campaign</a>
-                                    <p>Free check-up initiative</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/r7.jpg" alt="Award"></a>
-                                <div class="desc">
-                                    <a href="#" class="title">Industry Award</a>
-                                    <p>Best Medical Supplier 2024</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="ctg-right">
-                        <a href="#" target="_blank">
-                            <img class="img-fluid d-block mx-auto" src="img/category/c5.jpg" alt="Advertisement">
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- End related-product Area -->
+    </div>
+    <!-- About End -->
 
-    <!-- Testimonial Start (from provided content) -->
+    <!-- Service Start (Kauka original services) -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-12 col-lg-4 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="service-title">
+                        <h1 class="display-6 mb-4">What We Offer</h1>
+                        <p class="fs-5 mb-0">
+                            We supply a wide range of medical products and equipment designed to meet the needs of healthcare professionals and institutions.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-8 col-xl-9">
+                    <div class="row g-5">
+                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="service-item h-100">
+                                <div class="btn-square bg-light mb-4">
+                                    <i class="fa fa-stethoscope fa-2x text-secondary"></i>
+                                </div>
+                                <h3>Medical Equipment</h3>
+                                <p class="mb-2">
+                                    Supplying high-quality diagnostic and treatment equipment to hospitals and clinics nationwide.
+                                </p>
+                                <a href="#!">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.3s">
+                            <div class="service-item h-100">
+                                <div class="btn-square bg-light mb-4">
+                                    <i class="fa fa-kit-medical fa-2x text-secondary"></i>
+                                </div>
+                                <h3>Hospital Consumables</h3>
+                                <p class="mb-2">
+                                    From gloves and syringes to bandages and masks — we ensure consistent supply of essential medical items.
+                                </p>
+                                <a href="#!">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="service-item h-100">
+                                <div class="btn-square bg-light mb-4">
+                                    <i class="fa fa-heart-pulse fa-2x text-secondary"></i>
+                                </div>
+                                <h3>Patient Care Products</h3>
+                                <p class="mb-2">
+                                    Providing comfort and safety with reliable patient care and monitoring solutions.
+                                </p>
+                                <a href="#!">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="service-item h-100">
+                                <div class="btn-square bg-light mb-4">
+                                    <i class="fa fa-pills fa-2x text-secondary"></i>
+                                </div>
+                                <h3>Pharmaceutical Supplies</h3>
+                                <p class="mb-2">
+                                    Delivering trusted pharmaceutical products that meet global safety and efficacy standards.
+                                </p>
+                                <a href="#!">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.3s">
+                            <div class="service-item h-100">
+                                <div class="btn-square bg-light mb-4">
+                                    <i class="fa fa-truck-medical fa-2x text-secondary"></i>
+                                </div>
+                                <h3>Medical Logistics</h3>
+                                <p class="mb-2">
+                                    Efficient distribution network ensuring timely delivery of critical medical supplies across regions.
+                                </p>
+                                <a href="#!">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="service-item h-100">
+                                <div class="btn-square bg-light mb-4">
+                                    <i class="fa fa-hospital fa-2x text-secondary"></i>
+                                </div>
+                                <h3>Hospital Setup Solutions</h3>
+                                <p class="mb-2">
+                                    Comprehensive support for new and existing healthcare facilities — from planning to full equipment installation.
+                                </p>
+                                <a href="#!">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+    <!-- Features Start (Kauka original stats) -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="rounded overflow-hidden">
+                        <div class="row g-0">
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                                <div class="text-center bg-primary py-5 px-4 h-100">
+                                    <i class="fa fa-users fa-3x text-secondary mb-3"></i>
+                                    <h1 class="display-5 mb-0" data-toggle="counter-up">120</h1>
+                                    <span class="text-dark">Professional Staff</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="text-center bg-secondary py-5 px-4 h-100">
+                                    <i class="fa fa-award fa-3x text-primary mb-3"></i>
+                                    <h1 class="display-5 text-white mb-0" data-toggle="counter-up">25</h1>
+                                    <span class="text-white">Years of Experience</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="text-center bg-secondary py-5 px-4 h-100">
+                                    <i class="fa fa-boxes-stacked fa-3x text-primary mb-3"></i>
+                                    <h1 class="display-5 text-white mb-0" data-toggle="counter-up">3000</h1>
+                                    <span class="text-white">Products Supplied</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                                <div class="text-center bg-primary py-5 px-4 h-100">
+                                    <i class="fa fa-hospital-user fa-3x text-secondary mb-3"></i>
+                                    <h1 class="display-5 mb-0" data-toggle="counter-up">1500</h1>
+                                    <span class="text-dark">Satisfied Clients</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p class="section-title bg-white text-start text-primary pe-3">Why Choose Us</p>
+                    <h1 class="display-6 mb-4 wow fadeIn" data-wow-delay="0.2s">Trusted Partner in Medical Supplies</h1>
+                    <p class="mb-4 wow fadeIn" data-wow-delay="0.3s">
+                        We are dedicated to providing healthcare facilities with reliable and affordable medical supplies.
+                        Our reputation is built on quality products, timely delivery, and professional customer service.
+                    </p>
+                    <p class="text-dark wow fadeIn" data-wow-delay="0.4s"><i class="fa fa-check text-primary me-2"></i>Certified and approved medical products</p>
+                    <p class="text-dark wow fadeIn" data-wow-delay="0.5s"><i class="fa fa-check text-primary me-2"></i>Strong distribution and logistics network</p>
+                    <p class="text-dark wow fadeIn" data-wow-delay="0.6s"><i class="fa fa-check text-primary me-2"></i>Experienced and dedicated support team</p>
+                    <div class="d-flex mt-4 wow fadeIn" data-wow-delay="0.7s">
+                        <a class="btn btn-primary py-3 px-4 me-3" href="about.html">Learn More</a>
+                        <a class="btn btn-secondary py-3 px-4" href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+    <!-- Team Start (Kauka original team) -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="section-title bg-white text-center text-primary px-3">Our Team</p>
+                <h1 class="display-6 mb-4">Meet Our Professional Team</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="team-item d-flex h-100 p-4">
+                        <div class="team-detail pe-4">
+                            <img class="img-fluid mb-4" src="img/team-1.jpeg" alt="">
+                            <h3>Fadhili mwankenja</h3>
+                            <span>Operation Manager</span>
+                        </div>
+                        <div class="team-social bg-light d-flex flex-column justify-content-center flex-shrink-0 p-4">
+                            <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-x-twitter"></i></a>
+                            <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="team-item d-flex h-100 p-4">
+                        <div class="team-detail pe-4">
+                            <img class="img-fluid mb-4" src="img/team-2.jpeg" alt="">
+                            <h3>Patrick mbise</h3>
+                            <span>Operation Manager</span>
+                        </div>
+                        <div class="team-social bg-light d-flex flex-column justify-content-center flex-shrink-0 p-4">
+                            <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-x-twitter"></i></a>
+                            <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="team-item d-flex h-100 p-4">
+                        <div class="team-detail pe-4">
+                            <img class="img-fluid mb-4" src="img/team-3.jpeg" alt="">
+                            <h3>Clementina peter</h3>
+                            <span>Sales & Procurement Officer</span>
+                        </div>
+                        <div class="team-social bg-light d-flex flex-column justify-content-center flex-shrink-0 p-4">
+                            <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-x-twitter"></i></a>
+                            <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="team-item d-flex h-100 p-4">
+                        <div class="team-detail pe-4">
+                            <img class="img-fluid mb-4" src="img/team-3.png" alt="">
+                            <h3>Dr. Ambwene john mwankenja</h3>
+                            <span>Director</span>
+                        </div>
+                        <div class="team-social bg-light d-flex flex-column justify-content-center flex-shrink-0 p-4">
+                            <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-x-twitter"></i></a>
+                            <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- Testimonial Start (Kauka original testimonials) -->
     <div class="container-fluid py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-md-12 col-lg-4 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
                     <div class="testimonial-title">
-                        <h1 class="display-6 mb-4">What Our Clients Say</h1>
-                        <p class="fs-5 mb-0">We’re proud to be a trusted partner in delivering reliable medical equipment and healthcare solutions nationwide.</p>
+                        <h1 class="display-6 mb-4">What Our Clients Say About Us</h1>
+                        <p class="fs-5 mb-0">We're proud to be a trusted partner in delivering reliable medical equipment and healthcare solutions nationwide.</p>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-8 col-xl-9">
@@ -817,7 +576,7 @@
                             <div class="row g-5 align-items-center">
                                 <div class="col-md-6">
                                     <div class="testimonial-img">
-                                        <img class="img-fluid" src="img/team-1.png" alt="Client">
+                                        <img class="img-fluid" src="img/team-1.png" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -847,7 +606,7 @@
                             <div class="row g-5 align-items-center">
                                 <div class="col-md-6">
                                     <div class="testimonial-img">
-                                        <img class="img-fluid" src="img/team-2.png" alt="Client">
+                                        <img class="img-fluid" src="img/team-2.png" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -859,7 +618,7 @@
                                             <i class="fa fa-star text-primary"></i>
                                             <i class="fa fa-star text-primary"></i>
                                         </div>
-                                        <p class="fs-5">We’ve partnered with them for over three years. Their professionalism and commitment to healthcare delivery are unmatched.</p>
+                                        <p class="fs-5">We've partnered with them for over three years. Their professionalism and commitment to healthcare delivery are unmatched.</p>
                                         <div class="d-flex align-items-center">
                                             <div class="btn-lg-square bg-light text-secondary flex-shrink-0">
                                                 <i class="fa fa-quote-right fa-2x"></i>
@@ -873,6 +632,36 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="testimonial-item">
+                            <div class="row g-5 align-items-center">
+                                <div class="col-md-6">
+                                    <div class="testimonial-img">
+                                        <img class="img-fluid" src="img/team-3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="testimonial-text pb-5 pb-md-0">
+                                        <div class="mb-2">
+                                            <i class="fa fa-star text-primary"></i>
+                                            <i class="fa fa-star text-primary"></i>
+                                            <i class="fa fa-star text-primary"></i>
+                                            <i class="fa fa-star text-primary"></i>
+                                            <i class="fa fa-star text-primary"></i>
+                                        </div>
+                                        <p class="fs-5">Thanks to their efficient delivery and reliable products, our clinic operations have become smoother and more effective.</p>
+                                        <div class="d-flex align-items-center">
+                                            <div class="btn-lg-square bg-light text-secondary flex-shrink-0">
+                                                <i class="fa fa-quote-right fa-2x"></i>
+                                            </div>
+                                            <div class="ps-3">
+                                                <h5 class="mb-0">Dr. Kelvin Chacha</h5>
+                                                <span>Head of Clinic Operations, LifePoint Health</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -880,95 +669,135 @@
     </div>
     <!-- Testimonial End -->
 
-    <!-- Footer Start (from includes) -->
-    <footer class="footer-area section_gap">
+    <!-- Events Start (Kauka original events) -->
+    <div class="container-fluid py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3  col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>About Us</h6>
-                        <p>
-                            We are dedicated to providing high-quality medical equipment and healthcare solutions that empower hospitals, clinics, and professionals.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4  col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Newsletter</h6>
-                        <p>Stay update with our latest</p>
-                        <div class="" id="mc_embed_signup">
-
-                            <form target="_blank" novalidate="true" action="#" method="get" class="form-inline">
-
-                                <div class="d-flex flex-row">
-
-                                    <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
-                                        required="" type="email">
-
-
-                                    <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-                                    <div style="position: absolute; left: -5000px;">
-                                        <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-                                    </div>
-                                </div>
-                                <div class="info"></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3  col-md-6 col-sm-6">
-                    <div class="single-footer-widget mail-chimp">
-                        <h6 class="mb-20">Instragram Feed</h6>
-                        <ul class="instafeed d-flex flex-wrap">
-                            <li><img src="img/i1.jpg" alt=""></li>
-                            <li><img src="img/i2.jpg" alt=""></li>
-                            <li><img src="img/i3.jpg" alt=""></li>
-                            <li><img src="img/i4.jpg" alt=""></li>
-                            <li><img src="img/i5.jpg" alt=""></li>
-                            <li><img src="img/i6.jpg" alt=""></li>
-                            <li><img src="img/i7.jpg" alt=""></li>
-                            <li><img src="img/i8.jpg" alt=""></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Follow Us</h6>
-                        <p>Let us be social</p>
-                        <div class="footer-social d-flex align-items-center">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-behance"></i></a>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-center mx-auto wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="section-title bg-white text-center text-primary px-3">Updates</p>
+                <h1 class="display-6 mb-4">Latest News & Exhibitions</h1>
             </div>
-            <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
-                <p class="footer-text m-0">
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Kauka Company
-                </p>
+            <div class="row g-4">
+                <div class="col-md-12 col-lg-12 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="event-item h-100 p-4">
+                        <img class="img-fluid w-100 mb-4" src="img/event-1.jpg" alt="">
+                        <a href="#!" class="h3 d-inline-block">Medical Expo 2025</a>
+                        <p>Showcasing our latest innovations and hospital equipment at the International Medical Expo.</p>
+                        <div class="bg-light p-4">
+                            <p class="mb-1"><i class="fa fa-clock text-primary me-2"></i>09:00 AM - 05:00 PM</p>
+                            <p class="mb-1"><i class="fa fa-calendar-alt text-primary me-2"></i>March 10 - March 15</p>
+                            <p class="mb-0"><i class="fa fa-map-marker-alt text-primary me-2"></i>Dar es Salaam, Tanzania</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+    </div>
+    <!-- Events End -->
+
+    <!-- Banner Start -->
+    <div class="container-fluid banner py-5">
+        <div class="container">
+            <div class="banner-inner bg-light p-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 py-5 text-center">
+                        <h1 class="display-6 wow fadeIn" data-wow-delay="0.3s">Your Reliable Partner in Healthcare Supply</h1>
+                        <p class="fs-5 mb-4 wow fadeIn" data-wow-delay="0.5s">
+                            We are committed to supporting hospitals, clinics, and pharmacies with premium-quality medical
+                            equipment and supplies. Together, we build a healthier tomorrow.
+                        </p>
+                        <div class="d-flex justify-content-center wow fadeIn" data-wow-delay="0.7s">
+                            <a class="btn btn-primary py-3 px-4 me-3" href="products.html">Explore Products</a>
+                            <a class="btn btn-secondary py-3 px-4" href="contact.html">Get a Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+
+    <!-- Footer Start (Kauka original footer) -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-5 py-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Our Office</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Dar es Salaam, Tanzania</p>
+                    <p class="mb-2"><i class="fa fa-address-alt me-3"></i>Po.box 14012</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 625 726 051</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@kaukamedics.com</p>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-square btn-primary me-2" href="https://www.facebook.com/ambwenekauka/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="https://www.instagram.com/kauka_medical_supplies/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="products.html">Our Products</a>
+                    <a class="btn btn-link" href="login.html">Admin</a>
+                    <a class="btn btn-link" href="#!">Privacy Policy</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Business Hours</h4>
+                    <p class="mb-1">Monday - Friday</p>
+                    <h6 class="text-light">08:00 am - 05:00 pm</h6>
+                    <p class="mb-1">Saturday</p>
+                    <h6 class="text-light">09:00 am - 01:00 pm</h6>
+                    <p class="mb-1">Sunday</p>
+                    <h6 class="text-light">Closed</h6>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Product Gallery</h4>
+                    <div class="row g-2">
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-1.jpg" alt="Medical Equipment">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-2.jpg" alt="Surgical Tools">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-3.jpg" alt="Hospital Supplies">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-4.jpg" alt="Diagnostic Devices">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-5.jpg" alt="Laboratory Equipment">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-6.jpg" alt="Medical Instruments">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright pt-5">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="fw-semi-bold" href="#!">kauka_medical_supplies</a>, All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a class="fw-semi-bold" href="#!">kaukamedics</a>. Distributed by
+                        <a class="fw-semi-bold" href="#!">kauka_medical_supplies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-    <!-- Scripts -->
-    <script src="js/vendor/jquery-2.2.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/nouislider.min.js"></script>
-    <script src="js/countdown.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- Google Maps (optional) -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-    <script src="js/gmaps.min.js"></script>
+    <!-- Scripts (Kauka original) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
     <script src="js/main.js"></script>
 
     <!-- Video modal script -->
