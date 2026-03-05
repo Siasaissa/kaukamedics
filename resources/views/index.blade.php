@@ -46,10 +46,10 @@
     <!-- Topbar End -->
 
     <!-- Navbar Start (integrated with header area) -->
-    <header class="header_area sticky-header">
-        <div class="main_menu">
-            <nav class="navbar navbar-expand-lg navbar-light main_box">
-                <div class="container">
+    <header class="header_area sticky-header" style="padding: 2px; !mportant">
+        <div class="main_menu" style="padding: 2px; !mportant">
+            <nav class="navbar navbar-expand-lg navbar-light main_box " style="padding: 2px; !mportant">
+                <div class="container" style="padding: 2px; !mportant">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <a class="navbar-brand logo_h" href="#"><img src="img/logo.png" alt="Kauka Company Logo" style="height: 100px; margin: 2px; !important"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
