@@ -313,7 +313,7 @@
                                 <h6>{{ $product->name }}</h6>
                                 <div class="price">
                                     <h6>{{$product->price}}</h6>
-                                    <h6 class="l-through">{{ $product->price -100 }}</h6>
+                                    <h6 class="l-through">{{ $product->price +100 }}</h6>
                                 </div>
                                 <div class="prd-bottom">
                                     <a href="#" class="social-info">
@@ -359,12 +359,14 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="single-product">
-                            <img class="img-fluid" src="img/product/p5.jpg" alt="Protective Mask">
+                            <img class="img-fluid" src="{{ $product->image && file_exists(storage_path('app/public/'.$product->image)) 
+                     ? asset('storage/app/public/'.$product->image) 
+                     : asset('img/defaultmedical.jpg') }}" alt="Protective Mask">
                             <div class="product-details">
-                                <h6>N95 Protective Masks (Box of 50)</h6>
+                                <h6>{{ $produ->name }}</h6>
                                 <div class="price">
-                                    <h6>$45.00</h6>
-                                    <h6 class="l-through">$55.00</h6>
+                                    <h6>{{ $produ->price }}</h6>
+                                    <h6 class="l-through">{{ $produ->price +100 }}</h6>
                                 </div>
                                 <div class="prd-bottom">
                                     <a href="#" class="social-info">
