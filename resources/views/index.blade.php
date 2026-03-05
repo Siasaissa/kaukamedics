@@ -262,8 +262,8 @@
                         <div class="col-lg-8 col-md-8">
                             <div class="single-deal">
                                 <div class="overlay"></div>
-                                <img class="img-fluid w-100" src="img/category/c4.jpg" alt="Pharmaceutical Supplies">
-                                <a href="img/category/c4.jpg" class="img-pop-up" target="_blank">
+                                <img class="img-fluid w-100" src="img/pharmaceutical_supplies.jpg" alt="Pharmaceutical Supplies">
+                                <a href="img/pharmaceutical_supplies.jpg" class="img-pop-up" target="_blank">
                                     <div class="deal-details">
                                         <h6 class="deal-title">Pharmaceutical Supplies</h6>
                                     </div>
@@ -275,8 +275,8 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-deal">
                         <div class="overlay"></div>
-                        <img class="img-fluid w-100" src="img/category/c5.jpg" alt="Medical Logistics">
-                        <a href="img/category/c5.jpg" class="img-pop-up" target="_blank">
+                        <img class="img-fluid w-100" src="img/logo.png" alt="Medical Logistics">
+                        <a href="img/logo.png" class="img-pop-up" target="_blank">
                             <div class="deal-details">
                                 <h6 class="deal-title">Medical Logistics</h6>
                             </div>
