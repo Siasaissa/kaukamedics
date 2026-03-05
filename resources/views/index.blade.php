@@ -46,7 +46,7 @@
     <!-- Topbar End -->
 
     <!-- Navbar Start (integrated with header area) -->
-    <header class="header_area sticky-header" style="margin: 15px">
+    <header class="header_area sticky-header" style="margin-bottom: 15px">
         <div class="main_menu">
             <nav class="navbar navbar-expand-lg navbar-light main_box" style="padding-top:0 !important; padding-bottom:0 !important;">
                 <div class="container">
