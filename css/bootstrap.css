@@ -585,8 +585,8 @@ pre code {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 2px !important; 
+    margin-bottom: 2px !important;
 }
 
 @media (min-width:576px) {
