@@ -105,7 +105,7 @@
     <!-- Navbar End -->
 
     <!-- start banner Area (Carousel Start) -->
-    <section class="banner-area">
+    <section class="banner-area" style="margin-top:120px;">
         <div class="container">
             <div class="row fullscreen align-items-center justify-content-start">
                 <div class="col-lg-12">
