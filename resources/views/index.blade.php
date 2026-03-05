@@ -54,7 +54,7 @@
                     <a class="navbar-brand logo_h" href="#" style="padding:0 !important; margin:0 !important;">
     <img src="img/logo.png" 
          alt="Kauka Company Logo" 
-         style="height:60px !important; padding:0 !important; margin:0 !important; display:block;">
+         style="height:100px !important; padding:0 !important; margin:0 !important; display:block;">
 </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
