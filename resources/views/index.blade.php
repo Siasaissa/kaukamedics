@@ -47,9 +47,9 @@
 
     <!-- Navbar Start (integrated with header area) -->
     <header class="header_area sticky-header" style="margin: 15px">
-        <div class="main_menu">
+        <div class="main_menu" style="margin: 15px">
             <nav class="navbar navbar-expand-lg navbar-light main_box" style="padding-top:0 !important; padding-bottom:0 !important;">
-                <div class="container" style="margin: 15px">
+                <div class="container" >
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <a class="navbar-brand logo_h d-flex" href="#" style="padding:0 !important; margin:0 !important; line-height:0 !important;">
                         <img src="img/logo.png" 
