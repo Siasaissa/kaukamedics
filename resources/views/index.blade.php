@@ -306,12 +306,12 @@
                      @foreach ( $products as $product)
                     <div class="col-lg-3 col-md-6">
                         <div class="single-product">
-                            <img class="img-fluid" src="img/product/p1.jpg" alt="Diagnostic Tool">
+                            <img class="img-fluid" src="{{ asset($product->image) }}" alt="Diagnostic Tool">
                             <div class="product-details">
-                                <h6>Advanced Diagnostic Stethoscope</h6>
+                                <h6>{{ $product->name }}</h6>
                                 <div class="price">
-                                    <h6>$189.00</h6>
-                                    <h6 class="l-through">$210.00</h6>
+                                    <h6>{{$product->price}}</h6>
+                                    <h6 class="l-through">{{ $product->price -100 }}</h6>
                                 </div>
                                 <div class="prd-bottom">
                                     <a href="#" class="social-info">
