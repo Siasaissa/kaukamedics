@@ -241,7 +241,7 @@
                             <div class="single-deal">
                                 <div class="overlay"></div>
                                 <img class="img-fluid w-100" src="img/category/c2.jpg" alt="Hospital Consumables">
-                                <a href="img/category/c2.jpg" class="img-pop-up" target="_blank">
+                                <a href="img/Hospital_consumable.jpg" class="img-pop-up" target="_blank">
                                     <div class="deal-details">
                                         <h6 class="deal-title">Hospital Consumables</h6>
                                     </div>
