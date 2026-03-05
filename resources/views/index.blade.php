@@ -306,7 +306,9 @@
                      @foreach ( $products as $product)
                     <div class="col-lg-3 col-md-6">
                         <div class="single-product">
-                            <img class="img-fluid" src="{{ asset($product->image) }}" alt="Diagnostic Tool">
+                            <img class="img-fluid" src="{{ $product->image && file_exists(storage_path('app/public/'.$product->image)) 
+                     ? asset('storage/app/public/'.$product->image) 
+                     : asset('img/defaultmedical.jpg') }}" alt="Diagnostic Tool">
                             <div class="product-details">
                                 <h6>{{ $product->name }}</h6>
                                 <div class="price">
