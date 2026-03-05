@@ -798,6 +798,22 @@
             }
         });
     </script>
+    <script>
+$(document).ready(function(){
+    $('.active-banner-slider').owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000, // 2 seconds
+        autoplayHoverPause: true,
+        smartSpeed: 800,
+        dots: true,
+        nav: false
+    });
+});
+</script>
+<link rel="stylesheet" href="css/owl.carousel.css">
+<script src="js/owl.carousel.min.js"></script>
 </body>
 
 </html>
