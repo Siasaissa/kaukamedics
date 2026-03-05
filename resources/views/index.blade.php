@@ -46,10 +46,10 @@
     <!-- Topbar End -->
 
     <!-- Navbar Start (integrated with header area) -->
-    <header class="header_area sticky-header" style="margin: 15px">
-        <div class="main_menu" style="margin: 15px">
+    <header class="header_area sticky-header" >
+        <div class="main_menu">
             <nav class="navbar navbar-expand-lg navbar-light main_box" style="padding-top:0 !important; padding-bottom:0 !important;">
-                <div class="container" >
+                <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <a class="navbar-brand logo_h d-flex" href="#" style="padding:0 !important; margin:0 !important; line-height:0 !important;">
                         <img src="img/logo.png" 
@@ -105,7 +105,7 @@
     <!-- Navbar End -->
 
     <!-- start banner Area (Carousel Start) -->
-    <section class="banner-area" >
+    <section class="banner-area">
         <div class="container">
             <div class="row fullscreen align-items-center justify-content-start">
                 <div class="col-lg-12">
