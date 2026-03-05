@@ -341,7 +341,56 @@
             </div>
         </div>
         <!-- single product slide - More Products -->
-        
+        <div class="single-product-slider">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <div class="section-title">
+                            <h1>Essential Healthcare Items</h1>
+                            <p>Reliable supplies for everyday medical needs, always in stock.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- single product -->
+                     @foreach ($products1 as $produ)
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-product">
+                            <img class="img-fluid" src="img/product/p5.jpg" alt="Protective Mask">
+                            <div class="product-details">
+                                <h6>N95 Protective Masks (Box of 50)</h6>
+                                <div class="price">
+                                    <h6>$45.00</h6>
+                                    <h6 class="l-through">$55.00</h6>
+                                </div>
+                                <div class="prd-bottom">
+                                    <a href="#" class="social-info">
+                                        <span class="ti-bag"></span>
+                                        <p class="hover-text">Inquire</p>
+                                    </a>
+                                    <a href="#" class="social-info">
+                                        <span class="lnr lnr-heart"></span>
+                                        <p class="hover-text">Save</p>
+                                    </a>
+                                    <a href="#" class="social-info">
+                                        <span class="lnr lnr-sync"></span>
+                                        <p class="hover-text">Compare</p>
+                                    </a>
+                                    <a href="#" class="social-info">
+                                        <span class="lnr lnr-move"></span>
+                                        <p class="hover-text">Details</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     @endforeach
+                    <!-- single product -->
+                    
+                </div>
+            </div>
+        </div>
     </section>
     <!-- end product Area -->
 
