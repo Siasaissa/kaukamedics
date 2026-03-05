@@ -221,7 +221,7 @@
     <!-- end features Area -->
 
     <!-- Start category Area (What We Offer / Services) -->
-    <section class="category-area">
+    <!--<section class="category-area">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-12">
@@ -285,7 +285,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- End category Area -->
 
     <!-- start product Area (Our Products) -->
