@@ -61,37 +61,22 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="{{ route('index') }}">Home</a></li>
                             <li class="nav-item submenu dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                <a href="{{ route('products') }}" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                                  aria-expanded="false">Products</a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="#">Medical Equipment</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Hospital Consumables</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Patient Care</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Pharmaceuticals</a></li>
-                                </ul>
                             </li>
                             <li class="nav-item submenu dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                <a href="{{ route('service') }}" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                                  aria-expanded="false">Services</a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="#">Medical Logistics</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Hospital Setup</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Equipment Maintenance</a></li>
-                                </ul>
+                                
                             </li>
                             <li class="nav-item submenu dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                <a href="{{ route('about') }}" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                                  aria-expanded="false">About Us</a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Our Team</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">News & Events</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                                </ul>
+                                
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
