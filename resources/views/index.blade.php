@@ -11,7 +11,7 @@
     <!-- Meta Description -->
     <meta name="description" content="Kauka Company - Reliable Medical Supplies for a Healthier Tomorrow">
     <!-- Meta Keyword -->
-    <meta name="keywords" content="medical equipment, hospital supplies, healthcare, medical products">
+    <meta name="keywords" content="kauka,medics,vifaa tiba,vifaa vya hospitali,afya,bidhaa za dawa, medical equipment, hospital supplies, healthcare, medical products">
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
@@ -83,7 +83,7 @@
                             <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
+                            <li class="nav-item"><a href="{{ route('cart') }}" class="cart"><span class="ti-bag">{{ session('cart') ? count(session('cart')) : 0 }}</span></a></li>
                             <li class="nav-item">
                                 <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
                             </li>
