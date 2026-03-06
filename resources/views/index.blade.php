@@ -369,7 +369,7 @@
                                     <h6 class="l-through">{{ $produ->price +100 }}</h6>
                                 </div>
                                 <div class="prd-bottom">
-                                    <a href="#" class="social-info">
+                                    <a href="{{ route('add.to.cart', $product->id) }}" class="social-info">
                                         <span class="ti-bag"></span>
                                         <p class="hover-text">Inquire</p>
                                     </a>
