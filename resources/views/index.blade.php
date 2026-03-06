@@ -720,7 +720,7 @@
 
     <!-- Scripts -->
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/jquery.ajaxchimp.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
@@ -729,10 +729,69 @@
     <script src="js/countdown.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <!-- Google Maps (optional) -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
     <script src="js/gmaps.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Initialize banner carousel
+            $('.active-banner-slider').owlCarousel({
+                items: 1,
+                loop: true,
+                dots: true,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                smartSpeed: 1000
+            });
+            
+            // Initialize testimonial carousel - THIS MAKES TESTIMONIALS APPEAR
+            $('.testimonial-carousel').owlCarousel({
+                items: 1,
+                loop: true,
+                dots: true,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 6000,
+                smartSpeed: 800,
+                margin: 30
+            });
+            
+            // Initialize exclusive product slider
+            $('.active-exclusive-product-slider').owlCarousel({
+                items: 1,
+                loop: true,
+                dots: true,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                smartSpeed: 800
+            });
+            
+            // Search functionality
+            $('#search').click(function() {
+                $('#search_input_box').slideToggle();
+            });
+            
+            $('#close_search').click(function() {
+                $('#search_input_box').slideUp();
+            });
+            
+            // Back to top button
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 300) {
+                    $('.back-to-top').fadeIn();
+                } else {
+                    $('.back-to-top').fadeOut();
+                }
+            });
+            
+            $('.back-to-top').click(function(e) {
+                e.preventDefault();
+                $('html, body').animate({scrollTop: 0}, 300);
+            });
+        });
+    </script>
 
     <!-- Video modal script -->
     <script>
