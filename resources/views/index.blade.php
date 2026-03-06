@@ -866,6 +866,8 @@
     </div>
 </div>
      @endforeach
+
+
 <!-- Related Products Modal (can be shown after adding to cart) -->
 <div class="modal fade" id="addedToCartModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
@@ -884,6 +886,7 @@
         </div>
     </div>
 </div>
+
 
 <!-- JavaScript for modal interactions -->
 <script>
