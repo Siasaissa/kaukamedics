@@ -515,7 +515,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card text-center border-0 shadow">
-                        <img class="card-img-top rounded-circle mx-auto mt-4" src="img/team-2.png" alt="Team Member" style="width:150px; height:150px; object-fit:cover;">
+                        <img class="card-img-top rounded-circle mx-auto mt-4" src="img/team-2.jpeg" alt="Team Member" style="width:150px; height:150px; object-fit:cover;">
                         <div class="card-body">
                             <h5 class="card-title">Clementina Peter</h5>
                             <p class="card-text text-muted">Sales & Procurement Officer</p>
@@ -529,7 +529,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card text-center border-0 shadow">
-                        <img class="card-img-top rounded-circle mx-auto mt-4" src="img/team-3.png" alt="Team Member" style="width:150px; height:150px; object-fit:cover;">
+                        <img class="card-img-top rounded-circle mx-auto mt-4" src="img/team-3.jpeg" alt="Team Member" style="width:150px; height:150px; object-fit:cover;">
                         <div class="card-body">
                             <h5 class="card-title">Patrick Mbise</h5>
                             <p class="card-text text-muted">Operation Manager</p>
@@ -543,7 +543,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card text-center border-0 shadow">
-                        <img class="card-img-top rounded-circle mx-auto mt-4" src="img/team-2.png" alt="Team Member" style="width:150px; height:150px; object-fit:cover;">
+                        <img class="card-img-top rounded-circle mx-auto mt-4" src="img/team-3.jpeg" alt="Team Member" style="width:150px; height:150px; object-fit:cover;">
                         <div class="card-body">
                             <h5 class="card-title">Fadhili Mwankenja</h5>
                             <p class="card-text text-muted">Operation Manager</p>
