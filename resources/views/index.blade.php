@@ -505,7 +505,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                             <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/team-1.jpeg" alt="Event" style="height: 100px; object-fit: cover;"></a>
+                                <a href="#"><img src="img/team-1.jpeg" alt="Event" style="height: 90px; object-fit: cover;"></a>
                                 <div class="desc">
                                     <a href="#" class="title">Medical Expo 2025</a>
                                     <p>March 10-15, Dar es Salaam</p>
