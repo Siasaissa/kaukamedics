@@ -514,7 +514,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                             <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/r2.jpg" alt="News"></a>
+                                <a href="#"><img src="img/team-2.jpeg" alt="News"></a>
                                 <div class="desc">
                                     <a href="#" class="title">New Product Launch</a>
                                     <p>Advanced patient monitors</p>
@@ -523,7 +523,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                             <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/r3.jpg" alt="Training"></a>
+                                <a href="#"><img src="img/team-3.jpeg" alt="Training"></a>
                                 <div class="desc">
                                     <a href="#" class="title">Staff Training</a>
                                     <p>Equipment handling session</p>
