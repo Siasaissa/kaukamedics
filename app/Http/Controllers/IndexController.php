@@ -22,7 +22,8 @@ $products2 = Product::orderByDesc('id')
                      ->skip(8)
                      ->take(4)
                      ->get();
+$produc = Product::all();
 
-        return view('index', compact('products','products1','products2'));
+        return view('index', compact('products','products1','products2','produc'));
     }
 }
