@@ -446,7 +446,7 @@
                         </div>
                         <!-- single exclusive carousel -->
                         <div class="single-exclusive-slider">
-                            <img class="img-fluid" src="img/product/e-p1.png" alt="Logistics">
+                            <img class="img-fluid" src="img/distribution.jpg" alt="Logistics">
                             <div class="product-details">
                                 <div class="price">
                                     <h6>Reliable Logistics</h6>
