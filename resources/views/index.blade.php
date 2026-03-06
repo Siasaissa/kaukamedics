@@ -501,10 +501,10 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card text-center border-0 shadow">
-                        <img class="card-img-top rounded-circle mx-auto mt-4" src="img/team-1.png" alt="Team Member" style="width:150px; height:150px; object-fit:cover;">
+                        <img class="card-img-top rounded-circle mx-auto mt-4" src="img/team-3.png" alt="Team Member" style="width:150px; height:150px; object-fit:cover;">
                         <div class="card-body">
-                            <h5 class="card-title">Dr. John Mbeki</h5>
-                            <p class="card-text text-muted">Medical Director</p>
+                            <h5 class="card-title">Dr. Ambwene John</h5>
+                            <p class="card-text text-muted">Director</p>
                             <div class="d-flex justify-content-center">
                                 <a href="#" class="btn btn-sm btn-outline-primary mx-1"><i class="fa fa-facebook"></i></a>
                                 <a href="#" class="btn btn-sm btn-outline-info mx-1"><i class="fa fa-linkedin"></i></a>
@@ -517,8 +517,8 @@
                     <div class="card text-center border-0 shadow">
                         <img class="card-img-top rounded-circle mx-auto mt-4" src="img/team-2.png" alt="Team Member" style="width:150px; height:150px; object-fit:cover;">
                         <div class="card-body">
-                            <h5 class="card-title">Sarah Kimambo</h5>
-                            <p class="card-text text-muted">Procurement Manager</p>
+                            <h5 class="card-title">Clementina Peter</h5>
+                            <p class="card-text text-muted">Sales & Procurement Officer</p>
                             <div class="d-flex justify-content-center">
                                 <a href="#" class="btn btn-sm btn-outline-primary mx-1"><i class="fa fa-facebook"></i></a>
                                 <a href="#" class="btn btn-sm btn-outline-info mx-1"><i class="fa fa-linkedin"></i></a>
@@ -531,8 +531,8 @@
                     <div class="card text-center border-0 shadow">
                         <img class="card-img-top rounded-circle mx-auto mt-4" src="img/team-3.png" alt="Team Member" style="width:150px; height:150px; object-fit:cover;">
                         <div class="card-body">
-                            <h5 class="card-title">Michael Ochieng</h5>
-                            <p class="card-text text-muted">Logistics Coordinator</p>
+                            <h5 class="card-title">Patrick Mbise</h5>
+                            <p class="card-text text-muted">Operation Manager</p>
                             <div class="d-flex justify-content-center">
                                 <a href="#" class="btn btn-sm btn-outline-primary mx-1"><i class="fa fa-facebook"></i></a>
                                 <a href="#" class="btn btn-sm btn-outline-info mx-1"><i class="fa fa-linkedin"></i></a>
@@ -545,8 +545,8 @@
                     <div class="card text-center border-0 shadow">
                         <img class="card-img-top rounded-circle mx-auto mt-4" src="img/team-2.png" alt="Team Member" style="width:150px; height:150px; object-fit:cover;">
                         <div class="card-body">
-                            <h5 class="card-title">Grace Mwangi</h5>
-                            <p class="card-text text-muted">Customer Relations</p>
+                            <h5 class="card-title">Fadhili Mwankenja</h5>
+                            <p class="card-text text-muted">Operation Manager</p>
                             <div class="d-flex justify-content-center">
                                 <a href="#" class="btn btn-sm btn-outline-primary mx-1"><i class="fa fa-facebook"></i></a>
                                 <a href="#" class="btn btn-sm btn-outline-info mx-1"><i class="fa fa-linkedin"></i></a>
