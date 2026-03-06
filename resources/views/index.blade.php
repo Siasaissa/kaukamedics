@@ -832,14 +832,8 @@
                             <div class="col-8">
                                 <div class="btn-group w-100" role="group">
                                     <a href="{{ route('add.to.cart', $product->id) }}" class="btn btn-primary">
-                                        <i class="ti-bag mr-1"></i> Inquire Now
+                                        <i class="ti-bag mr-1"></i> Inquire
                                     </a>
-                                    <button type="button" class="btn btn-outline-danger" onclick="addToWishlist({{ $product->id }})">
-                                        <i class="lnr lnr-heart"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-outline-secondary" onclick="shareProduct({{ $product->id }})">
-                                        <i class="fa fa-share-alt"></i>
-                                    </button>
                                 </div>
                             </div>
                         </div>
