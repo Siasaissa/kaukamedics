@@ -82,12 +82,17 @@
                             </li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
                         </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="nav-item"><a href="{{ route('cart') }}" class="cart"><span class="ti-bag text-primary">{{ session('cart') ? count(session('cart')) : 0 }}</span></a></li>
-                            <li class="nav-item">
-                                <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
-                            </li>
-                        </ul>
+                        <ul class="nav navbar-nav navbar-right align-items-center">
+    <!-- Cart with badge styling -->
+    <li class="nav-item mr-2">
+        <a href="{{ route('cart') }}" class="nav-link p-2 position-relative">
+            <span class="ti-bag" style="font-size: 20px; color: #007bff;"></span>
+            <span class="badge badge-primary position-absolute" 
+                  style="top: 0; right: 0; font-size: 10px; padding: 2px 5px; border-radius: 50%;">
+                {{ session('cart') ? count(session('cart')) : 0 }}
+            </span>
+        </a>
+    </li>
                     </div>
                 </div>
             </nav>
