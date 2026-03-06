@@ -699,6 +699,286 @@
             </div>
         </div>
     </footer>
+
+
+    <!-- Product Details Modal - Place this after your product loop -->
+<div class="modal fade" id="productModal{{ $product->id }}" tabindex="-1" role="dialog" aria-labelledby="productModalLabel{{ $product->id }}" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header border-0 bg-primary text-white">
+                <h5 class="modal-title" id="productModalLabel{{ $product->id }}">
+                    <i class="fa fa-info-circle mr-2"></i>Product Details
+                </h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="row">
+                    <!-- Product Image -->
+                    <div class="col-md-5 text-center">
+                        <div class="product-image-wrapper p-3 bg-light rounded">
+                            <img src="{{ $product->image && file_exists(storage_path('app/public/'.$product->image)) ? asset('storage/app/public/'.$product->image) : asset('img/defaultmedical.jpg') }}" 
+                                 class="img-fluid rounded" 
+                                 alt="{{ $product->name }}"
+                                 style="max-height: 250px; object-fit: contain;">
+                        </div>
+                        
+                        <!-- Thumbnail Gallery (optional) -->
+                        <div class="row mt-3">
+                            <div class="col-4">
+                                <img src="{{ $product->image && file_exists(storage_path('app/public/'.$product->image)) ? asset('storage/app/public/'.$product->image) : asset('img/defaultmedical.jpg') }}" 
+                                     class="img-fluid border rounded p-1" 
+                                     style="height: 50px; width: 100%; object-fit: cover; cursor: pointer;"
+                                     onclick="document.getElementById('mainProductImage{{ $product->id }}').src=this.src">
+                            </div>
+                            <div class="col-4">
+                                <img src="img/defaultmedical.jpg" 
+                                     class="img-fluid border rounded p-1" 
+                                     style="height: 50px; width: 100%; object-fit: cover; cursor: pointer;"
+                                     onclick="document.getElementById('mainProductImage{{ $product->id }}').src=this.src">
+                            </div>
+                            <div class="col-4">
+                                <img src="img/defaultmedical.jpg" 
+                                     class="img-fluid border rounded p-1" 
+                                     style="height: 50px; width: 100%; object-fit: cover; cursor: pointer;"
+                                     onclick="document.getElementById('mainProductImage{{ $product->id }}').src=this.src">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Details -->
+                    <div class="col-md-7">
+                        <h3 class="mb-3 text-primary">{{ $product->name }}</h3>
+                        
+                        <!-- Price Section -->
+                        <div class="price-section bg-light p-3 rounded mb-3">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <span class="text-muted">Our Price:</span>
+                                    <h2 class="text-primary mb-0">TZS {{ number_format($product->price, 0) }}</h2>
+                                </div>
+                                <div class="col-6">
+                                    <span class="text-muted">Market Price:</span>
+                                    <h5 class="text-danger mb-0"><del>TZS {{ number_format($product->price + 100, 0) }}</del></h5>
+                                    <span class="badge badge-success mt-1">Save TZS 100</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product Information Tabs -->
+                        <ul class="nav nav-tabs nav-justified" id="productTab{{ $product->id }}" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="details-tab{{ $product->id }}" data-toggle="tab" href="#details{{ $product->id }}" role="tab">
+                                    <i class="fa fa-list mr-1"></i> Details
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="specs-tab{{ $product->id }}" data-toggle="tab" href="#specs{{ $product->id }}" role="tab">
+                                    <i class="fa fa-cog mr-1"></i> Specs
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="shipping-tab{{ $product->id }}" data-toggle="tab" href="#shipping{{ $product->id }}" role="tab">
+                                    <i class="fa fa-truck mr-1"></i> Shipping
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <div class="tab-content p-3 border border-top-0 rounded-bottom mb-3" id="productTabContent{{ $product->id }}">
+                            <!-- Details Tab -->
+                            <div class="tab-pane fade show active" id="details{{ $product->id }}" role="tabpanel">
+                                <p class="mb-2"><i class="fa fa-check-circle text-success mr-2"></i> <strong>Category:</strong> Medical Equipment</p>
+                                <p class="mb-2"><i class="fa fa-check-circle text-success mr-2"></i> <strong>Brand:</strong> Kauka Certified</p>
+                                <p class="mb-2"><i class="fa fa-check-circle text-success mr-2"></i> <strong>Warranty:</strong> 1 Year</p>
+                                <p class="mb-2"><i class="fa fa-check-circle text-success mr-2"></i> <strong>Certification:</strong> ISO, CE, FDA</p>
+                                <p class="mb-0"><i class="fa fa-check-circle text-success mr-2"></i> <strong>Stock Status:</strong> <span class="badge badge-success">In Stock</span></p>
+                            </div>
+                            
+                            <!-- Specifications Tab -->
+                            <div class="tab-pane fade" id="specs{{ $product->id }}" role="tabpanel">
+                                <p class="mb-2"><strong>Dimensions:</strong> 25cm x 15cm x 10cm</p>
+                                <p class="mb-2"><strong>Weight:</strong> 1.5 kg</p>
+                                <p class="mb-2"><strong>Material:</strong> Medical-grade stainless steel</p>
+                                <p class="mb-2"><strong>Power:</strong> 110-240V, 50/60Hz</p>
+                                <p class="mb-0"><strong>Includes:</strong> User manual, warranty card, accessories</p>
+                            </div>
+                            
+                            <!-- Shipping Tab -->
+                            <div class="tab-pane fade" id="shipping{{ $product->id }}" role="tabpanel">
+                                <p class="mb-2"><i class="fa fa-map-marker text-primary mr-2"></i> <strong>Delivery:</strong> 2-3 business days</p>
+                                <p class="mb-2"><i class="fa fa-shield text-primary mr-2"></i> <strong>Free Shipping:</strong> On orders over TZS 500,000</p>
+                                <p class="mb-2"><i class="fa fa-undo text-primary mr-2"></i> <strong>Returns:</strong> 7-day money-back guarantee</p>
+                                <p class="mb-0"><i class="fa fa-phone text-primary mr-2"></i> <strong>Support:</strong> 24/7 customer service</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Quantity and Action Buttons -->
+                        <div class="row mt-3">
+                            <div class="col-4">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-secondary" type="button" onclick="decrementQty({{ $product->id }})">-</button>
+                                    </div>
+                                    <input type="number" id="qty{{ $product->id }}" class="form-control text-center" value="1" min="1" max="99">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" onclick="incrementQty({{ $product->id }})">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="btn-group w-100" role="group">
+                                    <a href="{{ route('add.to.cart', $product->id) }}" class="btn btn-primary">
+                                        <i class="ti-bag mr-1"></i> Inquire Now
+                                    </a>
+                                    <button type="button" class="btn btn-outline-danger" onclick="addToWishlist({{ $product->id }})">
+                                        <i class="lnr lnr-heart"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary" onclick="shareProduct({{ $product->id }})">
+                                        <i class="fa fa-share-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Additional Info -->
+                        <div class="mt-3 small text-muted">
+                            <i class="fa fa-lock mr-1"></i> Secure transaction | 
+                            <i class="fa fa-truck mr-1 ml-2"></i> Fast delivery | 
+                            <i class="fa fa-credit-card mr-1 ml-2"></i> Multiple payment options
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-0 bg-light">
+                <div class="w-100">
+                    <div class="row">
+                        <div class="col-md-4 text-center text-md-left mb-2 mb-md-0">
+                            <small><i class="fa fa-check-circle text-success mr-1"></i> Certified Product</small>
+                        </div>
+                        <div class="col-md-4 text-center mb-2 mb-md-0">
+                            <small><i class="fa fa-shield text-success mr-1"></i> Quality Guaranteed</small>
+                        </div>
+                        <div class="col-md-4 text-center text-md-right">
+                            <small><i class="fa fa-headphones text-success mr-1"></i> 24/7 Support</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Related Products Modal (can be shown after adding to cart) -->
+<div class="modal fade" id="addedToCartModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content text-center border-0 shadow">
+            <div class="modal-body p-4">
+                <div class="text-success mb-3">
+                    <i class="fa fa-check-circle fa-4x"></i>
+                </div>
+                <h5>Added to Inquiries!</h5>
+                <p class="text-muted">Product has been added to your inquiry list.</p>
+                <div class="btn-group w-100">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Continue Shopping</button>
+                    <a href="{{ route('cart') }}" class="btn btn-primary">View List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript for modal interactions -->
+<script>
+function incrementQty(productId) {
+    var input = document.getElementById('qty' + productId);
+    var value = parseInt(input.value, 10);
+    if (value < 99) input.value = value + 1;
+}
+
+function decrementQty(productId) {
+    var input = document.getElementById('qty' + productId);
+    var value = parseInt(input.value, 10);
+    if (value > 1) input.value = value - 1;
+}
+
+function addToWishlist(productId) {
+    // Add your wishlist logic here
+    alert('Product added to wishlist!');
+}
+
+function shareProduct(productId) {
+    // Share functionality
+    if (navigator.share) {
+        navigator.share({
+            title: 'Check this product',
+            text: 'Great medical product from Kauka Company',
+            url: window.location.href,
+        });
+    } else {
+        prompt('Copy this link to share:', window.location.href);
+    }
+}
+
+// Show added to cart modal after adding to cart
+$(document).ready(function() {
+    // Check if product was just added to cart
+    if (window.location.hash === '#added') {
+        $('#addedToCartModal').modal('show');
+    }
+    
+    // Optional: Show modal after adding to cart
+    $('a[href*="add.to.cart"]').click(function(e) {
+        e.preventDefault();
+        var url = $(this).attr('href');
+        // You could use AJAX here instead of redirect
+        window.location.href = url + '#added';
+    });
+});
+</script>
+
+<!-- CSS for modal enhancements -->
+<style>
+.modal-content {
+    border-radius: 15px;
+    overflow: hidden;
+}
+.modal-header.bg-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+.product-image-wrapper {
+    transition: all 0.3s ease;
+}
+.product-image-wrapper:hover {
+    transform: scale(1.02);
+}
+.nav-tabs .nav-link {
+    color: #495057;
+    border: none;
+    padding: 10px 15px;
+}
+.nav-tabs .nav-link.active {
+    color: #007bff;
+    background: transparent;
+    border-bottom: 3px solid #007bff;
+}
+.nav-tabs .nav-link:hover {
+    border: none;
+    border-bottom: 3px solid #dee2e6;
+}
+.tab-content {
+    background: #fff;
+}
+.btn-group .btn {
+    padding: 12px 0;
+}
+.btn-group .btn:first-child {
+    border-radius: 30px 0 0 30px;
+}
+.btn-group .btn:last-child {
+    border-radius: 0 30px 30px 0;
+}
+</style>
     
     <!-- Scripts -->
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
