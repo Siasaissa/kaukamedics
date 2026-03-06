@@ -465,29 +465,7 @@
     </section>
     <!-- End exclusive deal Area -->
 
-
-    <!-- Video Modal Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Company Overview Video</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="ratio ratio-16x9">
-                        <video id="video" class="w-100 rounded" controls autoplay muted>
-                            <source src="img/video1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Video End -->
-
-    <!-- Start brand Area (Partner Brands) -->
+    <!-- Start brand Area (Partner Brands) 
     <section class="brand-area section_gap">
         <div class="container">
             <div class="row">
@@ -508,7 +486,7 @@
                 </a>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- End brand Area -->
 
     <!-- Start related-product Area (Deals of the Week / Latest News) -->
@@ -517,8 +495,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center">
                     <div class="section-title">
-                        <h1>Latest News & Events</h1>
-                        <p>Stay updated with our participation in medical exhibitions and latest offerings.</p>
+                        <h1>Team Member</h1>
+                        <p>Kauka Medics Team</p>
                     </div>
                 </div>
             </div>
@@ -527,7 +505,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                             <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/r1.jpg" alt="Event"></a>
+                                <a href="#"><img src="img/team-1.jpeg" alt="Event"></a>
                                 <div class="desc">
                                     <a href="#" class="title">Medical Expo 2025</a>
                                     <p>March 10-15, Dar es Salaam</p>
@@ -536,7 +514,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                             <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/r2.jpg" alt="News"></a>
+                                <a href="#"><img src="img/team-1.jpeg" alt="News"></a>
                                 <div class="desc">
                                     <a href="#" class="title">New Product Launch</a>
                                     <p>Advanced patient monitors</p>
@@ -545,7 +523,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                             <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/r3.jpg" alt="Training"></a>
+                                <a href="#"><img src="img/team-1.jpeg" alt="Training"></a>
                                 <div class="desc">
                                     <a href="#" class="title">Staff Training</a>
                                     <p>Equipment handling session</p>
@@ -554,7 +532,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                             <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/r5.jpg" alt="Partnership"></a>
+                                <a href="#"><img src="img/team-1.jpeg" alt="Partnership"></a>
                                 <div class="desc">
                                     <a href="#" class="title">New Partnership</a>
                                     <p>With leading global supplier</p>
@@ -563,7 +541,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                             <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/r6.jpg" alt="Community"></a>
+                                <a href="#"><img src="img/team-1.jpeg" alt="Community"></a>
                                 <div class="desc">
                                     <a href="#" class="title">Health Campaign</a>
                                     <p>Free check-up initiative</p>
@@ -572,7 +550,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                             <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/r7.jpg" alt="Award"></a>
+                                <a href="#"><img src="img/team-1.jpeg" alt="Award"></a>
                                 <div class="desc">
                                     <a href="#" class="title">Industry Award</a>
                                     <p>Best Medical Supplier 2024</p>
