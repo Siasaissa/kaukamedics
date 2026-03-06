@@ -324,7 +324,7 @@
                                         <span class="lnr lnr-heart"></span>
                                         <p class="hover-text">Save</p>
                                     </a>
-                                    <a href="#" class="social-info" data-bs-toggle="modal" data-bs-target="#productModal{{ $product->id }}">
+                                    <a href="#" class="social-info" data-toggle="modal" data-target="#productModal{{ $product->id }}">
                                         <span class="lnr lnr-move"></span>
                                         <p class="hover-text">Details</p>
                                     </a>
