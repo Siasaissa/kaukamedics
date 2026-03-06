@@ -407,19 +407,19 @@
                         </div>
                         <div class="col-lg-12">
                             <div class="row clock-wrap">
-                                <div class="col clockinner1 ">
+                                <div class="col clockinner1 clockinner">
                                     <h1 class="days">120</h1>
                                     <span class="smalltext">Staff</span>
                                 </div>
-                                <div class="col clockinner ">
+                                <div class="col clockinner clockinner1">
                                     <h1 class="hours">25</h1>
                                     <span class="smalltext">Years</span>
                                 </div>
-                                <div class="col clockinner ">
+                                <div class="col clockinner clockinner1">
                                     <h1 class="minutes">3000</h1>
                                     <span class="smalltext">Products</span>
                                 </div>
-                                <div class="col clockinner ">
+                                <div class="col">
                                     <h1 class="seconds">1500</h1>
                                     <span class="smalltext">Clients</span>
                                 </div>
@@ -778,20 +778,7 @@
             }
         });
     </script>
-    <script>
-$(document).ready(function(){
-    $('.active-banner-slider').owlCarousel({
-        items: 1,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 2000, // 2 seconds
-        autoplayHoverPause: true,
-        smartSpeed: 800,
-        dots: true,
-        nav: false
-    });
-});
-</script>
+
 <link rel="stylesheet" href="css/owl.carousel.css">
 <script src="js/owl.carousel.min.js"></script>
 </body>
