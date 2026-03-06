@@ -514,7 +514,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                             <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/team-2.jpeg" alt="News"></a>
+                                <a href="#"><img src="img/team-2.jpeg" alt="News" style="height: 90px; object-fit: cover;"></a>
                                 <div class="desc">
                                     <a href="#" class="title">New Product Launch</a>
                                     <p>Advanced patient monitors</p>
@@ -523,7 +523,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                             <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/team-3.jpeg" alt="Training"></a>
+                                <a href="#"><img src="img/team-3.jpeg" alt="Training" style="height: 90px; object-fit: cover;"></a>
                                 <div class="desc">
                                     <a href="#" class="title">Staff Training</a>
                                     <p>Equipment handling session</p>
@@ -532,7 +532,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                             <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/r5.jpg" alt="Partnership"></a>
+                                <a href="#"><img src="img/team-3.png" alt="Partnership" style="height: 90px; object-fit: cover;"></a>
                                 <div class="desc">
                                     <a href="#" class="title">New Partnership</a>
                                     <p>With leading global supplier</p>
