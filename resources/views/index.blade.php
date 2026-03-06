@@ -832,7 +832,7 @@
                             <div class="col-8">
                                 <div class="btn-group w-100" role="group">
                                     <a href="{{ route('add.to.cart', $product->id) }}" class="btn btn-primary">
-                                        <i class="ti-bag mr-1"></i> Inquire
+                                        <i class="ti-bag mr-1"></i>
                                     </a>
                                 </div>
                             </div>
