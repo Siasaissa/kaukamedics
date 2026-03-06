@@ -432,7 +432,7 @@
                     <div class="active-exclusive-product-slider">
                         <!-- single exclusive carousel -->
                         <div class="single-exclusive-slider">
-                            <img class="img-fluid" src="img/product/e-p1.png" alt="Team">
+                            <img class="img-fluid" src="img/team-3.png" alt="Team">
                             <div class="product-details">
                                 <div class="price">
                                     <h6>Professional Team</h6>
