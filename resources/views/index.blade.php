@@ -395,7 +395,7 @@
     </section>
     <!-- end product Area -->
 
-    <!-- Start exclusive deal Area (About / Mission) -->
+    <!-- Start exclusive deal Area (About / Mission) 
     <section class="exclusive-deal-area">
         <div class="container-fluid">
             <div class="row justify-content-center align-items-center">
@@ -430,7 +430,7 @@
                 </div>
                 <div class="col-lg-6 no-padding exclusive-right">
                     <div class="active-exclusive-product-slider">
-                        <!-- single exclusive carousel -->
+                        <!-- single exclusive carousel 
                         <div class="single-exclusive-slider">
                             <img class="img-fluid" src="img/team-3.png" alt="Team">
                             <div class="product-details">
@@ -444,7 +444,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- single exclusive carousel -->
+                        <!-- single exclusive carousel 
                         <div class="single-exclusive-slider">
                             <img class="img-fluid" src="img/distribution.jpg" alt="Logistics">
                             <div class="product-details">
@@ -462,7 +462,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- End exclusive deal Area -->
 
     <!-- Start brand Area (Partner Brands) 
