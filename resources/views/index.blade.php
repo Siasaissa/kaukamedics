@@ -407,19 +407,19 @@
                         </div>
                         <div class="col-lg-12">
                             <div class="row clock-wrap">
-                                <div class="col clockinner1 clockinner">
+                                <div class="col clockinner1 ">
                                     <h1 class="days">120</h1>
                                     <span class="smalltext">Staff</span>
                                 </div>
-                                <div class="col clockinner clockinner1">
+                                <div class="col clockinner ">
                                     <h1 class="hours">25</h1>
                                     <span class="smalltext">Years</span>
                                 </div>
-                                <div class="col clockinner clockinner1">
+                                <div class="col clockinner ">
                                     <h1 class="minutes">3000</h1>
                                     <span class="smalltext">Products</span>
                                 </div>
-                                <div class="col clockinner clockinner1">
+                                <div class="col clockinner ">
                                     <h1 class="seconds">1500</h1>
                                     <span class="smalltext">Clients</span>
                                 </div>
