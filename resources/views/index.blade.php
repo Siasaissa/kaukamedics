@@ -817,10 +817,10 @@
                         </div>
                         
                         <!-- Quantity and Action Buttons -->
-                        <div class="row mt-3">
+                        <!--<div class="row mt-3">
                             <div class="col-4">
                                 <div class="input-group">
-                                    <!--<div class="input-group-prepend">
+                                    <div class="input-group-prepend">
                                         <button class="btn btn-outline-secondary" type="button" onclick="decrementQty({{ $product->id }})">-</button>
                                     </div>
 
@@ -828,7 +828,7 @@
 
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-secondary" type="button" onclick="incrementQty({{ $product->id }})">+</button>
-                                    </div>-->
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-8">
@@ -838,7 +838,7 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                         
                         <!-- Additional Info -->
                         <div class="mt-3 small text-muted">
