@@ -312,7 +312,7 @@
                             <div class="product-details">
                                 <h6>{{ $product->name }}</h6>
                                 <div class="price">
-                                    <h6>{{$product->price}}</h6>
+                                    <h6>{{ number_format($product->price, 2)}}</h6>
                                     <h6 class="l-through">{{ number_format( $product->price +100, 2)  }}</h6>
                                 </div>
                                 <div class="prd-bottom">
