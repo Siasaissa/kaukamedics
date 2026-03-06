@@ -709,8 +709,8 @@
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content border-0 shadow">
             <div class="modal-header border-0 bg-primary text-white">
-                <h5 class="modal-title" id="productModalLabel{{ $product->id }}">
-                    <i class="fa fa-info-circle mr-2"></i>Product Details
+                <h5 class="modal-title text-white" id="productModalLabel{{ $product->id }}">
+                    <i class="fa fa-info-circle mr-2 "></i>Product Details
                 </h5>
                 <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
