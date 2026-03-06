@@ -408,19 +408,19 @@
                         <div class="col-lg-12">
                             <div class="row clock-wrap">
                                 <div class="col clockinner1 clockinner">
-                                    <h1 class="text">120</h1>
+                                    <h1>120</h1>
                                     <span class="smalltext">Staff</span>
                                 </div>
                                 <div class="col clockinner clockinner1">
-                                    <h1 class="text">25</h1>
+                                    <h1>25</h1>
                                     <span class="smalltext">Years</span>
                                 </div>
                                 <div class="col clockinner clockinner1">
-                                    <h1 class="text">3000</h1>
+                                    <h1>3000</h1>
                                     <span class="smalltext">Products</span>
                                 </div>
                                 <div class="col clockinner clockinner1">
-                                    <h1 class="text">1500</h1>
+                                    <h1 >1500</h1>
                                     <span class="smalltext">Clients</span>
                                 </div>
                             </div>
