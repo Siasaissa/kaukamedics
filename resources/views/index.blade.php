@@ -362,8 +362,8 @@
                             <div class="product-details">
                                 <h6>{{ $produ->name }}</h6>
                                 <div class="price">
-                                    <h6>{{ $produ->price }}</h6>
-                                    <h6 class="l-through">{{ $produ->price +100 }}</h6>
+                                    <h6>{{ number_format( $produ->price, 2) }}</h6>
+                                    <h6 class="l-through">{{ number_format( $produ->price +100, 2) }}</h6>
                                 </div>
                                 <div class="prd-bottom">
                                     <a href="{{ route('add.to.cart', $produ->id) }}" class="social-info">
