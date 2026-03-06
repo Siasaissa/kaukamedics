@@ -494,7 +494,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center">
-                    <div class="section-title">
+                    <div class="section-title mt-5">
                         <h1>Team Member</h1>
                         <p>Kauka Medics Team</p>
                     </div>
@@ -539,30 +539,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/r6.jpg" alt="Community"></a>
-                                <div class="desc">
-                                    <a href="#" class="title">Health Campaign</a>
-                                    <p>Free check-up initiative</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/r7.jpg" alt="Award"></a>
-                                <div class="desc">
-                                    <a href="#" class="title">Industry Award</a>
-                                    <p>Best Medical Supplier 2024</p>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="ctg-right">
                         <a href="#" target="_blank">
-                            <img class="img-fluid d-block mx-auto" src="img/category/c5.jpg" alt="Advertisement">
+                            <img class="img-fluid d-block mx-auto" src="img/logo.png" alt="Advertisement">
                         </a>
                     </div>
                 </div>
