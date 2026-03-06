@@ -702,6 +702,9 @@
 
 
     <!-- Product Details Modal - Place this after your product loop -->
+     @foreach ($products as $product )
+     
+
 <div class="modal fade" id="productModal{{ $product->id }}" tabindex="-1" role="dialog" aria-labelledby="productModalLabel{{ $product->id }}" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content border-0 shadow">
@@ -868,7 +871,7 @@
         </div>
     </div>
 </div>
-
+     @endforeach
 <!-- Related Products Modal (can be shown after adding to cart) -->
 <div class="modal fade" id="addedToCartModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
