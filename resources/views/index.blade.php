@@ -749,9 +749,6 @@
             }
         });
     </script>
-
-<link rel="stylesheet" href="css/owl.carousel.css">
-<script src="js/owl.carousel.min.js"></script>
 </body>
 
 </html>
