@@ -562,73 +562,75 @@
 
 
     
-    <!-- Testimonial Start (from provided content) -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-md-12 col-lg-4 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="testimonial-title">
-                        <h1 class="display-6 mb-4">What Our Clients Say</h1>
-                        <p class="fs-5 mb-0">We’re proud to be a trusted partner in delivering reliable medical equipment and healthcare solutions nationwide.</p>
-                    </div>
+    <!-- Testimonial Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-4 col-xl-3">
+                <div class="testimonial-title">
+                    <h1 class="display-6 mb-4">What Our Clients Say</h1>
+                    <p class="fs-5 mb-0">We're proud to be a trusted partner in delivering reliable medical equipment and healthcare solutions nationwide.</p>
                 </div>
-                <div class="col-md-12 col-lg-8 col-xl-9">
-                    <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay="0.3s">
-                        <div class="testimonial-item">
-                            <div class="row g-5 align-items-center">
-                                <div class="col-md-6">
-                                    <div class="testimonial-img">
-                                        <img class="img-fluid" src="img/team-1.png" alt="Client">
-                                    </div>
+            </div>
+            <div class="col-md-12 col-lg-8 col-xl-9">
+                <div class="owl-carousel testimonial-carousel">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="testimonial-img">
+                                    <img class="img-fluid" src="img/team-1.png" alt="Dr. Henry Mwenda">
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="testimonial-text pb-5 pb-md-0">
-                                        <div class="mb-2">
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="testimonial-text">
+                                    <div class="mb-2">
+                                        <i class="fa fa-star text-primary"></i>
+                                        <i class="fa fa-star text-primary"></i>
+                                        <i class="fa fa-star text-primary"></i>
+                                        <i class="fa fa-star text-primary"></i>
+                                        <i class="fa fa-star text-primary"></i>
+                                    </div>
+                                    <p class="fs-5">"Their medical supplies are of exceptional quality. Our hospital has greatly benefited from their quick service and dependable products."</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-light text-secondary p-3 rounded-circle mr-3">
+                                            <i class="fa fa-quote-right fa-2x"></i>
                                         </div>
-                                        <p class="fs-5">Their medical supplies are of exceptional quality. Our hospital has greatly benefited from their quick service and dependable products.</p>
-                                        <div class="d-flex align-items-center">
-                                            <div class="btn-lg-square bg-light text-secondary flex-shrink-0">
-                                                <i class="fa fa-quote-right fa-2x"></i>
-                                            </div>
-                                            <div class="ps-3">
-                                                <h5 class="mb-0">Dr. Henry Mwenda</h5>
-                                                <span>Medical Director, CityCare Hospital</span>
-                                            </div>
+                                        <div>
+                                            <h5 class="mb-0">Dr. Henry Mwenda</h5>
+                                            <span class="text-muted">Medical Director, CityCare Hospital</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="testimonial-item">
-                            <div class="row g-5 align-items-center">
-                                <div class="col-md-6">
-                                    <div class="testimonial-img">
-                                        <img class="img-fluid" src="img/team-2.png" alt="Client">
-                                    </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="testimonial-img">
+                                    <img class="img-fluid" src="img/team-2.png" alt="Sarah John">
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="testimonial-text pb-5 pb-md-0">
-                                        <div class="mb-2">
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="testimonial-text">
+                                    <div class="mb-2">
+                                        <i class="fa fa-star text-primary"></i>
+                                        <i class="fa fa-star text-primary"></i>
+                                        <i class="fa fa-star text-primary"></i>
+                                        <i class="fa fa-star text-primary"></i>
+                                        <i class="fa fa-star text-primary"></i>
+                                    </div>
+                                    <p class="fs-5">"We've partnered with them for over three years. Their professionalism and commitment to healthcare delivery are unmatched."</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-light text-secondary p-3 rounded-circle mr-3">
+                                            <i class="fa fa-quote-right fa-2x"></i>
                                         </div>
-                                        <p class="fs-5">We’ve partnered with them for over three years. Their professionalism and commitment to healthcare delivery are unmatched.</p>
-                                        <div class="d-flex align-items-center">
-                                            <div class="btn-lg-square bg-light text-secondary flex-shrink-0">
-                                                <i class="fa fa-quote-right fa-2x"></i>
-                                            </div>
-                                            <div class="ps-3">
-                                                <h5 class="mb-0">Sarah John</h5>
-                                                <span>Procurement Officer, Meditech Labs</span>
-                                            </div>
+                                        <div>
+                                            <h5 class="mb-0">Sarah John</h5>
+                                            <span class="text-muted">Procurement Officer, Meditech Labs</span>
                                         </div>
                                     </div>
                                 </div>
@@ -639,8 +641,8 @@
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
-
+</div>
+<!-- Testimonial End -->
     <!-- Footer Start (from includes) -->
     <footer class="footer-area section_gap">
         <div class="container">
