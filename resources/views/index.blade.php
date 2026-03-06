@@ -307,8 +307,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="single-product">
                             <img class="img-fluid" src="{{ $product->image && file_exists(storage_path('app/public/'.$product->image)) 
-                     ? asset('storage/app/public/'.$product->image) 
-                     : asset('img/defaultmedical.jpg') }}" alt="Diagnostic Tool">
+                            ? asset('storage/app/public/'.$product->image) 
+                            : asset('img/defaultmedical.jpg') }}" alt="Diagnostic Tool">
                             <div class="product-details">
                                 <h6>{{ $product->name }}</h6>
                                 <div class="price">
@@ -324,11 +324,7 @@
                                         <span class="lnr lnr-heart"></span>
                                         <p class="hover-text">Save</p>
                                     </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">Compare</p>
-                                    </a>
-                                    <a href="#" class="social-info">
+                                    <a href="#" class="social-info" data-bs-toggle="modal" data-bs-target="#productModal{{ $product->id }}">
                                         <span class="lnr lnr-move"></span>
                                         <p class="hover-text">Details</p>
                                     </a>
@@ -336,6 +332,70 @@
                             </div>
                         </div>
                     </div>
+                    <div class="modal fade" id="productModal{{ $product->id }}" tabindex="-1" aria-labelledby="productModalLabel{{ $product->id }}" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel{{ $product->id }}">{{ $product->name }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Product Image -->
+                        <img src="{{ asset('images/products/' . $product->image) }}" class="img-fluid" alt="{{ $product->name }}">
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Product Details -->
+                        <h4>{{ $product->name }}</h4>
+                        <p class="text-muted">Price: ${{ number_format($product->price, 2) }}</p>
+                        
+                        @if($product->category)
+                            <p><strong>Category:</strong> {{ $product->category->name }}</p>
+                        @endif
+                        
+                        @if($product->brand)
+                            <p><strong>Brand:</strong> {{ $product->brand->name }}</p>
+                        @endif
+                        
+                        <p><strong>Availability:</strong> 
+                            @if($product->stock > 0)
+                                <span class="text-success">In Stock ({{ $product->stock }} available)</span>
+                            @else
+                                <span class="text-danger">Out of Stock</span>
+                            @endif
+                        </p>
+                        
+                        <h5>Description</h5>
+                        <p>{{ $product->description }}</p>
+                        
+                        @if($product->short_description)
+                            <p><small>{{ $product->short_description }}</small></p>
+                        @endif
+                        
+                        <!-- Additional Product Attributes -->
+                        @if($product->color)
+                            <p><strong>Color:</strong> {{ $product->color }}</p>
+                        @endif
+                        
+                        @if($product->size)
+                            <p><strong>Size:</strong> {{ $product->size }}</p>
+                        @endif
+                        
+                        @if($product->weight)
+                            <p><strong>Weight:</strong> {{ $product->weight }} kg</p>
+                        @endif
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="{{ route('product.details', $product->id) }}" class="btn btn-primary">View Full Details</a>
+                <a href="{{ route('add.to.cart', $product->id) }}" class="btn btn-success">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
                      @endforeach
                     <!-- single product -->
                     
