@@ -356,8 +356,8 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="single-product">
-                            <img class="img-fluid" src="{{ $product->image && file_exists(storage_path('app/public/'.$product->image)) 
-                     ? asset('storage/app/public/'.$product->image) 
+                            <img class="img-fluid" src="{{ $produ->image && file_exists(storage_path('app/public/'.$product->image)) 
+                     ? asset('storage/app/public/'.$produ->image) 
                      : asset('img/defaultmedical.jpg') }}" alt="Protective Mask">
                             <div class="product-details">
                                 <h6>{{ $produ->name }}</h6>
@@ -371,15 +371,11 @@
                                         <p class="hover-text">Inquire</p>
                                     </a>
                                     <a href="#" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
+                                        <span class="lnr lnr-heart" onclick="addToWishlist({{ $produ->id }})"></span>
                                         <p class="hover-text">Save</p>
                                     </a>
                                     <a href="#" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">Compare</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-move"></span>
+                                        <span class="lnr lnr-move" data-toggle="modal" data-target="#productModal{{ $produ->id }}"></span>
                                         <p class="hover-text">Details</p>
                                     </a>
                                 </div>
@@ -393,100 +389,7 @@
             </div>
         </div>
     </section>
-    <!-- end product Area -->
-
-    <!-- Start exclusive deal Area (About / Mission) 
-    <section class="exclusive-deal-area">
-        <div class="container-fluid">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-lg-6 no-padding exclusive-left">
-                    <div class="row clock_sec clockdiv" id="clockdiv">
-                        <div class="col-lg-12">
-                            <h1>Our Mission: Quality Healthcare for All</h1>
-                            <p>Partner with us to access reliable medical solutions that keep your healthcare facility equipped and efficient.</p>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="row clock-wrap">
-                                <div class="col clockinner1 clockinner">
-                                    <h1>5</h1>
-                                    <span class="smalltext">Staff</span>
-                                </div>
-                                <div class="col clockinner clockinner1">
-                                    <h1>18</h1>
-                                    <span class="smalltext">Years</span>
-                                </div>
-                                <div class="col clockinner clockinner1">
-                                    <h1>{{count( $produc )}}</h1>
-                                    <span class="smalltext">Products</span>
-                                </div>
-                                <div class="col clockinner clockinner1">
-                                    <h1 >1500</h1>
-                                    <span class="smalltext">Clients</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class="primary-btn">Learn More About Us</a>
-                </div>
-                <div class="col-lg-6 no-padding exclusive-right">
-                    <div class="active-exclusive-product-slider">
-                        <!-- single exclusive carousel 
-                        <div class="single-exclusive-slider">
-                            <img class="img-fluid" src="img/team-3.png" alt="Team">
-                            <div class="product-details">
-                                <div class="price">
-                                    <h6>Professional Team</h6>
-                                </div>
-                                <h4>Dedicated experts committed to serving your medical supply needs.</h4>
-                                <div class="add-bag d-flex align-items-center justify-content-center">
-                                    <a class="add-btn" href="#"><span class="ti-user"></span></a>
-                                    <span class="add-text text-uppercase">Meet the Team</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single exclusive carousel 
-                        <div class="single-exclusive-slider">
-                            <img class="img-fluid" src="img/distribution.jpg" alt="Logistics">
-                            <div class="product-details">
-                                <div class="price">
-                                    <h6>Reliable Logistics</h6>
-                                </div>
-                                <h4>Efficient distribution network ensuring timely delivery.</h4>
-                                <div class="add-bag d-flex align-items-center justify-content-center">
-                                    <a class="add-btn" href="#"><span class="ti-truck"></span></a>
-                                    <span class="add-text text-uppercase">Our Services</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
-    <!-- End exclusive deal Area -->
-
-    <!-- Start brand Area (Partner Brands) 
-    <section class="brand-area section_gap">
-        <div class="container">
-            <div class="row">
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="img/brand/1.png" alt="Partner">
-                </a>
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="img/brand/2.png" alt="Partner">
-                </a>
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="img/brand/3.png" alt="Partner">
-                </a>
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="img/brand/4.png" alt="Partner">
-                </a>
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="img/brand/5.png" alt="Partner">
-                </a>
-            </div>
-        </div>
-    </section>-->
+    
     <!-- End brand Area -->
 
     <!-- Team Members Section (NEW) -->
@@ -868,6 +771,177 @@
     </div>
 </div>
      @endforeach
+     <!-- for page two -->
+
+@foreach ($products1 as $produ )
+     
+
+<div class="modal fade" id="productModal{{ $produ->id }}" tabindex="-1" role="dialog" aria-labelledby="productModalLabel{{ $product->id }}" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header border-0 bg-primary text-white">
+                <h5 class="modal-title text-white" id="productModalLabel{{ $produ->id }}">
+                    <i class="fa fa-info-circle mr-2 text-white"></i>Product Details
+                </h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="row">
+                    <!-- Product Image -->
+                    <div class="col-md-5 text-center">
+                        <div class="product-image-wrapper p-3 bg-light rounded">
+                            <img src="{{ $produ->image && file_exists(storage_path('app/public/'.$produ->image)) ? asset('storage/app/public/'.$produ->image) : asset('img/defaultmedical.jpg') }}" 
+                                 class="img-fluid rounded" 
+                                 alt="{{ $produ->name }}"
+                                 style="max-height: 250px; object-fit: contain;">
+                        </div>
+                        
+                        <!-- Thumbnail Gallery (optional) -->
+                        <div class="row mt-3">
+                            <div class="col-4">
+                                <img src="{{ $produ->image && file_exists(storage_path('app/public/'.$produ->image)) ? asset('storage/app/public/'.$produ->image) : asset('img/defaultmedical.jpg') }}" 
+                                     class="img-fluid border rounded p-1" 
+                                     style="height: 50px; width: 100%; object-fit: cover; cursor: pointer;"
+                                     onclick="document.getElementById('mainProductImage{{ $produ->id }}').src=this.src">
+                            </div>
+                            <div class="col-4">
+                                <img src="img/defaultmedical.jpg" 
+                                     class="img-fluid border rounded p-1" 
+                                     style="height: 50px; width: 100%; object-fit: cover; cursor: pointer;"
+                                     onclick="document.getElementById('mainProductImage{{ $produ->id }}').src=this.src">
+                            </div>
+                            <div class="col-4">
+                                <img src="img/defaultmedical.jpg" 
+                                     class="img-fluid border rounded p-1" 
+                                     style="height: 50px; width: 100%; object-fit: cover; cursor: pointer;"
+                                     onclick="document.getElementById('mainProductImage{{ $produ->id }}').src=this.src">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Details -->
+                    <div class="col-md-7">
+                        <h3 class="mb-3 text-primary">{{ $produ->name }}</h3>
+                        
+                        <!-- Price Section -->
+                        <div class="price-section bg-light p-3 rounded mb-3">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <span class="text-muted">Our Price:</span>
+                                    <h2 class="text-primary mb-0">TZS {{ number_format($produ->price, 0) }}</h2>
+                                </div>
+                                <div class="col-6">
+                                    <span class="text-muted">Market Price:</span>
+                                    <h5 class="text-danger mb-0"><del>TZS {{ number_format($produ->price + 100, 0) }}</del></h5>
+                                    <span class="badge badge-success mt-1">Save TZS 100</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product Information Tabs -->
+                        <ul class="nav nav-tabs nav-justified" id="productTab{{ $produ->id }}" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="details-tab{{ $produ->id }}" data-toggle="tab" href="#details{{ $produ->id }}" role="tab">
+                                    <i class="fa fa-list mr-1"></i> Details
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="specs-tab{{ $produ->id }}" data-toggle="tab" href="#specs{{ $produ->id }}" role="tab">
+                                    <i class="fa fa-cog mr-1"></i> Specs
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="shipping-tab{{ $produ->id }}" data-toggle="tab" href="#shipping{{ $produ->id }}" role="tab">
+                                    <i class="fa fa-truck mr-1"></i> Shipping
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <div class="tab-content p-3 border border-top-0 rounded-bottom mb-3" id="productTabContent{{ $produ->id }}">
+                            <!-- Details Tab -->
+                            <div class="tab-pane fade show active" id="details{{ $produ->id }}" role="tabpanel">
+                                <p class="mb-2"><i class="fa fa-check-circle text-success mr-2"></i> <strong>Category:</strong> Medical Equipment</p>
+                                <p class="mb-2"><i class="fa fa-check-circle text-success mr-2"></i> <strong>Brand:</strong> Kauka Certified</p>
+                                <p class="mb-2"><i class="fa fa-check-circle text-success mr-2"></i> <strong>Warranty:</strong> 1 Year</p>
+                                <p class="mb-2"><i class="fa fa-check-circle text-success mr-2"></i> <strong>Certification:</strong> ISO, CE, FDA</p>
+                                <p class="mb-0"><i class="fa fa-check-circle text-success mr-2"></i> <strong>Stock Status:</strong> <span class="badge badge-success">In Stock</span></p>
+                            </div>
+                            
+                            <!-- Specifications Tab -->
+                            <div class="tab-pane fade" id="specs{{ $produ->id }}" role="tabpanel">
+                                <p class="mb-2"><strong>Dimensions:</strong> 25cm x 15cm x 10cm</p>
+                                <p class="mb-2"><strong>Weight:</strong> 1.5 kg</p>
+                                <p class="mb-2"><strong>Material:</strong> Medical-grade stainless steel</p>
+                                <p class="mb-2"><strong>Power:</strong> 110-240V, 50/60Hz</p>
+                                <p class="mb-0"><strong>Includes:</strong> User manual, warranty card, accessories</p>
+                            </div>
+                            
+                            <!-- Shipping Tab -->
+                            <div class="tab-pane fade" id="shipping{{ $produ->id }}" role="tabpanel">
+                                <p class="mb-2"><i class="fa fa-map-marker text-primary mr-2"></i> <strong>Delivery:</strong> 2-3 business days</p>
+                                <p class="mb-2"><i class="fa fa-shield text-primary mr-2"></i> <strong>Free Shipping:</strong> On orders over TZS 500,000</p>
+                                <p class="mb-2"><i class="fa fa-undo text-primary mr-2"></i> <strong>Returns:</strong> 7-day money-back guarantee</p>
+                                <p class="mb-0"><i class="fa fa-phone text-primary mr-2"></i> <strong>Support:</strong> 24/7 customer service</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Quantity and Action Buttons -->
+                        <!--<div class="row mt-3">
+                            <div class="col-4">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-secondary" type="button" onclick="decrementQty({{ $product->id }})">-</button>
+                                    </div>
+
+                                    <input type="number" id="qty{{ $product->id }}" class="form-control text-center" value="1" min="1" max="99">
+
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" onclick="incrementQty({{ $product->id }})">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="btn-group ">
+                                    <a href="{{ route('add.to.cart', $product->id) }}" class="btn btn-primary">
+                                        <i class="ti-bag mr-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>-->
+                        
+                        <!-- Additional Info -->
+                        <div class="mt-3 small text-muted">
+                            <i class="fa fa-lock mr-1"></i> Secure transaction | 
+                            <i class="fa fa-truck mr-1 ml-2"></i> Fast delivery | 
+                            <i class="fa fa-credit-card mr-1 ml-2"></i> Multiple payment options
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-0 bg-light">
+                <div class="w-100">
+                    <div class="row">
+                        <div class="col-md-4 text-center text-md-left mb-2 mb-md-0">
+                            <small><i class="fa fa-check-circle text-success mr-1"></i> Certified Product</small>
+                        </div>
+                        <div class="col-md-4 text-center mb-2 mb-md-0">
+                            <small><i class="fa fa-shield text-success mr-1"></i> Quality Guaranteed</small>
+                        </div>
+                        <div class="col-md-4 text-center text-md-right">
+                            <small><i class="fa fa-headphones text-success mr-1"></i> 24/7 Support</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+     @endforeach
+
+
+    <!-- for page two -->
 
 
 <!-- Related Products Modal (can be shown after adding to cart) -->
