@@ -579,7 +579,7 @@
                         <div class="row align-items-center">
                             <div class="col-md-6">
                                 <div class="testimonial-img">
-                                    <img class="img-fluid" src="img/team-1.png" alt="Dr. Henry Mwenda">
+                                    <img class="img-fluid" src="img/team-1.jpg" alt="Dr. Henry Mwenda" style="height: 100px; object-fit: cover;">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -611,7 +611,7 @@
                         <div class="row align-items-center">
                             <div class="col-md-6">
                                 <div class="testimonial-img">
-                                    <img class="img-fluid" src="img/team-2.png" alt="Sarah John">
+                                    <img class="img-fluid" src="img/team-1.jpg" alt="Sarah John" style="height: 100px; object-fit: cover;">
                                 </div>
                             </div>
                             <div class="col-md-6">
