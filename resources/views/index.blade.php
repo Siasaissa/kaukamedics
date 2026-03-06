@@ -390,7 +390,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="{{ route('product.details', $product->id) }}" class="btn btn-primary">View Full Details</a>
+                <a href="#" class="btn btn-primary">View Full Details</a>
                 <a href="{{ route('add.to.cart', $product->id) }}" class="btn btn-success">Add to Cart</a>
             </div>
         </div>
