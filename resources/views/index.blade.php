@@ -561,71 +561,7 @@
     <!-- Team Members End -->
 
 
-    <!-- Start related-product Area (Deals of the Week / Latest News) -->
-    <section class="related-product-area section_gap_bottom">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 text-center">
-                    <div class="section-title mt-5">
-                        <h1>Team Member</h1>
-                        <p>Kauka Medics Team</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-9">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/team-1.jpeg" alt="Event" style="height: 90px; object-fit: cover;"></a>
-                                <div class="desc">
-                                    <a href="#" class="title">Medical Expo 2025</a>
-                                    <p>March 10-15, Dar es Salaam</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/team-2.jpeg" alt="News" style="height: 90px; object-fit: cover;"></a>
-                                <div class="desc">
-                                    <a href="#" class="title">New Product Launch</a>
-                                    <p>Advanced patient monitors</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/team-3.jpeg" alt="Training" style="height: 90px; object-fit: cover;"></a>
-                                <div class="desc">
-                                    <a href="#" class="title">Staff Training</a>
-                                    <p>Equipment handling session</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-                            <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/team-3.png" alt="Partnership" style="height: 90px; object-fit: cover;"></a>
-                                <div class="desc">
-                                    <a href="#" class="title">New Partnership</a>
-                                    <p>With leading global supplier</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="ctg-right">
-                        <a href="#" target="_blank">
-                            <img class="img-fluid d-block mx-auto" src="img/logo.png" alt="Advertisement">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End related-product Area -->
-
+    
     <!-- Testimonial Start (from provided content) -->
     <div class="container-fluid py-5">
         <div class="container">
