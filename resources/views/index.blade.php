@@ -543,7 +543,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="card text-center border-0 shadow">
-                        <img class="card-img-top rounded-circle mx-auto mt-4" src="img/team-2.png" alt="Team Member" style="width:150px; height:150px; object-fit:cover; border-radius: 20%;">
+                        <img class="card-img-top rounded-circle mx-auto mt-4" src="img/team-2.png" alt="Team Member" style="width:150px; height:150px; object-fit:cover;">
                         <div class="card-body">
                             <h5 class="card-title">Grace Mwangi</h5>
                             <p class="card-text text-muted">Customer Relations</p>
@@ -579,7 +579,7 @@
                         <div class="row align-items-center">
                             <div class="col-md-6">
                                 <div class="testimonial-img">
-                                    <img class="img-fluid" src="img/team-1.jpg" alt="Dr. Henry Mwenda" style="height: 250px; object-fit: cover; border-radius: 20%;">
+                                    <img class="img-fluid" src="img/team-1.jpg" alt="Dr. Henry Mwenda" style="height: 250px; object-fit: cover;">
                                 </div>
                             </div>
                             <div class="col-md-6">
