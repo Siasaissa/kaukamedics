@@ -17,10 +17,8 @@
     <!-- Site Title -->
     <title>Kauka Company - Medical Supplies</title>
 
-    <!--
-		CSS
-		============================================= -->
-    <!-- Bootstrap & Main Styles -->
+    <!-- CSS
+    ============================================= -->
     <link rel="stylesheet" href="css/linearicons.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/themify-icons.css">
@@ -32,29 +30,18 @@
     <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/main.css">
-    <!-- Additional CSS for medical theme (can be merged into main.css) -->
-    
 </head>
 
 <body>
 
-    <!-- Topbar Start (from includes) -->
-    <!-- Topbar placeholder - replace with actual topbar content -->
-    <div class="topbar-area">
-        <!-- Topbar content here -->
-    </div>
-    <!-- Topbar End -->
-
-    <!-- Navbar Start (integrated with header area) -->
+    <!-- Navbar Start -->
     <header class="header_area sticky-header">
         <div class="main_menu">
-            <nav class="navbar navbar-expand-lg navbar-light main_box" style="padding-top:0 !important; padding-bottom:0 !important;">
+            <nav class="navbar navbar-expand-lg navbar-light main_box">
                 <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="#" style="padding:0 !important; margin:0 !important; line-height:0 !important;">
-                        <img src="img/logo.png" 
-                            alt="Kauka Company Logo" 
-                            style="height:100px !important; padding:0 !important; margin:0 !important; display:block;">
+                    <!-- Brand -->
+                    <a class="navbar-brand logo_h" href="{{ route('index') }}">
+                        <img src="img/logo.png" alt="Kauka Company Logo" style="height:60px; width:auto;">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,24 +49,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
                             <li class="nav-item active"><a class="nav-link" href="{{ route('index') }}">Home</a></li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="{{ route('products') }}" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                 aria-expanded="false">Products</a>
-                            </li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="{{ route('service') }}" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                 aria-expanded="false">Services</a>
-                                
-                            </li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="{{ route('about') }}" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                 aria-expanded="false">About Us</a>
-                                
-                            </li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('products') }}">Products</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('service') }}">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About Us</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
@@ -104,63 +80,63 @@
     </header>
     <!-- Navbar End -->
 
-    <!-- start banner Area (Carousel Start) -->
-    <section class="banner-area" style="margin-top:100px;">
+    <!-- Banner Area Start -->
+    <section class="banner-area" style="margin-top:80px;">
         <div class="container">
             <div class="row fullscreen align-items-center justify-content-start">
                 <div class="col-lg-12">
                     <div class="active-banner-slider owl-carousel">
-                        <!-- single-slide 1 -->
-                        <div class="row single-slide align-items-center d-flex">
+                        <!-- slide 1 -->
+                        <div class="row single-slide align-items-center">
                             <div class="col-lg-5 col-md-6">
                                 <div class="banner-content">
                                     <h1>Reliable Medical <br>Supplies</h1>
                                     <p>We are dedicated to providing high-quality medical equipment and healthcare solutions that empower hospitals, clinics, and professionals to deliver better patient care.</p>
                                     <div class="add-bag d-flex align-items-center">
-                                        <a class="add-btn" href="#"><span class="lnr lnr-cross "></span></a>
+                                        <a class="add-btn" href="{{ route('products') }}"><span class="lnr lnr-cross"></span></a>
                                         <span class="add-text text-uppercase">Explore Products</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-7">
                                 <div class="banner-img">
-                                    <img class="img-fluid" src="img/KAUKA QMPQNI_page-0001.jpg" alt="Medical Equipment">
+                                    <img class="img-fluid" src="img/banner/medical-1.jpg" alt="Medical Equipment">
                                 </div>
                             </div>
                         </div>
-                        <!-- single-slide 2 -->
-                        <div class="row single-slide">
-                            <div class="col-lg-5">
+                        <!-- slide 2 -->
+                        <div class="row single-slide align-items-center">
+                            <div class="col-lg-5 col-md-6">
                                 <div class="banner-content">
                                     <h1>Supplying Care, <br>Saving Lives</h1>
                                     <p>From essential hospital tools to advanced diagnostic devices, we ensure reliable access to quality medical supplies that help healthcare providers perform at their best.</p>
                                     <div class="add-bag d-flex align-items-center">
-                                        <a class="add-btn" href="#"><span class="lnr lnr-cross"></span></a>
+                                        <a class="add-btn" href="{{ route('products') }}"><span class="lnr lnr-cross"></span></a>
                                         <span class="add-text text-uppercase">View Collection</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-7">
                                 <div class="banner-img">
-                                    <img class="img-fluid" src="img/kauka company profile  pdf_page-0002.jpg" alt="Healthcare Supplies">
+                                    <img class="img-fluid" src="img/banner/medical-2.jpg" alt="Healthcare Supplies">
                                 </div>
                             </div>
                         </div>
-                        <!-- single-slide 3 -->
-                        <div class="row single-slide">
-                            <div class="col-lg-5">
+                        <!-- slide 3 -->
+                        <div class="row single-slide align-items-center">
+                            <div class="col-lg-5 col-md-6">
                                 <div class="banner-content">
                                     <h1>Quality You <br>Can Trust</h1>
                                     <p>Our mission is to enhance healthcare delivery by providing innovative, affordable, and reliable medical supplies that meet international quality standards.</p>
                                     <div class="add-bag d-flex align-items-center">
-                                        <a class="add-btn" href="#"><span class="lnr lnr-cross"></span></a>
+                                        <a class="add-btn" href="{{ route('about') }}"><span class="lnr lnr-cross"></span></a>
                                         <span class="add-text text-uppercase">About Us</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-7">
                                 <div class="banner-img">
-                                    <img class="img-fluid" src="img/kauka company profile  pdf_page-0003.jpg" alt="Healthcare Professionals">
+                                    <img class="img-fluid" src="img/banner/medical-3.jpg" alt="Healthcare Professionals">
                                 </div>
                             </div>
                         </div>
@@ -169,47 +145,43 @@
             </div>
         </div>
     </section>
-    <!-- End banner Area -->
+    <!-- Banner Area End -->
 
-    <!-- start features Area (Why Choose Us / Features) -->
+    <!-- Features Area Start -->
     <section class="features-area section_gap">
         <div class="container">
             <div class="row features-inner">
-                <!-- single features -->
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-features">
                         <div class="f-icon">
-                            <img src="img/features/f-icon1.png" alt="">
+                            <img src="img/features/f-icon1.png" alt="Certified">
                         </div>
                         <h6>Certified Products</h6>
                         <p>All products meet international quality standards</p>
                     </div>
                 </div>
-                <!-- single features -->
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-features">
                         <div class="f-icon">
-                            <img src="img/features/f-icon2.png" alt="">
+                            <img src="img/features/f-icon2.png" alt="Logistics">
                         </div>
                         <h6>Reliable Logistics</h6>
                         <p>Efficient distribution network nationwide</p>
                     </div>
                 </div>
-                <!-- single features -->
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-features">
                         <div class="f-icon">
-                            <img src="img/features/f-icon3.png" alt="">
+                            <img src="img/features/f-icon3.png" alt="Support">
                         </div>
                         <h6>24/7 Support</h6>
                         <p>Dedicated customer service team</p>
                     </div>
                 </div>
-                <!-- single features -->
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-features">
                         <div class="f-icon">
-                            <img src="img/features/f-icon4.png" alt="">
+                            <img src="img/features/f-icon4.png" alt="Payment">
                         </div>
                         <h6>Secure Payment</h6>
                         <p>Safe and flexible payment options</p>
@@ -218,189 +190,102 @@
             </div>
         </div>
     </section>
-    <!-- end features Area -->
+    <!-- Features Area End -->
 
-    <!-- Start category Area (What We Offer / Services) -->
-    <!--<section class="category-area">
+    <!-- Product Area Start -->
+    <section class="product-area section_gap">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-12">
-                    <div class="row">
-                        <div class="col-lg-8 col-md-8">
-                            <div class="single-deal">
-                                <div class="overlay"></div>
-                                <img class="img-fluid w-100" src="img/medicalequipment.jpg" alt="Medical Equipment">
-                                <a href="img/medicalequipment.jpg" class="img-pop-up" target="_blank">
-                                    <div class="deal-details">
-                                        <h6 class="deal-title">Medical Equipment</h6>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="single-deal">
-                                <div class="overlay"></div>
-                                <img class="img-fluid w-100" src="img/Hospital_consumable.jpg" alt="Hospital Consumables">
-                                <a href="img/Hospital_consumable.jpg" class="img-pop-up" target="_blank">
-                                    <div class="deal-details">
-                                        <h6 class="deal-title">Hospital Consumables</h6>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="single-deal">
-                                <div class="overlay"></div>
-                                <img class="img-fluid w-100" src="img/patient_care.jpg" alt="Patient Care Products">
-                                <a href="img/patient_care.jpg" class="img-pop-up" target="_blank">
-                                    <div class="deal-details">
-                                        <h6 class="deal-title">Patient Care Products</h6>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-8">
-                            <div class="single-deal">
-                                <div class="overlay"></div>
-                                <img class="img-fluid w-100" src="img/pharmaceutical_supplies.jpg" alt="Pharmaceutical Supplies">
-                                <a href="img/pharmaceutical_supplies.jpg" class="img-pop-up" target="_blank">
-                                    <div class="deal-details">
-                                        <h6 class="deal-title">Pharmaceutical Supplies</h6>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-deal">
-                        <div class="overlay"></div>
-                        <img class="img-fluid w-100" src="img/logo.png" alt="Medical Logistics">
-                        <a href="img/logo.png" class="img-pop-up" target="_blank">
-                            <div class="deal-details">
-                                <h6 class="deal-title">Medical Logistics</h6>
-                            </div>
-                        </a>
+                <div class="col-lg-6 text-center">
+                    <div class="section-title">
+                        <h1>Featured Medical Supplies</h1>
+                        <p>Discover our selection of high-quality medical products trusted by healthcare professionals.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>-->
-    <!-- End category Area -->
-
-    <!-- start product Area (Our Products) -->
-    <section class="owl-carousel active-product-area section_gap">
-        <!-- single product slide - Featured Products -->
-        <div class="single-product-slider">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 text-center">
-                        <div class="section-title">
-                            <h1>Featured Medical Supplies</h1>
-                            <p>Discover our selection of high-quality medical products trusted by healthcare professionals.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- single product -->
-                     @foreach ( $products as $product)
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="{{ $product->image && file_exists(storage_path('app/public/'.$product->image)) 
-                            ? asset('storage/app/public/'.$product->image) 
-                            : asset('img/defaultmedical.jpg') }}" alt="Diagnostic Tool">
-                            <div class="product-details">
-                                <h6>{{ $product->name }}</h6>
-                                <div class="price">
-                                    <h6>{{ number_format($product->price, 2)}}</h6>
-                                    <h6 class="l-through">{{ number_format( $product->price +100, 2)  }}</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="{{ route('add.to.cart', $product->id) }}" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">Inquire</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Save</p>
-                                    </a>
-                                    <a href="#" class="social-info" data-bs-toggle="modal" data-bs-target="#productModal{{ $product->id }}">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">Details</p>
-                                    </a>
-                                </div>
+            <div class="row">
+                @foreach($products as $product)
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-product">
+                        <img class="img-fluid" src="{{ $product->image && file_exists(public_path('storage/'.$product->image)) ? asset('storage/'.$product->image) : asset('img/products/default.jpg') }}" alt="{{ $product->name }}">
+                        <div class="product-details">
+                            <h6>{{ $product->name }}</h6>
+                            <div class="price">
+                                <h6>TZS {{ number_format($product->price, 0) }}</h6>
+                                @if(isset($product->compare_price))
+                                <h6 class="l-through">TZS {{ number_format($product->compare_price, 0) }}</h6>
+                                @endif
+                            </div>
+                            <div class="prd-bottom">
+                                <a href="{{ route('add.to.cart', $product->id) }}" class="social-info">
+                                    <span class="ti-bag"></span>
+                                    <p class="hover-text">Inquire</p>
+                                </a>
+                                <a href="#" class="social-info">
+                                    <span class="lnr lnr-heart"></span>
+                                    <p class="hover-text">Save</p>
+                                </a>
+                                <a href="#" class="social-info" data-toggle="modal" data-target="#productModal{{ $product->id }}">
+                                    <span class="lnr lnr-move"></span>
+                                    <p class="hover-text">Details</p>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    
-                     @endforeach
-                    <!-- single product -->
-                    
+                </div>
+                @endforeach
+            </div>
+            
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-6 text-center">
+                    <div class="section-title">
+                        <h1>Essential Healthcare Items</h1>
+                        <p>Reliable supplies for everyday medical needs, always in stock.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- single product slide - More Products -->
-        <div class="single-product-slider">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 text-center">
-                        <div class="section-title">
-                            <h1>Essential Healthcare Items</h1>
-                            <p>Reliable supplies for everyday medical needs, always in stock.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <!-- single product -->
-                     @foreach ($products1 as $produ)
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-product">
-                            <img class="img-fluid" src="{{ $product->image && file_exists(storage_path('app/public/'.$product->image)) 
-                     ? asset('storage/app/public/'.$product->image) 
-                     : asset('img/defaultmedical.jpg') }}" alt="Protective Mask">
-                            <div class="product-details">
-                                <h6>{{ $produ->name }}</h6>
-                                <div class="price">
-                                    <h6>{{ number_format( $produ->price, 2) }}</h6>
-                                    <h6 class="l-through">{{ number_format( $produ->price +100, 2) }}</h6>
-                                </div>
-                                <div class="prd-bottom">
-                                    <a href="{{ route('add.to.cart', $produ->id) }}" class="social-info">
-                                        <span class="ti-bag"></span>
-                                        <p class="hover-text">Inquire</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-heart"></span>
-                                        <p class="hover-text">Save</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-sync"></span>
-                                        <p class="hover-text">Compare</p>
-                                    </a>
-                                    <a href="#" class="social-info">
-                                        <span class="lnr lnr-move"></span>
-                                        <p class="hover-text">Details</p>
-                                    </a>
-                                </div>
+            <div class="row">
+                @foreach($products1 as $product)
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-product">
+                        <img class="img-fluid" src="{{ $product->image && file_exists(public_path('storage/'.$product->image)) ? asset('storage/'.$product->image) : asset('img/products/default.jpg') }}" alt="{{ $product->name }}">
+                        <div class="product-details">
+                            <h6>{{ $product->name }}</h6>
+                            <div class="price">
+                                <h6>TZS {{ number_format($product->price, 0) }}</h6>
+                                @if(isset($product->compare_price))
+                                <h6 class="l-through">TZS {{ number_format($product->compare_price, 0) }}</h6>
+                                @endif
+                            </div>
+                            <div class="prd-bottom">
+                                <a href="{{ route('add.to.cart', $product->id) }}" class="social-info">
+                                    <span class="ti-bag"></span>
+                                    <p class="hover-text">Inquire</p>
+                                </a>
+                                <a href="#" class="social-info">
+                                    <span class="lnr lnr-heart"></span>
+                                    <p class="hover-text">Save</p>
+                                </a>
+                                <a href="#" class="social-info">
+                                    <span class="lnr lnr-move"></span>
+                                    <p class="hover-text">Details</p>
+                                </a>
                             </div>
                         </div>
                     </div>
-                     @endforeach
-                    <!-- single product -->
-                    
                 </div>
+                @endforeach
             </div>
         </div>
     </section>
-    <!-- end product Area -->
+    <!-- Product Area End -->
 
-    <!-- Start exclusive deal Area (About / Mission) -->
+    <!-- Mission/Stats Area Start -->
     <section class="exclusive-deal-area">
         <div class="container-fluid">
             <div class="row justify-content-center align-items-center">
                 <div class="col-lg-6 no-padding exclusive-left">
-                    <div class="row clock_sec clockdiv" id="clockdiv">
+                    <div class="row clock_sec">
                         <div class="col-lg-12">
                             <h1>Our Mission: Quality Healthcare for All</h1>
                             <p>Partner with us to access reliable medical solutions that keep your healthcare facility equipped and efficient.</p>
@@ -416,44 +301,38 @@
                                     <span class="smalltext">Years</span>
                                 </div>
                                 <div class="col clockinner clockinner1">
-                                    <h1>{{count( $produc )}}</h1>
+                                    <h1>{{ $productCount ?? '150+' }}</h1>
                                     <span class="smalltext">Products</span>
                                 </div>
                                 <div class="col clockinner clockinner1">
-                                    <h1 >1500</h1>
+                                    <h1>1500</h1>
                                     <span class="smalltext">Clients</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="primary-btn">Learn More About Us</a>
+                    <a href="{{ route('about') }}" class="primary-btn">Learn More About Us</a>
                 </div>
                 <div class="col-lg-6 no-padding exclusive-right">
-                    <div class="active-exclusive-product-slider">
-                        <!-- single exclusive carousel -->
+                    <div class="active-exclusive-product-slider owl-carousel">
                         <div class="single-exclusive-slider">
-                            <img class="img-fluid" src="img/team-3.png" alt="Team">
+                            <img class="img-fluid" src="img/team/team-1.jpg" alt="Our Team">
                             <div class="product-details">
-                                <div class="price">
-                                    <h6>Professional Team</h6>
-                                </div>
-                                <h4>Dedicated experts committed to serving your medical supply needs.</h4>
+                                <h4>Professional Team</h4>
+                                <p>Dedicated experts committed to serving your medical supply needs.</p>
                                 <div class="add-bag d-flex align-items-center justify-content-center">
-                                    <a class="add-btn" href="#"><span class="ti-user"></span></a>
+                                    <a class="add-btn" href="{{ route('about') }}"><span class="ti-user"></span></a>
                                     <span class="add-text text-uppercase">Meet the Team</span>
                                 </div>
                             </div>
                         </div>
-                        <!-- single exclusive carousel -->
                         <div class="single-exclusive-slider">
-                            <img class="img-fluid" src="img/distribution.jpg" alt="Logistics">
+                            <img class="img-fluid" src="img/logistics.jpg" alt="Our Logistics">
                             <div class="product-details">
-                                <div class="price">
-                                    <h6>Reliable Logistics</h6>
-                                </div>
-                                <h4>Efficient distribution network ensuring timely delivery.</h4>
+                                <h4>Reliable Logistics</h4>
+                                <p>Efficient distribution network ensuring timely delivery.</p>
                                 <div class="add-bag d-flex align-items-center justify-content-center">
-                                    <a class="add-btn" href="#"><span class="ti-truck"></span></a>
+                                    <a class="add-btn" href="{{ route('service') }}"><span class="ti-truck"></span></a>
                                     <span class="add-text text-uppercase">Our Services</span>
                                 </div>
                             </div>
@@ -463,40 +342,16 @@
             </div>
         </div>
     </section>
-    <!-- End exclusive deal Area -->
+    <!-- Mission/Stats Area End -->
 
-    <!-- Start brand Area (Partner Brands) 
-    <section class="brand-area section_gap">
-        <div class="container">
-            <div class="row">
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="img/brand/1.png" alt="Partner">
-                </a>
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="img/brand/2.png" alt="Partner">
-                </a>
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="img/brand/3.png" alt="Partner">
-                </a>
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="img/brand/4.png" alt="Partner">
-                </a>
-                <a class="col single-img" href="#">
-                    <img class="img-fluid d-block mx-auto" src="img/brand/5.png" alt="Partner">
-                </a>
-            </div>
-        </div>
-    </section>-->
-    <!-- End brand Area -->
-
-    <!-- Start related-product Area (Deals of the Week / Latest News) -->
+    <!-- Team/News Area Start -->
     <section class="related-product-area section_gap_bottom">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center">
                     <div class="section-title mt-5">
-                        <h1>Team Member</h1>
-                        <p>Kauka Medics Team</p>
+                        <h1>Latest Updates</h1>
+                        <p>News and events from Kauka Medics</p>
                     </div>
                 </div>
             </div>
@@ -505,7 +360,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                             <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/team-1.jpeg" alt="Event" style="height: 90px; object-fit: cover;"></a>
+                                <a href="#"><img src="img/news/event-1.jpg" alt="Medical Expo" style="width:80px; height:80px; object-fit:cover;"></a>
                                 <div class="desc">
                                     <a href="#" class="title">Medical Expo 2025</a>
                                     <p>March 10-15, Dar es Salaam</p>
@@ -514,7 +369,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                             <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/team-2.jpeg" alt="News" style="height: 90px; object-fit: cover;"></a>
+                                <a href="#"><img src="img/news/product-launch.jpg" alt="New Product" style="width:80px; height:80px; object-fit:cover;"></a>
                                 <div class="desc">
                                     <a href="#" class="title">New Product Launch</a>
                                     <p>Advanced patient monitors</p>
@@ -523,7 +378,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                             <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/team-3.jpeg" alt="Training" style="height: 90px; object-fit: cover;"></a>
+                                <a href="#"><img src="img/news/training.jpg" alt="Training" style="width:80px; height:80px; object-fit:cover;"></a>
                                 <div class="desc">
                                     <a href="#" class="title">Staff Training</a>
                                     <p>Equipment handling session</p>
@@ -532,66 +387,58 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 mb-20">
                             <div class="single-related-product d-flex">
-                                <a href="#"><img src="img/team-3.png" alt="Partnership" style="height: 90px; object-fit: cover;"></a>
+                                <a href="#"><img src="img/news/partnership.jpg" alt="Partnership" style="width:80px; height:80px; object-fit:cover;"></a>
                                 <div class="desc">
                                     <a href="#" class="title">New Partnership</a>
                                     <p>With leading global supplier</p>
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="ctg-right">
                         <a href="#" target="_blank">
-                            <img class="img-fluid d-block mx-auto" src="img/logo.png" alt="Advertisement">
+                            <img class="img-fluid" src="img/logo.png" alt="Kauka Company">
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End related-product Area -->
+    <!-- Team/News Area End -->
 
-    <!-- Testimonial Start (from provided content) -->
+    <!-- Testimonial Start -->
     <div class="container-fluid py-5">
         <div class="container">
             <div class="row g-5">
-                <div class="col-md-12 col-lg-4 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
+                <div class="col-md-12 col-lg-4 col-xl-3">
                     <div class="testimonial-title">
                         <h1 class="display-6 mb-4">What Our Clients Say</h1>
-                        <p class="fs-5 mb-0">We’re proud to be a trusted partner in delivering reliable medical equipment and healthcare solutions nationwide.</p>
+                        <p class="fs-5 mb-0">We're proud to be a trusted partner in delivering reliable medical equipment and healthcare solutions nationwide.</p>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-8 col-xl-9">
-                    <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay="0.3s">
+                    <div class="owl-carousel testimonial-carousel">
                         <div class="testimonial-item">
                             <div class="row g-5 align-items-center">
                                 <div class="col-md-6">
                                     <div class="testimonial-img">
-                                        <img class="img-fluid" src="img/team-1.png" alt="Client">
+                                        <img class="img-fluid rounded-circle" src="img/testimonials/client-1.jpg" alt="Dr. Henry Mwenda">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="testimonial-text pb-5 pb-md-0">
+                                    <div class="testimonial-text">
                                         <div class="mb-2">
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
                                         </div>
-                                        <p class="fs-5">Their medical supplies are of exceptional quality. Our hospital has greatly benefited from their quick service and dependable products.</p>
-                                        <div class="d-flex align-items-center">
-                                            <div class="btn-lg-square bg-light text-secondary flex-shrink-0">
-                                                <i class="fa fa-quote-right fa-2x"></i>
-                                            </div>
-                                            <div class="ps-3">
-                                                <h5 class="mb-0">Dr. Henry Mwenda</h5>
-                                                <span>Medical Director, CityCare Hospital</span>
-                                            </div>
-                                        </div>
+                                        <p class="fs-5">"Their medical supplies are of exceptional quality. Our hospital has greatly benefited from their quick service and dependable products."</p>
+                                        <h5 class="mb-0">Dr. Henry Mwenda</h5>
+                                        <span>Medical Director, CityCare Hospital</span>
                                     </div>
                                 </div>
                             </div>
@@ -600,28 +447,21 @@
                             <div class="row g-5 align-items-center">
                                 <div class="col-md-6">
                                     <div class="testimonial-img">
-                                        <img class="img-fluid" src="img/team-2.png" alt="Client">
+                                        <img class="img-fluid rounded-circle" src="img/testimonials/client-2.jpg" alt="Sarah John">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="testimonial-text pb-5 pb-md-0">
+                                    <div class="testimonial-text">
                                         <div class="mb-2">
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
                                         </div>
-                                        <p class="fs-5">We’ve partnered with them for over three years. Their professionalism and commitment to healthcare delivery are unmatched.</p>
-                                        <div class="d-flex align-items-center">
-                                            <div class="btn-lg-square bg-light text-secondary flex-shrink-0">
-                                                <i class="fa fa-quote-right fa-2x"></i>
-                                            </div>
-                                            <div class="ps-3">
-                                                <h5 class="mb-0">Sarah John</h5>
-                                                <span>Procurement Officer, Meditech Labs</span>
-                                            </div>
-                                        </div>
+                                        <p class="fs-5">"We've partnered with them for over three years. Their professionalism and commitment to healthcare delivery are unmatched."</p>
+                                        <h5 class="mb-0">Sarah John</h5>
+                                        <span>Procurement Officer, Meditech Labs</span>
                                     </div>
                                 </div>
                             </div>
@@ -633,55 +473,34 @@
     </div>
     <!-- Testimonial End -->
 
-    <!-- Footer Start (from includes) -->
+    <!-- Footer Start -->
     <footer class="footer-area section_gap">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3  col-md-6 col-sm-6">
+                <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-footer-widget">
                         <h6>About Us</h6>
-                        <p>
-                            We are dedicated to providing high-quality medical equipment and healthcare solutions that empower hospitals, clinics, and professionals.
-                        </p>
+                        <p>We are dedicated to providing high-quality medical equipment and healthcare solutions that empower hospitals, clinics, and professionals.</p>
                     </div>
                 </div>
-                <div class="col-lg-4  col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-footer-widget">
                         <h6>Newsletter</h6>
-                        <p>Stay update with our latest</p>
-                        <div class="" id="mc_embed_signup">
-
-                            <form target="_blank" novalidate="true" action="#" method="get" class="form-inline">
-
-                                <div class="d-flex flex-row">
-
-                                    <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
-                                        required="" type="email">
-
-
-                                    <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-                                    <div style="position: absolute; left: -5000px;">
-                                        <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-                                    </div>
-                                </div>
-                                <div class="info"></div>
-                            </form>
-                        </div>
+                        <p>Stay updated with our latest</p>
+                        <form action="#" method="post" class="form-inline">
+                            <div class="d-flex flex-row">
+                                <input class="form-control" name="EMAIL" placeholder="Enter Email" type="email">
+                                <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <div class="col-lg-3  col-md-6 col-sm-6">
-                    <div class="single-footer-widget mail-chimp">
-                        <h6 class="mb-20">Instragram Feed</h6>
-                        <ul class="instafeed d-flex flex-wrap">
-                            <li><img src="img/i1.jpg" alt=""></li>
-                            <li><img src="img/i2.jpg" alt=""></li>
-                            <li><img src="img/i3.jpg" alt=""></li>
-                            <li><img src="img/i4.jpg" alt=""></li>
-                            <li><img src="img/i5.jpg" alt=""></li>
-                            <li><img src="img/i6.jpg" alt=""></li>
-                            <li><img src="img/i7.jpg" alt=""></li>
-                            <li><img src="img/i8.jpg" alt=""></li>
-                        </ul>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h6>Contact Info</h6>
+                        <p><i class="fa fa-map-marker"></i> Dar es Salaam, Tanzania</p>
+                        <p><i class="fa fa-phone"></i> +255 123 456 789</p>
+                        <p><i class="fa fa-envelope"></i> info@kaukacompany.com</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-6">
@@ -691,57 +510,69 @@
                         <div class="footer-social d-flex align-items-center">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-behance"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
                 <p class="footer-text m-0">
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Kauka Company
+                    Copyright &copy; {{ date('Y') }} All rights reserved | Kauka Company
                 </p>
             </div>
         </div>
     </footer>
+    <!-- Footer End -->
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-arrow-up"></i></a>
 
     <!-- Scripts -->
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/jquery.ajaxchimp.min.js"></script>
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
     <script src="js/nouislider.min.js"></script>
-    <script src="js/countdown.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <!-- Google Maps (optional) -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-    <script src="js/gmaps.min.js"></script>
     <script src="js/main.js"></script>
 
-    <!-- Video modal script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const video = document.getElementById('video');
-            const modal = document.getElementById('videoModal');
-            if (modal) {
-                modal.addEventListener('hidden.bs.modal', function () {
-                    if (video) {
-                        video.pause();
-                        video.currentTime = 0;
-                    }
-                });
-            }
+        $(document).ready(function() {
+            // Initialize carousels
+            $('.active-banner-slider').owlCarousel({
+                items: 1,
+                loop: true,
+                dots: true,
+                nav: false
+            });
+            
+            $('.testimonial-carousel').owlCarousel({
+                items: 1,
+                loop: true,
+                dots: true,
+                nav: false
+            });
+            
+            $('.active-exclusive-product-slider').owlCarousel({
+                items: 1,
+                loop: true,
+                dots: true,
+                nav: false
+            });
+            
+            // Search functionality
+            $('#search').click(function() {
+                $('#search_input_box').toggle();
+            });
+            
+            $('#close_search').click(function() {
+                $('#search_input_box').hide();
+            });
         });
     </script>
-
-<link rel="stylesheet" href="css/owl.carousel.css">
-<script src="js/owl.carousel.min.js"></script>
 </body>
-
 </html>
