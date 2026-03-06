@@ -320,7 +320,7 @@
                                         <span class="ti-bag"></span>
                                         <p class="hover-text">Inquire</p>
                                     </a>
-                                    <a href="#" class="social-info">
+                                    <a href="#" class="social-info" onclick="addToWishlist({{ $product->id }})">
                                         <span class="lnr lnr-heart"></span>
                                         <p class="hover-text">Save</p>
                                     </a>
