@@ -28,13 +28,13 @@
                         @endphp
                         <tr>
                             <td>
-    <img src="{{ !empty($item['image']) && file_exists(public_path('storage/app/public/'.$item['image']))
-                 ? asset('storage/app/public/'.$item['image'])
-                 : asset('img/defaultmedical.jpg') }}"
-         width="60"
-         class="img-fluid rounded"
-         alt="{{ $item['name'] }}">
-</td>
+                                <img src="{{ !empty($item['image']) && file_exists(public_path('storage/app/public/'.$item['image']))
+                                            ? asset('storage/app/public/'.$item['image'])
+                                            : asset('img/defaultmedical.jpg') }}"
+                                    width="60"
+                                    class="img-fluid rounded"
+                                    alt="{{ $item['name'] }}">
+                            </td>
 
                             <td class="fw-semibold">{{ $item['name'] }}</td>
                             <td>Tsh {{ number_format($item['price'],2) }}</td>

@@ -823,10 +823,12 @@
                                     <div class="input-group-prepend">
                                         <button class="btn btn-outline-secondary" type="button" onclick="decrementQty({{ $product->id }})">-</button>
                                     </div>
-                                    <input type="number" id="qty{{ $product->id }}" class="form-control text-center" value="1" min="1" max="99">
+
+                                    <!--<input type="number" id="qty{{ $product->id }}" class="form-control text-center" value="1" min="1" max="99">
+
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-secondary" type="button" onclick="incrementQty({{ $product->id }})">+</button>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                             <div class="col-8">
