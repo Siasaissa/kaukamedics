@@ -71,16 +71,16 @@
                                 <a href="{{ route('products') }}" class="nav-link dropdown-toggle" >Products</a>
                             </li>
                             <li class="nav-item submenu dropdown">
-                                <a href="{{ route('service') }}" >Services</a>
+                                <a href="{{ route('service') }}" class="nav-link dropdown-toggle" >Services</a>
                                 
                             </li>
 
                             <li class="nav-item">
-                                <a href="{{ route('about') }}" >About Us</a>
+                                <a href="{{ route('about') }}" class="nav-link dropdown-toggle" >About Us</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+                                <a class="nav-link" href="{{ route('contact') }}" class="nav-link dropdown-toggle" >Contact</a>
                             </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
