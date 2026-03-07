@@ -52,18 +52,15 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
-
                             <li class="nav-item "><a class="nav-link" href="{{ route('index') }}">Home</a></li>
-
                             <li class="nav-item ">
                                 <a href="{{ route('products') }}">Products</a>
                             </li>
-                            
-                            <li class="nav-item ">
+                            <li class="nav-item submenu dropdown">
                                 <a href="{{ route('service') }}">Services</a>
                                 
                             </li>
-                            <li class="nav-item ">
+                            <li class="nav-item submenu dropdown">
                                 <a href="{{ route('about') }}" >About Us</a>
                                 
                             </li>
