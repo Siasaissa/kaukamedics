@@ -52,22 +52,22 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
+
                             <li class="nav-item "><a class="nav-link" href="{{ route('index') }}">Home</a></li>
-                            <li class="nav-item active">
-                                <a href="{{ route('products') }}" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                 aria-expanded="false">Products</a>
+
+                            <li class="nav-item ">
+                                <a href="{{ route('products') }}">Products</a>
                             </li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="{{ route('service') }}" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                 aria-expanded="false">Services</a>
+                            
+                            <li class="nav-item ">
+                                <a href="{{ route('service') }}">Services</a>
                                 
                             </li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="{{ route('about') }}" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                 aria-expanded="false">About Us</a>
+                            <li class="nav-item ">
+                                <a href="{{ route('about') }}" >About Us</a>
                                 
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="nav-item"><a href="{{ route('cart') }}" class="cart"><span class="ti-bag text-primary">{{ session('cart') ? count(session('cart')) : 0 }}</span></a></li>

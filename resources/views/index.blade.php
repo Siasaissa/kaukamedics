@@ -66,19 +66,17 @@
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
                             <li class="nav-item active"><a class="nav-link" href="{{ route('index') }}">Home</a></li>
+                            
                             <li class="nav-item submenu dropdown">
-                                <a href="{{ route('products') }}" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                 aria-expanded="false">Products</a>
+                                <a href="{{ route('products') }}" class="nav-link dropdown-toggle" >Products</a>
                             </li>
                             <li class="nav-item submenu dropdown">
-                                <a href="{{ route('service') }}" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                 aria-expanded="false">Services</a>
+                                <a href="{{ route('service') }}" >Services</a>
                                 
                             </li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="{{ route('about') }}" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                 aria-expanded="false">About Us</a>
-                                
+
+                            <li class="nav-item submenu dropdown"><a href="{{ route('about') }}" >About Us</a>
+    
                             </li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
                         </ul>
