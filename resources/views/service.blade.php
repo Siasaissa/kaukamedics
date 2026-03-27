@@ -95,11 +95,19 @@
     </section>
     <!-- End Banner Area -->
 
-    <!-- Service Categories Area -->
+    <!-- Services Section - Horizontal Layout -->
     <section class="blog_categorie_area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-12 text-center">
+                    <div class="section-top-border">
+                        <h3 class="mb-30">Delivering Trusted Medical Solutions</h3>
+                        <p class="mb-30">We supply a wide range of medical products and equipment designed to meet the needs of healthcare professionals and institutions nationwide. Our commitment to quality ensures that every healthcare facility receives reliable supplies that empower them to save lives every day.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
                     <div class="categories_post">
                         <img src="img/blog/cat-post/cat-post-3.jpg" alt="Medical Equipment">
                         <div class="categories_details">
@@ -108,12 +116,12 @@
                                     <h5>Medical Equipment</h5>
                                 </a>
                                 <div class="border_line"></div>
-                                <p>High-quality diagnostic and treatment equipment for hospitals and clinics</p>
+                                <p>High-quality diagnostic and treatment equipment for hospitals and clinics nationwide. From imaging systems to surgical instruments.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="categories_post">
                         <img src="img/blog/cat-post/cat-post-2.jpg" alt="Hospital Consumables">
                         <div class="categories_details">
@@ -122,21 +130,65 @@
                                     <h5>Hospital Consumables</h5>
                                 </a>
                                 <div class="border_line"></div>
-                                <p>Essential medical supplies including gloves, syringes, bandages and masks</p>
+                                <p>Essential medical supplies including gloves, syringes, bandages, masks and daily consumables for healthcare facilities.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="categories_post">
-                        <img src="img/blog/cat-post/cat-post-1.jpg" alt="Patient Care">
+                        <img src="img/blog/cat-post/cat-post-1.jpg" alt="Patient Care Products">
                         <div class="categories_details">
                             <div class="categories_text">
                                 <a href="#">
                                     <h5>Patient Care Products</h5>
                                 </a>
                                 <div class="border_line"></div>
-                                <p>Comfort, safety and monitoring solutions for enhanced patient outcomes</p>
+                                <p>Comfort, safety and monitoring solutions including mobility aids, pressure care products and monitoring devices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="categories_post">
+                        <img src="img/blog/cat-post/cat-post-3.jpg" alt="Pharmaceutical Supplies">
+                        <div class="categories_details">
+                            <div class="categories_text">
+                                <a href="#">
+                                    <h5>Pharmaceutical Supplies</h5>
+                                </a>
+                                <div class="border_line"></div>
+                                <p>Trusted pharmaceutical products meeting global safety and efficacy standards with cold chain logistics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="categories_post">
+                        <img src="img/blog/cat-post/cat-post-2.jpg" alt="Medical Logistics">
+                        <div class="categories_details">
+                            <div class="categories_text">
+                                <a href="#">
+                                    <h5>Medical Logistics</h5>
+                                </a>
+                                <div class="border_line"></div>
+                                <p>Efficient distribution network ensuring timely delivery of critical medical supplies across all regions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="categories_post">
+                        <img src="img/blog/cat-post/cat-post-1.jpg" alt="Hospital Setup">
+                        <div class="categories_details">
+                            <div class="categories_text">
+                                <a href="#">
+                                    <h5>Hospital Setup Solutions</h5>
+                                </a>
+                                <div class="border_line"></div>
+                                <p>Complete support for new and existing healthcare facilities from planning to full equipment installation.</p>
                             </div>
                         </div>
                     </div>
@@ -144,15 +196,15 @@
             </div>
         </div>
     </section>
-    <!-- End Service Categories Area -->
+    <!-- End Services Section -->
 
-    <!-- Main Services Area -->
+    <!-- Main Services Area with Detailed Content -->
     <section class="blog_area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="blog_left_sidebar">
-                        <!-- Service 1 -->
+                        <!-- Medical Equipment -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -163,8 +215,8 @@
                                     </div>
                                     <ul class="blog_meta list">
                                         <li><a href="#">Premium Quality<i class="lnr lnr-star"></i></a></li>
-                                        <li><a href="#">CE & FDA<i class="lnr lnr-checkmark-circle"></i></a></li>
-                                        <li><a href="#">Warranty<i class="lnr lnr-shield"></i></a></li>
+                                        <li><a href="#">CE & FDA Approved<i class="lnr lnr-checkmark-circle"></i></a></li>
+                                        <li><a href="#">Warranty Included<i class="lnr lnr-shield"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -175,14 +227,14 @@
                                         <a href="#">
                                             <h2>State-of-the-Art Medical Equipment</h2>
                                         </a>
-                                        <p>We supply high-quality diagnostic and treatment equipment to hospitals and clinics nationwide. From imaging systems to surgical instruments, our products meet global safety standards and deliver reliable performance for healthcare professionals.</p>
-                                        <a href="#" class="white_bg_btn">Learn More</a>
+                                        <p>We supply high-quality diagnostic and treatment equipment to hospitals and clinics nationwide. From imaging systems to surgical instruments, our products meet global safety standards and deliver reliable performance for healthcare professionals. Our range includes MRI machines, ultrasound systems, surgical tables, and advanced monitoring devices with complete warranty and maintenance support.</p>
+                                        <a href="#" class="white_bg_btn">Request Quote</a>
                                     </div>
                                 </div>
                             </div>
                         </article>
                         
-                        <!-- Service 2 -->
+                        <!-- Hospital Consumables -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -194,7 +246,7 @@
                                     <ul class="blog_meta list">
                                         <li><a href="#">Daily Supply<i class="lnr lnr-calendar-full"></i></a></li>
                                         <li><a href="#">Bulk Orders<i class="lnr lnr-cart"></i></a></li>
-                                        <li><a href="#">In Stock<i class="lnr lnr-database"></i></a></li>
+                                        <li><a href="#">Always In Stock<i class="lnr lnr-database"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -205,14 +257,14 @@
                                         <a href="#">
                                             <h2>Comprehensive Hospital Consumables</h2>
                                         </a>
-                                        <p>From gloves and syringes to bandages and masks — we ensure consistent supply of essential medical items. Our inventory management guarantees that healthcare facilities never face shortages of critical consumables.</p>
-                                        <a href="#" class="white_bg_btn">Learn More</a>
+                                        <p>From gloves and syringes to bandages and masks — we ensure consistent supply of essential medical items. Our inventory management guarantees that healthcare facilities never face shortages of critical consumables. We serve hospitals, clinics, and medical centers with reliable daily deliveries of all essential medical supplies.</p>
+                                        <a href="#" class="white_bg_btn">Order Supplies</a>
                                     </div>
                                 </div>
                             </div>
                         </article>
                         
-                        <!-- Service 3 -->
+                        <!-- Patient Care Products -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -223,26 +275,26 @@
                                     </div>
                                     <ul class="blog_meta list">
                                         <li><a href="#">Mobility Aids<i class="lnr lnr-wheelchair"></i></a></li>
-                                        <li><a href="#">Monitoring<i class="lnr lnr-chart-bars"></i></a></li>
-                                        <li><a href="#">Comfort<i class="lnr lnr-heart"></i></a></li>
+                                        <li><a href="#">Monitoring Devices<i class="lnr lnr-chart-bars"></i></a></li>
+                                        <li><a href="#">Comfort Solutions<i class="lnr lnr-heart"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-3.jpg" alt="Patient Care">
+                                    <img src="img/blog/main-blog/m-blog-3.jpg" alt="Patient Care Products">
                                     <div class="blog_details">
                                         <a href="#">
                                             <h2>Advanced Patient Care Products</h2>
                                         </a>
-                                        <p>Providing comfort and safety with reliable patient care and monitoring solutions. Our range includes mobility aids, pressure care products, and monitoring devices designed to enhance patient outcomes.</p>
-                                        <a href="#" class="white_bg_btn">Learn More</a>
+                                        <p>Providing comfort and safety with reliable patient care and monitoring solutions. Our range includes mobility aids, pressure care mattresses, patient lifts, bedside monitors, and fall prevention equipment designed to enhance patient outcomes and support healthcare staff in delivering quality care.</p>
+                                        <a href="#" class="white_bg_btn">View Products</a>
                                     </div>
                                 </div>
                             </div>
                         </article>
                         
-                        <!-- Service 4 -->
+                        <!-- Pharmaceutical Supplies -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -253,26 +305,26 @@
                                     </div>
                                     <ul class="blog_meta list">
                                         <li><a href="#">WHO Certified<i class="lnr lnr-certificate"></i></a></li>
-                                        <li><a href="#">Authentic<i class="lnr lnr-checkmark-circle"></i></a></li>
+                                        <li><a href="#">Authentic Products<i class="lnr lnr-checkmark-circle"></i></a></li>
                                         <li><a href="#">Cold Chain<i class="lnr lnr-snowflake"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-4.jpg" alt="Pharmaceutical">
+                                    <img src="img/blog/main-blog/m-blog-4.jpg" alt="Pharmaceutical Supplies">
                                     <div class="blog_details">
                                         <a href="#">
                                             <h2>Trusted Pharmaceutical Supplies</h2>
                                         </a>
-                                        <p>Delivering trusted pharmaceutical products that meet global safety and efficacy standards. We partner with reputable manufacturers to ensure every medication we supply is authentic and effective.</p>
+                                        <p>Delivering trusted pharmaceutical products that meet global safety and efficacy standards. We partner with reputable manufacturers to ensure every medication we supply is authentic, properly stored, and effective. Our cold chain logistics ensure temperature-sensitive products maintain their integrity throughout delivery.</p>
                                         <a href="#" class="white_bg_btn">Learn More</a>
                                     </div>
                                 </div>
                             </div>
                         </article>
                         
-                        <!-- Service 5 -->
+                        <!-- Medical Logistics -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -284,25 +336,25 @@
                                     <ul class="blog_meta list">
                                         <li><a href="#">Fast Delivery<i class="lnr lnr-rocket"></i></a></li>
                                         <li><a href="#">Nationwide<i class="lnr lnr-map"></i></a></li>
-                                        <li><a href="#">Tracking<i class="lnr lnr-location"></i></a></li>
+                                        <li><a href="#">Real-time Tracking<i class="lnr lnr-location"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-5.jpg" alt="Logistics">
+                                    <img src="img/blog/main-blog/m-blog-5.jpg" alt="Medical Logistics">
                                     <div class="blog_details">
                                         <a href="#">
                                             <h2>Efficient Medical Logistics Network</h2>
                                         </a>
-                                        <p>Efficient distribution network ensuring timely delivery of critical medical supplies across regions. Our logistics team works around the clock to ensure healthcare facilities receive what they need, when they need it.</p>
-                                        <a href="#" class="white_bg_btn">Learn More</a>
+                                        <p>Efficient distribution network ensuring timely delivery of critical medical supplies across regions. Our logistics team works around the clock to ensure healthcare facilities receive what they need, when they need it. We offer scheduled deliveries, emergency dispatch, and real-time shipment tracking for complete peace of mind.</p>
+                                        <a href="#" class="white_bg_btn">Track Delivery</a>
                                     </div>
                                 </div>
                             </div>
                         </article>
                         
-                        <!-- Service 6 -->
+                        <!-- Hospital Setup Solutions -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -314,7 +366,7 @@
                                     <ul class="blog_meta list">
                                         <li><a href="#">Consultation<i class="lnr lnr-bubble"></i></a></li>
                                         <li><a href="#">Installation<i class="lnr lnr-wrench"></i></a></li>
-                                        <li><a href="#">Training<i class="lnr lnr-graduation-hat"></i></a></li>
+                                        <li><a href="#">Staff Training<i class="lnr lnr-graduation-hat"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -325,8 +377,8 @@
                                         <a href="#">
                                             <h2>Complete Hospital Setup Solutions</h2>
                                         </a>
-                                        <p>Comprehensive support for new and existing healthcare facilities — from planning to full equipment installation. We provide end-to-end services including facility assessment, equipment selection, procurement, installation, and staff training.</p>
-                                        <a href="#" class="white_bg_btn">Learn More</a>
+                                        <p>Comprehensive support for new and existing healthcare facilities — from planning to full equipment installation. We provide end-to-end services including facility assessment, equipment selection, procurement, installation, and staff training. Whether you're opening a new clinic or upgrading an existing hospital, we ensure a smooth transition.</p>
+                                        <a href="#" class="white_bg_btn">Request Consultation</a>
                                     </div>
                                 </div>
                             </div>
@@ -347,7 +399,7 @@
                     <div class="blog_right_sidebar">
                         <aside class="single_sidebar_widget search_widget">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search Services" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Services'">
+                                <input type="text" class="form-control" placeholder="Search Services">
                                 <span class="input-group-btn">
                                     <button class="btn btn-default" type="button"><i class="lnr lnr-magnifier"></i></button>
                                 </span>
@@ -384,17 +436,17 @@
                                 </div>
                             </div>
                             <div class="media post_item">
-                                <img src="img/blog/popular-post/post3.jpg" alt="Pharmaceutical">
+                                <img src="img/blog/popular-post/post3.jpg" alt="Patient Care">
                                 <div class="media-body">
-                                    <a href="#"><h3>Pharmaceutical Supplies</h3></a>
-                                    <p>Trusted Medicines</p>
+                                    <a href="#"><h3>Patient Care Products</h3></a>
+                                    <p>Safety & Monitoring</p>
                                 </div>
                             </div>
                             <div class="media post_item">
-                                <img src="img/blog/popular-post/post4.jpg" alt="Logistics">
+                                <img src="img/blog/popular-post/post4.jpg" alt="Pharmaceutical">
                                 <div class="media-body">
-                                    <a href="#"><h3>Medical Logistics</h3></a>
-                                    <p>Nationwide Delivery</p>
+                                    <a href="#"><h3>Pharmaceutical Supplies</h3></a>
+                                    <p>Trusted Medicines</p>
                                 </div>
                             </div>
                             <div class="br"></div>
@@ -420,17 +472,16 @@
                         
                         <aside class="single-sidebar-widget newsletter_widget">
                             <h4 class="widget_title">Newsletter</h4>
-                            <p>Stay updated with our latest medical supplies, equipment arrivals, and healthcare solutions.</p>
+                            <p>Stay updated with our latest medical supplies and healthcare solutions.</p>
                             <div class="form-group d-flex flex-row">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                                        <div class="input-group-text"><i class="fa fa-envelope"></i></div>
                                     </div>
                                     <input type="text" class="form-control" placeholder="Enter email">
                                 </div>
                                 <a href="#" class="bbtns">Subscribe</a>
                             </div>
-                            <p class="text-bottom">Get updates on new products and offers</p>
                             <div class="br"></div>
                         </aside>
                         
@@ -474,7 +525,7 @@
                             <form target="_blank" novalidate action="#" method="get" class="form-inline">
                                 <div class="d-flex flex-row">
                                     <input class="form-control" name="EMAIL" placeholder="Enter Email" required="" type="email">
-                                    <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                                    <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right"></i></button>
                                 </div>
                             </form>
                         </div>
@@ -509,7 +560,7 @@
     <!-- End Footer Area -->
 
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 	<script src="js/vendor/bootstrap.min.js"></script>
 	<script src="js/jquery.ajaxchimp.min.js"></script>
 	<script src="js/jquery.nice-select.min.js"></script>
