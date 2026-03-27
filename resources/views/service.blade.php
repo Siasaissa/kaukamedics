@@ -95,7 +95,7 @@
     </section>
     <!-- End Banner Area -->
 
-    <!-- Services Section - Horizontal Layout -->
+    <!-- Services Grid Section - Professional Horizontal Layout -->
     <section class="blog_categorie_area">
         <div class="container">
             <div class="row">
@@ -116,7 +116,7 @@
                                     <h5>Medical Equipment</h5>
                                 </a>
                                 <div class="border_line"></div>
-                                <p>High-quality diagnostic and treatment equipment for hospitals and clinics nationwide. From imaging systems to surgical instruments.</p>
+                                <p>High-quality diagnostic and treatment equipment for hospitals and clinics nationwide.</p>
                             </div>
                         </div>
                     </div>
@@ -130,7 +130,7 @@
                                     <h5>Hospital Consumables</h5>
                                 </a>
                                 <div class="border_line"></div>
-                                <p>Essential medical supplies including gloves, syringes, bandages, masks and daily consumables for healthcare facilities.</p>
+                                <p>Essential medical supplies including gloves, syringes, bandages, masks and daily consumables.</p>
                             </div>
                         </div>
                     </div>
@@ -144,13 +144,11 @@
                                     <h5>Patient Care Products</h5>
                                 </a>
                                 <div class="border_line"></div>
-                                <p>Comfort, safety and monitoring solutions including mobility aids, pressure care products and monitoring devices.</p>
+                                <p>Comfort, safety and monitoring solutions including mobility aids and monitoring devices.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row mt-4">
                 <div class="col-lg-4 col-md-6">
                     <div class="categories_post">
                         <img src="img/blog/cat-post/cat-post-3.jpg" alt="Pharmaceutical Supplies">
@@ -160,7 +158,7 @@
                                     <h5>Pharmaceutical Supplies</h5>
                                 </a>
                                 <div class="border_line"></div>
-                                <p>Trusted pharmaceutical products meeting global safety and efficacy standards with cold chain logistics.</p>
+                                <p>Trusted pharmaceutical products meeting global safety and efficacy standards.</p>
                             </div>
                         </div>
                     </div>
@@ -174,7 +172,7 @@
                                     <h5>Medical Logistics</h5>
                                 </a>
                                 <div class="border_line"></div>
-                                <p>Efficient distribution network ensuring timely delivery of critical medical supplies across all regions.</p>
+                                <p>Efficient distribution network ensuring timely delivery of critical medical supplies.</p>
                             </div>
                         </div>
                     </div>
@@ -188,7 +186,7 @@
                                     <h5>Hospital Setup Solutions</h5>
                                 </a>
                                 <div class="border_line"></div>
-                                <p>Complete support for new and existing healthcare facilities from planning to full equipment installation.</p>
+                                <p>Complete support for new and existing healthcare facilities from planning to installation.</p>
                             </div>
                         </div>
                     </div>
@@ -196,15 +194,15 @@
             </div>
         </div>
     </section>
-    <!-- End Services Section -->
+    <!-- End Services Grid Section -->
 
-    <!-- Main Services Area with Detailed Content -->
+    <!-- Detailed Services Section -->
     <section class="blog_area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="blog_left_sidebar">
-                        <!-- Medical Equipment -->
+                        <!-- Service 1: Medical Equipment -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -227,14 +225,14 @@
                                         <a href="#">
                                             <h2>State-of-the-Art Medical Equipment</h2>
                                         </a>
-                                        <p>We supply high-quality diagnostic and treatment equipment to hospitals and clinics nationwide. From imaging systems to surgical instruments, our products meet global safety standards and deliver reliable performance for healthcare professionals. Our range includes MRI machines, ultrasound systems, surgical tables, and advanced monitoring devices with complete warranty and maintenance support.</p>
-                                        <a href="#" class="white_bg_btn">Request Quote</a>
+                                        <p>We supply high-quality diagnostic and treatment equipment to hospitals and clinics nationwide. From imaging systems to surgical instruments, our products meet global safety standards and deliver reliable performance for healthcare professionals.</p>
+                                        <a href="#" class="white_bg_btn">Learn More</a>
                                     </div>
                                 </div>
                             </div>
                         </article>
                         
-                        <!-- Hospital Consumables -->
+                        <!-- Service 2: Hospital Consumables -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -257,14 +255,14 @@
                                         <a href="#">
                                             <h2>Comprehensive Hospital Consumables</h2>
                                         </a>
-                                        <p>From gloves and syringes to bandages and masks — we ensure consistent supply of essential medical items. Our inventory management guarantees that healthcare facilities never face shortages of critical consumables. We serve hospitals, clinics, and medical centers with reliable daily deliveries of all essential medical supplies.</p>
-                                        <a href="#" class="white_bg_btn">Order Supplies</a>
+                                        <p>From gloves and syringes to bandages and masks — we ensure consistent supply of essential medical items. Our inventory management guarantees that healthcare facilities never face shortages of critical consumables.</p>
+                                        <a href="#" class="white_bg_btn">Learn More</a>
                                     </div>
                                 </div>
                             </div>
                         </article>
                         
-                        <!-- Patient Care Products -->
+                        <!-- Service 3: Patient Care Products -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -287,14 +285,14 @@
                                         <a href="#">
                                             <h2>Advanced Patient Care Products</h2>
                                         </a>
-                                        <p>Providing comfort and safety with reliable patient care and monitoring solutions. Our range includes mobility aids, pressure care mattresses, patient lifts, bedside monitors, and fall prevention equipment designed to enhance patient outcomes and support healthcare staff in delivering quality care.</p>
-                                        <a href="#" class="white_bg_btn">View Products</a>
+                                        <p>Providing comfort and safety with reliable patient care and monitoring solutions. Our range includes mobility aids, pressure care products, and monitoring devices designed to enhance patient outcomes.</p>
+                                        <a href="#" class="white_bg_btn">Learn More</a>
                                     </div>
                                 </div>
                             </div>
                         </article>
                         
-                        <!-- Pharmaceutical Supplies -->
+                        <!-- Service 4: Pharmaceutical Supplies -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -317,14 +315,14 @@
                                         <a href="#">
                                             <h2>Trusted Pharmaceutical Supplies</h2>
                                         </a>
-                                        <p>Delivering trusted pharmaceutical products that meet global safety and efficacy standards. We partner with reputable manufacturers to ensure every medication we supply is authentic, properly stored, and effective. Our cold chain logistics ensure temperature-sensitive products maintain their integrity throughout delivery.</p>
+                                        <p>Delivering trusted pharmaceutical products that meet global safety and efficacy standards. We partner with reputable manufacturers to ensure every medication we supply is authentic and effective.</p>
                                         <a href="#" class="white_bg_btn">Learn More</a>
                                     </div>
                                 </div>
                             </div>
                         </article>
                         
-                        <!-- Medical Logistics -->
+                        <!-- Service 5: Medical Logistics -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -347,14 +345,14 @@
                                         <a href="#">
                                             <h2>Efficient Medical Logistics Network</h2>
                                         </a>
-                                        <p>Efficient distribution network ensuring timely delivery of critical medical supplies across regions. Our logistics team works around the clock to ensure healthcare facilities receive what they need, when they need it. We offer scheduled deliveries, emergency dispatch, and real-time shipment tracking for complete peace of mind.</p>
-                                        <a href="#" class="white_bg_btn">Track Delivery</a>
+                                        <p>Efficient distribution network ensuring timely delivery of critical medical supplies across regions. Our logistics team works around the clock to ensure healthcare facilities receive what they need, when they need it.</p>
+                                        <a href="#" class="white_bg_btn">Learn More</a>
                                     </div>
                                 </div>
                             </div>
                         </article>
                         
-                        <!-- Hospital Setup Solutions -->
+                        <!-- Service 6: Hospital Setup Solutions -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -377,8 +375,8 @@
                                         <a href="#">
                                             <h2>Complete Hospital Setup Solutions</h2>
                                         </a>
-                                        <p>Comprehensive support for new and existing healthcare facilities — from planning to full equipment installation. We provide end-to-end services including facility assessment, equipment selection, procurement, installation, and staff training. Whether you're opening a new clinic or upgrading an existing hospital, we ensure a smooth transition.</p>
-                                        <a href="#" class="white_bg_btn">Request Consultation</a>
+                                        <p>Comprehensive support for new and existing healthcare facilities — from planning to full equipment installation. We provide end-to-end services including facility assessment, equipment selection, procurement, installation, and staff training.</p>
+                                        <a href="#" class="white_bg_btn">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -407,7 +405,7 @@
                             <div class="br"></div>
                         </aside>
                         
-                        <aside class="single_sidebar_widget author_widget">
+                        <aside class="single_sidebar_widget author_widget" style="margin-top: 0; padding-top: 0;">
                             <img class="author_img rounded-circle" src="img/logo.png" alt="Kauka Medics">
                             <h4>Kauka Medical Supplies</h4>
                             <p>Trusted Healthcare Partner</p>
@@ -424,7 +422,7 @@
                             <div class="media post_item">
                                 <img src="img/blog/popular-post/post1.jpg" alt="Medical Equipment">
                                 <div class="media-body">
-                                    <a href="#"><h3>Medical Equipment Supply</h3></a>
+                                    <a href="#"><h3>Medical Equipment</h3></a>
                                     <p>Diagnostic & Treatment</p>
                                 </div>
                             </div>
@@ -505,7 +503,7 @@
             </div>
         </div>
     </section>
-    <!-- End Main Services Area -->
+    <!-- End Detailed Services Section -->
 
     <!-- Footer Area -->
     <footer class="footer-area section_gap">
