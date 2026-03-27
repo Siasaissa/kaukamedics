@@ -196,8 +196,6 @@
     </section>
     <!-- End Services Grid Section -->
 
-    <!-- Detailed Services Section -->
-    
     <!-- Footer Area -->
     <footer class="footer-area section_gap">
         <div class="container">
