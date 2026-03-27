@@ -9,13 +9,13 @@
     <!-- Author Meta -->
     <meta name="author" content="CodePixar">
     <!-- Meta Description -->
-    <meta name="description" content="Kauka Medical Supplies - Trusted medical equipment and healthcare solutions">
+    <meta name="description" content="">
     <!-- Meta Keyword -->
-    <meta name="keywords" content="medical supplies, healthcare equipment, hospital consumables">
+    <meta name="keywords" content="">
     <!-- meta character set -->
     <meta charset="UTF-8">
     <!-- Site Title -->
-    <title>Kauka Medics - Medical Equipment & Healthcare Supplies</title>
+    <title>Karma Shop</title>
     <!--
 			CSS
 			============================================= -->
@@ -106,7 +106,7 @@
                         <img src="img/blog/cat-post/cat-post-3.jpg" alt="post">
                         <div class="categories_details">
                             <div class="categories_text">
-                                <a href="blog-details.html">
+                                <a href="#">
                                     <h5>Medical Equipment</h5>
                                 </a>
                                 <div class="border_line"></div>
@@ -120,7 +120,7 @@
                         <img src="img/blog/cat-post/cat-post-2.jpg" alt="post">
                         <div class="categories_details">
                             <div class="categories_text">
-                                <a href="blog-details.html">
+                                <a href="#">
                                     <h5>Hospital Consumables</h5>
                                 </a>
                                 <div class="border_line"></div>
@@ -134,7 +134,7 @@
                         <img src="img/blog/cat-post/cat-post-1.jpg" alt="post">
                         <div class="categories_details">
                             <div class="categories_text">
-                                <a href="blog-details.html">
+                                <a href="#">
                                     <h5>Patient Care Products</h5>
                                 </a>
                                 <div class="border_line"></div>
@@ -165,21 +165,21 @@
                                     </div>
                                     <ul class="blog_meta list">
                                         <li><a href="#">Kauka Medics<i class="lnr lnr-user"></i></a></li>
-                                        <li><a href="#">Featured Service<i class="lnr lnr-calendar-full"></i></a></li>
-                                        <li><a href="#">Premium Quality<i class="lnr lnr-eye"></i></a></li>
-                                        <li><a href="#">Trusted Supply<i class="lnr lnr-bubble"></i></a></li>
+                                        <li><a href="#">Premium Quality<i class="lnr lnr-calendar-full"></i></a></li>
+                                        <li><a href="#">Trusted Supply<i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#">Nationwide<i class="lnr lnr-bubble"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-1.jpg" alt="Medical Equipment">
+                                    <img src="img/blog/main-blog/m-blog-1.jpg" alt="">
                                     <div class="blog_details">
-                                        <a href="single-blog.html">
+                                        <a href="#">
                                             <h2>State-of-the-Art Medical Equipment</h2>
                                         </a>
                                         <p>We supply high-quality diagnostic and treatment equipment to hospitals and clinics nationwide. From imaging systems to surgical instruments, our products meet global safety standards and deliver reliable performance for healthcare professionals.</p>
-                                        <a href="single-blog.html" class="white_bg_btn">Learn More</a>
+                                        <a href="#" class="white_bg_btn">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -203,13 +203,13 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-2.jpg" alt="Hospital Consumables">
+                                    <img src="img/blog/main-blog/m-blog-2.jpg" alt="">
                                     <div class="blog_details">
-                                        <a href="single-blog.html">
+                                        <a href="#">
                                             <h2>Comprehensive Hospital Consumables</h2>
                                         </a>
                                         <p>From gloves and syringes to bandages and masks — we ensure consistent supply of essential medical items. Our inventory management guarantees that healthcare facilities never face shortages of critical consumables.</p>
-                                        <a href="single-blog.html" class="white_bg_btn">Learn More</a>
+                                        <a href="#" class="white_bg_btn">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -233,13 +233,13 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-3.jpg" alt="Patient Care Products">
+                                    <img src="img/blog/main-blog/m-blog-3.jpg" alt="">
                                     <div class="blog_details">
-                                        <a href="single-blog.html">
+                                        <a href="#">
                                             <h2>Advanced Patient Care Products</h2>
                                         </a>
                                         <p>Providing comfort and safety with reliable patient care and monitoring solutions. Our range includes mobility aids, pressure care products, and monitoring devices designed to enhance patient outcomes.</p>
-                                        <a href="single-blog.html" class="white_bg_btn">Learn More</a>
+                                        <a href="#" class="white_bg_btn">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -263,13 +263,13 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-4.jpg" alt="Pharmaceutical Supplies">
+                                    <img src="img/blog/main-blog/m-blog-4.jpg" alt="">
                                     <div class="blog_details">
-                                        <a href="single-blog.html">
+                                        <a href="#">
                                             <h2>Trusted Pharmaceutical Supplies</h2>
                                         </a>
                                         <p>Delivering trusted pharmaceutical products that meet global safety and efficacy standards. We partner with reputable manufacturers to ensure every medication we supply is authentic and effective.</p>
-                                        <a href="single-blog.html" class="white_bg_btn">Learn More</a>
+                                        <a href="#" class="white_bg_btn">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -293,13 +293,13 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-5.jpg" alt="Medical Logistics">
+                                    <img src="img/blog/main-blog/m-blog-5.jpg" alt="">
                                     <div class="blog_details">
-                                        <a href="single-blog.html">
+                                        <a href="#">
                                             <h2>Efficient Medical Logistics Network</h2>
                                         </a>
                                         <p>Efficient distribution network ensuring timely delivery of critical medical supplies across regions. Our logistics team works around the clock to ensure healthcare facilities receive what they need, when they need it.</p>
-                                        <a href="single-blog.html" class="white_bg_btn">Learn More</a>
+                                        <a href="#" class="white_bg_btn">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -341,7 +341,7 @@
                             <div class="br"></div>
                         </aside>
                         <aside class="single_sidebar_widget author_widget">
-                            <img class="author_img rounded-circle" src="img/logo.png" alt="Kauka Medics">
+                            <img class="author_img rounded-circle" src="img/logo.png" alt="">
                             <h4>Kauka Medical Supplies</h4>
                             <p>Healthcare Solutions Provider</p>
                             <div class="social_icon">
@@ -481,7 +481,7 @@
     <footer class="footer-area section_gap">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="col-lg-3  col-md-6 col-sm-6">
                     <div class="single-footer-widget">
                         <h6>About Us</h6>
                         <p>
@@ -489,7 +489,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="col-lg-4  col-md-6 col-sm-6">
                     <div class="single-footer-widget">
                         <h6>Newsletter</h6>
                         <p>Stay update with our latest</p>
@@ -511,7 +511,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="col-lg-3  col-md-6 col-sm-6">
                     <div class="single-footer-widget mail-chimp">
                         <h6 class="mb-20">Contact Info</h6>
                         <p><i class="fa fa-map-marker"></i> Dar es Salaam, Tanzania</p>
