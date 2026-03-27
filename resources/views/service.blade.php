@@ -403,9 +403,7 @@
                                 </span>
                             </div>
                             <div class="br"></div>
-                        </aside>
-                        
-                        <aside class="single_sidebar_widget author_widget" style="margin-top: 0; padding-top: 0;">
+
                             <img class="author_img rounded-circle" src="img/logo.png" alt="Kauka Medics">
                             <h4>Kauka Medical Supplies</h4>
                             <p>Trusted Healthcare Partner</p>
