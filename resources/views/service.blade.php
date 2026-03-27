@@ -97,250 +97,385 @@
     </section>
     <!-- End Banner Area -->
 
-    <!-- Video Section Start -->
-    <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="background-color: #ff6b6b !important;">
+    <!--================Blog Categorie Area =================-->
+    <section class="blog_categorie_area">
         <div class="container">
-            <div class="row g-0">
-                <div class="col-lg-11">
-                    <div class="h-100 py-5 d-flex align-items-center">
-                        <button type="button" class="btn-play" data-bs-toggle="modal" data-src="img/video3.mp4" data-bs-target="#videoModal">
-                            <span></span>
-                        </button>
-                        <h3 class="ms-5 mb-0 text-white">Delivering trusted medical supplies that empower healthcare professionals to save lives every day.</h3>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="categories_post">
+                        <img src="img/blog/cat-post/cat-post-3.jpg" alt="post">
+                        <div class="categories_details">
+                            <div class="categories_text">
+                                <a href="blog-details.html">
+                                    <h5>Medical Equipment</h5>
+                                </a>
+                                <div class="border_line"></div>
+                                <p>High-quality diagnostic and treatment equipment</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="d-none d-lg-block col-lg-1">
-                    <div class="h-100 w-100 bg-secondary d-flex align-items-center justify-content-center">
-                        <span class="text-white" style="transform: rotate(-90deg);">Scroll Down</span>
+                <div class="col-lg-4">
+                    <div class="categories_post">
+                        <img src="img/blog/cat-post/cat-post-2.jpg" alt="post">
+                        <div class="categories_details">
+                            <div class="categories_text">
+                                <a href="blog-details.html">
+                                    <h5>Hospital Consumables</h5>
+                                </a>
+                                <div class="border_line"></div>
+                                <p>Gloves, syringes, bandages and masks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="categories_post">
+                        <img src="img/blog/cat-post/cat-post-1.jpg" alt="post">
+                        <div class="categories_details">
+                            <div class="categories_text">
+                                <a href="blog-details.html">
+                                    <h5>Patient Care Products</h5>
+                                </a>
+                                <div class="border_line"></div>
+                                <p>Comfort and safety monitoring solutions</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Video Section End -->
+    </section>
+    <!--================Blog Categorie Area =================-->
 
-    <!-- Video Modal Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Company Overview Video</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="ratio ratio-16x9">
-                        <video id="video" class="w-100 rounded" controls autoplay muted>
-                            <source src="img/video3.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Video Modal End -->
-
-    <!-- Service Section Start -->
-    <div class="container-fluid py-5">
+    <!--================Blog Area =================-->
+    <section class="blog_area">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-md-12 col-lg-4 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="service-title">
-                        <h1 class="display-6 mb-4">What We Offer</h1>
-                        <p class="fs-5 mb-0">
-                            We supply a wide range of medical products and equipment designed to meet the needs of healthcare professionals and institutions.
-                        </p>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="blog_left_sidebar">
+                        <article class="row blog_item">
+                            <div class="col-md-3">
+                                <div class="blog_info text-right">
+                                    <div class="post_tag">
+                                        <a href="#">Medical,</a>
+                                        <a class="active" href="#">Equipment,</a>
+                                        <a href="#">Healthcare,</a>
+                                        <a href="#">Diagnostics</a>
+                                    </div>
+                                    <ul class="blog_meta list">
+                                        <li><a href="#">Kauka Medics<i class="lnr lnr-user"></i></a></li>
+                                        <li><a href="#">Featured Service<i class="lnr lnr-calendar-full"></i></a></li>
+                                        <li><a href="#">Premium Quality<i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#">Trusted Supply<i class="lnr lnr-bubble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="blog_post">
+                                    <img src="img/blog/main-blog/m-blog-1.jpg" alt="Medical Equipment">
+                                    <div class="blog_details">
+                                        <a href="single-blog.html">
+                                            <h2>State-of-the-Art Medical Equipment</h2>
+                                        </a>
+                                        <p>We supply high-quality diagnostic and treatment equipment to hospitals and clinics nationwide. From imaging systems to surgical instruments, our products meet global safety standards and deliver reliable performance for healthcare professionals.</p>
+                                        <a href="single-blog.html" class="white_bg_btn">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="row blog_item">
+                            <div class="col-md-3">
+                                <div class="blog_info text-right">
+                                    <div class="post_tag">
+                                        <a href="#">Consumables,</a>
+                                        <a class="active" href="#">Supplies,</a>
+                                        <a href="#">Essentials,</a>
+                                        <a href="#">Safety</a>
+                                    </div>
+                                    <ul class="blog_meta list">
+                                        <li><a href="#">Kauka Medics<i class="lnr lnr-user"></i></a></li>
+                                        <li><a href="#">Essential Items<i class="lnr lnr-calendar-full"></i></a></li>
+                                        <li><a href="#">Daily Supply<i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#">Bulk Orders<i class="lnr lnr-bubble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="blog_post">
+                                    <img src="img/blog/main-blog/m-blog-2.jpg" alt="Hospital Consumables">
+                                    <div class="blog_details">
+                                        <a href="single-blog.html">
+                                            <h2>Comprehensive Hospital Consumables</h2>
+                                        </a>
+                                        <p>From gloves and syringes to bandages and masks — we ensure consistent supply of essential medical items. Our inventory management guarantees that healthcare facilities never face shortages of critical consumables.</p>
+                                        <a href="single-blog.html" class="white_bg_btn">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="row blog_item">
+                            <div class="col-md-3">
+                                <div class="blog_info text-right">
+                                    <div class="post_tag">
+                                        <a href="#">Patient Care,</a>
+                                        <a class="active" href="#">Monitoring,</a>
+                                        <a href="#">Comfort,</a>
+                                        <a href="#">Safety</a>
+                                    </div>
+                                    <ul class="blog_meta list">
+                                        <li><a href="#">Kauka Medics<i class="lnr lnr-user"></i></a></li>
+                                        <li><a href="#">Care Solutions<i class="lnr lnr-calendar-full"></i></a></li>
+                                        <li><a href="#">Patient First<i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#">Quality Assurance<i class="lnr lnr-bubble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="blog_post">
+                                    <img src="img/blog/main-blog/m-blog-3.jpg" alt="Patient Care Products">
+                                    <div class="blog_details">
+                                        <a href="single-blog.html">
+                                            <h2>Advanced Patient Care Products</h2>
+                                        </a>
+                                        <p>Providing comfort and safety with reliable patient care and monitoring solutions. Our range includes mobility aids, pressure care products, and monitoring devices designed to enhance patient outcomes.</p>
+                                        <a href="single-blog.html" class="white_bg_btn">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="row blog_item">
+                            <div class="col-md-3">
+                                <div class="blog_info text-right">
+                                    <div class="post_tag">
+                                        <a href="#">Pharmaceutical,</a>
+                                        <a class="active" href="#">Medicines,</a>
+                                        <a href="#">Quality,</a>
+                                        <a href="#">Safety</a>
+                                    </div>
+                                    <ul class="blog_meta list">
+                                        <li><a href="#">Kauka Medics<i class="lnr lnr-user"></i></a></li>
+                                        <li><a href="#">Pharma Supply<i class="lnr lnr-calendar-full"></i></a></li>
+                                        <li><a href="#">Trusted Brands<i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#">Global Standards<i class="lnr lnr-bubble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="blog_post">
+                                    <img src="img/blog/main-blog/m-blog-4.jpg" alt="Pharmaceutical Supplies">
+                                    <div class="blog_details">
+                                        <a href="single-blog.html">
+                                            <h2>Trusted Pharmaceutical Supplies</h2>
+                                        </a>
+                                        <p>Delivering trusted pharmaceutical products that meet global safety and efficacy standards. We partner with reputable manufacturers to ensure every medication we supply is authentic and effective.</p>
+                                        <a href="single-blog.html" class="white_bg_btn">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="row blog_item">
+                            <div class="col-md-3">
+                                <div class="blog_info text-right">
+                                    <div class="post_tag">
+                                        <a href="#">Logistics,</a>
+                                        <a class="active" href="#">Distribution,</a>
+                                        <a href="#">Delivery,</a>
+                                        <a href="#">Supply Chain</a>
+                                    </div>
+                                    <ul class="blog_meta list">
+                                        <li><a href="#">Kauka Medics<i class="lnr lnr-user"></i></a></li>
+                                        <li><a href="#">Fast Delivery<i class="lnr lnr-calendar-full"></i></a></li>
+                                        <li><a href="#">Nationwide<i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#">Reliable Service<i class="lnr lnr-bubble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="blog_post">
+                                    <img src="img/blog/main-blog/m-blog-5.jpg" alt="Medical Logistics">
+                                    <div class="blog_details">
+                                        <a href="single-blog.html">
+                                            <h2>Efficient Medical Logistics Network</h2>
+                                        </a>
+                                        <p>Efficient distribution network ensuring timely delivery of critical medical supplies across regions. Our logistics team works around the clock to ensure healthcare facilities receive what they need, when they need it.</p>
+                                        <a href="single-blog.html" class="white_bg_btn">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <nav class="blog-pagination justify-content-center d-flex">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Previous">
+                                        <span aria-hidden="true">
+                                            <span class="lnr lnr-chevron-left"></span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a href="#" class="page-link">01</a></li>
+                                <li class="page-item active"><a href="#" class="page-link">02</a></li>
+                                <li class="page-item"><a href="#" class="page-link">03</a></li>
+                                <li class="page-item"><a href="#" class="page-link">04</a></li>
+                                <li class="page-item"><a href="#" class="page-link">09</a></li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Next">
+                                        <span aria-hidden="true">
+                                            <span class="lnr lnr-chevron-right"></span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-8 col-xl-9">
-                    <div class="row g-5">
-                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
-                            <div class="service-item h-100">
-                                <div class="btn-square bg-light mb-4">
-                                    <i class="fa fa-stethoscope fa-2x text-secondary"></i>
-                                </div>
-                                <h3>Medical Equipment</h3>
-                                <p class="mb-2">
-                                    Supplying high-quality diagnostic and treatment equipment to hospitals and clinics nationwide.
-                                </p>
-                                <a href="#!">Read More</a>
+                <div class="col-lg-4">
+                    <div class="blog_right_sidebar">
+                        <aside class="single_sidebar_widget search_widget">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search Services" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Services'">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button"><i class="lnr lnr-magnifier"></i></button>
+                                </span>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.3s">
-                            <div class="service-item h-100">
-                                <div class="btn-square bg-light mb-4">
-                                    <i class="fa fa-kit-medical fa-2x text-secondary"></i>
-                                </div>
-                                <h3>Hospital Consumables</h3>
-                                <p class="mb-2">
-                                    From gloves and syringes to bandages and masks — we ensure consistent supply of essential medical items.
-                                </p>
-                                <a href="#!">Read More</a>
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single_sidebar_widget author_widget">
+                            <img class="author_img rounded-circle" src="img/logo.png" alt="Kauka Medics">
+                            <h4>Kauka Medical Supplies</h4>
+                            <p>Healthcare Solutions Provider</p>
+                            <div class="social_icon">
+                                <a href="https://www.facebook.com/ambwenekauka/"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/kauka_medical_supplies/"><i class="fa fa-instagram"></i></a>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.5s">
-                            <div class="service-item h-100">
-                                <div class="btn-square bg-light mb-4">
-                                    <i class="fa fa-heart-pulse fa-2x text-secondary"></i>
+                            <p>We supply a wide range of medical products and equipment designed to meet the needs of healthcare professionals and institutions nationwide.</p>
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single_sidebar_widget popular_post_widget">
+                            <h3 class="widget_title">Key Services</h3>
+                            <div class="media post_item">
+                                <img src="img/blog/popular-post/post1.jpg" alt="post">
+                                <div class="media-body">
+                                    <a href="#">
+                                        <h3>Medical Equipment Supply</h3>
+                                    </a>
+                                    <p>Diagnostic & Treatment</p>
                                 </div>
-                                <h3>Patient Care Products</h3>
-                                <p class="mb-2">
-                                    Providing comfort and safety with reliable patient care and monitoring solutions.
-                                </p>
-                                <a href="#!">Read More</a>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
-                            <div class="service-item h-100">
-                                <div class="btn-square bg-light mb-4">
-                                    <i class="fa fa-pills fa-2x text-secondary"></i>
+                            <div class="media post_item">
+                                <img src="img/blog/popular-post/post2.jpg" alt="post">
+                                <div class="media-body">
+                                    <a href="#">
+                                        <h3>Hospital Consumables</h3>
+                                    </a>
+                                    <p>Daily Essential Items</p>
                                 </div>
-                                <h3>Pharmaceutical Supplies</h3>
-                                <p class="mb-2">
-                                    Delivering trusted pharmaceutical products that meet global safety and efficacy standards.
-                                </p>
-                                <a href="#!">Read More</a>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.3s">
-                            <div class="service-item h-100">
-                                <div class="btn-square bg-light mb-4">
-                                    <i class="fa fa-truck-medical fa-2x text-secondary"></i>
+                            <div class="media post_item">
+                                <img src="img/blog/popular-post/post3.jpg" alt="post">
+                                <div class="media-body">
+                                    <a href="#">
+                                        <h3>Pharmaceutical Supplies</h3>
+                                    </a>
+                                    <p>Trusted Medicines</p>
                                 </div>
-                                <h3>Medical Logistics</h3>
-                                <p class="mb-2">
-                                    Efficient distribution network ensuring timely delivery of critical medical supplies across regions.
-                                </p>
-                                <a href="#!">Read More</a>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.5s">
-                            <div class="service-item h-100">
-                                <div class="btn-square bg-light mb-4">
-                                    <i class="fa fa-hospital fa-2x text-secondary"></i>
+                            <div class="media post_item">
+                                <img src="img/blog/popular-post/post4.jpg" alt="post">
+                                <div class="media-body">
+                                    <a href="#">
+                                        <h3>Hospital Setup Solutions</h3>
+                                    </a>
+                                    <p>Complete Installation</p>
                                 </div>
-                                <h3>Hospital Setup Solutions</h3>
-                                <p class="mb-2">
-                                    Comprehensive support for new and existing healthcare facilities — from planning to full equipment installation.
-                                </p>
-                                <a href="#!">Read More</a>
                             </div>
-                        </div>
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single_sidebar_widget ads_widget">
+                            <a href="#"><img class="img-fluid" src="img/blog/add.jpg" alt=""></a>
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single_sidebar_widget post_category_widget">
+                            <h4 class="widget_title">Service Categories</h4>
+                            <ul class="list cat-list">
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Medical Equipment</p>
+                                        <p>12</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Hospital Consumables</p>
+                                        <p>24</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Patient Care Products</p>
+                                        <p>18</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Pharmaceutical Supplies</p>
+                                        <p>32</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Medical Logistics</p>
+                                        <p>8</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="d-flex justify-content-between">
+                                        <p>Hospital Setup Solutions</p>
+                                        <p>6</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single-sidebar-widget newsletter_widget">
+                            <h4 class="widget_title">Newsletter</h4>
+                            <p>
+                                Stay updated with our latest medical supplies, equipment arrivals, and healthcare solutions.
+                            </p>
+                            <div class="form-group d-flex flex-row">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email"
+                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'">
+                                </div>
+                                <a href="#" class="bbtns">Subscribe</a>
+                            </div>
+                            <p class="text-bottom">Get updates on new products and offers</p>
+                            <div class="br"></div>
+                        </aside>
+                        <aside class="single-sidebar-widget tag_cloud_widget">
+                            <h4 class="widget_title">Service Tags</h4>
+                            <ul class="list">
+                                <li><a href="#">Medical Equipment</a></li>
+                                <li><a href="#">Surgical Supplies</a></li>
+                                <li><a href="#">Diagnostic Tools</a></li>
+                                <li><a href="#">Hospital Furniture</a></li>
+                                <li><a href="#">Pharmaceuticals</a></li>
+                                <li><a href="#">Patient Monitoring</a></li>
+                                <li><a href="#">Lab Equipment</a></li>
+                                <li><a href="#">Emergency Supplies</a></li>
+                                <li><a href="#">Wound Care</a></li>
+                                <li><a href="#">Mobility Aids</a></li>
+                            </ul>
+                        </aside>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Service Section End -->
-
-    <!-- Testimonial Section Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-md-12 col-lg-4 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="testimonial-title">
-                        <h1 class="display-6 mb-4">What Our Clients Say About Us</h1>
-                        <p class="fs-5 mb-0">We're proud to be a trusted partner in delivering reliable medical equipment and healthcare solutions nationwide.</p>
-                    </div>
-                </div>
-                <div class="col-md-12 col-lg-8 col-xl-9">
-                    <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay="0.3s">
-                        <div class="testimonial-item">
-                            <div class="row g-5 align-items-center">
-                                <div class="col-md-6">
-                                    <div class="testimonial-img">
-                                        <img class="img-fluid" src="img/team-1.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="testimonial-text pb-5 pb-md-0">
-                                        <div class="mb-2">
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                        </div>
-                                        <p class="fs-5">Their medical supplies are of exceptional quality. Our hospital has greatly benefited from their quick service and dependable products.</p>
-                                        <div class="d-flex align-items-center">
-                                            <div class="btn-lg-square bg-light text-secondary flex-shrink-0">
-                                                <i class="fa fa-quote-right fa-2x"></i>
-                                            </div>
-                                            <div class="ps-3">
-                                                <h5 class="mb-0">Dr. Henry Mwenda</h5>
-                                                <span>Medical Director, CityCare Hospital</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-item">
-                            <div class="row g-5 align-items-center">
-                                <div class="col-md-6">
-                                    <div class="testimonial-img">
-                                        <img class="img-fluid" src="img/team-2.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="testimonial-text pb-5 pb-md-0">
-                                        <div class="mb-2">
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                        </div>
-                                        <p class="fs-5">We've partnered with them for over three years. Their professionalism and commitment to healthcare delivery are unmatched.</p>
-                                        <div class="d-flex align-items-center">
-                                            <div class="btn-lg-square bg-light text-secondary flex-shrink-0">
-                                                <i class="fa fa-quote-right fa-2x"></i>
-                                            </div>
-                                            <div class="ps-3">
-                                                <h5 class="mb-0">Sarah John</h5>
-                                                <span>Procurement Officer, Meditech Labs</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-item">
-                            <div class="row g-5 align-items-center">
-                                <div class="col-md-6">
-                                    <div class="testimonial-img">
-                                        <img class="img-fluid" src="img/team-3.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="testimonial-text pb-5 pb-md-0">
-                                        <div class="mb-2">
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                            <i class="fa fa-star text-primary"></i>
-                                        </div>
-                                        <p class="fs-5">Thanks to their efficient delivery and reliable products, our clinic operations have become smoother and more effective.</p>
-                                        <div class="d-flex align-items-center">
-                                            <div class="btn-lg-square bg-light text-secondary flex-shrink-0">
-                                                <i class="fa fa-quote-right fa-2x"></i>
-                                            </div>
-                                            <div class="ps-3">
-                                                <h5 class="mb-0">Dr. Kelvin Chacha</h5>
-                                                <span>Head of Clinic Operations, LifePoint Health</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial Section End -->
+    </section>
+    <!--================Blog Area =================-->
 
     <!-- start footer Area -->
     <footer class="footer-area section_gap">
@@ -348,57 +483,56 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-footer-widget">
-                        <h6>Our Office</h6>
-                        <p><i class="fa fa-map-marker-alt me-3"></i> Dar es Salaam, Tanzania</p>
-                        <p><i class="fa fa-address-alt me-3"></i> Po.box 14012</p>
-                        <p><i class="fa fa-phone-alt me-3"></i> +255 625 726 051</p>
-                        <p><i class="fa fa-envelope me-3"></i> info@kaukamedics.com</p>
-                        <div class="footer-social d-flex align-items-center mt-3">
-                            <a href="https://www.facebook.com/ambwenekauka/" class="me-2"><i class="fa fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/kauka_medical_supplies/"><i class="fa fa-instagram"></i></a>
-                        </div>
+                        <h6>About Us</h6>
+                        <p>
+                            Kauka Medical Supplies delivers trusted medical products and equipment that empower healthcare professionals to save lives every day.
+                        </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-footer-widget">
-                        <h6>Quick Links</h6>
-                        <div class="d-flex flex-column">
-                            <a href="about.html" class="mb-2">About Us</a>
-                            <a href="contact.html" class="mb-2">Contact Us</a>
-                            <a href="products.html" class="mb-2">Our Products</a>
-                            <a href="login.html" class="mb-2">Admin</a>
-                            <a href="#!">Privacy Policy</a>
+                        <h6>Newsletter</h6>
+                        <p>Stay update with our latest</p>
+                        <div class="" id="mc_embed_signup">
+                            <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                method="get" class="form-inline">
+                                <div class="d-flex flex-row">
+                                    <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Enter Email '" required="" type="email">
+                                    <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right"
+                                            aria-hidden="true"></i></button>
+                                    <div style="position: absolute; left: -5000px;">
+                                        <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
+                                            type="text">
+                                    </div>
+                                </div>
+                                <div class="info"></div>
+                            </form>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Business Hours</h6>
-                        <p class="mb-1">Monday - Friday</p>
-                        <p class="mb-1">08:00 am - 05:00 pm</p>
-                        <p class="mb-1">Saturday</p>
-                        <p class="mb-1">09:00 am - 01:00 pm</p>
-                        <p class="mb-1">Sunday</p>
-                        <p>Closed</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-footer-widget mail-chimp">
-                        <h6 class="mb-20">Product Gallery</h6>
-                        <ul class="instafeed d-flex flex-wrap" style="list-style: none; padding-left: 0;">
-                            <li><img src="img/gallery-1.jpg" alt="Medical Equipment" style="width: 70px; height: 70px; object-fit: cover; margin: 2px;"></li>
-                            <li><img src="img/gallery-2.jpg" alt="Surgical Tools" style="width: 70px; height: 70px; object-fit: cover; margin: 2px;"></li>
-                            <li><img src="img/gallery-3.jpg" alt="Hospital Supplies" style="width: 70px; height: 70px; object-fit: cover; margin: 2px;"></li>
-                            <li><img src="img/gallery-4.jpg" alt="Diagnostic Devices" style="width: 70px; height: 70px; object-fit: cover; margin: 2px;"></li>
-                            <li><img src="img/gallery-5.jpg" alt="Laboratory Equipment" style="width: 70px; height: 70px; object-fit: cover; margin: 2px;"></li>
-                            <li><img src="img/gallery-6.jpg" alt="Medical Instruments" style="width: 70px; height: 70px; object-fit: cover; margin: 2px;"></li>
-                        </ul>
+                        <h6 class="mb-20">Contact Info</h6>
+                        <p><i class="fa fa-map-marker"></i> Dar es Salaam, Tanzania</p>
+                        <p><i class="fa fa-phone"></i> +255 625 726 051</p>
+                        <p><i class="fa fa-envelope"></i> info@kaukamedics.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h6>Follow Us</h6>
+                        <p>Let us be social</p>
+                        <div class="footer-social d-flex align-items-center">
+                            <a href="https://www.facebook.com/ambwenekauka/"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/kauka_medical_supplies/"><i class="fa fa-instagram"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
                 <p class="footer-text m-0">
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Designed by <a href="#!">kaukamedics</a>
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Designed by <a href="#">Kauka Medics</a>
                 </p>
             </div>
         </div>
@@ -419,48 +553,6 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="js/gmaps.min.js"></script>
 	<script src="js/main.js"></script>
-    
-    <script>
-        // Initialize video modal functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            var videoModal = document.getElementById('videoModal');
-            if (videoModal) {
-                videoModal.addEventListener('show.bs.modal', function(event) {
-                    var button = event.relatedTarget;
-                    var videoSrc = button.getAttribute('data-src');
-                    var video = document.getElementById('video');
-                    if (video) {
-                        video.src = videoSrc;
-                        video.play();
-                    }
-                });
-                videoModal.addEventListener('hide.bs.modal', function() {
-                    var video = document.getElementById('video');
-                    if (video) {
-                        video.pause();
-                        video.src = '';
-                    }
-                });
-            }
-            
-            // Initialize owl carousel for testimonials
-            if ($('.testimonial-carousel').length) {
-                $('.testimonial-carousel').owlCarousel({
-                    loop: true,
-                    margin: 30,
-                    nav: false,
-                    dots: true,
-                    autoplay: true,
-                    autoplayTimeout: 5000,
-                    responsive: {
-                        0: { items: 1 },
-                        768: { items: 1 },
-                        992: { items: 1 }
-                    }
-                });
-            }
-        });
-    </script>
 </body>
 
 </html>
