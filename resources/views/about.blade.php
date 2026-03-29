@@ -2,19 +2,12 @@
 <html lang="zxx" class="no-js">
 
 <head>
-    <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicon-->
     <link rel="shortcut icon" href="img/fav.png">
-    <!-- Author Meta -->
     <meta name="author" content="Kauka Company">
-    <!-- Meta Description -->
     <meta name="description" content="Kauka Company - Reliable Medical Supplies for a Healthier Tomorrow">
-    <!-- Meta Keyword -->
     <meta name="keywords" content="kauka,medics,medical equipment, hospital supplies, healthcare">
-    <!-- meta character set -->
     <meta charset="UTF-8">
-    <!-- Site Title -->
     <title>Kauka Company - About Us</title>
     <link rel="stylesheet" href="css/linearicons.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -23,208 +16,256 @@
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/nice-select.css">
     <link rel="stylesheet" href="css/nouislider.min.css">
-    <link rel="stylesheet" href="css/ion.rangeSlider.css" />
-    <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
+    <link rel="stylesheet" href="css/ion.rangeSlider.css">
+    <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css">
     <link rel="stylesheet" href="css/main.css">
+
     <style>
-        /* ── Layout overrides only – no colour changes ── */
+        /* ============================================================
+           LAYOUT & PROFESSIONAL POLISH — colours from main.css only
+           ============================================================ */
 
-        /* 1. Mission / Vision / Values cards: equal height, image fills top */
-        .blog_categorie_area .categories_post {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            border-radius: 4px;
+        /* Section spacing */
+        .blog_categorie_area { padding: 60px 0 40px; }
+        .blog_area           { padding: 50px 0 70px; }
+
+        /* Section title helper */
+        .section-title-wrap            { text-align: center; margin-bottom: 44px; }
+        .section-title-wrap .sub-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            opacity: .55;
+        }
+        .section-title-wrap h2   { font-size: 2rem; font-weight: 700; margin: 0 0 14px; line-height: 1.25; }
+        .section-title-wrap .title-bar { width: 48px; height: 3px; margin: 0 auto; border-radius: 2px; }
+
+        /* ── Mission / Vision / Values ── */
+        .blog_categorie_area .row   { display: flex; align-items: stretch; }
+        .blog_categorie_area .col-lg-4 { display: flex; margin-bottom: 24px; }
+        .mvv-card {
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,.08);
-        }
-        .blog_categorie_area .categories_post img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
-        .blog_categorie_area .categories_details {
-            flex: 1;
-            display: flex;
-            align-items: stretch;
-        }
-        .blog_categorie_area .categories_text {
-            padding: 20px;
-            width: 100%;
-        }
-        .blog_categorie_area .row {
-            align-items: stretch;
-        }
-        .blog_categorie_area .col-lg-4 {
+            box-shadow: 0 4px 22px rgba(0,0,0,.09);
+            transition: transform .26s ease, box-shadow .26s ease;
             display: flex;
             flex-direction: column;
-            margin-bottom: 20px;
-        }
-
-        /* 2. Blog articles: image covers its container neatly */
-        .blog_item .blog_post img {
             width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-            border-radius: 4px;
         }
+        .mvv-card:hover { transform: translateY(-6px); box-shadow: 0 14px 36px rgba(0,0,0,.14); }
+        .mvv-card img   { width: 100%; height: 200px; object-fit: cover; display: block; }
+        .mvv-card .card-body-inner { padding: 24px 22px 28px; flex: 1; }
+        .mvv-card .card-icon {
+            width: 42px; height: 42px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 17px; margin-bottom: 14px;
+        }
+        .mvv-card h5  { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
+        .mvv-card .border_line { margin-bottom: 12px; }
+        .mvv-card p   { font-size: 0.9rem; line-height: 1.75; margin: 0; opacity: .82; }
+        .mvv-card .bottom-line { height: 4px; border-radius: 0 0 10px 10px; }
 
-        /* 3. Blog item meta column: vertically centred with the article */
-        .blog_item .blog_info {
-            padding-top: 10px;
-        }
+        /* ── Stats bar ── */
+        .stats-bar            { padding: 44px 0; }
+        .stat-item            { text-align: center; padding: 0 8px; }
+        .stat-item .stat-num  { display: block; font-size: 2.5rem; font-weight: 800; line-height: 1; margin-bottom: 6px; }
+        .stat-item .stat-lbl  { font-size: 0.75rem; letter-spacing: 1.8px; text-transform: uppercase; opacity: .6; }
+        .stat-sep             { width: 1px; height: 48px; opacity: .12; align-self: center; }
+
+        /* ── Blog articles ── */
         .blog_item {
+            display: flex;
             align-items: flex-start;
-            margin-bottom: 40px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 46px;
+            padding-bottom: 46px;
+            border-bottom: 1px solid rgba(0,0,0,.07);
         }
-        .blog_item:last-of-type {
-            border-bottom: none;
+        .blog_item:last-of-type { border-bottom: none; margin-bottom: 0; }
+        .blog_item .blog_post img {
+            width: 100%; height: 230px;
+            object-fit: cover; border-radius: 8px; display: block;
         }
+        .blog_item .blog_info   { padding-top: 6px; }
+        .blog_details h2        { font-size: 1.18rem; font-weight: 700; line-height: 1.45; margin: 14px 0 10px; }
+        .blog_details p         { font-size: 0.89rem; line-height: 1.78; opacity: .84; margin-bottom: 16px; }
+        .blog_meta li a         { font-size: 0.81rem; }
 
-        /* 4. Blog details spacing */
-        .blog_details h2 {
-            font-size: 1.25rem;
-            line-height: 1.4;
-            margin-top: 14px;
-            margin-bottom: 10px;
-        }
-        .blog_details p {
-            margin-bottom: 16px;
-        }
-
-        /* 5. Sidebar widgets: consistent spacing */
+        /* ── Sidebar ── */
+        .blog_right_sidebar { padding-left: 10px; }
         .single_sidebar_widget,
         .single-sidebar-widget {
-            margin-bottom: 30px;
-            padding-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 14px rgba(0,0,0,.07);
+            padding: 24px 22px;
+            margin-bottom: 28px;
+        }
+        .widget_title {
+            font-size: 0.97rem; font-weight: 700; letter-spacing: .4px;
+            margin-bottom: 18px; padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0,0,0,.06);
         }
 
-        /* 6. Author widget: centred layout */
-        .author_widget {
-            text-align: center;
-            padding: 24px 20px;
-        }
+        /* Author */
+        .author_widget         { text-align: center; }
         .author_widget .author_img {
-            width: 90px;
-            height: 90px;
-            object-fit: cover;
-            margin: 0 auto 14px;
-            display: block;
+            width: 90px; height: 90px; object-fit: cover; border-radius: 50%;
+            margin: 0 auto 14px; display: block; border: 3px solid rgba(0,0,0,.08);
         }
-        .author_widget h4 {
-            margin-bottom: 4px;
-        }
-        .author_widget .social_icon {
-            margin: 12px 0;
-        }
-        .author_widget .social_icon a {
-            margin: 0 5px;
-            font-size: 16px;
+        .author_widget h4      { font-size: 1rem; font-weight: 700; margin-bottom: 3px; }
+        .author_widget .role   { font-size: 0.78rem; opacity: .55; margin-bottom: 12px; }
+        .author_widget .social_icon { margin: 10px 0 14px; }
+        .author_widget .social_icon a { margin: 0 6px; font-size: 15px; }
+        .author_widget blockquote {
+            font-size: 0.84rem; line-height: 1.72; font-style: italic;
+            opacity: .78; border-left: none; padding: 0; margin: 0;
         }
 
-        /* 7. Popular post (milestones): image + text aligned */
+        /* Milestones */
         .post_item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 16px;
-            gap: 14px;
+            display: flex; align-items: center; gap: 14px;
+            margin-bottom: 14px; padding-bottom: 14px;
+            border-bottom: 1px solid rgba(0,0,0,.05);
         }
-        .post_item img {
-            width: 70px;
-            height: 55px;
-            object-fit: cover;
-            border-radius: 3px;
-            flex-shrink: 0;
-        }
-        .post_item .media-body h3 {
-            font-size: 0.9rem;
-            margin-bottom: 2px;
-        }
-        .post_item .media-body p {
-            font-size: 0.82rem;
-            margin: 0;
-        }
+        .post_item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .post_item img        { width: 66px; height: 50px; object-fit: cover; border-radius: 5px; flex-shrink: 0; }
+        .post_item .media-body h3 { font-size: 0.87rem; font-weight: 600; margin-bottom: 3px; }
+        .post_item .media-body p  { font-size: 0.77rem; margin: 0; opacity: .55; }
 
-        /* 8. Services list: clean row layout */
+        /* Services */
+        .cat-list              { list-style: none; padding: 0; margin: 0; }
+        .cat-list li           { border-bottom: 1px solid rgba(0,0,0,.05); }
+        .cat-list li:last-child { border-bottom: none; }
         .cat-list li a {
-            padding: 7px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 9px 0; transition: padding-left .18s;
         }
-        .cat-list li a p {
-            margin: 0;
-            font-size: 0.9rem;
-        }
+        .cat-list li a:hover  { padding-left: 5px; }
+        .cat-list li a p      { margin: 0; font-size: 0.87rem; }
+        .cat-list li a p:last-child { font-size: 0.77rem; font-weight: 700; opacity: .5; }
 
-        /* 9. Newsletter widget form row */
+        /* Newsletter */
         .newsletter_widget .form-group {
-            align-items: center;
-            gap: 8px;
-            flex-wrap: nowrap;
+            display: flex; align-items: center; gap: 6px; flex-wrap: nowrap; margin-bottom: 8px;
         }
-        .newsletter_widget .bbtns {
-            white-space: nowrap;
-            padding: 8px 14px;
-            font-size: 0.85rem;
-        }
+        .newsletter_widget .bbtns { white-space: nowrap; padding: 9px 14px; font-size: 0.82rem; border-radius: 4px; }
+        .newsletter_widget .text-bottom { font-size: 0.75rem; opacity: .5; margin: 0; }
 
-        /* 10. Tag cloud: wrapping flex */
-        .tag_cloud_widget ul.list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            padding: 0;
-            list-style: none;
-        }
-        .tag_cloud_widget ul.list li {
-            margin: 0;
-        }
+        /* Tags */
+        .tag_cloud_widget ul.list { display: flex; flex-wrap: wrap; gap: 7px; list-style: none; padding: 0; margin: 0; }
         .tag_cloud_widget ul.list li a {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 3px;
-            font-size: 0.82rem;
+            display: inline-block; padding: 5px 13px; border-radius: 20px;
+            font-size: 0.77rem; font-weight: 600; border: 1px solid rgba(0,0,0,.1);
+            transition: all .2s;
+        }
+        .tag_cloud_widget ul.list li a:hover { border-color: transparent; }
+
+        /* Ads widget */
+        .ads_widget { padding: 0 !important; overflow: hidden; }
+        .ads_widget img { border-radius: 10px; display: block; width: 100%; }
+
+        /* ============================================================
+           VIDEO GALLERY
+           ============================================================ */
+        .video-gallery-section { padding: 70px 0; }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 10px;
+        }
+        .video-card {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 4px 18px rgba(0,0,0,.11);
+            transition: transform .26s ease, box-shadow .26s ease;
+        }
+        .video-card:hover { transform: translateY(-6px); box-shadow: 0 16px 38px rgba(0,0,0,.17); }
+        .video-card > img { width: 100%; height: 195px; object-fit: cover; display: block; }
+        .video-card .vc-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,.68) 0%, rgba(0,0,0,.18) 55%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 16px;
+        }
+        .video-card .play-btn {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -60%);
+            width: 52px; height: 52px; border-radius: 50%;
+            background: rgba(255,255,255,.93);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 17px;
+            box-shadow: 0 4px 18px rgba(0,0,0,.28);
+            transition: transform .22s ease, background .22s ease;
+        }
+        .video-card:hover .play-btn { transform: translate(-50%, -60%) scale(1.13); background: #fff; }
+        .video-card .play-btn i     { margin-left: 3px; }
+        .video-card .vc-label       { color: #fff; }
+        .video-card .vc-label h6    { font-size: 0.88rem; font-weight: 700; margin: 0 0 3px; line-height: 1.3; }
+        .video-card .vc-label span  { font-size: 0.73rem; opacity: .75; }
+        .video-card .vc-duration {
+            position: absolute; top: 10px; right: 10px;
+            background: rgba(0,0,0,.58); color: #fff;
+            font-size: 0.7rem; padding: 3px 8px;
+            border-radius: 3px; font-weight: 700; letter-spacing: .5px;
         }
 
-        /* 11. Blog area top spacing */
-        .blog_area {
-            padding-top: 40px;
-            padding-bottom: 60px;
+        /* ── Video Popup ── */
+        .video-popup-overlay {
+            display: none; position: fixed; inset: 0;
+            background: rgba(0,0,0,.88); z-index: 99999;
+            align-items: center; justify-content: center;
         }
+        .video-popup-overlay.active { display: flex; animation: popupFadeIn .22s ease; }
+        @keyframes popupFadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .video-popup-inner  { position: relative; width: 90%; max-width: 880px; }
+        .close-popup {
+            position: absolute; top: -40px; right: 0;
+            background: none; border: none; color: #fff;
+            font-size: 28px; cursor: pointer; line-height: 1;
+            transition: transform .2s; opacity: .85;
+        }
+        .close-popup:hover { transform: rotate(90deg); opacity: 1; }
+        .video-wrapper {
+            position: relative; padding-top: 56.25%;
+            border-radius: 10px; overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,.55);
+        }
+        .video-wrapper iframe {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;
+        }
+        .popup-title-bar { color: #fff; padding: 14px 2px 0; font-size: 1rem; font-weight: 600; }
 
-        /* 12. Responsive: stack meta above article on small screens */
-        @media (max-width: 767px) {
-            .blog_item .col-md-3 {
-                text-align: left !important;
-                margin-bottom: 12px;
-            }
-            .blog_item .blog_post img {
-                height: 180px;
-            }
-            .blog_categorie_area .categories_post img {
-                height: 160px;
-            }
+        /* Responsive */
+        @media (max-width: 991px) { .video-grid { grid-template-columns: repeat(2,1fr); } }
+        @media (max-width: 575px) {
+            .video-grid { grid-template-columns: 1fr; }
+            .blog_right_sidebar { padding-left: 0; margin-top: 30px; }
+            .stat-item .stat-num { font-size: 1.9rem; }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Start Header Area -->
+    <!-- ═══ HEADER ═══ -->
     <header class="header_area sticky-header">
         <div class="main_menu">
-            <nav class="navbar navbar-expand-lg navbar-light main_box" style="padding-top:0 !important; padding-bottom:0 !important;">
+            <nav class="navbar navbar-expand-lg navbar-light main_box"
+                style="padding-top:0 !important; padding-bottom:0 !important;">
                 <div class="container">
-                    <a class="navbar-brand logo_h" href="#" style="padding:0 !important; margin:0 !important; line-height:0 !important;">
-                        <img src="img/logo.png" alt="Kauka Company Logo" style="height:100px !important; padding:0 !important; margin:0 !important; display:block;">
+                    <a class="navbar-brand logo_h" href="#"
+                        style="padding:0 !important; margin:0 !important; line-height:0 !important;">
+                        <img src="img/logo.png" alt="Kauka Company Logo"
+                            style="height:100px !important; padding:0 !important; margin:0 !important; display:block;">
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -232,13 +273,23 @@
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
                             <li class="nav-item"><a class="nav-link" href="{{ route('index') }}">Home</a></li>
-                            <li class="nav-item"><a href="{{ route('products') }}" class="nav-link dropdown-toggle">Products</a></li>
-                            <li class="nav-item submenu dropdown"><a href="{{ route('service') }}" class="nav-link dropdown-toggle">Services</a></li>
-                            <li class="nav-item active"><a href="{{ route('about') }}" class="nav-link dropdown-toggle">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('products') }}">Products</a></li>
+                            <li class="nav-item submenu dropdown">
+                                <a class="nav-link dropdown-toggle" href="{{ route('service') }}">Services</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{{ route('about') }}">About Us</a>
+                            </li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="nav-item"><a href="{{ route('cart') }}" class="cart"><span class="ti-bag text-primary">{{ session('cart') ? count(session('cart')) : 0 }}</span></a></li>
+                            <li class="nav-item">
+                                <a href="{{ route('cart') }}" class="cart">
+                                    <span class="ti-bag text-primary">
+                                        {{ session('cart') ? count(session('cart')) : 0 }}
+                                    </span>
+                                </a>
+                            </li>
                             <li class="nav-item">
                                 <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
                             </li>
@@ -257,9 +308,8 @@
             </div>
         </div>
     </header>
-    <!-- End Header Area -->
 
-    <!-- Start Banner Area -->
+    <!-- ═══ PAGE BANNER ═══ -->
     <section class="banner-area organic-breadcrumb">
         <div class="container">
             <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
@@ -273,70 +323,223 @@
             </div>
         </div>
     </section>
-    <!-- End Banner Area -->
 
-    <!-- Mission / Vision / Values -->
+    <!-- ═══ MISSION / VISION / VALUES ═══ -->
     <section class="blog_categorie_area">
         <div class="container">
+            <div class="section-title-wrap">
+                <span class="sub-label">Who We Are</span>
+                <h2>Our Foundation</h2>
+                <div class="title-bar"></div>
+            </div>
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="categories_post">
+                <div class="col-lg-4 col-md-6">
+                    <div class="mvv-card">
                         <img src="img/blog/cat-post/cat-post-3.jpg" alt="Our Mission">
-                        <div class="categories_details">
-                            <div class="categories_text">
-                                <a href="#"><h5>Our Mission</h5></a>
-                                <div class="border_line"></div>
-                                <p>To enhance healthcare delivery by providing innovative, affordable, and reliable medical supplies.</p>
-                            </div>
+                        <div class="card-body-inner">
+                            <div class="card-icon"><i class="fa fa-bullseye"></i></div>
+                            <h5>Our Mission</h5>
+                            <div class="border_line"></div>
+                            <p>To enhance healthcare delivery by providing innovative, affordable, and reliable medical supplies that meet international quality standards.</p>
                         </div>
+                        <div class="bottom-line"></div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="categories_post">
+                <div class="col-lg-4 col-md-6">
+                    <div class="mvv-card">
                         <img src="img/blog/cat-post/cat-post-2.jpg" alt="Our Vision">
-                        <div class="categories_details">
-                            <div class="categories_text">
-                                <a href="#"><h5>Our Vision</h5></a>
-                                <div class="border_line"></div>
-                                <p>To be the most trusted partner in healthcare supply across Africa.</p>
-                            </div>
+                        <div class="card-body-inner">
+                            <div class="card-icon"><i class="fa fa-eye"></i></div>
+                            <h5>Our Vision</h5>
+                            <div class="border_line"></div>
+                            <p>To be the most trusted partner in healthcare supply across Africa, empowering every clinic, hospital, and professional we serve.</p>
                         </div>
+                        <div class="bottom-line"></div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="categories_post">
+                <div class="col-lg-4 col-md-6">
+                    <div class="mvv-card">
                         <img src="img/blog/cat-post/cat-post-1.jpg" alt="Our Values">
-                        <div class="categories_details">
-                            <div class="categories_text">
-                                <a href="#"><h5>Our Values</h5></a>
-                                <div class="border_line"></div>
-                                <p>Quality, Integrity, Reliability, and Customer-Centered Service.</p>
-                            </div>
+                        <div class="card-body-inner">
+                            <div class="card-icon"><i class="fa fa-star"></i></div>
+                            <h5>Our Values</h5>
+                            <div class="border_line"></div>
+                            <p>Quality, Integrity, Reliability, and Customer-Centered Service — the four pillars that guide every decision we make.</p>
                         </div>
+                        <div class="bottom-line"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main About Content -->
+    <!-- ═══ STATS BAR ═══ -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="row justify-content-center align-items-center text-center">
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <span class="stat-num">20+</span>
+                        <span class="stat-lbl">Years Experience</span>
+                    </div>
+                </div>
+                <div class="col-1 d-none d-md-flex justify-content-center">
+                    <div class="stat-sep"></div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <span class="stat-num">1,500+</span>
+                        <span class="stat-lbl">Happy Clients</span>
+                    </div>
+                </div>
+                <div class="col-1 d-none d-md-flex justify-content-center">
+                    <div class="stat-sep"></div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <span class="stat-num">1,200+</span>
+                        <span class="stat-lbl">Products Supplied</span>
+                    </div>
+                </div>
+                <div class="col-1 d-none d-md-flex justify-content-center">
+                    <div class="stat-sep"></div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <span class="stat-num">24/7</span>
+                        <span class="stat-lbl">Support Available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ VIDEO GALLERY ═══ -->
+    <section class="video-gallery-section">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="sub-label">See Us in Action</span>
+                <h2>Our Story in Videos</h2>
+                <div class="title-bar"></div>
+            </div>
+            <div class="video-grid">
+
+                <div class="video-card"
+                    data-video="https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1"
+                    data-title="Kauka Company Overview">
+                    <img src="img/blog/main-blog/m-blog-1.jpg" alt="Company Overview">
+                    <span class="vc-duration">3:24</span>
+                    <div class="vc-overlay">
+                        <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
+                        <div class="vc-label">
+                            <h6>Company Overview</h6>
+                            <span>Who we are &amp; what we do</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card"
+                    data-video="https://www.youtube.com/embed/ysz5S6PUM-U?autoplay=1"
+                    data-title="Our Medical Products Range">
+                    <img src="img/blog/main-blog/m-blog-2.jpg" alt="Products Range">
+                    <span class="vc-duration">4:51</span>
+                    <div class="vc-overlay">
+                        <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
+                        <div class="vc-label">
+                            <h6>Our Products Range</h6>
+                            <span>Certified medical supplies</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card"
+                    data-video="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1"
+                    data-title="Meet Our Team">
+                    <img src="img/blog/main-blog/m-blog-3.jpg" alt="Meet Our Team">
+                    <span class="vc-duration">2:18</span>
+                    <div class="vc-overlay">
+                        <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
+                        <div class="vc-label">
+                            <h6>Meet Our Team</h6>
+                            <span>The people behind Kauka</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card"
+                    data-video="https://www.youtube.com/embed/3nQNiWdeH2Q?autoplay=1"
+                    data-title="Supply & Delivery Process">
+                    <img src="img/blog/main-blog/m-blog-4.jpg" alt="Supply Process">
+                    <span class="vc-duration">5:07</span>
+                    <div class="vc-overlay">
+                        <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
+                        <div class="vc-label">
+                            <h6>Supply &amp; Delivery Process</h6>
+                            <span>From order to doorstep</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card"
+                    data-video="https://www.youtube.com/embed/ZPn3MBNt4Rc?autoplay=1"
+                    data-title="Client Testimonials">
+                    <img src="img/blog/main-blog/m-blog-5.jpg" alt="Client Testimonials">
+                    <span class="vc-duration">6:33</span>
+                    <div class="vc-overlay">
+                        <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
+                        <div class="vc-label">
+                            <h6>Client Testimonials</h6>
+                            <span>What our partners say</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card"
+                    data-video="https://www.youtube.com/embed/aircAruvnKk?autoplay=1"
+                    data-title="East Africa Expansion">
+                    <img src="img/blog/cat-post/cat-post-1.jpg" alt="East Africa Expansion">
+                    <span class="vc-duration">4:12</span>
+                    <div class="vc-overlay">
+                        <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
+                        <div class="vc-label">
+                            <h6>East Africa Expansion</h6>
+                            <span>Growing our footprint</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ VIDEO POPUP MODAL ═══ -->
+    <div class="video-popup-overlay" id="videoPopup">
+        <div class="video-popup-inner">
+            <button class="close-popup" id="closePopup" aria-label="Close video">&times;</button>
+            <div class="video-wrapper">
+                <iframe id="popupIframe" src="" allowfullscreen
+                    allow="autoplay; encrypted-media; picture-in-picture"></iframe>
+            </div>
+            <div class="popup-title-bar" id="popupTitle"></div>
+        </div>
+    </div>
+
+    <!-- ═══ ABOUT CONTENT + SIDEBAR ═══ -->
     <section class="blog_area">
         <div class="container">
             <div class="row">
 
-                <!-- Left: Main Articles -->
+                <!-- Left: Articles -->
                 <div class="col-lg-8">
                     <div class="blog_left_sidebar">
 
-                        <!-- Article 1: Company Overview -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
                                     <div class="post_tag">
                                         <a href="#">Quality,</a>
                                         <a class="active" href="#">Healthcare,</a>
-                                        <a href="#">Medical,</a>
-                                        <a href="#">Supplies</a>
+                                        <a href="#">Medical</a>
                                     </div>
                                     <ul class="blog_meta list">
                                         <li><a href="#">Kauka Team <i class="lnr lnr-user"></i></a></li>
@@ -358,7 +561,6 @@
                             </div>
                         </article>
 
-                        <!-- Article 2: Mission -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -378,14 +580,13 @@
                                     <img src="img/blog/main-blog/m-blog-2.jpg" alt="Our Mission">
                                     <div class="blog_details">
                                         <a href="#"><h2>Our Mission: Quality Healthcare for All</h2></a>
-                                        <p>To enhance healthcare delivery by providing innovative, affordable, and reliable medical supplies that meet international quality standards. We ensure quality and reliability in every product, partner with healthcare providers to improve outcomes, and remain committed to advancing medical care across Africa.</p>
+                                        <p>To enhance healthcare delivery by providing innovative, affordable, and reliable medical supplies that meet international quality standards. We partner with healthcare providers to improve outcomes and remain committed to advancing medical care across Africa.</p>
                                         <a href="#" class="white_bg_btn">Read More</a>
                                     </div>
                                 </div>
                             </div>
                         </article>
 
-                        <!-- Article 3: Team -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -405,14 +606,13 @@
                                     <img src="img/blog/main-blog/m-blog-3.jpg" alt="Our Team">
                                     <div class="blog_details">
                                         <a href="#"><h2>Meet Our Professional Team</h2></a>
-                                        <p>Our team is led by experienced healthcare professionals dedicated to serving your medical supply needs. Dr. Ambwene John Mwankenja (Director), Fadhili Mwankenja (Operation Manager), Patrick Mbise (Operation Manager), and Clementina Peter (Sales & Procurement Officer) bring decades of combined experience to ensure you receive the best products and service.</p>
+                                        <p>Our team is led by experienced healthcare professionals. Dr. Ambwene John Mwankenja (Director), Fadhili Mwankenja (Operation Manager), Patrick Mbise (Operation Manager), and Clementina Peter (Sales & Procurement Officer) bring decades of combined experience to ensure every client receives the best products and service.</p>
                                         <a href="#" class="white_bg_btn">Meet the Team</a>
                                     </div>
                                 </div>
                             </div>
                         </article>
 
-                        <!-- Article 4: Clients -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -439,7 +639,6 @@
                             </div>
                         </article>
 
-                        <!-- Article 5: Why Choose Us -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -478,7 +677,6 @@
                                 <li class="page-item active"><a href="#" class="page-link">02</a></li>
                                 <li class="page-item"><a href="#" class="page-link">03</a></li>
                                 <li class="page-item"><a href="#" class="page-link">04</a></li>
-                                <li class="page-item"><a href="#" class="page-link">09</a></li>
                                 <li class="page-item">
                                     <a href="#" class="page-link" aria-label="Next">
                                         <span aria-hidden="true"><span class="lnr lnr-chevron-right"></span></span>
@@ -494,34 +692,31 @@
                 <div class="col-lg-4">
                     <div class="blog_right_sidebar">
 
-                        <!-- Search -->
                         <aside class="single_sidebar_widget search_widget">
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Search Our Story"
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Our Story'">
+                                    onfocus="this.placeholder=''" onblur="this.placeholder='Search Our Story'">
                                 <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button"><i class="lnr lnr-magnifier"></i></button>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="lnr lnr-magnifier"></i>
+                                    </button>
                                 </span>
                             </div>
-                            <div class="br"></div>
                         </aside>
 
-                        <!-- Director Profile -->
                         <aside class="single_sidebar_widget author_widget">
                             <img class="author_img rounded-circle" src="img/team-3.png" alt="Dr. Ambwene John Mwankenja">
                             <h4>Dr. Ambwene John Mwankenja</h4>
-                            <p>Director, Kauka Company</p>
+                            <p class="role">Director, Kauka Company</p>
                             <div class="social_icon">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
                                 <a href="#"><i class="fa fa-linkedin"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
-                            <p>"Our commitment is to provide healthcare facilities with reliable and affordable medical supplies. We believe in building a healthier tomorrow through quality products and exceptional service."</p>
-                            <div class="br"></div>
+                            <blockquote>"Our commitment is to provide healthcare facilities with reliable and affordable medical supplies. We believe in building a healthier tomorrow through quality products and exceptional service."</blockquote>
                         </aside>
 
-                        <!-- Milestones -->
                         <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title">Our Milestones</h3>
                             <div class="media post_item">
@@ -552,78 +747,44 @@
                                     <p>2024</p>
                                 </div>
                             </div>
-                            <div class="br"></div>
                         </aside>
 
-                        <!-- CTA Banner -->
                         <aside class="single_sidebar_widget ads_widget">
-                            <a href="contact.html"><img class="img-fluid" src="img/blog/add.jpg" alt="Contact Us"></a>
-                            <div class="br"></div>
+                            <a href="contact.html">
+                                <img class="img-fluid" src="img/blog/add.jpg" alt="Contact Kauka">
+                            </a>
                         </aside>
 
-                        <!-- Services List -->
                         <aside class="single_sidebar_widget post_category_widget">
                             <h4 class="widget_title">Our Services</h4>
                             <ul class="list cat-list">
-                                <li>
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <p>Medical Equipment Supply</p>
-                                        <p>50+</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <p>Hospital Consumables</p>
-                                        <p>200+</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <p>Equipment Maintenance</p>
-                                        <p>24/7</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <p>Medical Logistics</p>
-                                        <p>Nationwide</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <p>Staff Training</p>
-                                        <p>Monthly</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex justify-content-between">
-                                        <p>Consultancy</p>
-                                        <p>Available</p>
-                                    </a>
-                                </li>
+                                <li><a href="#"><p>Medical Equipment Supply</p><p>50+</p></a></li>
+                                <li><a href="#"><p>Hospital Consumables</p><p>200+</p></a></li>
+                                <li><a href="#"><p>Equipment Maintenance</p><p>24/7</p></a></li>
+                                <li><a href="#"><p>Medical Logistics</p><p>Nationwide</p></a></li>
+                                <li><a href="#"><p>Staff Training</p><p>Monthly</p></a></li>
+                                <li><a href="#"><p>Consultancy</p><p>Available</p></a></li>
                             </ul>
-                            <div class="br"></div>
                         </aside>
 
-                        <!-- Newsletter -->
                         <aside class="single-sidebar-widget newsletter_widget">
                             <h4 class="widget_title">Newsletter</h4>
                             <p>Stay updated with our latest products and healthcare news.</p>
                             <div class="form-group d-flex flex-row">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                                        <div class="input-group-text">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        </div>
                                     </div>
-                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email"
-                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'">
+                                    <input type="text" class="form-control" placeholder="Enter email"
+                                        onfocus="this.placeholder=''" onblur="this.placeholder='Enter email'">
                                 </div>
                                 <a href="#" class="bbtns">Subscribe</a>
                             </div>
                             <p class="text-bottom">You can unsubscribe at any time</p>
-                            <div class="br"></div>
                         </aside>
 
-                        <!-- Tags -->
                         <aside class="single-sidebar-widget tag_cloud_widget">
                             <h4 class="widget_title">Tags</h4>
                             <ul class="list">
@@ -644,13 +805,12 @@
 
                     </div>
                 </div>
-                <!-- End Sidebar -->
 
             </div>
         </div>
     </section>
 
-    <!-- Start Footer Area -->
+    <!-- ═══ FOOTER ═══ -->
     <footer class="footer-area section_gap">
         <div class="container">
             <div class="row">
@@ -670,10 +830,12 @@
                                 method="get" class="form-inline">
                                 <div class="d-flex flex-row">
                                     <input class="form-control" name="EMAIL" placeholder="Enter Email"
-                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email'"
+                                        onfocus="this.placeholder=''" onblur="this.placeholder='Enter Email'"
                                         required="" type="email">
-                                    <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-                                    <div style="position: absolute; left: -5000px;">
+                                    <button class="click-btn btn btn-default">
+                                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                    </button>
+                                    <div style="position:absolute;left:-5000px;">
                                         <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
                                     </div>
                                 </div>
@@ -687,7 +849,7 @@
                         <h6 class="mb-20">Contact Info</h6>
                         <p><i class="fa fa-map-marker"></i> Dar es Salaam, Tanzania</p>
                         <p><i class="fa fa-phone"></i> +255 123 456 789</p>
-                        <p><i class="fa fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="365f585059765d57435d5755595b4657584f1855595b">[email&#160;protected]</a></p>
+                        <p><i class="fa fa-envelope"></i> info@kaukacompany.com</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-6">
@@ -705,13 +867,14 @@
             </div>
             <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
                 <p class="footer-text m-0">
-                    Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | Kauka Company - Medical Supplies
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                    All rights reserved | Kauka Company - Medical Supplies
                 </p>
             </div>
         </div>
     </footer>
-    <!-- End Footer Area -->
 
+    <!-- Scripts -->
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
         integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
@@ -726,6 +889,43 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
     <script src="js/gmaps.min.js"></script>
     <script src="js/main.js"></script>
+
     <script>
         $(document).ready(function () {
-            $('#search').click(function ()
+
+            /* Header search */
+            $('#search').on('click', function () { $('#search_input_box').slideToggle(); });
+            $('#close_search').on('click', function () { $('#search_input_box').slideUp(); });
+
+            /* Video popup */
+            var $overlay = $('#videoPopup');
+            var $iframe  = $('#popupIframe');
+            var $title   = $('#popupTitle');
+
+            $('.video-card').on('click', function () {
+                $iframe.attr('src', $(this).data('video'));
+                $title.text($(this).data('title'));
+                $overlay.addClass('active');
+                $('body').css('overflow', 'hidden');
+            });
+
+            $('#closePopup').on('click', function () { closeVideo(); });
+
+            $overlay.on('click', function (e) {
+                if ($(e.target).is($overlay)) { closeVideo(); }
+            });
+
+            $(document).on('keydown', function (e) {
+                if (e.key === 'Escape') { closeVideo(); }
+            });
+
+            function closeVideo() {
+                $overlay.removeClass('active');
+                $iframe.attr('src', '');
+                $('body').css('overflow', '');
+            }
+        });
+    </script>
+
+</body>
+</html>
