@@ -35,78 +35,62 @@
 
     <!-- Start Header Area -->
 	<header class="header_area sticky-header">
-		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light main_box">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt="Kauka Company Logo" style="height:50px;"></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Products</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="category.html">Medical Equipment</a></li>
-									<li class="nav-item"><a class="nav-link" href="category.html">Hospital Consumables</a></li>
-									<li class="nav-item"><a class="nav-link" href="category.html">Patient Care</a></li>
-									<li class="nav-item"><a class="nav-link" href="category.html">Pharmaceuticals</a></li>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Services</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="service.html">Equipment Maintenance</a></li>
-									<li class="nav-item"><a class="nav-link" href="service.html">Medical Logistics</a></li>
-									<li class="nav-item"><a class="nav-link" href="service.html">Training</a></li>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown active">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">About</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item active"><a class="nav-link" href="about.html">Our Story</a></li>
-									<li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
-									<li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
-								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-						</ul>
-						<ul class="nav navbar-nav navbar-right align-items-center">
-							<li class="nav-item mr-2">
-								<a href="cart.html" class="nav-link p-2 position-relative">
-									<span class="ti-bag" style="font-size: 20px; color: #007bff;"></span>
-									<span class="badge badge-primary position-absolute" style="top: 0; right: 0; font-size: 10px; padding: 2px 5px; border-radius: 50%;">0</span>
-								</a>
-							</li>
-							<li class="nav-item">
-								<button class="btn btn-link nav-link p-2" id="search" style="border: none; background: none;">
-									<span class="lnr lnr-magnifier" style="font-size: 20px; color: #007bff;"></span>
-								</button>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
-		<div class="search_input" id="search_input_box">
-			<div class="container">
-				<form class="d-flex justify-content-between">
-					<input type="text" class="form-control" id="search_input" placeholder="Search products...">
-					<button type="submit" class="btn"></button>
-					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
-				</form>
-			</div>
-		</div>
-	</header>
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light main_box" style="padding-top:0 !important; padding-bottom:0 !important;">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand logo_h" href="#" style="padding:0 !important; margin:0 !important; line-height:0 !important;">
+                        <img src="img/logo.png" 
+                            alt="Kauka Company Logo" 
+                            style="height:100px !important; padding:0 !important; margin:0 !important; display:block;">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="{{ route('index') }}">Home</a></li>
+
+                            <li class="nav-item active">
+                                <a href="{{ route('products') }}" class="nav-link dropdown-toggle" >Products</a>
+                            </li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="{{ route('service') }}" class="nav-link dropdown-toggle" >Services</a>
+                                
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="{{ route('about') }}" class="nav-link dropdown-toggle" >About Us</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('contact') }}" class="nav-link dropdown-toggle" >Contact</a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="nav-item"><a href="{{ route('cart') }}" class="cart"><span class="ti-bag text-primary">{{ session('cart') ? count(session('cart')) : 0 }}</span></a></li>
+                            <li class="nav-item">
+                                <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="search_input" id="search_input_box">
+            <div class="container">
+                <form class="d-flex justify-content-between">
+                    <input type="text" class="form-control" id="search_input" placeholder="Search products...">
+                    <button type="submit" class="btn"></button>
+                    <span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+                </form>
+            </div>
+        </div>
+    </header>
 	<!-- End Header Area -->
 
     <!-- Start Banner Area - Page Header -->
