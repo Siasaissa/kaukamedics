@@ -26,6 +26,191 @@
     <link rel="stylesheet" href="css/ion.rangeSlider.css" />
     <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* ── Layout overrides only – no colour changes ── */
+
+        /* 1. Mission / Vision / Values cards: equal height, image fills top */
+        .blog_categorie_area .categories_post {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,.08);
+        }
+        .blog_categorie_area .categories_post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .blog_categorie_area .categories_details {
+            flex: 1;
+            display: flex;
+            align-items: stretch;
+        }
+        .blog_categorie_area .categories_text {
+            padding: 20px;
+            width: 100%;
+        }
+        .blog_categorie_area .row {
+            align-items: stretch;
+        }
+        .blog_categorie_area .col-lg-4 {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        /* 2. Blog articles: image covers its container neatly */
+        .blog_item .blog_post img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            border-radius: 4px;
+        }
+
+        /* 3. Blog item meta column: vertically centred with the article */
+        .blog_item .blog_info {
+            padding-top: 10px;
+        }
+        .blog_item {
+            align-items: flex-start;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .blog_item:last-of-type {
+            border-bottom: none;
+        }
+
+        /* 4. Blog details spacing */
+        .blog_details h2 {
+            font-size: 1.25rem;
+            line-height: 1.4;
+            margin-top: 14px;
+            margin-bottom: 10px;
+        }
+        .blog_details p {
+            margin-bottom: 16px;
+        }
+
+        /* 5. Sidebar widgets: consistent spacing */
+        .single_sidebar_widget,
+        .single-sidebar-widget {
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        /* 6. Author widget: centred layout */
+        .author_widget {
+            text-align: center;
+            padding: 24px 20px;
+        }
+        .author_widget .author_img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            margin: 0 auto 14px;
+            display: block;
+        }
+        .author_widget h4 {
+            margin-bottom: 4px;
+        }
+        .author_widget .social_icon {
+            margin: 12px 0;
+        }
+        .author_widget .social_icon a {
+            margin: 0 5px;
+            font-size: 16px;
+        }
+
+        /* 7. Popular post (milestones): image + text aligned */
+        .post_item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            gap: 14px;
+        }
+        .post_item img {
+            width: 70px;
+            height: 55px;
+            object-fit: cover;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+        .post_item .media-body h3 {
+            font-size: 0.9rem;
+            margin-bottom: 2px;
+        }
+        .post_item .media-body p {
+            font-size: 0.82rem;
+            margin: 0;
+        }
+
+        /* 8. Services list: clean row layout */
+        .cat-list li a {
+            padding: 7px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cat-list li a p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* 9. Newsletter widget form row */
+        .newsletter_widget .form-group {
+            align-items: center;
+            gap: 8px;
+            flex-wrap: nowrap;
+        }
+        .newsletter_widget .bbtns {
+            white-space: nowrap;
+            padding: 8px 14px;
+            font-size: 0.85rem;
+        }
+
+        /* 10. Tag cloud: wrapping flex */
+        .tag_cloud_widget ul.list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 0;
+            list-style: none;
+        }
+        .tag_cloud_widget ul.list li {
+            margin: 0;
+        }
+        .tag_cloud_widget ul.list li a {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 3px;
+            font-size: 0.82rem;
+        }
+
+        /* 11. Blog area top spacing */
+        .blog_area {
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+
+        /* 12. Responsive: stack meta above article on small screens */
+        @media (max-width: 767px) {
+            .blog_item .col-md-3 {
+                text-align: left !important;
+                margin-bottom: 12px;
+            }
+            .blog_item .blog_post img {
+                height: 180px;
+            }
+            .blog_categorie_area .categories_post img {
+                height: 160px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -502,7 +687,7 @@
                         <h6 class="mb-20">Contact Info</h6>
                         <p><i class="fa fa-map-marker"></i> Dar es Salaam, Tanzania</p>
                         <p><i class="fa fa-phone"></i> +255 123 456 789</p>
-                        <p><i class="fa fa-envelope"></i> info@kaukacompany.com</p>
+                        <p><i class="fa fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="365f585059765d57435d5755595b4657584f1855595b">[email&#160;protected]</a></p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-6">
@@ -520,7 +705,7 @@
             </div>
             <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
                 <p class="footer-text m-0">
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Kauka Company - Medical Supplies
+                    Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | Kauka Company - Medical Supplies
                 </p>
             </div>
         </div>
@@ -543,14 +728,4 @@
     <script src="js/main.js"></script>
     <script>
         $(document).ready(function () {
-            $('#search').click(function () {
-                $('#search_input_box').slideToggle();
-            });
-            $('#close_search').click(function () {
-                $('#search_input_box').slideUp();
-            });
-        });
-    </script>
-</body>
-
-</html>
+            $('#search').click(function ()
