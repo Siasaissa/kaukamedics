@@ -2,38 +2,38 @@
 <html lang="zxx" class="no-js">
 
 <head>
-    <!-- Mobile Specific Meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="img/fav.png">
-    <!-- Author Meta -->
-    <meta name="author" content="CodePixar">
-    <!-- Meta Description -->
-    <meta name="description" content="">
-    <!-- Meta Keyword -->
-    <meta name="keywords" content="">
-    <!-- meta character set -->
-    <meta charset="UTF-8">
-    <!-- Site Title -->
-    <title>Karma Shop - Contact Us</title>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="CodePixar">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Karma Shop</title>
 
-    <!--
+	<!--
             CSS
             ============================================= -->
-    <link rel="stylesheet" href="css/linearicons.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/nouislider.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/linearicons.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/nouislider.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
-    <!-- Start Header Area -->
-    <header class="header_area sticky-header">
+	<!-- Start Header Area -->
+	<header class="header_area sticky-header">
         <div class="main_menu">
             <nav class="navbar navbar-expand-lg navbar-light main_box" style="padding-top:0 !important; padding-bottom:0 !important;">
                 <div class="container">
@@ -86,221 +86,218 @@
             </div>
         </div>
     </header>
-    <!-- End Header Area -->
+	<!-- End Header Area -->
 
-    <!-- Start Banner Area -->
-    <section class="banner-area organic-breadcrumb">
-        <div class="container">
-            <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
-                <div class="col-first">
-                    <h1>Contact Us</h1>
-                    <nav class="d-flex align-items-center">
-                        <a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
-                        <a href="category.html">Contact</a>
-                    </nav>
-                </div>
+	<!-- Start Banner Area -->
+	<section class="banner-area organic-breadcrumb">
+		<div class="container">
+			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+				<div class="col-first">
+					<h1>Contact Us</h1>
+					<nav class="d-flex align-items-center">
+						<a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
+						<a href="category.html">Contact</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Banner Area -->
+
+	<!--================Contact Area =================-->
+	<!-- Contact Start -->
+    <div class="container-fluid py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                <p class="section-title bg-white text-start text-primary pe-3">Contact</p>
+                <h1 class="display-6 mb-4 wow fadeIn" data-wow-delay="0.2s">
+                    Have Questions? Get in Touch With Us
+                </h1>
+                <iframe
+  class="w-100"
+  src="https://www.google.com/maps?q=-6.80486,39.25936&z=16&output=embed"
+  frameborder="0"
+  style="height:425px; border:0;"
+  allowfullscreen=""
+  aria-hidden="false"
+  tabindex="0"></iframe>
+
+            </div>
+            <div class="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
+                <h3>Send Us a Message</h3>
+                <p class="mb-4">
+                    Have inquiries about our medical products or need support? Fill out the form below and our team
+                    will respond promptly to assist you.
+                </p>
+                <form action="{{ route('contact.send') }}" method="POST">
+    @csrf
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
+                <label for="name">Your Name</label>
             </div>
         </div>
-    </section>
-    <!-- End Banner Area -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                <label for="email">Your Email</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-floating">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <label for="subject">Subject</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-floating">
+                <textarea class="form-control" name="message" placeholder="Leave a message here" id="message" style="height: 250px" required></textarea>
+                <label for="message">Message</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary py-3 px-4" type="submit">Send Message</button>
+        </div>
+    </div>
+</form>
 
-    <!--================ REPLACED CONTACT AREA =================-->
-    <!-- The following contact section is the exact content from your provided page, 
-         with all original classes, CSS structure, and functionality preserved. 
-         Only the content (text, map, form) has been updated/kept as requested. 
-         No classes or CSS were modified. -->
-    
-    <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                    <p class="section-title bg-white text-start text-primary pe-3">Contact</p>
-                    <h1 class="display-6 mb-4 wow fadeIn" data-wow-delay="0.2s">
-                        Have Questions? Get in Touch With Us
-                    </h1>
-                    <iframe
-                        class="w-100"
-                        src="https://www.google.com/maps?q=-6.80486,39.25936&z=16&output=embed"
-                        frameborder="0"
-                        style="height:425px; border:0;"
-                        allowfullscreen=""
-                        aria-hidden="false"
-                        tabindex="0"></iframe>
-                </div>
-                <div class="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
-                    <h3>Send Us a Message</h3>
-                    <p class="mb-4">
-                        Have inquiries about our medical products or need support? Fill out the form below and our team
-                        will respond promptly to assist you.
-                    </p>
-                    <form action="{{ route('contact.send') }}" method="POST">
-                        @csrf
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
-                                    <label for="name">Your Name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                                    <label for="email">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" name="message" placeholder="Leave a message here" id="message" style="height: 250px" required></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary py-3 px-4" type="submit">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
             </div>
         </div>
     </div>
+</div>
+
     <!-- Contact End -->
+	<!--================End Contact Area =================-->
 
-    <!--================ END REPLACED CONTACT AREA =================-->
+	<!-- start footer Area -->
+	<footer class="footer-area section_gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3  col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>About Us</h6>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
+							magna aliqua.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4  col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Newsletter</h6>
+						<p>Stay update with our latest</p>
+						<div class="" id="mc_embed_signup">
 
-    <!-- start footer Area -->
-    <footer class="footer-area section_gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3  col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>About Us</h6>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
-                            magna aliqua.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4  col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Newsletter</h6>
-                        <p>Stay update with our latest</p>
-                        <div class="" id="mc_embed_signup">
+							<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+							 method="get" class="form-inline">
 
-                            <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                             method="get" class="form-inline">
+								<div class="d-flex flex-row">
 
-                                <div class="d-flex flex-row">
-
-                                    <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
-                                     required="" type="email">
+									<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
+									 required="" type="email">
 
 
-                                    <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-                                    <div style="position: absolute; left: -5000px;">
-                                        <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-                                    </div>
+									<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+									<div style="position: absolute; left: -5000px;">
+										<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+									</div>
 
-                                    <!-- <div class="col-lg-4 col-md-4">
-                                                    <button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
-                                                </div>  -->
-                                </div>
-                                <div class="info"></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3  col-md-6 col-sm-6">
-                    <div class="single-footer-widget mail-chimp">
-                        <h6 class="mb-20">Instragram Feed</h6>
-                        <ul class="instafeed d-flex flex-wrap">
-                            <li><img src="img/i1.jpg" alt=""></li>
-                            <li><img src="img/i2.jpg" alt=""></li>
-                            <li><img src="img/i3.jpg" alt=""></li>
-                            <li><img src="img/i4.jpg" alt=""></li>
-                            <li><img src="img/i5.jpg" alt=""></li>
-                            <li><img src="img/i6.jpg" alt=""></li>
-                            <li><img src="img/i7.jpg" alt=""></li>
-                            <li><img src="img/i8.jpg" alt=""></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Follow Us</h6>
-                        <p>Let us be social</p>
-                        <div class="footer-social d-flex align-items-center">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-behance"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
-                <p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+									<!-- <div class="col-lg-4 col-md-4">
+													<button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
+												</div>  -->
+								</div>
+								<div class="info"></div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3  col-md-6 col-sm-6">
+					<div class="single-footer-widget mail-chimp">
+						<h6 class="mb-20">Instragram Feed</h6>
+						<ul class="instafeed d-flex flex-wrap">
+							<li><img src="img/i1.jpg" alt=""></li>
+							<li><img src="img/i2.jpg" alt=""></li>
+							<li><img src="img/i3.jpg" alt=""></li>
+							<li><img src="img/i4.jpg" alt=""></li>
+							<li><img src="img/i5.jpg" alt=""></li>
+							<li><img src="img/i6.jpg" alt=""></li>
+							<li><img src="img/i7.jpg" alt=""></li>
+							<li><img src="img/i8.jpg" alt=""></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Follow Us</h6>
+						<p>Let us be social</p>
+						<div class="footer-social d-flex align-items-center">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
+				<p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </p>
-            </div>
-        </div>
-    </footer>
-    <!-- End footer Area -->
+			</div>
+		</div>
+	</footer>
+	<!-- End footer Area -->
 
-    <!--================Contact Success and Error message Area =================-->
-    <div id="success" class="modal modal-message fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <i class="fa fa-close"></i>
-                    </button>
-                    <h2>Thank you</h2>
-                    <p>Your message is successfully sent...</p>
-                </div>
-            </div>
-        </div>
-    </div>
+	<!--================Contact Success and Error message Area =================-->
+	<div id="success" class="modal modal-message fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i class="fa fa-close"></i>
+					</button>
+					<h2>Thank you</h2>
+					<p>Your message is successfully sent...</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <!-- Modals error -->
+	<!-- Modals error -->
 
-    <div id="error" class="modal modal-message fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <i class="fa fa-close"></i>
-                    </button>
-                    <h2>Sorry !</h2>
-                    <p> Something went wrong </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--================End Contact Success and Error message Area =================-->
+	<div id="error" class="modal modal-message fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i class="fa fa-close"></i>
+					</button>
+					<h2>Sorry !</h2>
+					<p> Something went wrong </p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--================End Contact Success and Error message Area =================-->
 
 
-    <script src="js/vendor/jquery-2.2.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-     crossorigin="anonymous"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/nouislider.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <!--gmaps Js-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-    <script src="js/gmaps.min.js"></script>
-    <script src="js/main.js"></script>
+	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+	 crossorigin="anonymous"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/nouislider.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>
