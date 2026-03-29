@@ -16,9 +16,6 @@
     <meta charset="UTF-8">
     <!-- Site Title -->
     <title>Kauka Company - About Us</title>
-    <!--
-            CSS
-            ============================================= -->
     <link rel="stylesheet" href="css/linearicons.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/themify-icons.css">
@@ -34,42 +31,26 @@
 <body>
 
     <!-- Start Header Area -->
-	<header class="header_area sticky-header">
+    <header class="header_area sticky-header">
         <div class="main_menu">
             <nav class="navbar navbar-expand-lg navbar-light main_box" style="padding-top:0 !important; padding-bottom:0 !important;">
                 <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
                     <a class="navbar-brand logo_h" href="#" style="padding:0 !important; margin:0 !important; line-height:0 !important;">
-                        <img src="img/logo.png" 
-                            alt="Kauka Company Logo" 
-                            style="height:100px !important; padding:0 !important; margin:0 !important; display:block;">
+                        <img src="img/logo.png" alt="Kauka Company Logo" style="height:100px !important; padding:0 !important; margin:0 !important; display:block;">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
                             <li class="nav-item"><a class="nav-link" href="{{ route('index') }}">Home</a></li>
-
-                            <li class="nav-item active">
-                                <a href="{{ route('products') }}" class="nav-link dropdown-toggle" >Products</a>
-                            </li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="{{ route('service') }}" class="nav-link dropdown-toggle" >Services</a>
-                                
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="{{ route('about') }}" class="nav-link dropdown-toggle" >About Us</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('contact') }}" class="nav-link dropdown-toggle" >Contact</a>
-                            </li>
+                            <li class="nav-item"><a href="{{ route('products') }}" class="nav-link dropdown-toggle">Products</a></li>
+                            <li class="nav-item submenu dropdown"><a href="{{ route('service') }}" class="nav-link dropdown-toggle">Services</a></li>
+                            <li class="nav-item active"><a href="{{ route('about') }}" class="nav-link dropdown-toggle">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="nav-item"><a href="{{ route('cart') }}" class="cart"><span class="ti-bag text-primary">{{ session('cart') ? count(session('cart')) : 0 }}</span></a></li>
@@ -91,9 +72,9 @@
             </div>
         </div>
     </header>
-	<!-- End Header Area -->
+    <!-- End Header Area -->
 
-    <!-- Start Banner Area - Page Header -->
+    <!-- Start Banner Area -->
     <section class="banner-area organic-breadcrumb">
         <div class="container">
             <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
@@ -109,18 +90,16 @@
     </section>
     <!-- End Banner Area -->
 
-    <!--================Blog Categorie Area =================-->
+    <!-- Mission / Vision / Values -->
     <section class="blog_categorie_area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="categories_post">
-                        <img src="img/blog/cat-post/cat-post-3.jpg" alt="post">
+                        <img src="img/blog/cat-post/cat-post-3.jpg" alt="Our Mission">
                         <div class="categories_details">
                             <div class="categories_text">
-                                <a href="blog-details.html">
-                                    <h5>Our Mission</h5>
-                                </a>
+                                <a href="#"><h5>Our Mission</h5></a>
                                 <div class="border_line"></div>
                                 <p>To enhance healthcare delivery by providing innovative, affordable, and reliable medical supplies.</p>
                             </div>
@@ -129,12 +108,10 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="categories_post">
-                        <img src="img/blog/cat-post/cat-post-2.jpg" alt="post">
+                        <img src="img/blog/cat-post/cat-post-2.jpg" alt="Our Vision">
                         <div class="categories_details">
                             <div class="categories_text">
-                                <a href="blog-details.html">
-                                    <h5>Our Vision</h5>
-                                </a>
+                                <a href="#"><h5>Our Vision</h5></a>
                                 <div class="border_line"></div>
                                 <p>To be the most trusted partner in healthcare supply across Africa.</p>
                             </div>
@@ -143,12 +120,10 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="categories_post">
-                        <img src="img/blog/cat-post/cat-post-1.jpg" alt="post">
+                        <img src="img/blog/cat-post/cat-post-1.jpg" alt="Our Values">
                         <div class="categories_details">
                             <div class="categories_text">
-                                <a href="blog-details.html">
-                                    <h5>Our Values</h5>
-                                </a>
+                                <a href="#"><h5>Our Values</h5></a>
                                 <div class="border_line"></div>
                                 <p>Quality, Integrity, Reliability, and Customer-Centered Service.</p>
                             </div>
@@ -158,14 +133,17 @@
             </div>
         </div>
     </section>
-    <!--================Blog Categorie Area =================-->
 
-    <!--================Blog Area =================-->
+    <!-- Main About Content -->
     <section class="blog_area">
         <div class="container">
             <div class="row">
+
+                <!-- Left: Main Articles -->
                 <div class="col-lg-8">
                     <div class="blog_left_sidebar">
+
+                        <!-- Article 1: Company Overview -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -176,26 +154,26 @@
                                         <a href="#">Supplies</a>
                                     </div>
                                     <ul class="blog_meta list">
-                                        <li><a href="#">Kauka Team<i class="lnr lnr-user"></i></a></li>
-                                        <li><a href="#">Est. 2005<i class="lnr lnr-calendar-full"></i></a></li>
-                                        <li><a href="#">1.2M Clients<i class="lnr lnr-eye"></i></a></li>
-                                        <li><a href="#">1500 Products<i class="lnr lnr-bubble"></i></a></li>
+                                        <li><a href="#">Kauka Team <i class="lnr lnr-user"></i></a></li>
+                                        <li><a href="#">Est. 2005 <i class="lnr lnr-calendar-full"></i></a></li>
+                                        <li><a href="#">1.2M Clients <i class="lnr lnr-eye"></i></a></li>
+                                        <li><a href="#">1500 Products <i class="lnr lnr-bubble"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-1.jpg" alt="">
+                                    <img src="img/blog/main-blog/m-blog-1.jpg" alt="Delivering Quality Healthcare">
                                     <div class="blog_details">
-                                        <a href="single-blog.html">
-                                            <h2>Delivering Quality Healthcare Solutions Since 2005</h2>
-                                        </a>
+                                        <a href="#"><h2>Delivering Quality Healthcare Solutions Since 2005</h2></a>
                                         <p>We are a trusted provider of medical equipment, hospital supplies, and healthcare solutions dedicated to improving the quality of care across hospitals, clinics, and medical institutions. Our goal is to make reliable medical products accessible to those who save lives every day.</p>
-                                        <a href="single-blog.html" class="white_bg_btn">Read More</a>
+                                        <a href="#" class="white_bg_btn">Read More</a>
                                     </div>
                                 </div>
                             </div>
                         </article>
+
+                        <!-- Article 2: Mission -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -205,24 +183,24 @@
                                         <a href="#">Commitment</a>
                                     </div>
                                     <ul class="blog_meta list">
-                                        <li><a href="#">Our Team<i class="lnr lnr-user"></i></a></li>
-                                        <li><a href="#">2024<i class="lnr lnr-calendar-full"></i></a></li>
+                                        <li><a href="#">Our Team <i class="lnr lnr-user"></i></a></li>
+                                        <li><a href="#">2024 <i class="lnr lnr-calendar-full"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-2.jpg" alt="">
+                                    <img src="img/blog/main-blog/m-blog-2.jpg" alt="Our Mission">
                                     <div class="blog_details">
-                                        <a href="single-blog.html">
-                                            <h2>Our Mission: Quality Healthcare for All</h2>
-                                        </a>
+                                        <a href="#"><h2>Our Mission: Quality Healthcare for All</h2></a>
                                         <p>To enhance healthcare delivery by providing innovative, affordable, and reliable medical supplies that meet international quality standards. We ensure quality and reliability in every product, partner with healthcare providers to improve outcomes, and remain committed to advancing medical care across Africa.</p>
-                                        <a href="single-blog.html" class="white_bg_btn">Read More</a>
+                                        <a href="#" class="white_bg_btn">Read More</a>
                                     </div>
                                 </div>
                             </div>
                         </article>
+
+                        <!-- Article 3: Team -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -232,24 +210,24 @@
                                         <a href="#">Professionals</a>
                                     </div>
                                     <ul class="blog_meta list">
-                                        <li><a href="#">Leadership<i class="lnr lnr-user"></i></a></li>
-                                        <li><a href="#">2024<i class="lnr lnr-calendar-full"></i></a></li>
+                                        <li><a href="#">Leadership <i class="lnr lnr-user"></i></a></li>
+                                        <li><a href="#">2024 <i class="lnr lnr-calendar-full"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-3.jpg" alt="">
+                                    <img src="img/blog/main-blog/m-blog-3.jpg" alt="Our Team">
                                     <div class="blog_details">
-                                        <a href="single-blog.html">
-                                            <h2>Meet Our Professional Team</h2>
-                                        </a>
+                                        <a href="#"><h2>Meet Our Professional Team</h2></a>
                                         <p>Our team is led by experienced healthcare professionals dedicated to serving your medical supply needs. Dr. Ambwene John Mwankenja (Director), Fadhili Mwankenja (Operation Manager), Patrick Mbise (Operation Manager), and Clementina Peter (Sales & Procurement Officer) bring decades of combined experience to ensure you receive the best products and service.</p>
-                                        <a href="single-blog.html" class="white_bg_btn">Meet the Team</a>
+                                        <a href="#" class="white_bg_btn">Meet the Team</a>
                                     </div>
                                 </div>
                             </div>
                         </article>
+
+                        <!-- Article 4: Clients -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -259,24 +237,24 @@
                                         <a href="#">Hospitals</a>
                                     </div>
                                     <ul class="blog_meta list">
-                                        <li><a href="#">Clients<i class="lnr lnr-user"></i></a></li>
-                                        <li><a href="#">2024<i class="lnr lnr-calendar-full"></i></a></li>
+                                        <li><a href="#">Clients <i class="lnr lnr-user"></i></a></li>
+                                        <li><a href="#">2024 <i class="lnr lnr-calendar-full"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-4.jpg" alt="">
+                                    <img src="img/blog/main-blog/m-blog-4.jpg" alt="Trusted Clients">
                                     <div class="blog_details">
-                                        <a href="single-blog.html">
-                                            <h2>Trusted by Healthcare Providers Nationwide</h2>
-                                        </a>
+                                        <a href="#"><h2>Trusted by Healthcare Providers Nationwide</h2></a>
                                         <p>We are proud to serve over 1,500 satisfied clients including hospitals, clinics, and pharmacies across Tanzania and East Africa. Our reputation is built on quality products, timely delivery, and professional customer service.</p>
-                                        <a href="single-blog.html" class="white_bg_btn">View More</a>
+                                        <a href="#" class="white_bg_btn">View More</a>
                                     </div>
                                 </div>
                             </div>
                         </article>
+
+                        <!-- Article 5: Why Choose Us -->
                         <article class="row blog_item">
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
@@ -286,31 +264,29 @@
                                         <a href="#">Us</a>
                                     </div>
                                     <ul class="blog_meta list">
-                                        <li><a href="#">Benefits<i class="lnr lnr-user"></i></a></li>
-                                        <li><a href="#">2024<i class="lnr lnr-calendar-full"></i></a></li>
+                                        <li><a href="#">Benefits <i class="lnr lnr-user"></i></a></li>
+                                        <li><a href="#">2024 <i class="lnr lnr-calendar-full"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-5.jpg" alt="">
+                                    <img src="img/blog/main-blog/m-blog-5.jpg" alt="Why Choose Kauka">
                                     <div class="blog_details">
-                                        <a href="single-blog.html">
-                                            <h2>Why Choose Kauka Company?</h2>
-                                        </a>
+                                        <a href="#"><h2>Why Choose Kauka Company?</h2></a>
                                         <p>We offer certified and approved medical products, a strong distribution and logistics network, and an experienced and dedicated support team. Partner with us to access reliable medical solutions that keep your healthcare facility equipped and efficient.</p>
                                         <a href="contact.html" class="white_bg_btn">Contact Us</a>
                                     </div>
                                 </div>
                             </div>
                         </article>
+
+                        <!-- Pagination -->
                         <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
                                 <li class="page-item">
                                     <a href="#" class="page-link" aria-label="Previous">
-                                        <span aria-hidden="true">
-                                            <span class="lnr lnr-chevron-left"></span>
-                                        </span>
+                                        <span aria-hidden="true"><span class="lnr lnr-chevron-left"></span></span>
                                     </a>
                                 </li>
                                 <li class="page-item"><a href="#" class="page-link">01</a></li>
@@ -320,26 +296,32 @@
                                 <li class="page-item"><a href="#" class="page-link">09</a></li>
                                 <li class="page-item">
                                     <a href="#" class="page-link" aria-label="Next">
-                                        <span aria-hidden="true">
-                                            <span class="lnr lnr-chevron-right"></span>
-                                        </span>
+                                        <span aria-hidden="true"><span class="lnr lnr-chevron-right"></span></span>
                                     </a>
                                 </li>
                             </ul>
                         </nav>
+
                     </div>
                 </div>
+
+                <!-- Right: Sidebar -->
                 <div class="col-lg-4">
                     <div class="blog_right_sidebar">
+
+                        <!-- Search -->
                         <aside class="single_sidebar_widget search_widget">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search Our Story" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Our Story'">
+                                <input type="text" class="form-control" placeholder="Search Our Story"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Our Story'">
                                 <span class="input-group-btn">
                                     <button class="btn btn-default" type="button"><i class="lnr lnr-magnifier"></i></button>
                                 </span>
-                            </div><!-- /input-group -->
+                            </div>
                             <div class="br"></div>
                         </aside>
+
+                        <!-- Director Profile -->
                         <aside class="single_sidebar_widget author_widget">
                             <img class="author_img rounded-circle" src="img/team-3.png" alt="Dr. Ambwene John Mwankenja">
                             <h4>Dr. Ambwene John Mwankenja</h4>
@@ -353,50 +335,48 @@
                             <p>"Our commitment is to provide healthcare facilities with reliable and affordable medical supplies. We believe in building a healthier tomorrow through quality products and exceptional service."</p>
                             <div class="br"></div>
                         </aside>
+
+                        <!-- Milestones -->
                         <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title">Our Milestones</h3>
                             <div class="media post_item">
-                                <img src="img/blog/popular-post/post1.jpg" alt="post">
+                                <img src="img/blog/popular-post/post1.jpg" alt="Company Founded">
                                 <div class="media-body">
-                                    <a href="blog-details.html">
-                                        <h3>Company Founded</h3>
-                                    </a>
+                                    <a href="#"><h3>Company Founded</h3></a>
                                     <p>2005</p>
                                 </div>
                             </div>
                             <div class="media post_item">
-                                <img src="img/blog/popular-post/post2.jpg" alt="post">
+                                <img src="img/blog/popular-post/post2.jpg" alt="Expanded to East Africa">
                                 <div class="media-body">
-                                    <a href="blog-details.html">
-                                        <h3>Expanded to East Africa</h3>
-                                    </a>
+                                    <a href="#"><h3>Expanded to East Africa</h3></a>
                                     <p>2010</p>
                                 </div>
                             </div>
                             <div class="media post_item">
-                                <img src="img/blog/popular-post/post3.jpg" alt="post">
+                                <img src="img/blog/popular-post/post3.jpg" alt="ISO Certification">
                                 <div class="media-body">
-                                    <a href="blog-details.html">
-                                        <h3>ISO Certification</h3>
-                                    </a>
+                                    <a href="#"><h3>ISO Certification</h3></a>
                                     <p>2015</p>
                                 </div>
                             </div>
                             <div class="media post_item">
-                                <img src="img/blog/popular-post/post4.jpg" alt="post">
+                                <img src="img/blog/popular-post/post4.jpg" alt="1500+ Clients Served">
                                 <div class="media-body">
-                                    <a href="blog-details.html">
-                                        <h3>1500+ Clients Served</h3>
-                                    </a>
+                                    <a href="#"><h3>1500+ Clients Served</h3></a>
                                     <p>2024</p>
                                 </div>
                             </div>
                             <div class="br"></div>
                         </aside>
+
+                        <!-- CTA Banner -->
                         <aside class="single_sidebar_widget ads_widget">
                             <a href="contact.html"><img class="img-fluid" src="img/blog/add.jpg" alt="Contact Us"></a>
                             <div class="br"></div>
                         </aside>
+
+                        <!-- Services List -->
                         <aside class="single_sidebar_widget post_category_widget">
                             <h4 class="widget_title">Our Services</h4>
                             <ul class="list cat-list">
@@ -439,6 +419,8 @@
                             </ul>
                             <div class="br"></div>
                         </aside>
+
+                        <!-- Newsletter -->
                         <aside class="single-sidebar-widget newsletter_widget">
                             <h4 class="widget_title">Newsletter</h4>
                             <p>Stay updated with our latest products and healthcare news.</p>
@@ -455,6 +437,8 @@
                             <p class="text-bottom">You can unsubscribe at any time</p>
                             <div class="br"></div>
                         </aside>
+
+                        <!-- Tags -->
                         <aside class="single-sidebar-widget tag_cloud_widget">
                             <h4 class="widget_title">Tags</h4>
                             <ul class="list">
@@ -472,40 +456,40 @@
                                 <li><a href="#">Maintenance</a></li>
                             </ul>
                         </aside>
+
                     </div>
                 </div>
+                <!-- End Sidebar -->
+
             </div>
         </div>
     </section>
-    <!--================Blog Area =================-->
 
-    <!-- start footer Area -->
+    <!-- Start Footer Area -->
     <footer class="footer-area section_gap">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3  col-md-6 col-sm-6">
+                <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-footer-widget">
                         <h6>About Kauka Company</h6>
-                        <p>
-                            We are dedicated to providing high-quality medical equipment and healthcare solutions that empower hospitals, clinics, and professionals across Tanzania and East Africa.
-                        </p>
+                        <p>We are dedicated to providing high-quality medical equipment and healthcare solutions that empower hospitals, clinics, and professionals across Tanzania and East Africa.</p>
                     </div>
                 </div>
-                <div class="col-lg-4  col-md-6 col-sm-6">
+                <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-footer-widget">
                         <h6>Newsletter</h6>
                         <p>Stay updated with our latest medical products</p>
-                        <div class="" id="mc_embed_signup">
-                            <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                        <div id="mc_embed_signup">
+                            <form target="_blank" novalidate="true"
+                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
                                 method="get" class="form-inline">
                                 <div class="d-flex flex-row">
-                                    <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''"
-                                        onblur="this.placeholder = 'Enter Email '" required="" type="email">
-                                    <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right"
-                                            aria-hidden="true"></i></button>
+                                    <input class="form-control" name="EMAIL" placeholder="Enter Email"
+                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email'"
+                                        required="" type="email">
+                                    <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
                                     <div style="position: absolute; left: -5000px;">
-                                        <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
-                                            type="text">
+                                        <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
                                     </div>
                                 </div>
                                 <div class="info"></div>
@@ -513,7 +497,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3  col-md-6 col-sm-6">
+                <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-footer-widget mail-chimp">
                         <h6 class="mb-20">Contact Info</h6>
                         <p><i class="fa fa-map-marker"></i> Dar es Salaam, Tanzania</p>
@@ -541,31 +525,28 @@
             </div>
         </div>
     </footer>
-    <!-- End footer Area -->
+    <!-- End Footer Area -->
 
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-	 crossorigin="anonymous"></script>
-	<script src="js/vendor/bootstrap.min.js"></script>
-	<script src="js/jquery.ajaxchimp.min.js"></script>
-	<script src="js/jquery.nice-select.min.js"></script>
-	<script src="js/jquery.sticky.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
     <script src="js/nouislider.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<!--gmaps Js-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-	<script src="js/gmaps.min.js"></script>
-	<script src="js/main.js"></script>
-    
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="js/gmaps.min.js"></script>
+    <script src="js/main.js"></script>
     <script>
-        $(document).ready(function() {
-            // Search functionality
-            $('#search').click(function() {
+        $(document).ready(function () {
+            $('#search').click(function () {
                 $('#search_input_box').slideToggle();
             });
-            
-            $('#close_search').click(function() {
+            $('#close_search').click(function () {
                 $('#search_input_box').slideUp();
             });
         });
