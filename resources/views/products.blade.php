@@ -300,8 +300,7 @@
 							<div class="single-product">
 								<img class="img-fluid" src="img/product/p1.jpg" alt="">
 								<div class="product-details">
-									<h6>addidas New Hammer sole
-										for Sports person</h6>
+									<h6>{{ $product->name }}</h6>
 									<div class="price">
 										<h6>$150.00</h6>
 										<h6 class="l-through">$210.00</h6>
