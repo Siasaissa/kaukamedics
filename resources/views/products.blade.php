@@ -302,8 +302,8 @@
 								<div class="product-details">
 									<h6>{{ $product->name }}</h6>
 									<div class="price">
-										<h6>$150.00</h6>
-										<h6 class="l-through">$210.00</h6>
+										<h6>Tzs {{ number_format( $product->price ,2) }} </h6>
+										<h6 class="l-through">Tzs {{ number_format( $product->price ,2) + 100}}</h6>
 									</div>
 									<div class="prd-bottom">
 
