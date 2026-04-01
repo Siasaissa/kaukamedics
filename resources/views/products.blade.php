@@ -298,8 +298,26 @@
 						 @foreach ($products as $product)
 						<div class="col-lg-4 col-md-6">
 							<div class="single-product">
+									@php
+										$imagePath = trim((string) ($product->image ?? ''));
+										$normalized = str_replace('\\', '/', $imagePath);
+										$normalized = ltrim(str_replace(['storage/app/public/', 'storage/'], '', $normalized), '/');
+										$imageUrl = asset('img/defaultmedical.jpg');
+
+										if ($imagePath !== '') {
+											if (\Illuminate\Support\Str::startsWith($imagePath, ['http://', 'https://'])) {
+												$imageUrl = $imagePath;
+											} elseif (file_exists(storage_path('app/public/' . $normalized))) {
+												$imageUrl = asset('storage/app/public/' . $normalized);
+											} elseif (file_exists(public_path('storage/' . $normalized))) {
+												$imageUrl = asset('storage/' . $normalized);
+											} elseif (file_exists(public_path($imagePath))) {
+												$imageUrl = asset($imagePath);
+											}
+										}
+									@endphp
 									<img class="img-fluid"
-										src="{{ $product->image ? asset('storage/'.$product->image) : asset('img/defaultmedical.jpg') }}"
+										src="{{ $imageUrl }}"
 										alt="{{ $product->name }}"
 										onerror="this.onerror=null;this.src='{{ asset('img/defaultmedical.jpg') }}';">
 								<div class="product-details">
