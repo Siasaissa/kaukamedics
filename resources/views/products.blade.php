@@ -298,7 +298,10 @@
 						 @foreach ($products as $product)
 						<div class="col-lg-4 col-md-6">
 							<div class="single-product">
-								<img class="img-fluid" src="img/product/p1.jpg" alt="">
+									<img class="img-fluid"
+										src="{{ $product->image ? asset('storage/'.$product->image) : asset('img/defaultmedical.jpg') }}"
+										alt="{{ $product->name }}"
+										onerror="this.onerror=null;this.src='{{ asset('img/defaultmedical.jpg') }}';">
 								<div class="product-details">
 									<h6>{{ $product->name }}</h6>
 									<div class="price">
