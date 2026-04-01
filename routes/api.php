@@ -14,7 +14,7 @@ Route::get('/test', function () {
 // --- Products API ---
 Route::get('/products', [ProductController::class, 'apiIndex']); // Get all products
 Route::get('/products/{id}', [ProductController::class, 'show']); // Get single product
-Route::get('/products/search', [ApiProductController::class, 'apiIndex']); // Use query param ?query=xxx
+Route::get('/products/search', [ProductController::class, 'apiIndex']); // Use query param ?query=xxx
 
 // --- Cart API ---
 // These APIs will manage session-based cart for the app

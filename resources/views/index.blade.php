@@ -357,7 +357,7 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="single-product">
-                            <img class="img-fluid" src="{{ $produ->image && file_exists(storage_path('app/public/'.$product->image)) 
+                            <img class="img-fluid" src="{{ $produ->image && file_exists(storage_path('app/public/'.$produ->image)) 
                      ? asset('storage/app/public/'.$produ->image) 
                      : asset('img/defaultmedical.jpg') }}" alt="Protective Mask">
                             <div class="product-details">
@@ -777,7 +777,7 @@
 @foreach ($products1 as $produ )
      
 
-<div class="modal fade" id="productModal{{ $produ->id }}" tabindex="-1" role="dialog" aria-labelledby="productModalLabel{{ $product->id }}" aria-hidden="true">
+<div class="modal fade" id="productModal{{ $produ->id }}" tabindex="-1" role="dialog" aria-labelledby="productModalLabel{{ $produ->id }}" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content border-0 shadow">
             <div class="modal-header border-0 bg-primary text-white">
