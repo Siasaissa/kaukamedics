@@ -28,6 +28,57 @@
 	<link rel="stylesheet" href="css/nouislider.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
+	<style>
+		.category-list .product-item {
+			display: flex;
+		}
+		.category-list .single-product {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			width: 100%;
+			border: 1px solid #f1f1f1;
+			padding: 14px;
+			background: #fff;
+		}
+		.product-thumb-wrap {
+			height: 240px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+			margin-bottom: 12px;
+			background: #f9f9f9;
+		}
+		.product-thumb-wrap img {
+			max-width: 100%;
+			max-height: 100%;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+		.category-list .product-details {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+		}
+		.category-list .product-details h6 {
+			min-height: 48px;
+		}
+		.product-filter-panel {
+			background: #fff;
+			border: 1px solid #ececec;
+			padding: 16px;
+			margin-bottom: 24px;
+		}
+		.no-results-box {
+			display: none;
+			background: #fff8e6;
+			border: 1px solid #ffe3a1;
+			padding: 14px;
+			margin-top: 10px;
+		}
+	</style>
 </head>
 
 <body id="category">
@@ -263,43 +314,53 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-xl-9 col-lg-8 col-md-7">
-				<!-- Start Filter Bar -->
-				<div class="filter-bar d-flex flex-wrap align-items-center">
-					<div class="sorting">
-						<select>
-							<option value="1">Default sorting</option>
-							<option value="1">Default sorting</option>
-							<option value="1">Default sorting</option>
-						</select>
+				<div class="col-xl-9 col-lg-8 col-md-7">
+					<!-- Start Filter Bar -->
+					<div class="filter-bar d-flex flex-wrap align-items-center justify-content-between">
+						<div>
+							<strong>Products</strong>
+						</div>
+						<div id="visibleProductCount" class="text-muted">Showing {{ count($products) }} of {{ count($products) }}</div>
 					</div>
-					<div class="sorting mr-auto">
-						<select>
-							<option value="1">Show 12</option>
-							<option value="1">Show 12</option>
-							<option value="1">Show 12</option>
-						</select>
+					<!-- End Filter Bar -->
+
+					<div class="product-filter-panel">
+						<div class="row">
+							<div class="col-lg-4 col-md-6 mb-2">
+								<input type="text" id="filterSearch" class="form-control" placeholder="Search by product name">
+							</div>
+							<div class="col-lg-2 col-md-3 mb-2">
+								<input type="number" id="filterMinPrice" class="form-control" placeholder="Min price">
+							</div>
+							<div class="col-lg-2 col-md-3 mb-2">
+								<input type="number" id="filterMaxPrice" class="form-control" placeholder="Max price">
+							</div>
+							<div class="col-lg-3 col-md-6 mb-2">
+								<select id="filterSort" class="form-control">
+									<option value="default">Sort: Default</option>
+									<option value="price-asc">Price: Low to High</option>
+									<option value="price-desc">Price: High to Low</option>
+									<option value="name-asc">Name: A to Z</option>
+									<option value="name-desc">Name: Z to A</option>
+								</select>
+							</div>
+							<div class="col-lg-1 col-md-6 mb-2">
+								<button id="resetFilters" type="button" class="btn btn-outline-secondary btn-block">Reset</button>
+							</div>
+						</div>
 					</div>
-					<div class="pagination">
-						<a href="#" class="prev-arrow"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
-						<a href="#" class="active">1</a>
-						<a href="#">2</a>
-						<a href="#">3</a>
-						<a href="#" class="dot-dot"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-						<a href="#">6</a>
-						<a href="#" class="next-arrow"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-					</div>
-				</div>
-				<!-- End Filter Bar -->
-				<!-- Start Best Seller -->
-				<section class="lattest-product-area pb-40 category-list">
-					<div class="row">
-						<!-- single product -->
-						 @foreach ($products as $product)
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product">
-									@php
-										$imagePath = trim((string) ($product->image ?? ''));
+					<!-- Start Best Seller -->
+					<section class="lattest-product-area pb-40 category-list">
+						<div class="row align-items-stretch" id="productGrid">
+							<!-- single product -->
+							 @foreach ($products as $product)
+							<div class="col-lg-4 col-md-6 product-item"
+								data-name="{{ strtolower($product->name) }}"
+								data-price="{{ (float) $product->price }}"
+								data-default-order="{{ $loop->index }}">
+								<div class="single-product">
+										@php
+											$imagePath = trim((string) ($product->image ?? ''));
 										$normalized = str_replace('\\', '/', $imagePath);
 										$normalized = ltrim(str_replace(['storage/app/public/', 'storage/'], '', $normalized), '/');
 										$imageUrl = asset('img/defaultmedical.jpg');
@@ -314,15 +375,17 @@
 											} elseif (file_exists(public_path($imagePath))) {
 												$imageUrl = asset($imagePath);
 											}
-										}
-									@endphp
-									<img class="img-fluid"
-										src="{{ $imageUrl }}"
-										alt="{{ $product->name }}"
-										onerror="this.onerror=null;this.src='{{ asset('img/defaultmedical.jpg') }}';">
-								<div class="product-details">
-									<h6>{{ $product->name }}</h6>
-									<div class="price">
+											}
+										@endphp
+										<div class="product-thumb-wrap">
+											<img class="img-fluid"
+												src="{{ $imageUrl }}"
+												alt="{{ $product->name }}"
+												onerror="this.onerror=null;this.src='{{ asset('img/defaultmedical.jpg') }}';">
+										</div>
+									<div class="product-details">
+										<h6>{{ $product->name }}</h6>
+										<div class="price">
 										<h6>Tzs {{ number_format( $product->price ,2) }} </h6>
 										<h6 class="l-through">Tzs {{ number_format( $product->price + 100,2) }}</h6>
 									</div>
@@ -348,11 +411,14 @@
 								</div>
 							</div>
 						</div>
-						@endforeach
-						
-					</div>
-				</section>
-				<!-- End Best Seller -->
+							@endforeach
+							
+						</div>
+						<div id="noResultsBox" class="no-results-box">
+							No products match your current filters.
+						</div>
+					</section>
+					<!-- End Best Seller -->
 				<!-- Start Filter Bar -->
 				<div class="filter-bar d-flex flex-wrap align-items-center">
 					<div class="sorting mr-auto">
@@ -540,6 +606,82 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="js/gmaps.min.js"></script>
 	<script src="js/main.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const grid = document.getElementById('productGrid');
+			if (!grid) return;
+
+			const items = Array.from(grid.querySelectorAll('.product-item'));
+			const searchInput = document.getElementById('filterSearch');
+			const minPriceInput = document.getElementById('filterMinPrice');
+			const maxPriceInput = document.getElementById('filterMaxPrice');
+			const sortSelect = document.getElementById('filterSort');
+			const countText = document.getElementById('visibleProductCount');
+			const noResultsBox = document.getElementById('noResultsBox');
+			const resetBtn = document.getElementById('resetFilters');
+			const total = items.length;
+
+			function sortItems(list) {
+				const mode = sortSelect.value;
+				const sorted = list.slice();
+
+				sorted.sort(function (a, b) {
+					const aPrice = parseFloat(a.dataset.price || '0');
+					const bPrice = parseFloat(b.dataset.price || '0');
+					const aName = (a.dataset.name || '').toLowerCase();
+					const bName = (b.dataset.name || '').toLowerCase();
+					const aDefault = parseInt(a.dataset.defaultOrder || '0', 10);
+					const bDefault = parseInt(b.dataset.defaultOrder || '0', 10);
+
+					if (mode === 'price-asc') return aPrice - bPrice;
+					if (mode === 'price-desc') return bPrice - aPrice;
+					if (mode === 'name-asc') return aName.localeCompare(bName);
+					if (mode === 'name-desc') return bName.localeCompare(aName);
+					return aDefault - bDefault;
+				});
+
+				sorted.forEach(function (item) {
+					grid.appendChild(item);
+				});
+			}
+
+			function applyFilters() {
+				const q = (searchInput.value || '').trim().toLowerCase();
+				const min = minPriceInput.value === '' ? Number.NEGATIVE_INFINITY : parseFloat(minPriceInput.value);
+				const max = maxPriceInput.value === '' ? Number.POSITIVE_INFINITY : parseFloat(maxPriceInput.value);
+
+				let visibleCount = 0;
+				items.forEach(function (item) {
+					const name = (item.dataset.name || '').toLowerCase();
+					const price = parseFloat(item.dataset.price || '0');
+					const matchesName = q === '' || name.indexOf(q) !== -1;
+					const matchesPrice = price >= min && price <= max;
+					const show = matchesName && matchesPrice;
+
+					item.style.display = show ? '' : 'none';
+					if (show) visibleCount++;
+				});
+
+				sortItems(items);
+				countText.textContent = 'Showing ' + visibleCount + ' of ' + total;
+				noResultsBox.style.display = visibleCount === 0 ? 'block' : 'none';
+			}
+
+			[searchInput, minPriceInput, maxPriceInput].forEach(function (el) {
+				el.addEventListener('input', applyFilters);
+			});
+			sortSelect.addEventListener('change', applyFilters);
+			resetBtn.addEventListener('click', function () {
+				searchInput.value = '';
+				minPriceInput.value = '';
+				maxPriceInput.value = '';
+				sortSelect.value = 'default';
+				applyFilters();
+			});
+
+			applyFilters();
+		});
+	</script>
 </body>
 
 </html>
