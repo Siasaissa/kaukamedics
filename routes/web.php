@@ -36,10 +36,18 @@ Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.
 
 
 Route::get('/products', [ProductController::class, 'index'])->name('products');
+Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
 Route::get('/cart', [ProductController::class, 'cart'])->name('cart');
 Route::get('/cart/add/{id}', [ProductController::class, 'addToCart'])->name('add.to.cart');
 Route::get('/cart/remove/{id}', [ProductController::class, 'removeFromCart'])->name('remove.from.cart');
 Route::post('/cart/update/{id}', [ProductController::class, 'updateCart'])->name('update.cart');
+
+// Wishlist (session)
+Route::get('/wishlist/add/{id}', [ProductController::class, 'addToWishlist'])->name('wishlist.add');
+Route::get('/wishlist/remove/{id}', [ProductController::class, 'removeFromWishlist'])->name('wishlist.remove');
+// Compare (session)
+Route::get('/compare/add/{id}', [ProductController::class, 'addToCompare'])->name('compare.add');
+Route::get('/compare/remove/{id}', [ProductController::class, 'removeFromCompare'])->name('compare.remove');
 
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
 Route::post('/checkout/process', [CheckoutController::class, 'process'])->name('checkout.process');
@@ -70,7 +78,6 @@ Route::middleware(['auth'])->group(function () {
 
 
 });
-
 
 // routes/web.php
 Route::get('/routes', function () {

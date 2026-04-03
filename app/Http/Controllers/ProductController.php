@@ -223,16 +223,58 @@ public function specialOrder(Request $request)
         $product = Product::find($id);
 
         if (!$product) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Product not found'
-            ], 404);
+            abort(404);
         }
 
-        return response()->json([
-            'success' => true,
-            'data' => $product
-        ]);
+        return view('product-detail', compact('product'));
+    }
+
+    // Wishlist (session)
+    public function addToWishlist($id)
+    {
+        $product = Product::find($id);
+        if (!$product) return redirect()->back()->with('error', 'Product not found');
+
+        $wishlist = session()->get('wishlist', []);
+        $wishlist[$id] = ['name' => $product->name, 'price' => $product->price, 'image' => $product->image];
+        session()->put('wishlist', $wishlist);
+
+        return redirect()->back()->with('success', 'Added to wishlist');
+    }
+
+    public function removeFromWishlist($id)
+    {
+        $wishlist = session()->get('wishlist', []);
+        if (isset($wishlist[$id])) {
+            unset($wishlist[$id]);
+            session()->put('wishlist', $wishlist);
+        }
+        return redirect()->back()->with('success', 'Removed from wishlist');
+    }
+
+    // Compare (session)
+    public function addToCompare($id)
+    {
+        $product = Product::find($id);
+        if (!$product) return redirect()->back()->with('error', 'Product not found');
+
+        $compare = session()->get('compare', []);
+        if (!isset($compare[$id])) {
+            $compare[$id] = ['name' => $product->name, 'price' => $product->price, 'image' => $product->image];
+        }
+        session()->put('compare', $compare);
+
+        return redirect()->back()->with('success', 'Added to compare');
+    }
+
+    public function removeFromCompare($id)
+    {
+        $compare = session()->get('compare', []);
+        if (isset($compare[$id])) {
+            unset($compare[$id]);
+            session()->put('compare', $compare);
+        }
+        return redirect()->back()->with('success', 'Removed from compare');
     }
 
     // --- Cart operations ---
