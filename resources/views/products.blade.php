@@ -78,28 +78,6 @@
 			padding: 14px;
 			margin-top: 10px;
 		}
-
-		/* Medical-specific improvements */
-		.badge-medical {
-			display: inline-block;
-			background: #17a2b8;
-			color: #fff;
-			padding: 4px 8px;
-			border-radius: 12px;
-			font-size: 12px;
-		}
-		.stock-label {
-			display: inline-block;
-			padding: 4px 8px;
-			border-radius: 12px;
-			font-size: 12px;
-		}
-		.stock-label.in { color:#155724; background:#d4edda; }
-		.stock-label.out { color:#721c24; background:#f8d7da; }
-		.product-desc { font-size:13px; color:#666; margin-bottom:8px; }
-		.prd-actions { margin-top: auto; }
-		.prd-actions .btn.add-to-cart { padding:6px 10px; font-size:14px; }
-		.prd-actions .action-icons a { color:#6c757d; margin-left:8px; }
 	</style>
 </head>
 
@@ -166,108 +144,162 @@
 	<!-- End Header Area -->
 
 	<!-- Start Banner Area -->
-		<section class="banner-area organic-breadcrumb">
-			<div class="container">
-				<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
-					<div class="col-first">
-						<h1>Medical Equipment</h1>
-						<nav class="d-flex align-items-center">
-							<a href="{{ route('index') }}">Home<span class="lnr lnr-arrow-right"></span></a>
-							<a href="{{ route('products') }}">Products<span class="lnr lnr-arrow-right"></span></a>
-							<a href="#">Medical Equipment</a>
-						</nav>
-					</div>
+	<section class="banner-area organic-breadcrumb">
+		<div class="container">
+			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+				<div class="col-first">
+					<h1>Shop Category page</h1>
+					<nav class="d-flex align-items-center">
+						<a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
+						<a href="#">Shop<span class="lnr lnr-arrow-right"></span></a>
+						<a href="category.html">Fashon Category</a>
+					</nav>
 				</div>
 			</div>
-		</section>
-		<!-- End Banner Area -->
-		@php
-			$medicalCategoryLabels = [
-				'diagnostics' => 'Diagnostics',
-				'consumables' => 'Medical Consumables',
-				'ppe' => 'PPE & Safety',
-				'laboratory' => 'Laboratory Supplies',
-				'surgical' => 'Surgical & Procedure',
-				'patient_care' => 'Patient Care',
-				'other' => 'Other Medical Items',
-			];
+		</div>
+	</section>
+	<!-- End Banner Area -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-3 col-lg-4 col-md-5">
+				<div class="sidebar-categories">
+					<div class="head">Browse Categories</div>
+					<ul class="main-categories">
+						<li class="main-nav-list"><a data-toggle="collapse" href="#fruitsVegetable" aria-expanded="false" aria-controls="fruitsVegetable"><span
+								 class="lnr lnr-arrow-right"></span>Fruits and Vegetables<span class="number">(53)</span></a>
+							<ul class="collapse" id="fruitsVegetable" data-toggle="collapse" aria-expanded="false" aria-controls="fruitsVegetable">
+								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
+							</ul>
+						</li>
 
-			$categorizeProduct = function ($name) {
-				$n = strtolower((string) $name);
-				if (\Illuminate\Support\Str::contains($n, ['glove', 'mask', 'gown', 'ppe', 'sanitizer', 'shield'])) return 'ppe';
-				if (\Illuminate\Support\Str::contains($n, ['test', 'monitor', 'bp', 'pressure', 'thermometer', 'stethoscope', 'diagnostic'])) return 'diagnostics';
-				if (\Illuminate\Support\Str::contains($n, ['syringe', 'cotton', 'bandage', 'catheter', 'tube', 'dressing', 'gauze'])) return 'consumables';
-				if (\Illuminate\Support\Str::contains($n, ['lab', 'reagent', 'microscope', 'centrifuge', 'pipette'])) return 'laboratory';
-				if (\Illuminate\Support\Str::contains($n, ['surgical', 'forceps', 'scalpel', 'blade', 'suture', 'operation'])) return 'surgical';
-				if (\Illuminate\Support\Str::contains($n, ['bed', 'wheelchair', 'crutch', 'walker', 'nebulizer', 'oxygen'])) return 'patient_care';
-				return 'other';
-			};
-
-			$categoryCounts = array_fill_keys(array_keys($medicalCategoryLabels), 0);
-			$stockCounts = ['in_stock' => 0, 'out_of_stock' => 0];
-			$unitCounts = [];
-			foreach ($products as $tmpProduct) {
-				$key = $categorizeProduct($tmpProduct->name ?? '');
-				$categoryCounts[$key]++;
-				$stockStatus = (int) ($tmpProduct->stock ?? 0) > 0 ? 'in_stock' : 'out_of_stock';
-				$stockCounts[$stockStatus]++;
-				$unit = strtolower(trim((string) ($tmpProduct->unit ?? '')));
-				if ($unit !== '') {
-					$unitCounts[$unit] = ($unitCounts[$unit] ?? 0) + 1;
-				}
-			}
-			ksort($unitCounts);
-		@endphp
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-3 col-lg-4 col-md-5">
-					<div class="sidebar-categories">
-						<div class="head">Medical Categories</div>
-						<ul class="main-categories">
-							@foreach ($medicalCategoryLabels as $categoryKey => $categoryLabel)
-								<li class="filter-list">
-									<input class="pixel-radio js-category-filter" type="checkbox" id="category_{{ $categoryKey }}" value="{{ $categoryKey }}">
-									<label for="category_{{ $categoryKey }}">{{ $categoryLabel }}<span>({{ $categoryCounts[$categoryKey] ?? 0 }})</span></label>
-								</li>
-							@endforeach
-						</ul>
+						<li class="main-nav-list"><a data-toggle="collapse" href="#meatFish" aria-expanded="false" aria-controls="meatFish"><span
+								 class="lnr lnr-arrow-right"></span>Meat and Fish<span class="number">(53)</span></a>
+							<ul class="collapse" id="meatFish" data-toggle="collapse" aria-expanded="false" aria-controls="meatFish">
+								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
+							</ul>
+						</li>
+						<li class="main-nav-list"><a data-toggle="collapse" href="#cooking" aria-expanded="false" aria-controls="cooking"><span
+								 class="lnr lnr-arrow-right"></span>Cooking<span class="number">(53)</span></a>
+							<ul class="collapse" id="cooking" data-toggle="collapse" aria-expanded="false" aria-controls="cooking">
+								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
+							</ul>
+						</li>
+						<li class="main-nav-list"><a data-toggle="collapse" href="#beverages" aria-expanded="false" aria-controls="beverages"><span
+								 class="lnr lnr-arrow-right"></span>Beverages<span class="number">(24)</span></a>
+							<ul class="collapse" id="beverages" data-toggle="collapse" aria-expanded="false" aria-controls="beverages">
+								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
+							</ul>
+						</li>
+						<li class="main-nav-list"><a data-toggle="collapse" href="#homeClean" aria-expanded="false" aria-controls="homeClean"><span
+								 class="lnr lnr-arrow-right"></span>Home and Cleaning<span class="number">(53)</span></a>
+							<ul class="collapse" id="homeClean" data-toggle="collapse" aria-expanded="false" aria-controls="homeClean">
+								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
+							</ul>
+						</li>
+						<li class="main-nav-list"><a href="#">Pest Control<span class="number">(24)</span></a></li>
+						<li class="main-nav-list"><a data-toggle="collapse" href="#officeProduct" aria-expanded="false" aria-controls="officeProduct"><span
+								 class="lnr lnr-arrow-right"></span>Office Products<span class="number">(77)</span></a>
+							<ul class="collapse" id="officeProduct" data-toggle="collapse" aria-expanded="false" aria-controls="officeProduct">
+								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
+							</ul>
+						</li>
+						<li class="main-nav-list"><a data-toggle="collapse" href="#beauttyProduct" aria-expanded="false" aria-controls="beauttyProduct"><span
+								 class="lnr lnr-arrow-right"></span>Beauty Products<span class="number">(65)</span></a>
+							<ul class="collapse" id="beauttyProduct" data-toggle="collapse" aria-expanded="false" aria-controls="beauttyProduct">
+								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
+							</ul>
+						</li>
+						<li class="main-nav-list"><a data-toggle="collapse" href="#healthProduct" aria-expanded="false" aria-controls="healthProduct"><span
+								 class="lnr lnr-arrow-right"></span>Health Products<span class="number">(29)</span></a>
+							<ul class="collapse" id="healthProduct" data-toggle="collapse" aria-expanded="false" aria-controls="healthProduct">
+								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
+							</ul>
+						</li>
+						<li class="main-nav-list"><a href="#">Pet Care<span class="number">(29)</span></a></li>
+						<li class="main-nav-list"><a data-toggle="collapse" href="#homeAppliance" aria-expanded="false" aria-controls="homeAppliance"><span
+								 class="lnr lnr-arrow-right"></span>Home Appliances<span class="number">(15)</span></a>
+							<ul class="collapse" id="homeAppliance" data-toggle="collapse" aria-expanded="false" aria-controls="homeAppliance">
+								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat<span class="number">(11)</span></a></li>
+							</ul>
+						</li>
+						<li class="main-nav-list"><a class="border-bottom-0" data-toggle="collapse" href="#babyCare" aria-expanded="false"
+							 aria-controls="babyCare"><span class="lnr lnr-arrow-right"></span>Baby Care<span class="number">(48)</span></a>
+							<ul class="collapse" id="babyCare" data-toggle="collapse" aria-expanded="false" aria-controls="babyCare">
+								<li class="main-nav-list child"><a href="#">Frozen Fish<span class="number">(13)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Dried Fish<span class="number">(09)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Fresh Fish<span class="number">(17)</span></a></li>
+								<li class="main-nav-list child"><a href="#">Meat Alternatives<span class="number">(01)</span></a></li>
+								<li class="main-nav-list child"><a href="#" class="border-bottom-0">Meat<span class="number">(11)</span></a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="sidebar-filter mt-50">
+					<div class="top-filter-head">Product Filters</div>
+					<div class="common-filter">
+						<div class="head">Brands</div>
+						<form action="#">
+							<ul>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="apple" name="brand"><label for="apple">Apple<span>(29)</span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="asus" name="brand"><label for="asus">Asus<span>(29)</span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="gionee" name="brand"><label for="gionee">Gionee<span>(19)</span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="micromax" name="brand"><label for="micromax">Micromax<span>(19)</span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="samsung" name="brand"><label for="samsung">Samsung<span>(19)</span></label></li>
+							</ul>
+						</form>
 					</div>
-					<div class="sidebar-filter mt-50">
-						<div class="top-filter-head">Product Filters</div>
-						<div class="common-filter">
-							<div class="head">Availability</div>
-							<form action="#">
-								<ul>
-									<li class="filter-list">
-										<input class="pixel-radio js-availability-filter" type="checkbox" id="availability_in_stock" value="in_stock">
-										<label for="availability_in_stock">In Stock<span>({{ $stockCounts['in_stock'] ?? 0 }})</span></label>
-									</li>
-									<li class="filter-list">
-										<input class="pixel-radio js-availability-filter" type="checkbox" id="availability_out_of_stock" value="out_of_stock">
-										<label for="availability_out_of_stock">Out of Stock<span>({{ $stockCounts['out_of_stock'] ?? 0 }})</span></label>
-									</li>
-								</ul>
-							</form>
-						</div>
-						<div class="common-filter">
-							<div class="head">Units</div>
-							<form action="#">
-								<ul>
-									@if (count($unitCounts) > 0)
-										@foreach ($unitCounts as $unitName => $unitCount)
-											<li class="filter-list">
-												<input class="pixel-radio js-unit-filter" type="checkbox" id="unit_{{ preg_replace('/[^a-z0-9_]/', '_', $unitName) }}" value="{{ $unitName }}">
-												<label for="unit_{{ preg_replace('/[^a-z0-9_]/', '_', $unitName) }}">{{ strtoupper($unitName) }}<span>({{ $unitCount }})</span></label>
-											</li>
-										@endforeach
-									@else
-										<li class="filter-list"><label>No units found in product records.</label></li>
-									@endif
-								</ul>
-							</form>
-						</div>
-						<div class="common-filter">
-							<div class="head">Price</div>
+					<div class="common-filter">
+						<div class="head">Color</div>
+						<form action="#">
+							<ul>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="black" name="color"><label for="black">Black<span>(29)</span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="balckleather" name="color"><label for="balckleather">Black
+										Leather<span>(29)</span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="blackred" name="color"><label for="blackred">Black
+										with red<span>(19)</span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="gold" name="color"><label for="gold">Gold<span>(19)</span></label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Spacegrey<span>(19)</span></label></li>
+							</ul>
+						</form>
+					</div>
+					<div class="common-filter">
+						<div class="head">Price</div>
 						<div class="price-range-area">
 							<div id="price-range"></div>
 							<div class="value-wrapper d-flex">
@@ -321,22 +353,14 @@
 					<section class="lattest-product-area pb-40 category-list">
 						<div class="row align-items-stretch" id="productGrid">
 							<!-- single product -->
-							@foreach ($products as $product)
-							@php
-								$itemCategoryKey = $categorizeProduct($product->name ?? '');
-								$itemStockStatus = (int) ($product->stock ?? 0) > 0 ? 'in_stock' : 'out_of_stock';
-								$itemUnit = strtolower(trim((string) ($product->unit ?? '')));
-							@endphp
+							 @foreach ($products as $product)
 							<div class="col-lg-4 col-md-6 product-item"
 								data-name="{{ strtolower($product->name) }}"
 								data-price="{{ (float) $product->price }}"
-								data-category="{{ $itemCategoryKey }}"
-								data-stockstatus="{{ $itemStockStatus }}"
-								data-unit="{{ $itemUnit }}"
 								data-default-order="{{ $loop->index }}">
 								<div class="single-product">
-									@php
-										$imagePath = trim((string) ($product->image ?? ''));
+										@php
+											$imagePath = trim((string) ($product->image ?? ''));
 										$normalized = str_replace('\\', '/', $imagePath);
 										$normalized = ltrim(str_replace(['storage/app/public/', 'storage/'], '', $normalized), '/');
 										$imageUrl = asset('img/defaultmedical.jpg');
@@ -351,35 +375,42 @@
 											} elseif (file_exists(public_path($imagePath))) {
 												$imageUrl = asset($imagePath);
 											}
-										}
-									@endphp
-									<div class="product-thumb-wrap">
-										<img class="img-fluid" src="{{ $imageUrl }}" alt="{{ $product->name }}" onerror="this.onerror=null;this.src='{{ asset('img/defaultmedical.jpg') }}';">
-									</div>
+											}
+										@endphp
+										<div class="product-thumb-wrap">
+											<img class="img-fluid"
+												src="{{ $imageUrl }}"
+												alt="{{ $product->name }}"
+												onerror="this.onerror=null;this.src='{{ asset('img/defaultmedical.jpg') }}';">
+										</div>
 									<div class="product-details">
-										<div class="d-flex justify-content-between align-items-start mb-2">
-											<span class="badge-medical">{{ $medicalCategoryLabels[$itemCategoryKey] ?? ucfirst($itemCategoryKey) }}</span>
-											<span class="stock-label {{ $itemStockStatus == 'in_stock' ? 'in' : 'out' }}">{{ $itemStockStatus == 'in_stock' ? 'In Stock' : 'Out of Stock' }}</span>
-										</div>
-										<h6 class="product-name">{{ $product->name }}</h6>
-										@if(!empty($product->description))
-											<p class="product-desc">{{ \Illuminate\Support\Str::limit($product->description, 100) }}</p>
-										@endif
-										<div class="price mb-2">
-											<h6>Tzs {{ number_format($product->price, 2) }}</h6>
-											<small class="text-muted">Unit: {{ strtoupper($itemUnit ?: 'pcs') }}</small>
-										</div>
-										<div class="prd-actions d-flex justify-content-between align-items-center">
-											<button class="btn btn-primary btn-sm add-to-cart" data-id="{{ $product->id ?? '' }}">Add to Cart</button>
-											<div class="action-icons">
-												<a href="#" title="Wishlist"><span class="lnr lnr-heart"></span></a>
-												<a href="#" title="Compare"><span class="lnr lnr-sync"></span></a>
-												<a href="#" title="View details"><span class="lnr lnr-move"></span></a>
-											</div>
-										</div>
+										<h6>{{ $product->name }}</h6>
+										<div class="price">
+										<h6>Tzs {{ number_format( $product->price ,2) }} </h6>
+										<h6 class="l-through">Tzs {{ number_format( $product->price + 100,2) }}</h6>
+									</div>
+									<div class="prd-bottom">
+
+										<a href="" class="social-info">
+											<span class="ti-bag"></span>
+											<p class="hover-text">add to bag</p>
+										</a>
+										<a href="" class="social-info">
+											<span class="lnr lnr-heart"></span>
+											<p class="hover-text">Wishlist</p>
+										</a>
+										<a href="" class="social-info">
+											<span class="lnr lnr-sync"></span>
+											<p class="hover-text">compare</p>
+										</a>
+										<a href="" class="social-info">
+											<span class="lnr lnr-move"></span>
+											<p class="hover-text">view more</p>
+										</a>
 									</div>
 								</div>
 							</div>
+						</div>
 							@endforeach
 							
 						</div>
@@ -588,9 +619,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			const countText = document.getElementById('visibleProductCount');
 			const noResultsBox = document.getElementById('noResultsBox');
 			const resetBtn = document.getElementById('resetFilters');
-			const categoryFilters = Array.from(document.querySelectorAll('.js-category-filter'));
-			const availabilityFilters = Array.from(document.querySelectorAll('.js-availability-filter'));
-			const unitFilters = Array.from(document.querySelectorAll('.js-unit-filter'));
 			const total = items.length;
 
 			function sortItems(list) {
@@ -621,23 +649,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				const q = (searchInput.value || '').trim().toLowerCase();
 				const min = minPriceInput.value === '' ? Number.NEGATIVE_INFINITY : parseFloat(minPriceInput.value);
 				const max = maxPriceInput.value === '' ? Number.POSITIVE_INFINITY : parseFloat(maxPriceInput.value);
-				const selectedCategories = categoryFilters.filter(function (el) { return el.checked; }).map(function (el) { return el.value; });
-				const selectedAvailability = availabilityFilters.filter(function (el) { return el.checked; }).map(function (el) { return el.value; });
-				const selectedUnits = unitFilters.filter(function (el) { return el.checked; }).map(function (el) { return el.value; });
 
 				let visibleCount = 0;
 				items.forEach(function (item) {
 					const name = (item.dataset.name || '').toLowerCase();
 					const price = parseFloat(item.dataset.price || '0');
-					const category = item.dataset.category || '';
-					const stockStatus = item.dataset.stockstatus || '';
-					const unit = item.dataset.unit || '';
 					const matchesName = q === '' || name.indexOf(q) !== -1;
 					const matchesPrice = price >= min && price <= max;
-					const matchesCategory = selectedCategories.length === 0 || selectedCategories.indexOf(category) !== -1;
-					const matchesAvailability = selectedAvailability.length === 0 || selectedAvailability.indexOf(stockStatus) !== -1;
-					const matchesUnit = selectedUnits.length === 0 || selectedUnits.indexOf(unit) !== -1;
-					const show = matchesName && matchesPrice && matchesCategory && matchesAvailability && matchesUnit;
+					const show = matchesName && matchesPrice;
 
 					item.style.display = show ? '' : 'none';
 					if (show) visibleCount++;
@@ -652,19 +671,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				el.addEventListener('input', applyFilters);
 			});
 			sortSelect.addEventListener('change', applyFilters);
-			[categoryFilters, availabilityFilters, unitFilters].forEach(function (group) {
-				group.forEach(function (el) {
-					el.addEventListener('change', applyFilters);
-				});
-			});
 			resetBtn.addEventListener('click', function () {
 				searchInput.value = '';
 				minPriceInput.value = '';
 				maxPriceInput.value = '';
 				sortSelect.value = 'default';
-				[categoryFilters, availabilityFilters, unitFilters].forEach(function (group) {
-					group.forEach(function (el) { el.checked = false; });
-				});
 				applyFilters();
 			});
 
