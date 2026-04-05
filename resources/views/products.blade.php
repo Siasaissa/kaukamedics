@@ -334,19 +334,19 @@
 										<small class="text-muted">Unit: {{ strtoupper($itemUnit ?: 'pcs') }}</small>
 									</div>
 									<div class="prd-bottom">
-										<a href="" class="social-info">
+										<a href="{{ route('add.to.cart', $product->id) }}" class="social-info" title="Add to bag" rel="nofollow">
 											<span class="ti-bag"></span>
 											<p class="hover-text">add to bag</p>
 										</a>
-										<a href="" class="social-info">
+										<a href="{{ route('wishlist.add', $product->id) }}" class="social-info" title="Add to wishlist" rel="nofollow">
 											<span class="lnr lnr-heart"></span>
 											<p class="hover-text">Wishlist</p>
 										</a>
-										<a href="" class="social-info">
+										<a href="{{ route('compare.add', $product->id) }}" class="social-info" title="Add to compare" rel="nofollow">
 											<span class="lnr lnr-sync"></span>
 											<p class="hover-text">compare</p>
 										</a>
-										<a href="" class="social-info">
+										<a href="{{ route('products.show', $product->id) }}" class="social-info" title="View product details">
 											<span class="lnr lnr-move"></span>
 											<p class="hover-text">view more</p>
 										</a>
