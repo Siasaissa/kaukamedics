@@ -157,40 +157,62 @@
                     <div class="col-lg-8">
                         <h3>Billing Details</h3>
 
+                        <!-- Flash / validation messages -->
+                        @if(session('success'))
+                            <div class="alert alert-success">{{ session('success') }}</div>
+                        @endif
+                        @if(session('error'))
+                            <div class="alert alert-danger">{{ session('error') }}</div>
+                        @endif
+                        @if($errors->any())
+                            <div class="alert alert-danger">
+                                <ul class="mb-0">
+                                    @foreach($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
                         <!-- Checkout form: posts to CheckoutController@process -->
                         <form id="checkoutForm" class="row contact_form" action="{{ route('checkout.process') }}" method="POST" novalidate="novalidate">
                             @csrf
 
                             <div class="col-md-6 form-group p_star">
-                                <input type="text" class="form-control" id="first" name="name" value="{{ old('name') }}" placeholder="Full name">
+                                <input required type="text" class="form-control" id="first" name="name" value="{{ old('name') }}" placeholder="Full name">
                                 <span class="placeholder" data-placeholder="First name"></span>
+                                @error('name')<small class="text-danger">{{ $message }}</small>@enderror
                             </div>
 
                             <div class="col-md-12 form-group">
                                 <input type="text" class="form-control" id="company" name="company" placeholder="Company name (optional)" value="{{ old('company') }}">
+                                @error('company')<small class="text-danger">{{ $message }}</small>@enderror
                             </div>
 
                             <div class="col-md-6 form-group p_star">
-                                <input type="text" class="form-control" id="number" name="phone" value="{{ old('phone') }}" placeholder="Phone number">
+                                <input required type="text" class="form-control" id="number" name="phone" value="{{ old('phone') }}" placeholder="Phone number">
                                 <span class="placeholder" data-placeholder="Phone number"></span>
+                                @error('phone')<small class="text-danger">{{ $message }}</small>@enderror
                             </div>
 
                             <div class="col-md-6 form-group p_star">
-                                <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" placeholder="Email Address">
+                                <input required type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" placeholder="Email Address">
                                 <span class="placeholder" data-placeholder="Email Address"></span>
+                                @error('email')<small class="text-danger">{{ $message }}</small>@enderror
                             </div>
 
                             <div class="col-md-12 form-group p_star">
                                 <select class="country_select" name="country">
-                                    <option value="TZ">Tanzania</option>
-                                    <option value="KE">Kenya</option>
-                                    <option value="UG">Uganda</option>
+                                    <option value="TZ" {{ old('country')=='TZ' ? 'selected':'' }}>Tanzania</option>
+                                    <option value="KE" {{ old('country')=='KE' ? 'selected':'' }}>Kenya</option>
+                                    <option value="UG" {{ old('country')=='UG' ? 'selected':'' }}>Uganda</option>
                                 </select>
                             </div>
 
                             <div class="col-md-12 form-group p_star">
-                                <input type="text" class="form-control" id="add1" name="address" value="{{ old('address') }}" placeholder="Address line 01">
+                                <input required type="text" class="form-control" id="add1" name="address" value="{{ old('address') }}" placeholder="Address line 01">
                                 <span class="placeholder" data-placeholder="Address line 01"></span>
+                                @error('address')<small class="text-danger">{{ $message }}</small>@enderror
                             </div>
 
                             <div class="col-md-12 form-group p_star">
@@ -199,15 +221,16 @@
                             </div>
 
                             <div class="col-md-12 form-group p_star">
-                                <input type="text" class="form-control" id="city" name="city" value="{{ old('city') }}" placeholder="Town/City">
+                                <input required type="text" class="form-control" id="city" name="city" value="{{ old('city') }}" placeholder="Town/City">
                                 <span class="placeholder" data-placeholder="Town/City"></span>
+                                @error('city')<small class="text-danger">{{ $message }}</small>@enderror
                             </div>
 
                             <div class="col-md-12 form-group p_star">
                                 <select class="country_select" name="district">
-                                    <option value="1">District</option>
-                                    <option value="2">District</option>
-                                    <option value="4">District</option>
+                                    <option value="1" {{ old('district')=='1' ? 'selected':'' }}>District</option>
+                                    <option value="2" {{ old('district')=='2' ? 'selected':'' }}>District</option>
+                                    <option value="4" {{ old('district')=='4' ? 'selected':'' }}>District</option>
                                 </select>
                             </div>
 
@@ -217,7 +240,7 @@
 
                             <div class="col-md-12 form-group">
                                 <div class="creat_account">
-                                    <input type="checkbox" id="f-option2" name="create_account">
+                                    <input type="checkbox" id="f-option2" name="create_account" {{ old('create_account') ? 'checked' : '' }}>
                                     <label for="f-option2">Create an account?</label>
                                 </div>
                             </div>
@@ -225,7 +248,7 @@
                             <div class="col-md-12 form-group">
                                 <div class="creat_account">
                                     <h3>Shipping Details</h3>
-                                    <input type="checkbox" id="f-option3" name="ship_different">
+                                    <input type="checkbox" id="f-option3" name="ship_different" {{ old('ship_different') ? 'checked' : '' }}>
                                     <label for="f-option3">Ship to a different address?</label>
                                 </div>
                                 <textarea class="form-control" name="message" id="message" rows="1" placeholder="Order Notes">{{ old('message') }}</textarea>
