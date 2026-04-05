@@ -248,7 +248,7 @@
 			</div>
 			<div class="col-xl-9 col-lg-8 col-md-7">
 				<!-- Start Filter Bar -->
-				<div class="filter-bar d-flex flex-wrap align-items-center justify-content-between mt-3">
+				<div class="filter-bar d-flex flex-wrap align-items-center justify-content-between">
 					<div>
 						<strong>Products</strong>
 					</div>
