@@ -158,7 +158,7 @@
                         <h3>Billing Details</h3>
 
                         <!-- Checkout form: posts to CheckoutController@process -->
-                        <form class="row contact_form" action="{{ route('checkout.process') }}" method="POST" novalidate="novalidate">
+                        <form id="checkoutForm" class="row contact_form" action="{{ route('checkout.process') }}" method="POST" novalidate="novalidate">
                             @csrf
 
                             <div class="col-md-6 form-group p_star">
@@ -400,6 +400,29 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
     <script src="js/gmaps.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+    // Wire the right-column action button to submit the top checkout form with the selected payment method
+    $(document).ready(function(){
+        $('#checkoutSubmit').on('click', function(e){
+            e.preventDefault();
+            var payment = $('input[name="payment_method"]:checked').val() || 'paypal';
+            var $form = $('#checkoutForm');
+            if ($form.length === 0) return alert('Checkout form not found.');
+
+            // set or create hidden input for payment_method so controller receives it
+            var $pm = $form.find('input[name="payment_method"]');
+            if ($pm.length === 0) {
+                $form.append('<input type="hidden" name="payment_method" value="' + payment + '">');
+            } else {
+                $pm.val(payment);
+            }
+
+            // submit the form
+            $form.submit();
+        });
+    });
+    </script>
 </body>
 
 </html>
