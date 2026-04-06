@@ -211,27 +211,35 @@
 				<!-- Start Filter Bar -->
 				<div class="filter-bar d-flex flex-wrap align-items-center">
 					<div class="sorting">
-						<select>
-							<option value="1">Default sorting</option>
-							<option value="1">Default sorting</option>
-							<option value="1">Default sorting</option>
-						</select>
+						<form action="{{ route('products') }}" method="GET">
+							@if(request('query'))
+								<input type="hidden" name="query" value="{{ request('query') }}">
+							@endif
+							<input type="hidden" name="per_page" value="{{ $perPage ?? request('per_page', 12) }}">
+							<select name="sort" onchange="this.form.submit()">
+								<option value="latest" {{ ($sort ?? request('sort', 'latest')) === 'latest' ? 'selected' : '' }}>Latest products</option>
+								<option value="price_asc" {{ ($sort ?? request('sort')) === 'price_asc' ? 'selected' : '' }}>Price: Low to High</option>
+								<option value="price_desc" {{ ($sort ?? request('sort')) === 'price_desc' ? 'selected' : '' }}>Price: High to Low</option>
+								<option value="name_asc" {{ ($sort ?? request('sort')) === 'name_asc' ? 'selected' : '' }}>Name: A to Z</option>
+								<option value="name_desc" {{ ($sort ?? request('sort')) === 'name_desc' ? 'selected' : '' }}>Name: Z to A</option>
+							</select>
+						</form>
 					</div>
 					<div class="sorting mr-auto">
-						<select>
-							<option value="1">Show 12</option>
-							<option value="1">Show 12</option>
-							<option value="1">Show 12</option>
-						</select>
+						<form action="{{ route('products') }}" method="GET">
+							@if(request('query'))
+								<input type="hidden" name="query" value="{{ request('query') }}">
+							@endif
+							<input type="hidden" name="sort" value="{{ $sort ?? request('sort', 'latest') }}">
+							<select name="per_page" onchange="this.form.submit()">
+								<option value="12" {{ (int) ($perPage ?? request('per_page', 12)) === 12 ? 'selected' : '' }}>Show 12</option>
+								<option value="24" {{ (int) ($perPage ?? request('per_page', 12)) === 24 ? 'selected' : '' }}>Show 24</option>
+								<option value="36" {{ (int) ($perPage ?? request('per_page', 12)) === 36 ? 'selected' : '' }}>Show 36</option>
+							</select>
+						</form>
 					</div>
-					<div class="pagination">
-						<a href="#" class="prev-arrow"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
-						<a href="#" class="active">1</a>
-						<a href="#">2</a>
-						<a href="#">3</a>
-						<a href="#" class="dot-dot"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-						<a href="#">6</a>
-						<a href="#" class="next-arrow"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+					<div class="mr-3 text-muted small">
+						Showing {{ $products->firstItem() ?? 0 }}-{{ $products->lastItem() ?? 0 }} of {{ $products->total() }}
 					</div>
 				</div>
 				<!-- End Filter Bar -->
@@ -239,7 +247,7 @@
 				<section class="lattest-product-area pb-40 category-list">
 					<div class="row">
 						<!-- single product -->
-						@foreach($products as $product)
+						@forelse($products as $product)
 						<div class="col-lg-4 col-md-6">
 							<div class="single-product">
                                 @php
@@ -292,7 +300,13 @@
 								</div>
 							</div>
 						</div>
-						@endforeach
+						@empty
+						<div class="col-12">
+							<div class="alert alert-light border text-center">
+								No products found for your current filter.
+							</div>
+						</div>
+						@endforelse
 						<!-- end foreach -->
 					</div>
 				</section>
@@ -300,20 +314,10 @@
 				<!-- Start Filter Bar -->
 				<div class="filter-bar d-flex flex-wrap align-items-center">
 					<div class="sorting mr-auto">
-						<select>
-							<option value="1">Show 12</option>
-							<option value="1">Show 12</option>
-							<option value="1">Show 12</option>
-						</select>
+						<p class="mb-0 text-muted small">Page {{ $products->currentPage() }} of {{ $products->lastPage() }}</p>
 					</div>
 					<div class="pagination">
-						<a href="#" class="prev-arrow"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
-						<a href="#" class="active">1</a>
-						<a href="#">2</a>
-						<a href="#">3</a>
-						<a href="#" class="dot-dot"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-						<a href="#">6</a>
-						<a href="#" class="next-arrow"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+						{{ $products->onEachSide(1)->links('pagination::bootstrap-4') }}
 					</div>
 				</div>
 				<!-- End Filter Bar -->

@@ -15,11 +15,42 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         $query = $request->query('query');
-        $products = Product::when($query, function($q) use ($query) {
-            $q->where('name', 'like', "%$query%");
-        })->get();
+        $sort = $request->query('sort', 'latest');
+        $perPage = (int) $request->query('per_page', 12);
 
-        return view('products', compact('products'));
+        $allowedPerPage = [12, 24, 36];
+        if (! in_array($perPage, $allowedPerPage, true)) {
+            $perPage = 12;
+        }
+
+        $products = Product::query()
+            ->when($query, function ($q) use ($query) {
+                $q->where('name', 'like', "%{$query}%");
+            });
+
+        switch ($sort) {
+            case 'price_asc':
+                $products->orderBy('price', 'asc');
+                break;
+            case 'price_desc':
+                $products->orderBy('price', 'desc');
+                break;
+            case 'name_asc':
+                $products->orderBy('name', 'asc');
+                break;
+            case 'name_desc':
+                $products->orderBy('name', 'desc');
+                break;
+            case 'latest':
+            default:
+                $sort = 'latest';
+                $products->orderBy('id', 'desc');
+                break;
+        }
+
+        $products = $products->paginate($perPage)->withQueryString();
+
+        return view('products', compact('products', 'sort', 'perPage', 'query'));
     }
 
     // Add product to cart (session only)
