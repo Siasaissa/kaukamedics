@@ -1,69 +1,77 @@
-<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container">
-        <div class="row g-5 py-5">
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-light mb-4">Our Office</h4>
-                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Dar es Salaam, Tanzania</p>
-                <p class="mb-2"><i class="fa fa-address-alt me-3"></i>Po.box 14012</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 625 726 051</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@kaukamedics.com</p>
-                <div class="d-flex pt-3">
-                    <a class="btn btn-square btn-primary me-2" href="https://www.facebook.com/ambwenekauka/"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-square btn-primary me-2" href="https://www.instagram.com/kauka_medical_supplies/"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-light mb-4">Quick Links</h4>
-                <a class="btn btn-link" href="{{('about')}}">About Us</a>
-                <a class="btn btn-link" href="{{route('contact')}}">Contact Us</a>
-                <a class="btn btn-link" href="{{route('products')}}">Our Products</a>
-                <a class="btn btn-link bi bi-person" href="{{ route('login') }}">Admin</a>
-                <a class="btn btn-link" href="#!">Privacy Policy</a>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-light mb-4">Business Hours</h4>
-                <p class="mb-1">Monday - Friday</p>
-                <h6 class="text-light">08:00 am - 05:00 pm</h6>
-                <p class="mb-1">Saturday</p>
-                <h6 class="text-light">09:00 am - 01:00 pm</h6>
-                <p class="mb-1">Sunday</p>
-                <h6 class="text-light">Closed</h6>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-light mb-4">Product Gallery</h4>
-                <div class="row g-2">
-                    <div class="col-4">
-                        <img class="img-fluid w-100" src="{{asset('img/gallery-1.jpg')}}" alt="Medical Equipment">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid w-100" src="{{asset('img/gallery-2.jpg')}}" alt="Surgical Tools">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid w-100" src="{{asset('img/gallery-3.jpg')}}" alt="Hospital Supplies">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid w-100" src="{{asset('img/gallery-4.jpg')}}" alt="Diagnostic Devices">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid w-100" src="{{asset('img/gallery-5.jpg')}}" alt="Laboratory Equipment">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid w-100" src="{{asset('img/gallery-6.jpg')}}" alt="Medical Instruments">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright pt-5">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="fw-semi-bold" href="#!">kauka_medical_supplies</a>, All Rights Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    Designed By <a class="fw-semi-bold" href="#!">kaukamedics</a>. Distributed by
-                    <a class="fw-semi-bold" href="#!">kauka_medical_supplies</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Footer End -->
+<footer class="footer-area section_gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3  col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>About Us</h6>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
+							magna aliqua.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4  col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Newsletter</h6>
+						<p>Stay update with our latest</p>
+						<div class="" id="mc_embed_signup">
+
+							<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+							 method="get" class="form-inline">
+
+								<div class="d-flex flex-row">
+
+									<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
+									 required="" type="email">
+
+
+									<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+									<div style="position: absolute; left: -5000px;">
+										<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+									</div>
+
+									<!-- <div class="col-lg-4 col-md-4">
+													<button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
+												</div>  -->
+								</div>
+								<div class="info"></div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3  col-md-6 col-sm-6">
+					<div class="single-footer-widget mail-chimp">
+						<h6 class="mb-20">Instragram Feed</h6>
+						<ul class="instafeed d-flex flex-wrap">
+							<li><img src="img/i1.jpg" alt=""></li>
+							<li><img src="img/i2.jpg" alt=""></li>
+							<li><img src="img/i3.jpg" alt=""></li>
+							<li><img src="img/i4.jpg" alt=""></li>
+							<li><img src="img/i5.jpg" alt=""></li>
+							<li><img src="img/i6.jpg" alt=""></li>
+							<li><img src="img/i7.jpg" alt=""></li>
+							<li><img src="img/i8.jpg" alt=""></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Follow Us</h6>
+						<p>Let us be social</p>
+						<div class="footer-social d-flex align-items-center">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
+				<p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+			</div>
+		</div>
+	</footer>
