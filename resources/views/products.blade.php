@@ -312,22 +312,17 @@
 									$img = $product->image ?? '';
 									$src = asset('img/product/p1.jpg');
 									if ($img) {
-										// absolute URL
 										if (filter_var($img, FILTER_VALIDATE_URL)) {
 											$src = $img;
 										} else {
 											$clean = ltrim($img, '/');
-											try {
-												// prefer Storage::url for public disk (works after php artisan storage:link)
-												if (\Illuminate\Support\Facades\Storage::disk('public')->exists($clean)) {
-													$src = \Illuminate\Support\Facades\Storage::disk('public')->url($clean);
-												} elseif (file_exists(public_path($clean))) {
+											// check storage/app/public
+											if (file_exists(storage_path('app/public/' . $clean))) {
+												$src = asset('storage/' . $clean);
+											} elseif (file_exists(public_path($clean))) {
 												$src = asset($clean);
 											} elseif (file_exists(public_path($img))) {
 												$src = asset($img);
-											}
-											} catch (\Exception $e) {
-												// ignore and use placeholder
 											}
 										}
 									}
