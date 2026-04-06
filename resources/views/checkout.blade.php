@@ -121,36 +121,6 @@
     <section class="checkout_area section_gap">
         <div class="container">
             <div class="returning_customer">
-                <div class="check_title">
-                    <h2>Returning Customer? <a href="#">Click here to login</a></h2>
-                </div>
-                <p>If you have shopped with us before, please enter your details in the boxes below. If you are a new
-                    customer, please proceed to the Billing & Shipping section.</p>
-                <form class="row contact_form" action="#" method="post" novalidate="novalidate">
-                    <div class="col-md-6 form-group p_star">
-                        <input type="text" class="form-control" id="name" name="name">
-                        <span class="placeholder" data-placeholder="Username or Email"></span>
-                    </div>
-                    <div class="col-md-6 form-group p_star">
-                        <input type="password" class="form-control" id="password" name="password">
-                        <span class="placeholder" data-placeholder="Password"></span>
-                    </div>
-                    <div class="col-md-12 form-group">
-                        <button type="submit" value="submit" class="primary-btn">login</button>
-                        <div class="creat_account">
-                            <input type="checkbox" id="f-option" name="selector">
-                            <label for="f-option">Remember me</label>
-                        </div>
-                        <a class="lost_pass" href="#">Lost your password?</a>
-                    </div>
-                </form>
-            </div>
-            <div class="cupon_area">
-                <div class="check_title">
-                    <h2>Have a coupon? <a href="#">Click here to enter your code</a></h2>
-                </div>
-                <input type="text" placeholder="Enter coupon code">
-                <a class="tp_btn" href="#">Apply Coupon</a>
             </div>
             <div class="billing_details">
                 <div class="row">
@@ -180,83 +150,32 @@
 
                             <div class="col-md-6 form-group p_star">
                                 <input required type="text" class="form-control" id="first" name="name" value="{{ old('name') }}" placeholder="Full name">
-                                <span class="placeholder" data-placeholder="First name"></span>
                                 @error('name')<small class="text-danger">{{ $message }}</small>@enderror
-                            </div>
-
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="company" name="company" placeholder="Company name (optional)" value="{{ old('company') }}">
-                                @error('company')<small class="text-danger">{{ $message }}</small>@enderror
                             </div>
 
                             <div class="col-md-6 form-group p_star">
                                 <input required type="text" class="form-control" id="number" name="phone" value="{{ old('phone') }}" placeholder="Phone number">
-                                <span class="placeholder" data-placeholder="Phone number"></span>
                                 @error('phone')<small class="text-danger">{{ $message }}</small>@enderror
                             </div>
 
                             <div class="col-md-6 form-group p_star">
                                 <input required type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" placeholder="Email Address">
-                                <span class="placeholder" data-placeholder="Email Address"></span>
                                 @error('email')<small class="text-danger">{{ $message }}</small>@enderror
                             </div>
 
                             <div class="col-md-12 form-group p_star">
-                                <select class="country_select" name="country">
-                                    <option value="TZ" {{ old('country')=='TZ' ? 'selected':'' }}>Tanzania</option>
-                                    <option value="KE" {{ old('country')=='KE' ? 'selected':'' }}>Kenya</option>
-                                    <option value="UG" {{ old('country')=='UG' ? 'selected':'' }}>Uganda</option>
-                                </select>
-                            </div>
-
-                            <div class="col-md-12 form-group p_star">
                                 <input required type="text" class="form-control" id="add1" name="address" value="{{ old('address') }}" placeholder="Address line 01">
-                                <span class="placeholder" data-placeholder="Address line 01"></span>
                                 @error('address')<small class="text-danger">{{ $message }}</small>@enderror
                             </div>
 
                             <div class="col-md-12 form-group p_star">
-                                <input type="text" class="form-control" id="add2" name="address2" value="{{ old('address2') }}" placeholder="Address line 02 (optional)">
-                                <span class="placeholder" data-placeholder="Address line 02"></span>
-                            </div>
-
-                            <div class="col-md-12 form-group p_star">
                                 <input required type="text" class="form-control" id="city" name="city" value="{{ old('city') }}" placeholder="Town/City">
-                                <span class="placeholder" data-placeholder="Town/City"></span>
                                 @error('city')<small class="text-danger">{{ $message }}</small>@enderror
-                            </div>
-
-                            <div class="col-md-12 form-group p_star">
-                                <select class="country_select" name="district">
-                                    <option value="1" {{ old('district')=='1' ? 'selected':'' }}>District</option>
-                                    <option value="2" {{ old('district')=='2' ? 'selected':'' }}>District</option>
-                                    <option value="4" {{ old('district')=='4' ? 'selected':'' }}>District</option>
-                                </select>
-                            </div>
-
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="zip" name="zip" value="{{ old('zip') }}" placeholder="Postcode/ZIP">
-                            </div>
-
-                            <div class="col-md-12 form-group">
-                                <div class="creat_account">
-                                    <input type="checkbox" id="f-option2" name="create_account" {{ old('create_account') ? 'checked' : '' }}>
-                                    <label for="f-option2">Create an account?</label>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 form-group">
-                                <div class="creat_account">
-                                    <h3>Shipping Details</h3>
-                                    <input type="checkbox" id="f-option3" name="ship_different" {{ old('ship_different') ? 'checked' : '' }}>
-                                    <label for="f-option3">Ship to a different address?</label>
-                                </div>
-                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Order Notes">{{ old('message') }}</textarea>
                             </div>
 
                             <div class="col-12 mt-3">
                                 <!-- payment selection included in right column order box as radios. This button will finalize order -->
-                                <button type="submit" class="primary-btn">Proceed to checkout</button>
+                                <button type="submit" class="primary-btn">Confirm Order</button>
                             </div>
 
                         </form>
