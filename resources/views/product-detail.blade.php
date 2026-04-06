@@ -14,6 +14,7 @@
 	<meta name="keywords" content="">
 	<!-- meta character set -->
 	<meta charset="UTF-8">
+	<base href="{{ url('/') }}/">
 	<!-- Site Title -->
 	<title>Karma Shop</title>
 
