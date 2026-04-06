@@ -269,9 +269,9 @@
 										$product->name ?? $product->title ?? 'Product' 
 									}}</h6>
 									<div class="price">
-										<h6>${{ number_format($product->price ?? 0, 2) }}</h6>
+										<h6>Tsh. {{ number_format($product->price ?? 0, 2) }}</h6>
 										@if(!empty($product->old_price))
-										<h6 class="l-through">${{ number_format($product->old_price, 2) }}</h6>
+										<h6 class="l-through">Tsh. {{ number_format($product->old_price, 2) }}</h6>
 										@endif
 									</div>
 									<div class="prd-bottom">
