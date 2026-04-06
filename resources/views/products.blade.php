@@ -307,20 +307,27 @@
 						@foreach($products as $product)
 						<div class="col-lg-4 col-md-6">
 							<div class="single-product">
-								<img class="img-fluid" 
-								@php
-									$img = $product->image ?? '';
-									if ($img && filter_var($img, FILTER_VALIDATE_URL)) {
-										$src = $img;
-									} elseif ($img && \Illuminate\Support\Facades\Storage::disk('public')->exists($img)) {
-										$src = asset('storage/'.$img);
-									} elseif ($img && file_exists(public_path($img))) {
-										$src = asset($img);
-									} else {
-										$src = asset('img/product/p1.jpg');
-									}
-								@endphp
-								src="{{ $src }}" alt="{{ $product->name ?? 'Product' }}" style="width:100%;height:220px;object-fit:cover;" loading="lazy">
+                                @php
+                                    $imagePath = trim((string) ($product->image ?? ''));
+                                    $normalized = str_replace('\\', '/', $imagePath);
+                                    $normalized = ltrim(str_replace(['storage/app/public/', 'storage/'], '', $normalized), '/');
+                                    $imageUrl = asset('img/defaultmedical.jpg');
+
+                                    if ($imagePath !== '') {
+                                        if (\Illuminate\Support\Str::startsWith($imagePath, ['http://', 'https://'])) {
+                                            $imageUrl = $imagePath;
+                                        } elseif (file_exists(storage_path('app/public/' . $normalized))) {
+                                        $imageUrl = asset('storage/app/public/' . $normalized);
+                                        } elseif (file_exists(public_path('storage/' . $normalized))) {
+                                        $imageUrl = asset('storage/' . $normalized);
+                                        } elseif (file_exists(public_path($imagePath))) {
+                                        $imageUrl = asset($imagePath);
+                                        }
+                                    }
+                                @endphp
+                                <div class="product-thumb-wrap">
+                                    <img class="img-fluid" src="{{ $imageUrl }}" alt="{{ $product->name }}" onerror="this.onerror=null;this.src='{{ asset('img/defaultmedical.jpg') }}';" style="width:100%;height:220px;object-fit:cover;">
+                                </div>
 								<div class="product-details">
 									<h6>{{ 
 										// prefer 'name' then 'title'
