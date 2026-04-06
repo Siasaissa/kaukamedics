@@ -17,22 +17,24 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" href="{{ route('index') }}">Home</a></li>
-
-                            <li class="nav-item active">
-                                <a href="{{ route('products') }}" class="nav-link dropdown-toggle" >Products</a>
-                            </li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="{{ route('service') }}" class="nav-link dropdown-toggle" >Services</a>
-                                
+                            <li class="nav-item {{ request()->routeIs('index') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('index') }}">Home</a>
                             </li>
 
-                            <li class="nav-item">
-                                <a href="{{ route('about') }}" class="nav-link dropdown-toggle" >About Us</a>
+                            <li class="nav-item {{ request()->routeIs('products') ? 'active' : '' }}">
+                                <a href="{{ route('products') }}" class="nav-link">Products</a>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('contact') }}" class="nav-link dropdown-toggle" >Contact</a>
+                            <li class="nav-item {{ request()->routeIs('service') ? 'active' : '' }}">
+                                <a href="{{ route('service') }}" class="nav-link">Services</a>
+                            </li>
+
+                            <li class="nav-item {{ request()->routeIs('about') ? 'active' : '' }}">
+                                <a href="{{ route('about') }}" class="nav-link">About Us</a>
+                            </li>
+
+                            <li class="nav-item {{ request()->routeIs('contact') ? 'active' : '' }}">
+                                <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                             </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
