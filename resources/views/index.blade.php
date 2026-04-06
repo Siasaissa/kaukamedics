@@ -38,7 +38,7 @@
 
 <body>
 
-    @include('partials.header')
+    @include('layouts.header')
 
     <!-- start banner Area (Carousel Start) -->
     <section class="banner-area" style="margin-top:100px;">
