@@ -284,10 +284,6 @@
 											<span class="lnr lnr-heart"></span>
 											<p class="hover-text">Wishlist</p>
 										</a>
-										<a href="{{ route('compare.add', $product->id) }}" class="social-info">
-											<span class="lnr lnr-sync"></span>
-											<p class="hover-text">compare</p>
-										</a>
 										<a href="{{ route('products.show', $product->id) }}" class="social-info">
 											<span class="lnr lnr-move"></span>
 											<p class="hover-text">view more</p>
