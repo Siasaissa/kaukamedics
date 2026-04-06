@@ -310,21 +310,14 @@
 								<img class="img-fluid" 
 								@php
 									$img = $product->image ?? '';
-									$src = asset('img/product/p1.jpg');
-									if ($img) {
-										if (filter_var($img, FILTER_VALIDATE_URL)) {
-											$src = $img;
-										} else {
-											$clean = ltrim($img, '/');
-											// check storage/app/public
-											if (file_exists(storage_path('app/public/' . $clean))) {
-												$src = asset('storage/' . $clean);
-											} elseif (file_exists(public_path($clean))) {
-												$src = asset($clean);
-											} elseif (file_exists(public_path($img))) {
-												$src = asset($img);
-											}
-										}
+									if ($img && filter_var($img, FILTER_VALIDATE_URL)) {
+										$src = $img;
+									} elseif ($img && \Illuminate\Support\Facades\Storage::disk('public')->exists($img)) {
+										$src = asset('storage/'.$img);
+									} elseif ($img && file_exists(public_path($img))) {
+										$src = asset($img);
+									} else {
+										$src = asset('img/product/p1.jpg');
 									}
 								@endphp
 								src="{{ $src }}" alt="{{ $product->name ?? 'Product' }}" style="width:100%;height:220px;object-fit:cover;" loading="lazy">
