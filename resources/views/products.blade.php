@@ -307,7 +307,20 @@
 						@foreach($products as $product)
 						<div class="col-lg-4 col-md-6">
 							<div class="single-product">
-								<img class="img-fluid" src="{{ asset($product->image ?? 'img/product/p1.jpg') }}" alt="{{ $product->name ?? 'Product' }}">
+								<img class="img-fluid" 
+								@php
+									$img = $product->image ?? '';
+									if ($img && filter_var($img, FILTER_VALIDATE_URL)) {
+										$src = $img;
+									} elseif ($img && \Illuminate\Support\Facades\Storage::disk('public')->exists($img)) {
+										$src = asset('storage/'.$img);
+									} elseif ($img && file_exists(public_path($img))) {
+										$src = asset($img);
+									} else {
+										$src = asset('img/product/p1.jpg');
+									}
+								@endphp
+								src="{{ $src }}" alt="{{ $product->name ?? 'Product' }}" style="width:100%;height:220px;object-fit:cover;" loading="lazy">
 								<div class="product-details">
 									<h6>{{ 
 										// prefer 'name' then 'title'
