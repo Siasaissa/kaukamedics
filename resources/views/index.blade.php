@@ -38,72 +38,7 @@
 
 <body>
 
-    <!-- Topbar Start (from includes) -->
-    <!-- Topbar placeholder - replace with actual topbar content -->
-    <div class="topbar-area">
-        <!-- Topbar content here -->
-    </div>
-    <!-- Topbar End -->
-
-    <!-- Navbar Start (integrated with header area) -->
-    <header class="header_area sticky-header">
-        <div class="main_menu">
-            <nav class="navbar navbar-expand-lg navbar-light main_box" style="padding-top:0 !important; padding-bottom:0 !important;">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="#" style="padding:0 !important; margin:0 !important; line-height:0 !important;">
-                        <img src="img/logo.png" 
-                            alt="Kauka Company Logo" 
-                            style="height:100px !important; padding:0 !important; margin:0 !important; display:block;">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item active"><a class="nav-link" href="{{ route('index') }}">Home</a></li>
-
-                            <li class="nav-item submenu dropdown">
-                                <a href="{{ route('products') }}" class="nav-link dropdown-toggle" >Products</a>
-                            </li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="{{ route('service') }}" class="nav-link dropdown-toggle" >Services</a>
-                                
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="{{ route('about') }}" class="nav-link dropdown-toggle" >About Us</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('contact') }}" class="nav-link dropdown-toggle" >Contact</a>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="nav-item"><a href="{{ route('cart') }}" class="cart"><span class="ti-bag text-primary">{{ session('cart') ? count(session('cart')) : 0 }}</span></a></li>
-                            <li class="nav-item">
-                                <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <div class="search_input" id="search_input_box">
-            <div class="container">
-                <form class="d-flex justify-content-between">
-                    <input type="text" class="form-control" id="search_input" placeholder="Search products...">
-                    <button type="submit" class="btn"></button>
-                    <span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
-                </form>
-            </div>
-        </div>
-    </header>
-    <!-- Navbar End -->
+    @include('partials.header')
 
     <!-- start banner Area (Carousel Start) -->
     <section class="banner-area" style="margin-top:100px;">
@@ -547,62 +482,7 @@
     </div>
 </div>
 <!-- Testimonial End -->
-    <!-- Footer Start (from includes) -->
-    <footer class="footer-area section_gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3  col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>About Us</h6>
-                        <p>
-                            We are dedicated to providing high-quality medical equipment and healthcare solutions that empower hospitals, clinics, and professionals.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-7  col-md-12 col-sm-12">
-                    <div class="single-footer-widget">
-                        <h6>Newsletter</h6>
-                        <p>Stay update with our latest</p>
-                        <div class="" id="mc_embed_signup">
-
-                            <form target="_blank" novalidate="true" action="#" method="get" class="form-inline">
-
-                                <div class="d-flex flex-row">
-
-                                    <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
-                                        required="" type="email">
-
-
-                                    <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-                                    <div style="position: absolute; left: -5000px;">
-                                        <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-                                    </div>
-                                </div>
-                                <div class="info"></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Follow Us</h6>
-                        <p>Let us be social</p>
-                        <div class="footer-social d-flex align-items-center">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-behance"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
-                <p class="footer-text m-0">
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Kauka Company
-                </p>
-            </div>
-        </div>
-    </footer>
+    @include('partials.footer')
 
 
     <!-- Product Details Modal - Place this after your product loop -->
