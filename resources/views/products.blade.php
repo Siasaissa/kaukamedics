@@ -325,6 +325,11 @@
 		</div>
 	</div>
 
+	<!-- Start related-product Area -->
+	<section class="related-product-area section_gap">
+		
+	</section>
+	<!-- End related-product Area -->
 
 	<!-- start footer Area -->
 	@include('layouts.footer')
