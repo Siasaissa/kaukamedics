@@ -37,6 +37,22 @@
                         <i class="bi bi-graph-up me-1"></i> Reports
                     </a>
                 </li>
+                
+                <li class="nav-item">
+                    <a href="{{ route('bulk') }}" 
+                       class="nav-link {{ Route::is('bulk.*') ? 'active' : '' }}">
+                        <i class="bi bi-chat-left-text me-1"></i> Bulk SMS
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="{{ route('admin.Invoice.index') }}" 
+                       class="nav-link {{ Route::is('bulk.*') ? 'active' : '' }}">
+                        <i class="bi bi-chat-left-text me-1"></i> Invoice
+                    </a>
+                </li>
+                
+
             </ul>
 
             <!-- Admin Profile Dropdown -->
