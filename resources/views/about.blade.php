@@ -336,7 +336,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="mvv-card">
-                        <img src="img/blog/cat-post/cat-post-3.jpg" alt="Our Mission">
+                        <img src="{{ $aboutImages[0] }}" alt="Our Mission">
                         <div class="card-body-inner">
                             <div class="card-icon"><i class="fa fa-bullseye"></i></div>
                             <h5>Our Mission</h5>
@@ -348,7 +348,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="mvv-card">
-                        <img src="img/blog/cat-post/cat-post-2.jpg" alt="Our Vision">
+                        <img src="{{ $aboutImages[1] }}" alt="Our Vision">
                         <div class="card-body-inner">
                             <div class="card-icon"><i class="fa fa-eye"></i></div>
                             <h5>Our Vision</h5>
@@ -360,7 +360,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="mvv-card">
-                        <img src="img/blog/cat-post/cat-post-1.jpg" alt="Our Values">
+                        <img src="{{ $aboutImages[2] }}" alt="Our Values">
                         <div class="card-body-inner">
                             <div class="card-icon"><i class="fa fa-star"></i></div>
                             <h5>Our Values</h5>
@@ -526,7 +526,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-1.jpg" alt="Delivering Quality Healthcare">
+                                    <img src="{{ $aboutImages[1] }}" alt="Delivering Quality Healthcare">
                                     <div class="blog_details">
                                         <a href="#"><h2>Delivering Quality Healthcare Solutions Since 2005</h2></a>
                                         <p>We are a trusted provider of medical equipment, hospital supplies, and healthcare solutions dedicated to improving the quality of care across hospitals, clinics, and medical institutions. Our goal is to make reliable medical products accessible to those who save lives every day.</p>
@@ -578,7 +578,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-3.jpg" alt="Our Team">
+                                    <img src="{{ $aboutImages[2] }}" alt="Our Team">
                                     <div class="blog_details">
                                         <a href="#"><h2>Meet Our Professional Team</h2></a>
                                         <p>Our team is led by experienced healthcare professionals. Dr. Ambwene John Mwankenja (Director), Fadhili Mwankenja (Operation Manager), Patrick Mbise (Operation Manager), and Clementina Peter (Sales & Procurement Officer) bring decades of combined experience to ensure every client receives the best products and service.</p>
@@ -604,7 +604,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-4.jpg" alt="Trusted Clients">
+                                    <img src="{{ $aboutImages[3] }}" alt="Trusted Clients">
                                     <div class="blog_details">
                                         <a href="#"><h2>Trusted by Healthcare Providers Nationwide</h2></a>
                                         <p>We are proud to serve over 1,500 satisfied clients including hospitals, clinics, and pharmacies across Tanzania and East Africa. Our reputation is built on quality products, timely delivery, and professional customer service.</p>
@@ -630,7 +630,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="img/blog/main-blog/m-blog-5.jpg" alt="Why Choose Kauka">
+                                    <img src="{{ $aboutImages[0] }}" alt="Why Choose Kauka">
                                     <div class="blog_details">
                                         <a href="#"><h2>Why Choose Kauka Company?</h2></a>
                                         <p>We offer certified and approved medical products, a strong distribution and logistics network, and an experienced and dedicated support team. Partner with us to access reliable medical solutions that keep your healthcare facility equipped and efficient.</p>
@@ -677,28 +677,28 @@
                         <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title">Our Milestones</h3>
                             <div class="media post_item">
-                                <img src="img/blog/popular-post/post1.jpg" alt="Company Founded">
+                                <img src="{{ $aboutImages[0] }}" alt="Company Founded">
                                 <div class="media-body">
                                     <a href="#"><h3>Company Founded</h3></a>
                                     <p>2005</p>
                                 </div>
                             </div>
                             <div class="media post_item">
-                                <img src="img/blog/popular-post/post2.jpg" alt="Expanded to East Africa">
+                                <img src="{{ $aboutImages[1] }}" alt="Expanded to East Africa">
                                 <div class="media-body">
                                     <a href="#"><h3>Expanded to East Africa</h3></a>
                                     <p>2010</p>
                                 </div>
                             </div>
                             <div class="media post_item">
-                                <img src="img/blog/popular-post/post3.jpg" alt="ISO Certification">
+                                <img src="{{ $aboutImages[2] }}" alt="ISO Certification">
                                 <div class="media-body">
                                     <a href="#"><h3>ISO Certification</h3></a>
                                     <p>2015</p>
                                 </div>
                             </div>
                             <div class="media post_item">
-                                <img src="img/blog/popular-post/post4.jpg" alt="1500+ Clients Served">
+                                <img src="{{ $aboutImages[3] }}" alt="1500+ Clients Served">
                                 <div class="media-body">
                                     <a href="#"><h3>1500+ Clients Served</h3></a>
                                     <p>2024</p>
@@ -708,7 +708,7 @@
 
                         <aside class="single_sidebar_widget ads_widget">
                             <a href="contact.html">
-                                <img class="img-fluid" src="img/blog/add.jpg" alt="Contact Kauka">
+                                <img class="img-fluid" src="{{ $aboutImages[2] }}" alt="Contact Kauka">
                             </a>
                         </aside>
 
