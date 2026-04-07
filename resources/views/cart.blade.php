@@ -123,16 +123,12 @@
                             <!-- summary rows -->
                             <tr class="bottom_button">
                                 <td>
-                                    <a class="gray_btn" href="{{ url('/') }}">Continue Shopping</a>
+                                    <a class="gray_btn" href="{{ route('products') }}">Continue Shopping</a>
                                 </td>
                                 <td></td>
                                 <td></td>
                                 <td>
-                                    <div class="cupon_text d-flex align-items-center">
-                                        <input type="text" placeholder="Coupon Code">
-                                        <a class="primary-btn" href="#">Apply</a>
-                                        <a class="gray_btn" href="#">Close Coupon</a>
-                                    </div>
+                                    
                                 </td>
                             </tr>
                             <tr>
@@ -146,32 +142,8 @@
                                 </td>
                             </tr>
                             <tr class="shipping_area">
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <h5>Shipping</h5>
-                                </td>
-                                <td>
-                                    <div class="shipping_box">
-                                        <ul class="list">
-                                            <li><a href="#">Flat Rate: TZS 5,000</a></li>
-                                            <li><a href="#">Free Shipping</a></li>
-                                            <li><a href="#">Flat Rate: TZS 10,000</a></li>
-                                            <li class="active"><a href="#">Local Delivery: TZS 2,000</a></li>
-                                        </ul>
-                                        <h6>Calculate Shipping <i class="fa fa-caret-down" aria-hidden="true"></i></h6>
-                                        <select class="shipping_select">
-                                            <option value="1">Tanzania</option>
-                                            <option value="2">Kenya</option>
-                                            <option value="4">Uganda</option>
-                                        </select>
-                                        <select class="shipping_select">
-                                            <option value="1">Select a Region</option>
-                                        </select>
-                                        <input type="text" placeholder="Postcode/Zipcode">
-                                        <a class="gray_btn" href="#">Update Details</a>
-                                    </div>
-                                </td>
+                                
+                                
                             </tr>
                             <tr class="out_button_area">
                                 <td></td>
@@ -179,7 +151,7 @@
                                 <td></td>
                                 <td>
                                     <div class="checkout_btn_inner d-flex align-items-center">
-                                        <a class="gray_btn" href="{{ url('/') }}">Continue Shopping</a>
+                                        <a class="gray_btn" href="{{ route('products') }}">Continue Shopping</a>
                                         <a class="primary-btn" href="{{ route('checkout') }}">Proceed to checkout</a>
                                     </div>
                                 </td>
