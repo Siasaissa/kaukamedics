@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a href="{{ route('dashboard') }}" class="nav-link {{ Route::is('admin.dashboard') ? 'active' : '' }}">
+                    <a href="{{ route('dashboard') }}" class="nav-link {{ Route::is('dashboard') ? 'active' : '' }}">
                         <i class="bi bi-house-door me-1"></i> Dashboard
                     </a>
                 </li>
@@ -38,19 +38,23 @@
                     </a>
                 </li>
                 
-                <li class="nav-item">
-                    <a href="{{ route('bulk') }}" 
-                       class="nav-link {{ Route::is('bulk.*') ? 'active' : '' }}">
-                        <i class="bi bi-chat-left-text me-1"></i> Bulk SMS
-                    </a>
-                </li>
+                @if (Route::has('bulk'))
+                    <li class="nav-item">
+                        <a href="{{ route('bulk') }}" 
+                           class="nav-link {{ Route::is('bulk') ? 'active' : '' }}">
+                            <i class="bi bi-chat-left-text me-1"></i> Bulk SMS
+                        </a>
+                    </li>
+                @endif
                 
-                <li class="nav-item">
-                    <a href="{{ route('admin.Invoice.index') }}" 
-                       class="nav-link {{ Route::is('bulk.*') ? 'active' : '' }}">
-                        <i class="bi bi-chat-left-text me-1"></i> Invoice
-                    </a>
-                </li>
+                @if (Route::has('admin.Invoice.index'))
+                    <li class="nav-item">
+                        <a href="{{ route('admin.Invoice.index') }}" 
+                           class="nav-link {{ Route::is('admin.Invoice.index') ? 'active' : '' }}">
+                            <i class="bi bi-receipt me-1"></i> Invoice
+                        </a>
+                    </li>
+                @endif
                 
 
             </ul>
