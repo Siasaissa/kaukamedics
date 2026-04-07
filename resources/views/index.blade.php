@@ -242,9 +242,7 @@
                      @foreach ( $products as $product)
                     <div class="col-lg-3 col-md-6">
                         <div class="single-product">
-                            <img class="img-fluid" src="{{ $product->image && file_exists(storage_path('app/public/'.$product->image)) 
-                            ? asset('storage/app/public/'.$product->image) 
-                            : asset('img/defaultmedical.jpg') }}" alt="Diagnostic Tool">
+                            <img class="img-fluid" src="{{ $product->image_url }}" alt="{{ $product->name }}" onerror="this.onerror=null;this.src='{{ asset('img/defaultmedical.jpg') }}';">
                             <div class="product-details">
                                 <h6>{{ $product->name }}</h6>
                                 <div class="price">
@@ -292,9 +290,7 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="single-product">
-                            <img class="img-fluid" src="{{ $produ->image && file_exists(storage_path('app/public/'.$produ->image)) 
-                     ? asset('storage/app/public/'.$produ->image) 
-                     : asset('img/defaultmedical.jpg') }}" alt="Protective Mask">
+                            <img class="img-fluid" src="{{ $produ->image_url }}" alt="{{ $produ->name }}" onerror="this.onerror=null;this.src='{{ asset('img/defaultmedical.jpg') }}';">
                             <div class="product-details">
                                 <h6>{{ $produ->name }}</h6>
                                 <div class="price">
@@ -505,16 +501,17 @@
                     <!-- Product Image -->
                     <div class="col-md-5 text-center">
                         <div class="product-image-wrapper p-3 bg-light rounded">
-                            <img src="{{ $product->image && file_exists(storage_path('app/public/'.$product->image)) ? asset('storage/app/public/'.$product->image) : asset('img/defaultmedical.jpg') }}" 
+                            <img src="{{ $product->image_url }}" 
                                  class="img-fluid rounded" 
                                  alt="{{ $product->name }}"
+                                 id="mainProductImage{{ $product->id }}"
                                  style="max-height: 250px; object-fit: contain;">
                         </div>
                         
                         <!-- Thumbnail Gallery (optional) -->
                         <div class="row mt-3">
                             <div class="col-4">
-                                <img src="{{ $product->image && file_exists(storage_path('app/public/'.$product->image)) ? asset('storage/app/public/'.$product->image) : asset('img/defaultmedical.jpg') }}" 
+                                <img src="{{ $product->image_url }}" 
                                      class="img-fluid border rounded p-1" 
                                      style="height: 50px; width: 100%; object-fit: cover; cursor: pointer;"
                                      onclick="document.getElementById('mainProductImage{{ $product->id }}').src=this.src">
@@ -673,16 +670,17 @@
                     <!-- Product Image -->
                     <div class="col-md-5 text-center">
                         <div class="product-image-wrapper p-3 bg-light rounded">
-                            <img src="{{ $produ->image && file_exists(storage_path('app/public/'.$produ->image)) ? asset('storage/app/public/'.$produ->image) : asset('img/defaultmedical.jpg') }}" 
+                            <img src="{{ $produ->image_url }}" 
                                  class="img-fluid rounded" 
                                  alt="{{ $produ->name }}"
+                                 id="mainProductImage{{ $produ->id }}"
                                  style="max-height: 250px; object-fit: contain;">
                         </div>
                         
                         <!-- Thumbnail Gallery (optional) -->
                         <div class="row mt-3">
                             <div class="col-4">
-                                <img src="{{ $produ->image && file_exists(storage_path('app/public/'.$produ->image)) ? asset('storage/app/public/'.$produ->image) : asset('img/defaultmedical.jpg') }}" 
+                                <img src="{{ $produ->image_url }}" 
                                      class="img-fluid border rounded p-1" 
                                      style="height: 50px; width: 100%; object-fit: cover; cursor: pointer;"
                                      onclick="document.getElementById('mainProductImage{{ $produ->id }}').src=this.src">
