@@ -671,7 +671,7 @@
                         </aside>
 
                         <aside class="single_sidebar_widget author_widget">
-                            <img class="author_img rounded-circle" src="{{ $aboutImages[1] }}" alt="Dr. Ambwene John Mwankenja">
+                            <img class="author_img rounded-circle" src="img/team-3.png" alt="Dr. Ambwene John Mwankenja">
                             <h4>Dr. Ambwene John Mwankenja</h4>
                             <p class="role">Director, Kauka Company</p>
                             <div class="social_icon">
