@@ -111,8 +111,17 @@
 	<!--================Contact Area =================-->
 	<section class="contact_area section_gap_bottom">
 		<div class="container">
-			<div id="mapBox" class="mapBox" data-lat="-6.810787" data-lon="39.259628" data-zoom="15" data-info="Magomeni Kanisani, Fundikila 10 Street, Dar es Salaam, Tanzania."
-			 data-mlat="-6.810787" data-mlon="39.259628">
+			<div class="mapBox">
+				<iframe
+					title="Magomeni Dar es Salaam Map"
+					src="https://www.google.com/maps?q=Magomeni%20Dar%20es%20Salaam%20Tanzania&z=15&output=embed"
+					width="100%"
+					height="420"
+					style="border:0;"
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade">
+				</iframe>
 			</div>
 			<div class="row">
 				<div class="col-lg-3">
@@ -272,9 +281,6 @@
 	<script src="js/nouislider.min.js"></script>
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
-	<!--gmaps Js-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-	<script src="js/gmaps.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 
