@@ -145,6 +145,29 @@
                                 <li><a href="#">Shipping <span>Flat rate: TZS 2,000</span></a></li>
                                 <li><a href="#">Total <span>TZS {{ number_format($total + 2000, 2) }}</span></a></li>
                             </ul>
+                            <div class="payment_item mt-4">
+                                <h4 class="mb-3">Select Payment Method</h4>
+                                <div class="mb-2">
+                                    <label class="d-flex align-items-center mb-2" for="payment_mpesa" style="cursor:pointer;">
+                                        <input type="radio" id="payment_mpesa" name="payment_method" value="M-Pesa" form="checkoutForm" {{ old('payment_method') === 'M-Pesa' ? 'checked' : '' }}>
+                                        <span class="ml-2">M-Pesa</span>
+                                    </label>
+                                </div>
+                                <div class="mb-2">
+                                    <label class="d-flex align-items-center mb-2" for="payment_crdb" style="cursor:pointer;">
+                                        <input type="radio" id="payment_crdb" name="payment_method" value="CRDB BANK" form="checkoutForm" {{ old('payment_method') === 'CRDB BANK' ? 'checked' : '' }}>
+                                        <span class="ml-2">CRDB BANK</span>
+                                    </label>
+                                </div>
+                                <div class="mb-2">
+                                    <label class="d-flex align-items-center mb-2" for="payment_nmb" style="cursor:pointer;">
+                                        <input type="radio" id="payment_nmb" name="payment_method" value="NMB BANK" form="checkoutForm" {{ old('payment_method') === 'NMB BANK' ? 'checked' : '' }}>
+                                        <span class="ml-2">NMB BANK</span>
+                                    </label>
+                                </div>
+                                @error('payment_method')<small class="text-danger d-block">{{ $message }}</small>@enderror
+                                <p class="text-muted mt-2 mb-0">Selecting a method will show payment instructions before you confirm the order.</p>
+                            </div>
                             
                         </div>
                     </div>
@@ -157,6 +180,26 @@
     <!-- start footer Area -->
     @include('layouts.footer')
     <!-- End footer Area -->
+
+    <div class="modal fade" id="paymentInstructionModal" tabindex="-1" role="dialog" aria-labelledby="paymentInstructionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="paymentInstructionModalLabel">Payment Instructions</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6 id="instructionMethod" class="text-primary mb-3"></h6>
+                    <div id="instructionContent" class="text-muted"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="primary-btn border-0" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
@@ -175,25 +218,55 @@
     <script src="js/main.js"></script>
 
     <script>
-    // Wire the right-column action button to submit the top checkout form with the selected payment method
+    const paymentInstructions = {
+        'M-Pesa': `
+            <p class="mb-2">Use M-Pesa to complete your payment quickly from your phone.</p>
+            <ol class="pl-3 mb-0">
+                <li>Open your M-Pesa menu on your phone.</li>
+                <li>Select <strong>Lipa kwa Simu</strong> or merchant payment.</li>
+                <li>Use business number <strong>000000</strong>.</li>
+                <li>Enter your order phone number as reference.</li>
+                <li>Complete the payment and keep the confirmation message.</li>
+            </ol>
+        `,
+        'CRDB BANK': `
+            <p class="mb-2">Make your transfer or deposit to the CRDB bank account below.</p>
+            <ul class="list-unstyled mb-0">
+                <li><strong>Bank:</strong> CRDB BANK</li>
+                <li><strong>Account Name:</strong> Kauka Medical Supplies</li>
+                <li><strong>Account Number:</strong> 012345678900</li>
+                <li><strong>Reference:</strong> Use your full name or phone number</li>
+            </ul>
+        `,
+        'NMB BANK': `
+            <p class="mb-2">Use the following NMB bank details to complete your order payment.</p>
+            <ul class="list-unstyled mb-0">
+                <li><strong>Bank:</strong> NMB BANK</li>
+                <li><strong>Account Name:</strong> Kauka Medical Supplies</li>
+                <li><strong>Account Number:</strong> 987654321000</li>
+                <li><strong>Reference:</strong> Use your full name or phone number</li>
+            </ul>
+        `
+    };
+
+    function showPaymentInstructions(method) {
+        if (!paymentInstructions[method]) {
+            return;
+        }
+
+        $('#instructionMethod').text(method);
+        $('#instructionContent').html(paymentInstructions[method]);
+        $('#paymentInstructionModal').modal('show');
+    }
+
     $(document).ready(function(){
-        $('#checkoutSubmit').on('click', function(e){
-            e.preventDefault();
-            var payment = $('input[name="payment_method"]:checked').val() || 'paypal';
-            var $form = $('#checkoutForm');
-            if ($form.length === 0) return alert('Checkout form not found.');
-
-            // set or create hidden input for payment_method so controller receives it
-            var $pm = $form.find('input[name="payment_method"]');
-            if ($pm.length === 0) {
-                $form.append('<input type="hidden" name="payment_method" value="' + payment + '">');
-            } else {
-                $pm.val(payment);
-            }
-
-            // submit the form
-            $form.submit();
+        $('input[name="payment_method"]').on('change', function(){
+            showPaymentInstructions(this.value);
         });
+
+        @if(session('show_instructions') && session('payment_method'))
+            showPaymentInstructions(@json(session('payment_method')));
+        @endif
     });
     </script>
 </body>
