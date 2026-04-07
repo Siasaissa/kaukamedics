@@ -255,10 +255,10 @@
     @php
         $aboutImageVersion = time();
         $aboutImages = [
-            asset('img/image1.jpg') . '?v=' . $aboutImageVersion,
-            asset('img/image2.jpg') . '?v=' . $aboutImageVersion,
-            asset('img/image3.jpg') . '?v=' . $aboutImageVersion,
-            asset('img/image4.jpg') . '?v=' . $aboutImageVersion,
+            'img/image1.jpg?v=' . $aboutImageVersion,
+            'img/image2.jpg?v=' . $aboutImageVersion,
+            'img/image3.jpg?v=' . $aboutImageVersion,
+            'img/image4.jpg?v=' . $aboutImageVersion,
         ];
     @endphp
 
