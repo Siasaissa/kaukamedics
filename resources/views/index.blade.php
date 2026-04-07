@@ -478,7 +478,7 @@
     </div>
 </div>
 <!-- Testimonial End -->
-    @include('partials.footer')
+    @include('layouts.footer')
 
 
     <!-- Product Details Modal - Place this after your product loop -->

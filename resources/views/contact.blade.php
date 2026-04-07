@@ -173,69 +173,7 @@
 	<!--================Contact Area =================-->
 
 	<!-- start footer Area -->
-	<footer class="footer-area section_gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>About Kauka Company</h6>
-                        <p>We are dedicated to providing high-quality medical equipment and healthcare solutions that empower hospitals, clinics, and professionals across Tanzania and East Africa.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Newsletter</h6>
-                        <p>Stay updated with our latest medical products</p>
-                        <div id="mc_embed_signup">
-                            <form target="_blank" novalidate="true"
-                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                method="get" class="form-inline">
-                                <div class="d-flex flex-row">
-                                    <input class="form-control" name="EMAIL" placeholder="Enter Email"
-                                        onfocus="this.placeholder=''" onblur="this.placeholder='Enter Email'"
-                                        required="" type="email">
-                                    <button class="click-btn btn btn-default">
-                                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                    </button>
-                                    <div style="position:absolute;left:-5000px;">
-                                        <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-                                    </div>
-                                </div>
-                                <div class="info"></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-footer-widget mail-chimp">
-                        <h6 class="mb-20">Contact Info</h6>
-                        <p><i class="fa fa-map-marker"></i> Dar es Salaam, Tanzania</p>
-                        <p><i class="fa fa-phone"></i> +255 123 456 789</p>
-                        <p><i class="fa fa-envelope"></i> info@kaukacompany.com</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Follow Us</h6>
-                        <p>Let us be social</p>
-                        <div class="footer-social d-flex align-items-center">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
-                <p class="footer-text m-0">
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                    All rights reserved | Kauka Company - Medical Supplies
-                </p>
-            </div>
-        </div>
-    </footer>
-
+	@include('layouts.footer')
 	<!-- End footer Area -->
 
 	<!--================Contact Success and Error message Area =================-->

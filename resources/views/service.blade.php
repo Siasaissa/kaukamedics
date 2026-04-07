@@ -197,55 +197,7 @@
     <!-- End Services Grid Section -->
 
     <!-- Footer Area -->
-    <footer class="footer-area section_gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>About Us</h6>
-                        <p>Kauka Medical Supplies delivers trusted medical products and equipment that empower healthcare professionals to save lives every day.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Newsletter</h6>
-                        <p>Stay update with our latest</p>
-                        <div id="mc_embed_signup">
-                            <form target="_blank" novalidate action="#" method="get" class="form-inline">
-                                <div class="d-flex flex-row">
-                                    <input class="form-control" name="EMAIL" placeholder="Enter Email" required="" type="email">
-                                    <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right"></i></button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-footer-widget mail-chimp">
-                        <h6 class="mb-20">Contact Info</h6>
-                        <p><i class="fa fa-map-marker"></i> Dar es Salaam, Tanzania</p>
-                        <p><i class="fa fa-phone"></i> +255 625 726 051</p>
-                        <p><i class="fa fa-envelope"></i> info@kaukamedics.com</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Follow Us</h6>
-                        <p>Let us be social</p>
-                        <div class="footer-social d-flex align-items-center">
-                            <a href="https://www.facebook.com/ambwenekauka/"><i class="fa fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/kauka_medical_supplies/"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
-                <p class="footer-text m-0">
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Designed by <a href="#">Kauka Medics</a>
-                </p>
-            </div>
-        </div>
-    </footer>
+     @include('layouts.footer')
     <!-- End Footer Area -->
 
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
