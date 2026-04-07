@@ -578,7 +578,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="{{ asset('img/image3.jpg') }}" alt="Our Team">
+                                    <img src="img/blog/main-blog/m-blog-3.jpg" alt="Our Team">
                                     <div class="blog_details">
                                         <a href="#"><h2>Meet Our Professional Team</h2></a>
                                         <p>Our team is led by experienced healthcare professionals. Dr. Ambwene John Mwankenja (Director), Fadhili Mwankenja (Operation Manager), Patrick Mbise (Operation Manager), and Clementina Peter (Sales & Procurement Officer) bring decades of combined experience to ensure every client receives the best products and service.</p>
@@ -604,7 +604,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="{{ asset('img/image4.jpg') }}" alt="Trusted Clients">
+                                    <img src="img/blog/main-blog/m-blog-4.jpg" alt="Trusted Clients">
                                     <div class="blog_details">
                                         <a href="#"><h2>Trusted by Healthcare Providers Nationwide</h2></a>
                                         <p>We are proud to serve over 1,500 satisfied clients including hospitals, clinics, and pharmacies across Tanzania and East Africa. Our reputation is built on quality products, timely delivery, and professional customer service.</p>
@@ -630,7 +630,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="{{ asset('img/image5.jpg') }}" alt="Why Choose Kauka">
+                                    <img src="img/blog/main-blog/m-blog-5.jpg" alt="Why Choose Kauka">
                                     <div class="blog_details">
                                         <a href="#"><h2>Why Choose Kauka Company?</h2></a>
                                         <p>We offer certified and approved medical products, a strong distribution and logistics network, and an experienced and dedicated support team. Partner with us to access reliable medical solutions that keep your healthcare facility equipped and efficient.</p>
