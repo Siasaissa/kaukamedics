@@ -111,8 +111,15 @@
 	<!--================Contact Area =================-->
 	<section class="contact_area section_gap_bottom">
 		<div class="container">
-			<div id="mapBox" class="mapBox" data-lat="40.701083" data-lon="-74.1522848" data-zoom="13" data-info="PO Box CT16122 Collins Street West, Victoria 8007, Australia."
-			 data-mlat="40.701083" data-mlon="-74.1522848">
+			<div id="mapBox" class="mapBox">
+				<iframe 
+					src="https://www.google.com/maps?q=Magomeni+Kanisani+Dar+es+Salaam&output=embed"
+					width="100%" 
+					height="400" 
+					style="border:0;" 
+					allowfullscreen>
+				</iframe>
+			</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-3">
