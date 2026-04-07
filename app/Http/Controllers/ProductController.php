@@ -364,7 +364,7 @@ public function specialOrder(Request $request)
             if (Str::startsWith($imagePath, ['http://', 'https://'])) {
                 $imageUrl = $imagePath;
             } elseif (file_exists(storage_path('app/public/' . $normalized))) {
-                $imageUrl = asset('storage/' . $normalized);
+                $imageUrl = asset('storage/app/public/' . $normalized);
             } elseif (file_exists(public_path('storage/' . $normalized))) {
                 $imageUrl = asset('storage/' . $normalized);
             } elseif (file_exists(public_path($imagePath))) {
