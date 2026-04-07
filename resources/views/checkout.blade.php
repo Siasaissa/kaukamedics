@@ -112,7 +112,6 @@
                                 <!-- payment selection included in right column order box as radios. This button will finalize order -->
                                 <button type="submit" class="primary-btn">Confirm Order</button>
                             </div>
-
                         </form>
 
                     </div>
