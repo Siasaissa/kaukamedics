@@ -38,22 +38,18 @@
                     <span class="nav-link-text ms-1">Reports</span>
                 </a>
             </li>
-            @if (Route::has('bulk'))
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('bulk') ? 'active bg-gradient-dark text-white' : 'text-dark' }}" href="{{ route('bulk') }}">
-                        <i class="material-symbols-rounded opacity-5">notifications</i>
-                        <span class="nav-link-text ms-1">Bulk Sms</span>
-                    </a>
-                </li>
-            @endif
-            @if (Route::has('admin.Invoice.index'))
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('admin.Invoice.index') ? 'active bg-gradient-dark text-white' : 'text-dark' }}" href="{{ route('admin.Invoice.index') }}">
-                        <i class="material-symbols-rounded opacity-5">receipt_long</i>
-                        <span class="nav-link-text ms-1">Invoice</span>
-                    </a>
-                </li>
-            @endif
+            <li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('bulk') ? 'active bg-gradient-dark text-white' : 'text-dark' }}" href="{{ route('bulk') }}">
+                    <i class="material-symbols-rounded opacity-5">notifications</i>
+                    <span class="nav-link-text ms-1">Bulk Sms</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('admin.Invoice.index') ? 'active bg-gradient-dark text-white' : 'text-dark' }}" href="{{ route('admin.Invoice.index') }}">
+                    <i class="material-symbols-rounded opacity-5">receipt_long</i>
+                    <span class="nav-link-text ms-1">Invoice</span>
+                </a>
+            </li>
         </ul>
     </div>
 </aside>

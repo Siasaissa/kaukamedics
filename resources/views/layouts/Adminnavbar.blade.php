@@ -38,23 +38,19 @@
                     </a>
                 </li>
                 
-                @if (Route::has('bulk'))
-                    <li class="nav-item">
-                        <a href="{{ route('bulk') }}" 
-                           class="nav-link {{ Route::is('bulk') ? 'active' : '' }}">
-                            <i class="bi bi-chat-left-text me-1"></i> Bulk SMS
-                        </a>
-                    </li>
-                @endif
+                <li class="nav-item">
+                    <a href="{{ route('bulk') }}" 
+                       class="nav-link {{ Route::is('bulk') ? 'active' : '' }}">
+                        <i class="bi bi-chat-left-text me-1"></i> Bulk SMS
+                    </a>
+                </li>
                 
-                @if (Route::has('admin.Invoice.index'))
-                    <li class="nav-item">
-                        <a href="{{ route('admin.Invoice.index') }}" 
-                           class="nav-link {{ Route::is('admin.Invoice.index') ? 'active' : '' }}">
-                            <i class="bi bi-receipt me-1"></i> Invoice
-                        </a>
-                    </li>
-                @endif
+                <li class="nav-item">
+                    <a href="{{ route('admin.Invoice.index') }}" 
+                       class="nav-link {{ Route::is('admin.Invoice.index') ? 'active' : '' }}">
+                        <i class="bi bi-receipt me-1"></i> Invoice
+                    </a>
+                </li>
                 
 
             </ul>

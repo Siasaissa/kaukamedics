@@ -74,6 +74,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/orders/{order}', [OrderController::class, 'show'])->name('admin.orders.show');
     Route::delete('/admin/orders/{order}', [OrderController::class, 'destroy'])->name('admin.orders.destroy');
     Route::post('admin/products/upload-excel', [ProductController::class, 'uploadExcel'])->name('admin.products.uploadExcel');
+    Route::get('/admin/bulk-sms', function () {
+        return view('admin.bulk.index');
+    })->name('bulk');
+    Route::get('/admin/invoices', function () {
+        return view('admin.invoice.index');
+    })->name('admin.Invoice.index');
 
 
 
