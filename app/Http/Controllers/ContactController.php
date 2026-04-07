@@ -8,6 +8,26 @@ use Illuminate\Support\Facades\Validator;
 
 class ContactController extends Controller
 {
+    public function subscribeNewsletter(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|max:255',
+        ]);
+
+        $data = [
+            'email' => $request->email,
+            'subject' => 'New Newsletter Subscription',
+        ];
+
+        Mail::send('emails.newsletter', $data, function ($message) use ($data) {
+            $message->to('info@kaukamedics.com')
+                ->subject($data['subject'])
+                ->replyTo($data['email']);
+        });
+
+        return back()->with('newsletter_success', 'Thanks for subscribing to our newsletter.');
+    }
+
     public function send(Request $request)
     {
         // Validate form inputs

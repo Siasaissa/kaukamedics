@@ -15,20 +15,22 @@
 				<div class="single-footer-widget">
 					<h6>Newsletter</h6>
 					<p>Stay update with our latest</p>
+					@if(session('newsletter_success'))
+						<div class="alert alert-success py-2">{{ session('newsletter_success') }}</div>
+					@endif
+					@if($errors->has('email'))
+						<div class="alert alert-danger py-2">{{ $errors->first('email') }}</div>
+					@endif
 					<div class="" id="mc_embed_signup">
-
-						<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-						 method="get" class="form-inline">
+						<form action="{{ route('newsletter.subscribe') }}" method="POST" class="form-inline">
+							@csrf
 
 							<div class="d-flex flex-row">
 
-								<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '">
+								<input class="form-control" name="email" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" value="{{ old('email') }}" required type="email">
 
 
-								<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-								<div style="position: absolute; left: -5000px;">
-									<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-								</div>
+								<button type="submit" class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
 
 								<!-- <div class="col-lg-4 col-md-4">
 									<button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>

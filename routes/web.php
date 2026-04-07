@@ -32,6 +32,7 @@ Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/service', [PageController::class, 'service'])->name('service');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
+Route::post('/newsletter/subscribe', [ContactController::class, 'subscribeNewsletter'])->name('newsletter.subscribe');
 
 
 
