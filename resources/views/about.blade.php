@@ -428,7 +428,7 @@
                 <div class="video-card"
                     data-video="{{ asset('img/video1.mp4') }}"
                     data-title="Kauka Company Overview">
-                    <img src="{{ asset('img/image1.jpg') }}" alt="Company Overview">
+                    <img src="{{ asset('assets/img/image1.jpg') }}" alt="Company Overview">
                     <span class="vc-duration">Video 1</span>
                     <div class="vc-overlay">
                         <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
@@ -442,7 +442,7 @@
                 <div class="video-card"
                     data-video="{{ asset('img/video2.mp4') }}"
                     data-title="Our Medical Products Range">
-                    <img src="{{ asset('img/image2.jpg') }}" alt="Products Range">
+                    <img src="{{ asset('assets/img/image2.jpg') }}" alt="Products Range">
                     <span class="vc-duration">Video 2</span>
                     <div class="vc-overlay">
                         <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
@@ -456,7 +456,7 @@
                 <div class="video-card"
                     data-video="{{ asset('img/video3.mp4') }}"
                     data-title="Meet Our Team">
-                    <img src="{{ asset('img/image3.jpg') }}" alt="Meet Our Team">
+                    <img src="{{ asset('assets/img/image3.jpg') }}" alt="Meet Our Team">
                     <span class="vc-duration">Video 3</span>
                     <div class="vc-overlay">
                         <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
@@ -470,7 +470,7 @@
                 <div class="video-card"
                     data-video="{{ asset('img/video4.mp4') }}"
                     data-title="Supply & Delivery Process">
-                    <img src="{{ asset('img/image4.jpg') }}" alt="Supply Process">
+                    <img src="{{ asset('assets/img/image4.jpg') }}" alt="Supply Process">
                     <span class="vc-duration">Video 4</span>
                     <div class="vc-overlay">
                         <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
@@ -526,7 +526,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="{{ asset('img/image2.jpg') }}" alt="Delivering Quality Healthcare">
+                                    <img src="{{ asset('assets/img/image2.jpg') }}" alt="Delivering Quality Healthcare">
                                     <div class="blog_details">
                                         <a href="#"><h2>Delivering Quality Healthcare Solutions Since 2005</h2></a>
                                         <p>We are a trusted provider of medical equipment, hospital supplies, and healthcare solutions dedicated to improving the quality of care across hospitals, clinics, and medical institutions. Our goal is to make reliable medical products accessible to those who save lives every day.</p>
@@ -552,7 +552,7 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="{{ asset('img/image1.jpg') }}" alt="Our Mission">
+                                    <img src="{{ asset('assets/img/image1.jpg') }}" alt="Our Mission">
                                     <div class="blog_details">
                                         <a href="#"><h2>Our Mission: Quality Healthcare for All</h2></a>
                                         <p>To enhance healthcare delivery by providing innovative, affordable, and reliable medical supplies that meet international quality standards. We partner with healthcare providers to improve outcomes and remain committed to advancing medical care across Africa.</p>
