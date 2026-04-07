@@ -58,6 +58,7 @@
 						<p>Magomeni Kanisani, Dar es Salaam</p>
 						<p><a href="tel:+255625726051">+255 625 726 051</a></p>
 						<p><a href="mailto:info@kaukamedics.com">info@kaukamedics.com</a></p>
+                        <p><a href="{{ route('admin.dashboard') }}">Admin</a></p>
 						<div class="footer-social d-flex align-items-center">
 							<a href="#"><i class="fa fa-facebook"></i></a>
 							<a href="#"><i class="fa fa-twitter"></i></a>
