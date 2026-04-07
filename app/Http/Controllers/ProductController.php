@@ -23,6 +23,12 @@ class ProductController extends Controller
             $perPage = 12;
         }
 
+        $sidebarProducts = Product::query()
+            ->latest('id')
+            ->select(['id', 'name', 'unit'])
+            ->take(8)
+            ->get();
+
         $products = Product::query()
             ->when($query, function ($q) use ($query) {
                 $q->where('name', 'like', "%{$query}%");
@@ -50,7 +56,7 @@ class ProductController extends Controller
 
         $products = $products->paginate($perPage)->withQueryString();
 
-        return view('products', compact('products', 'sort', 'perPage', 'query'));
+        return view('products', compact('products', 'sort', 'perPage', 'query', 'sidebarProducts'));
     }
 
     // Add product to cart (session only)
