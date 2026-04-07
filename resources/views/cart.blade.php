@@ -150,7 +150,7 @@
                                 <td></td>
                                 <td></td>
                                 <td>
-                                    <div class="checkout_btn_inner d-flex align-items-center">
+                                    <div class="checkout_btn_inner d-flex align-items-end">
                                         <a class="primary-btn" href="{{ route('checkout') }}">Proceed to checkout</a>
                                     </div>
                                 </td>
