@@ -6,6 +6,7 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\ProductsImport;
+use Illuminate\Support\Str;
 
 
 
@@ -263,7 +264,23 @@ public function specialOrder(Request $request)
             abort(404);
         }
 
-        return view('product-detail', compact('product'));
+        $product = $this->appendImageUrl($product);
+        $relatedProducts = $this->appendImageUrls(
+            Product::where('id', '!=', $product->id)
+                ->latest('id')
+                ->take(6)
+                ->get()
+        );
+
+        $productDescription = 'Our medical equipment is selected to meet the daily demands of hospitals, clinics, laboratories, and healthcare professionals. Each item is chosen with a strong focus on durability, safety, reliable performance, and ease of use so that facilities can work with confidence in critical care environments.';
+        $productQualityPoints = [
+            'Built for dependable use in professional healthcare environments.',
+            'Chosen for quality standards, practical handling, and long service life.',
+            'Suitable for hospitals, clinics, pharmacies, and diagnostic settings.',
+            'Supported by responsive supply service and consistent product sourcing.',
+        ];
+
+        return view('product-detail', compact('product', 'relatedProducts', 'productDescription', 'productQualityPoints'));
     }
 
     // Wishlist (session)
@@ -327,6 +344,37 @@ public function specialOrder(Request $request)
             'success' => true,
             'data' => $cart
         ]);
+    }
+
+    private function appendImageUrls($products)
+    {
+        return $products->map(function ($product) {
+            return $this->appendImageUrl($product);
+        });
+    }
+
+    private function appendImageUrl($product)
+    {
+        $imagePath = trim((string) ($product->image ?? ''));
+        $normalized = str_replace('\\', '/', $imagePath);
+        $normalized = ltrim(str_replace(['storage/app/public/', 'storage/'], '', $normalized), '/');
+        $imageUrl = asset('img/defaultmedical.jpg');
+
+        if ($imagePath !== '') {
+            if (Str::startsWith($imagePath, ['http://', 'https://'])) {
+                $imageUrl = $imagePath;
+            } elseif (file_exists(storage_path('app/public/' . $normalized))) {
+                $imageUrl = asset('storage/' . $normalized);
+            } elseif (file_exists(public_path('storage/' . $normalized))) {
+                $imageUrl = asset('storage/' . $normalized);
+            } elseif (file_exists(public_path($imagePath))) {
+                $imageUrl = asset($imagePath);
+            }
+        }
+
+        $product->image_url = $imageUrl;
+
+        return $product;
     }
 
     public function apiAddToCart(Request $request)
