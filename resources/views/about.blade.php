@@ -428,7 +428,7 @@
                 <div class="video-card"
                     data-video="{{ asset('img/video1.mp4') }}"
                     data-title="Kauka Company Overview">
-                    <img src="img/image1.jpg" alt="Company Overview">
+                    <img src="{{ asset('img/image1.jpg') }}" alt="Company Overview">
                     <span class="vc-duration">Video 1</span>
                     <div class="vc-overlay">
                         <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
@@ -442,7 +442,7 @@
                 <div class="video-card"
                     data-video="{{ asset('img/video2.mp4') }}"
                     data-title="Our Medical Products Range">
-                    <img src="img/image2.jpg" alt="Products Range">
+                    <img src="{{ asset('img/image2.jpg') }}" alt="Products Range">
                     <span class="vc-duration">Video 2</span>
                     <div class="vc-overlay">
                         <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
@@ -456,7 +456,7 @@
                 <div class="video-card"
                     data-video="{{ asset('img/video3.mp4') }}"
                     data-title="Meet Our Team">
-                    <img src="img/image3.jpg" alt="Meet Our Team">
+                    <img src="{{ asset('img/image3.jpg') }}" alt="Meet Our Team">
                     <span class="vc-duration">Video 3</span>
                     <div class="vc-overlay">
                         <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
@@ -470,7 +470,7 @@
                 <div class="video-card"
                     data-video="{{ asset('img/video4.mp4') }}"
                     data-title="Supply & Delivery Process">
-                    <img src="img/image4.jpg" alt="Supply Process">
+                    <img src="{{ asset('img/image4.jpg') }}" alt="Supply Process">
                     <span class="vc-duration">Video 4</span>
                     <div class="vc-overlay">
                         <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
