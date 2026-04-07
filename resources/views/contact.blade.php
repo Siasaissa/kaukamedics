@@ -111,14 +111,13 @@
 	<!--================Contact Area =================-->
 	<section class="contact_area section_gap_bottom">
 		<div class="container">
-			<div id="mapBox" class="mapBox">
-				<iframe 
-					src="https://www.google.com/maps?q=Magomeni+Kanisani+Dar+es+Salaam&output=embed"
-					width="100%" 
-					height="400" 
-					style="border:0;" 
-					allowfullscreen>
-				</iframe>
+			<div id="mapBox" class="mapBox"
+				data-lat="-6.7924"
+				data-lon="39.2551"
+				data-zoom="15"
+				data-info="Magomeni Kanisani, Dar es Salaam, Tanzania"
+				data-mlat="-6.7924"
+				data-mlon="39.2551">
 			</div>
 			</div>
 			<div class="row">
