@@ -235,7 +235,8 @@
             border-radius: 10px; overflow: hidden;
             box-shadow: 0 20px 60px rgba(0,0,0,.55);
         }
-        .video-wrapper iframe {
+        .video-wrapper iframe,
+        .video-wrapper video {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;
         }
         .popup-title-bar { color: #fff; padding: 14px 2px 0; font-size: 1rem; font-weight: 600; }
@@ -425,10 +426,10 @@
             <div class="video-grid">
 
                 <div class="video-card"
-                    data-video="https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1"
+                    data-video="{{ asset('img/video1.mp4') }}"
                     data-title="Kauka Company Overview">
                     <img src="img/blog/main-blog/m-blog-1.jpg" alt="Company Overview">
-                    <span class="vc-duration">3:24</span>
+                    <span class="vc-duration">Video 1</span>
                     <div class="vc-overlay">
                         <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
                         <div class="vc-label">
@@ -439,10 +440,10 @@
                 </div>
 
                 <div class="video-card"
-                    data-video="https://www.youtube.com/embed/ysz5S6PUM-U?autoplay=1"
+                    data-video="{{ asset('img/video2.mp4') }}"
                     data-title="Our Medical Products Range">
                     <img src="img/blog/main-blog/m-blog-2.jpg" alt="Products Range">
-                    <span class="vc-duration">4:51</span>
+                    <span class="vc-duration">Video 2</span>
                     <div class="vc-overlay">
                         <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
                         <div class="vc-label">
@@ -453,10 +454,10 @@
                 </div>
 
                 <div class="video-card"
-                    data-video="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1"
+                    data-video="{{ asset('img/video3.mp4') }}"
                     data-title="Meet Our Team">
                     <img src="img/blog/main-blog/m-blog-3.jpg" alt="Meet Our Team">
-                    <span class="vc-duration">2:18</span>
+                    <span class="vc-duration">Video 3</span>
                     <div class="vc-overlay">
                         <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
                         <div class="vc-label">
@@ -467,43 +468,15 @@
                 </div>
 
                 <div class="video-card"
-                    data-video="https://www.youtube.com/embed/3nQNiWdeH2Q?autoplay=1"
+                    data-video="{{ asset('img/video4.mp4') }}"
                     data-title="Supply & Delivery Process">
                     <img src="img/blog/main-blog/m-blog-4.jpg" alt="Supply Process">
-                    <span class="vc-duration">5:07</span>
+                    <span class="vc-duration">Video 4</span>
                     <div class="vc-overlay">
                         <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
                         <div class="vc-label">
                             <h6>Supply &amp; Delivery Process</h6>
                             <span>From order to doorstep</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video-card"
-                    data-video="https://www.youtube.com/embed/ZPn3MBNt4Rc?autoplay=1"
-                    data-title="Client Testimonials">
-                    <img src="img/blog/main-blog/m-blog-5.jpg" alt="Client Testimonials">
-                    <span class="vc-duration">6:33</span>
-                    <div class="vc-overlay">
-                        <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
-                        <div class="vc-label">
-                            <h6>Client Testimonials</h6>
-                            <span>What our partners say</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video-card"
-                    data-video="https://www.youtube.com/embed/aircAruvnKk?autoplay=1"
-                    data-title="East Africa Expansion">
-                    <img src="img/blog/cat-post/cat-post-1.jpg" alt="East Africa Expansion">
-                    <span class="vc-duration">4:12</span>
-                    <div class="vc-overlay">
-                        <div class="play-btn"><i class="fa fa-play text-primary"></i></div>
-                        <div class="vc-label">
-                            <h6>East Africa Expansion</h6>
-                            <span>Growing our footprint</span>
                         </div>
                     </div>
                 </div>
@@ -517,8 +490,10 @@
         <div class="video-popup-inner">
             <button class="close-popup" id="closePopup" aria-label="Close video">&times;</button>
             <div class="video-wrapper">
-                <iframe id="popupIframe" src="" allowfullscreen
-                    allow="autoplay; encrypted-media; picture-in-picture"></iframe>
+                <video id="popupVideo" controls playsinline>
+                    <source id="popupVideoSource" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
             <div class="popup-title-bar" id="popupTitle"></div>
         </div>
@@ -881,11 +856,17 @@
 
             /* Video popup */
             var $overlay = $('#videoPopup');
-            var $iframe  = $('#popupIframe');
+            var videoEl = document.getElementById('popupVideo');
+            var sourceEl = document.getElementById('popupVideoSource');
             var $title   = $('#popupTitle');
 
             $('.video-card').on('click', function () {
-                $iframe.attr('src', $(this).data('video'));
+                sourceEl.src = $(this).data('video');
+                videoEl.load();
+                var playPromise = videoEl.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(function () {});
+                }
                 $title.text($(this).data('title'));
                 $overlay.addClass('active');
                 $('body').css('overflow', 'hidden');
@@ -903,7 +884,9 @@
 
             function closeVideo() {
                 $overlay.removeClass('active');
-                $iframe.attr('src', '');
+                videoEl.pause();
+                sourceEl.src = '';
+                videoEl.load();
                 $('body').css('overflow', '');
             }
         });
