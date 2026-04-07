@@ -253,11 +253,12 @@
 
 <body>
     @php
+        $aboutImageVersion = time();
         $aboutImages = [
-            asset('assets/img/image1.jpg'),
-            asset('assets/img/image2.jpg'),
-            asset('assets/img/image3.jpg'),
-            asset('assets/img/image4.jpg'),
+            asset('img/image1.jpg') . '?v=' . $aboutImageVersion,
+            asset('img/image2.jpg') . '?v=' . $aboutImageVersion,
+            asset('img/image3.jpg') . '?v=' . $aboutImageVersion,
+            asset('img/image4.jpg') . '?v=' . $aboutImageVersion,
         ];
     @endphp
 
