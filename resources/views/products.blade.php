@@ -238,7 +238,7 @@
 							</select>
 						</form>
 					</div>
-					<div class="mr-3 text-muted small">
+					<div class="mr-3 text-muted small text-white">
 						Showing {{ $products->firstItem() ?? 0 }}-{{ $products->lastItem() ?? 0 }} of {{ $products->total() }}
 					</div>
 				</div>
