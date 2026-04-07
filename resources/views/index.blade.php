@@ -414,7 +414,7 @@
                         <div class="row align-items-center">
                             <div class="col-md-6">
                                 <div class="testimonial-img">
-                                    <img class="img-fluid" src="img/team-3.png" alt="Dr. Henry Mwenda" style="height: 250px; object-fit: cover;">
+                                    <img class="img-fluid" src="img/team-3.png" alt="Dr. Ambwene Kauka" style="height: 250px; object-fit: cover;">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -432,7 +432,7 @@
                                             <i class="fa fa-quote-right fa-2x"></i>
                                         </div>
                                         <div>
-                                            <h5 class="mb-0">Dr. Henry Mwenda</h5>
+                                            <h5 class="mb-0">Dr. Ambwene Kauka</h5>
                                             <span class="text-muted">Medical Director, CityCare Hospital</span>
                                         </div>
                                     </div>
@@ -446,7 +446,7 @@
                         <div class="row align-items-center">
                             <div class="col-md-6">
                                 <div class="testimonial-img">
-                                    <img class="img-fluid" src="img/team-3.png" alt="Sarah John" style="height: 250px; object-fit: cover;">
+                                    <img class="img-fluid" src="img/team-3.png" alt="Dr. Ambwene Kauka" style="height: 250px; object-fit: cover;">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -464,7 +464,7 @@
                                             <i class="fa fa-quote-right fa-2x"></i>
                                         </div>
                                         <div>
-                                            <h5 class="mb-0">Sarah John</h5>
+                                            <h5 class="mb-0">Dr. Ambwene Kauka</h5>
                                             <span class="text-muted">Procurement Officer, Meditech Labs</span>
                                         </div>
                                     </div>
