@@ -252,6 +252,15 @@
 </head>
 
 <body>
+    @php
+        $aboutImageVersion = time();
+        $aboutImages = [
+            'img/image1.jpg?v=' . $aboutImageVersion,
+            'img/image2.jpg?v=' . $aboutImageVersion,
+            'img/image3.jpg?v=' . $aboutImageVersion,
+            'img/image4.jpg?v=' . $aboutImageVersion,
+        ];
+    @endphp
 
     <!-- ═══ HEADER ═══ -->
     <header class="header_area sticky-header">
