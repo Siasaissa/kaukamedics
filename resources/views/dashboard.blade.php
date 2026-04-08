@@ -5,7 +5,7 @@
   @include('layouts.aside')
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
-    @include('layouts.navbar')
+    @include('layouts.adminavbar')
     <!-- End Navbar -->
     <div class="container-fluid py-2">
       <div class="row">
