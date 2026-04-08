@@ -1,67 +1,85 @@
-@include('layouts.head')
+@include('layouts.adminhead')
 
-<body>
-    @include('layouts.topbar')
-    @include('layouts.Adminnavbar')
-
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-4">
-            <h1 class="display-3 animated slideInDown">Profile</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="{{ route('index') }}">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#!">Account</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Profile</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
-
-
-    <!-- Profile Content Start -->
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10">
-
-                <!-- Update Profile -->
-                <div class="card shadow-sm mb-4 border-0">
-                    <div class="card-body bg-white dark:bg-gray-800 rounded p-4">
-                        <h4 class="mb-3 text-primary">Update Profile Information</h4>
-                        <div class="max-w-xl">
-                            @include('profile.partials.update-profile-information-form')
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Update Password -->
-                <div class="card shadow-sm mb-4 border-0">
-                    <div class="card-body bg-white dark:bg-gray-800 rounded p-4">
-                        <h4 class="mb-3 text-primary">Update Password</h4>
-                        <div class="max-w-xl">
-                            @include('profile.partials.update-password-form')
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Delete Account -->
-                <div class="card shadow-sm border-0">
-                    <div class="card-body bg-white dark:bg-gray-800 rounded p-4">
-                        <h4 class="mb-3 text-danger">Delete Account</h4>
-                        <div class="max-w-xl">
-                            @include('profile.partials.delete-user-form')
-                        </div>
-                    </div>
-                </div>
-
+<body class="g-sidenav-show bg-gray-100">
+  @include('layouts.aside')
+  
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
+    <!-- Navbar -->
+    @include('layouts.navbar')
+    <!-- End Navbar -->
+    
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                <h6 class="text-white text-capitalize ps-3">Profile</h6>
+              </div>
             </div>
+            
+            <div class="card-body">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                  <!-- Update Profile -->
+                  <div class="card mb-4">
+                    <div class="card-header bg-gradient-info">
+                      <h6 class="text-white mb-0">Update Profile Information</h6>
+                    </div>
+                    <div class="card-body">
+                      @include('profile.partials.update-profile-information-form')
+                    </div>
+                  </div>
+
+                  <!-- Update Password -->
+                  <div class="card mb-4">
+                    <div class="card-header bg-gradient-info">
+                      <h6 class="text-white mb-0">Update Password</h6>
+                    </div>
+                    <div class="card-body">
+                      @include('profile.partials.update-password-form')
+                    </div>
+                  </div>
+
+                  <!-- Delete Account -->
+                  <div class="card">
+                    <div class="card-header bg-gradient-danger">
+                      <h6 class="text-white mb-0">Delete Account</h6>
+                    </div>
+                    <div class="card-body">
+                      @include('profile.partials.delete-user-form')
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      
+      <!-- Footer -->
+      @include('layouts.adminfooter')
     </div>
-    <!-- Profile Content End -->
+  </main>
 
-    @include('layouts.footer')
-    @include('layouts.links')
+  <!-- Core JS Files -->
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+  
+  <script>
+    // Scrollbar initialization for sidenav
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      };
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  
+  <!-- Control Center for Material Dashboard -->
+  <script src="../assets/js/material-dashboard.min.js?v=3.2.0"></script>
 </body>
-
 </html>
