@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Concerns\ResolvesProductImages;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\ProductsImport;
-use Illuminate\Support\Str;
-
-
 
 class ProductController extends Controller
 {
+    use ResolvesProductImages;
+
     // Display all products
     public function index(Request $request)
     {
@@ -345,37 +345,6 @@ public function specialOrder(Request $request)
             'success' => true,
             'data' => $cart
         ]);
-    }
-
-    private function appendImageUrls($products)
-    {
-        return $products->map(function ($product) {
-            return $this->appendImageUrl($product);
-        });
-    }
-
-    private function appendImageUrl($product)
-    {
-        $imagePath = trim((string) ($product->image ?? ''));
-        $normalized = str_replace('\\', '/', $imagePath);
-        $normalized = ltrim(str_replace(['storage/app/public/', 'storage/'], '', $normalized), '/');
-        $imageUrl = asset('img/defaultmedical.jpg');
-
-        if ($imagePath !== '') {
-            if (Str::startsWith($imagePath, ['http://', 'https://'])) {
-                $imageUrl = $imagePath;
-            } elseif (file_exists(storage_path('app/public/' . $normalized))) {
-                $imageUrl = asset('storage/app/public/' . $normalized);
-            } elseif (file_exists(public_path('storage/' . $normalized))) {
-                $imageUrl = asset('storage/' . $normalized);
-            } elseif (file_exists(public_path($imagePath))) {
-                $imageUrl = asset($imagePath);
-            }
-        }
-
-        $product->image_url = $imageUrl;
-
-        return $product;
     }
 
     public function apiAddToCart(Request $request)
