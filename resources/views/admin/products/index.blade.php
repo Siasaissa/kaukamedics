@@ -76,7 +76,7 @@
                       <td class="align-middle text-center">
                         @if($product->image)
                           <div class="avatar avatar-sm me-3">
-                            <img src="{{ $product->image ? url('storage/' . $product->image) : url('img/defaultmedical.jpg') }}" alt="{{ $product->name }}" class="border-radius-sm" style="width: 60px; height: 60px; object-fit: cover;">
+                            <img src="{{ $product->image_url }}" alt="{{ $product->name }}" class="border-radius-sm" style="width: 60px; height: 60px; object-fit: cover;" onerror="this.onerror=null;this.src='{{ asset('img/defaultmedical.jpg') }}';">
                           </div>
                         @else
                           <span class="badge badge-sm bg-gradient-secondary">
@@ -96,6 +96,7 @@
                           data-product-stock="{{ $product->stock }}"
                           data-product-unit="{{ $product->unit }}"
                           data-product-image="{{ $product->image }}"
+                          data-product-image-url="{{ $product->image_url }}"
                           data-update-url="{{ route('admin.products.update', $product->id) }}">
                           <i class="material-symbols-rounded opacity-10">edit</i>
                         </button>
@@ -260,7 +261,7 @@
             </div>
             <div id="currentImageContainer" class="mb-3 d-none">
               <div class="mt-2">
-                <img id="currentProductImage" src="{{ $product->image ? url('storage/' . $product->image) : url('img/defaultmedical.jpg') }}" alt="Current Image" class="img-thumbnail" style="max-width: 100px;">
+                <img id="currentProductImage" src="{{ asset('img/defaultmedical.jpg') }}" alt="Current Image" class="img-thumbnail" style="max-width: 100px;">
                 <a href="#" id="viewImageLink" target="_blank" class="ms-2 text-info">View Full Size</a>
               </div>
             </div>
@@ -311,6 +312,7 @@
           const productStock = this.getAttribute('data-product-stock');
           const productUnit = this.getAttribute('data-product-unit');
           const productImage = this.getAttribute('data-product-image');
+          const productImageUrl = this.getAttribute('data-product-image-url');
           const updateUrl = this.getAttribute('data-update-url');
           
           // Fill form fields
@@ -324,10 +326,9 @@
           editForm.action = updateUrl;
           
           // Handle image display
-          if (productImage) {
-            const imageUrl = "{{ asset('storage/') }}/" + productImage;
-            currentProductImage.src = imageUrl;
-            viewImageLink.href = imageUrl;
+          if (productImage && productImageUrl) {
+            currentProductImage.src = productImageUrl;
+            viewImageLink.href = productImageUrl;
             currentImageContainer.classList.remove('d-none');
           } else {
             currentImageContainer.classList.add('d-none');

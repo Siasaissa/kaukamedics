@@ -129,6 +129,7 @@ class ProductController extends Controller
     }
     public function adminProduct(){
        $products = Product::orderBy('id', 'desc')->paginate(20);
+       $products->setCollection($this->appendImageUrls($products->getCollection()));
 
         return view('admin.products.index',compact('products'));
     }
