@@ -58,7 +58,7 @@
                       <p class="text-sm mb-0">TIN: {{ $company->tin }}</p>
                       @endif
                       @else
-                      <h6 class="text-dark fw-bold mb-2">Greatcare Medics</h6>
+                      <h6 class="text-dark fw-bold mb-2">Kauka Medics</h6>
                       <p class="text-sm text-muted">Add company details in settings</p>
                       @endif
                     </div>

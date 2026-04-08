@@ -7,7 +7,7 @@
                   document.write(new Date().getFullYear())
                 </script>,
                 made with <i class="fa fa-heart"></i> by
-                <a href="https://greatcaremedics.co.tz" class="font-weight-bold" target="_blank">Greatcaremedics</a>
+                <a href="https://kaukamedics.com" class="font-weight-bold" target="_blank">Kauka Medics</a>
                 for a better Medical tools
               </div>
             </div>
