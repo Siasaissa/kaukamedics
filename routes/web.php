@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\DashboardController;
@@ -18,7 +19,7 @@ use App\Http\Controllers\InvoiceController;
     return view('index');
 })->name('index');*/
 
-Route::get('/', [PageController::class, 'first'])->name('index');
+Route::get('/', [IndexController::class, 'index'])->name('index');
 
 
 Route::get('/dashboard', [DashboardController::class, 'index'])
