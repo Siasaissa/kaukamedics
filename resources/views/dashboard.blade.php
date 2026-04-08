@@ -12,7 +12,7 @@
         <div class="ms-3">
           <h3 class="mb-0 h4 font-weight-bolder">Dashboard</h3>
           <p class="mb-4">
-            Check the sales, value and bounce rate by country.
+            Review real sales performance and recent orders from your store.
           </p>
         </div>
         <div class="col-xl-4 col-sm-7 mb-xl-0 mb-4">
@@ -77,7 +77,7 @@
           <div class="card">
             <div class="card-body">
               <h6 class="mb-0 ">Monthly Sales Overview</h6>
-              <p class="text-sm ">Sales Performance Over Time</p>
+              <p class="text-sm ">Real sales totals for the last 6 months</p>
               <div class="pe-2">
                 <div class="chart">
                   <canvas id="salesChart" class="chart-canvas" height="170"></canvas>
@@ -102,7 +102,7 @@
                   <h6>Recent Orders</h6>
                   <p class="text-sm mb-0">
                     <i class="fa fa-check text-info" aria-hidden="true"></i>
-                    <span class="font-weight-bold ms-1">{{ $recentOrders->count() ?? 0 }} orders</span> this month
+                    <span class="font-weight-bold ms-1">{{ $recentOrders->count() ?? 0 }} recent orders</span> from latest activity
                   </p>
                 </div>
                 <div class="col-lg-6 col-5 my-auto text-end">
@@ -269,8 +269,9 @@
     var ctx = document.getElementById("salesChart").getContext("2d");
 
     // Get sales data from PHP
-    var salesMonths = {!! json_encode($salesMonths ?? ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']) !!};
-    var salesValues = {!! json_encode($salesValues ?? [0, 0, 0, 0, 0, 0, 0]) !!};
+    var salesMonths = @json($salesMonths ?? []);
+    var salesValues = @json($salesValues ?? []);
+    var maxSalesValue = salesValues.length ? Math.max(...salesValues) : 0;
 
     new Chart(ctx, {
       type: "bar",
@@ -318,7 +319,7 @@
             },
             ticks: {
               suggestedMin: 0,
-              suggestedMax: Math.max(...salesValues) * 1.2,
+              suggestedMax: maxSalesValue > 0 ? maxSalesValue * 1.2 : 1000,
               beginAtZero: true,
               padding: 10,
               font: {
