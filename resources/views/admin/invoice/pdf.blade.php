@@ -1,374 +1,232 @@
-@php
-    $logoBase64 = null;
-    $logoPath = public_path('img/greatcare-logo-02.png');
-
-    if (file_exists($logoPath)) {
-        $imageData = file_get_contents($logoPath);
-        $logoBase64 = 'data:image/png;base64,' . base64_encode($imageData);
-    }
-@endphp
-
-
-
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> INVOICE {{ $invoice->customer_name }}</title>
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    font-size: 9px;
-    color: #000;
-    padding: 15px;
-    background: #fff;
-}
-
-.invoice-wrapper {
-    max-width: 210mm;
-    margin: 0 auto;
-}
-
-/* Header Section with Logo and Bill To side by side */
-.header-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #000;
-}
-
-.header-left {
-    flex: 1;
-    padding-right: 20px;
-}
-
-.logo-placeholder {
-    width: 80px;
-    height: 80px;
-    background-color: #e0e0e0;
-    border: 1px solid #999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 8px;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.company-info {
-    font-size: 8px;
-    line-height: 1.5;
-}
-
-.company-name {
-    font-weight: bold;
-    font-size: 10px;
-    margin-bottom: 3px;
-}
-
-.header-right {
-    flex: 1;
-}
-
-.bill-to-label {
-    font-weight: bold;
-    font-size: 9px;
-    margin-bottom: 5px;
-}
-
-.customer-info {
-    font-size: 9px;
-    line-height: 1.5;
-}
-
-/* Invoice Title */
-.invoice-title {
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-    margin: 10px 0;
-    padding: 5px 0;
-}
-
-/* Meta Table - 2 rows x 3 columns */
-.meta-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 15px;
-    font-size: 9px;
-}
-
-.meta-table td {
-    border: 1px solid #000;
-    padding: 5px 8px;
-}
-
-.meta-label {
-    font-weight: bold;
-}
-
-/* Items Table */
-.items-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 10px;
-    font-size: 8px;
-}
-
-.items-table th {
-    background-color: transparent;
-    border: 1px solid #000;
-    padding: 5px 3px;
-    font-weight: bold;
-    font-size: 8px;
-}
-
-.items-table td {
-    border: 1px solid #000;
-    padding: 4px 3px;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-left {
-    text-align: left;
-}
-
-/* Bottom Section - Terms and Totals side by side */
-.bottom-section {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-}
-
-.terms-section {
-    flex: 1.5;
-    padding-right: 20px;
-    font-size: 7px;
-    line-height: 1.6;
-}
-
-.terms-title {
-    font-weight: bold;
-    font-size: 8px;
-    margin-bottom: 5px;
-}
-
-.totals-section {
-    flex: 1;
-    min-width: 250px;
-}
-
-.totals-table {
-    width: 100%;
-    font-size: 9px;
-}
-
-.totals-table td {
-    padding: 4px 4px;
-    border: 1px solid #000;
-}
-
-.totals-table .label {
-    font-weight: bold;
-    text-align: left;
-}
-
-.totals-table .value {
-    text-align: right;
-}
-
-.total-row {
-    border-top: 1px solid #000;
-    font-weight: bold;
-}
-
-.bottom-print-table {
-    width: 100%;
-    margin-top: 15px;
-    border-collapse: collapse;
-}
-
-.terms-cell {
-    width: 65%;
-    font-size: 7px;
-    line-height: 1.6;
-    vertical-align: top;
-    padding-right: 15px;
-}
-
-.totals-cell {
-    width: 35%;
-    vertical-align: top;
-}
-
-.header-print-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 15px;
-}
-
-.header-left-cell,
-.header-right-cell {
-    width: 50%;
-    vertical-align: top;
-    padding: 5px;
-}
-
-.header-right-cell {
-    text-align: right;
-}
-
-
-
-@media print {
-    body {
-        padding: 5mm;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice {{ $invoice->invoice_number }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            line-height: 1.4;
+            margin: 0;
+            padding: 15px;
+        }
+        h1, h2, h3, h4 {
+            margin: 5px 0;
+        }
+        p {
+            margin: 3px 0;
+        }
+    </style>
 </head>
 <body>
-
-<div class="invoice-wrapper">
-    
-    <table class="header-print-table">
-    <tr>
-        <!-- LEFT: Bill To -->
-        <td class="header-left-cell">
-            
-@if($logoBase64)
-    <img src="{{ $logoBase64 }}" style="height:100px;width:auto;">
-@else
-    <div style="font-size:8px;color:red;">LOGO NOT FOUND</div>
-@endif
-
-
-            <div class="bill-to-label">BILL TO :</div>
-            <div class="customer-info">
-                <strong>{{ $invoice->customer_name }}</strong><br>
-                {{ $invoice->customer_address }}<br>
-                {{ $invoice->customer_phone }}
-            </div>
-        </td>
-
-        <!-- RIGHT: Company Info -->
-        <td class="header-right-cell">
-            @if($logoBase64)
-                <img src="{{ $logoBase64 }}" style="height:100px;width:auto;">
-            @endif
-            
-            <div class="company-name">GREATCARE MEDICS CO. LTD</div>
-            <div class="company-info">
-                Plot No. 123 Uhuru Road / Arusha Street<br>
-                P.O. BOX 11110, Ilala, Amana, Dar es Salaam<br>
-                +255 766 638 701 / +255 716 191 948<br>
-                TIN : 136-605-623 | VRN : 40275917-H<br>
-                info@greatcaremedics.co.tz | www.greatcare.co.tz
-            </div>
-        </td>
-    </tr>
-</table>
-
-
-    <!-- INVOICE TITLE -->
-    <div class="invoice-title"> INVOICE</div>
-
-    <!-- META TABLE: 2 rows x 3 columns with borders -->
-    <table class="meta-table">
-        <tr>
-            <td class="meta-label">Invoice # :  {{ $invoice->invoice_number }}</td>
-            <td>REF # :</td>
-            <td class="meta-label">Currency :   TZS</td>
-        </tr>
-        <tr>
-            <td class="meta-label">Invoice Date :  {{ $invoice->invoice_date->format('m-d-Y') }}</td>
-            <td>Customer TIN :</td>
-            <td class="meta-label">Created By : Greatcare Medics</td>
-        </tr>
-    </table>
-
-    <!-- ITEMS TABLE -->
-    <table class="items-table">
-        <thead>
+    {{-- Company Header --}}
+    <div style="background-color: #f7941d; color: white; padding: 10px;">
+        <table width="100%" cellpadding="0" cellspacing="0">
             <tr>
-                <th style="width: 3%;">#</th>
-                <th style="width: 40%;" class="text-left">Product</th>
-                <th style="width: 8%;">Qty</th>
-                <th style="width: 5%;">Rate</th>
-                <th style="width: 14%;">Amount</th>
+                <!-- Logo -->
+                <td width="100" valign="top">
+                    @php
+                        $logoPath = public_path('img/logo.png');
+                        $logoBase64 = '';
+                        if (file_exists($logoPath)) {
+                            $imageData = file_get_contents($logoPath);
+                            $logoBase64 = 'data:image/png;base64,' . base64_encode($imageData);
+                        }
+                    @endphp
+                    @if($logoBase64)
+                        <img src="{{ $logoBase64 }}" alt="Logo" style="height: 100px; width: auto;">
+                    @endif
+                </td>
 
+                <!-- Company Info -->
+                <td valign="top" style="padding-left: 10px;">
+                    <h2 style="margin: 0; font-size: 14px;">KAUKA MEDICAL EQUIPMENT TANZANIA</h2>
+                    <p style="margin: 2px 0; font-size: 9px;">Magomeni Kanisani</p>
+                    <p style="margin: 2px 0; font-size: 9px;">P.O. Box 14012</p>
+                    <p style="margin: 2px 0; font-size: 9px;">0625726051 / 0673726051</p>
+                    <p style="margin: 2px 0; font-size: 9px;">kaukamedicalequipmenttanzania@gmail.com</p>
+                    <p style="margin: 2px 0; font-size: 9px;">www.kaukamedics.com</p>
+                    <p style="margin: 2px 0; font-size: 9px;">Tax ID: 150-846-935</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    {{-- Invoice Title --}}
+    <div style="text-align: center; margin: 10px 0;">
+        <h1 style="color: #f7941d; font-size: 18px; margin: 0;">INVOICE</h1>
+    </div>
+
+    {{-- Bill To and Invoice Info --}}
+    <div style="margin-bottom: 10px;">
+        <table width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+                <!-- Bill To -->
+                <td width="60%" valign="top" style="font-size: 10px;">
+                    <p style="margin: 2px 0;"><strong>Bill To</strong></p>
+                    <p style="margin: 2px 0;"><strong>{{ $invoice->customer_name }}</strong></p>
+                    <p style="margin: 2px 0;">{{ $invoice->customer_address }}</p>
+                    <p style="margin: 2px 0;">{{ $invoice->customer_phone }}</p>
+                    @if($invoice->customer_email)
+                    <p style="margin: 2px 0;">{{ $invoice->customer_email }}</p>
+                    @endif
+                </td>
+
+                <!-- Invoice Info -->
+                <td valign="top" style="text-align: right;">
+                    <h2 style="margin: 0; color: #f7941d; font-size: 16px;">{{ $invoice->invoice_number }}</h2>
+                    <p style="margin: 2px 0; color: #f7941d; font-size: 10px;">{{ $invoice->invoice_date->format('m-d-Y') }}</p>
+                    @if($invoice->reference)
+                    <p style="margin: 2px 0; font-size: 10px;">Ref. : {{ $invoice->reference }}</p>
+                    @endif
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    {{-- Terms --}}
+    <div style="margin-bottom: 10px; font-size: 8px; line-height: 1.3;">
+        <h3 style="font-size: 10px; margin: 5px 0;">TERMS:</h3>
+        <p style="margin: 2px 0;">1. All goods are supplied KAUKA MEDICAL EQUIPMENT TANZANIA sale basic</p>
+        <p style="margin: 2px 0;">2. Account Holder invoice is due strictly 30 days from days date of invoice</p>
+        <p style="margin: 2px 0;">3. All overdue Account The company reserves to charge interest at 3% rate of total</p>
+        <p style="margin: 2px 0;">4. ALL CASH PAYMENT SHOULD BE MADE DIRECTLY BY CASH OR THROUGH THE FOLLOWING ACCOUNT NAME:</p>
+        <p style="margin: 2px 0;">KAUKA MEDICAL EQUIPMENT TANZANIA BANK CRDB , NMB AND VODCOM LIPA NO 50666500</p>
+    </div>
+
+    {{-- Items Table --}}
+    <table class="border" width="100%" cellpadding="5" cellspacing="0" style="border-collapse: collapse; font-size: 9px; margin-bottom: 10px;">
+        <thead>
+            <tr style="background-color: #f7941d; color: white;">
+                <th style="border: 1px solid #343232; padding: 6px; text-align: left; font-size: 9px;">Sr no.</th>
+                <th style="border: 1px solid #343232; padding: 6px; text-align: left; font-size: 9px;">Product</th>
+                <th style="border: 1px solid #343232; padding: 6px; text-align: center; font-size: 9px;">Qty</th>
+                <th style="border: 1px solid #343232; padding: 6px; text-align: right; font-size: 9px;">Rate</th>
+                <th style="border: 1px solid #343232; padding: 6px; text-align: right; font-size: 9px;">Amount</th>
             </tr>
         </thead>
         <tbody>
             @foreach($invoice->items as $index => $item)
             <tr>
-                <td class="text-center">{{ $index + 1 }}</td>
-                <td>{{ $item->product }}</td>
-                <td class="text-center">{{ number_format($item->qty, 2) }}</td>
-                <td class="text-center">{{ number_format($item->rate, 2) }}</td>
-                <td class="text-right">{{ number_format($item->amount, 2) }}</td>
+                <td style="border: 1px solid #343232; padding: 5px; text-align: center; font-size: 9px;">{{ $index + 1 }}</td>
+                <td style="border: 1px solid #343232; padding: 5px; text-align: left; font-size: 9px;">{{ $item->product }}</td>
+                <td style="border: 1px solid #343232; padding: 5px; text-align: center; font-size: 9px;">{{ number_format($item->qty, 2) }}</td>
+                <td style="border: 1px solid #343232; padding: 5px; text-align: right; font-size: 9px;">{{ number_format($item->rate, 2) }}</td>
+                <td style="border: 1px solid #343232; padding: 5px; text-align: right; font-size: 9px;">{{ number_format($item->amount, 2) }}</td>
             </tr>
             @endforeach
         </tbody>
     </table>
 
-    <!-- BOTTOM: Terms on Left, Totals on Right (Same Row) -->
-    <table class="bottom-print-table">
-    <tr>
-        <td class="terms-cell">
-            <div class="terms-title">TERMS:</div>
-            1. All goods are supplied on GREATCARE MEDICS CO. LTD sale basis.<br>
-            2. Account holder invoices is due strictly 30 days from the date of invoice.<br>
-            3. All overdue accounts the company reserves right to charge interest at 3% rate of total.<br>
-            4. All cash payment should be made directly by cash or through the following account;<br>
-            5. ACCOUNT NAME; GREATCARE MEDICS CO. LTD, BANK NAME; UNITED BANK OF AFRICA (TZ) LTD (UBA)<br>
-            ACCOUNT NO: 56010030007932<br>
-            6. TIGO : LIPA NUMBER 7834898, GREATCARE MEDICS CO LTD.
-        </td>
+    {{-- Totals Section --}}
+    <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse: collapse; font-size: 9px;">
+        <tr>
+            <!-- Left column - Please Note -->
+            <td width="50%" valign="top" style="border-top: 1px solid #f7941d; padding: 8px;">
+                <strong style="font-size: 10px;">Please Note</strong>
+            </td>
+            <!-- Right column - Totals -->
+            <td width="50%" valign="top" style="padding: 0;">
+                <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+                    <tr>
+                        <td style="border-top: 1px solid #f7941d; border-bottom: 1px solid #f7941d; padding: 0;">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td style="padding: 6px 8px; text-align: left; font-size: 9px;"><strong>Total</strong></td>
+                                    <td style="padding: 6px 8px; text-align: right; font-size: 9px;"><strong>Sh {{ number_format($invoice->subtotal, 2) }}</strong></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    @if($invoice->shipping_charges > 0)
+                    <tr>
+                        <td style="border-bottom: 1px solid #f7941d; padding: 0;">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td style="padding: 6px 8px; text-align: left; font-size: 9px;"><strong>(+) Shipping Charges</strong></td>
+                                    <td style="padding: 6px 8px; text-align: right; font-size: 9px;"><strong>Sh {{ number_format($invoice->shipping_charges, 2) }}</strong></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    @endif
+                    <tr>
+                        <td style="border-bottom: 1px solid #f7941d; background-color: #f7941d; color: white; padding: 0;">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td style="padding: 6px 8px; text-align: left; font-size: 9px;"><strong>Grand Total</strong></td>
+                                    <td style="padding: 6px 8px; text-align: right; font-size: 9px;"><strong>Sh {{ number_format($invoice->grand_total, 2) }}</strong></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0;">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td style="padding: 6px 8px; text-align: left; font-size: 9px;"><strong>Balance</strong></td>
+                                    <td style="padding: 6px 8px; text-align: right; font-size: 9px;"><strong>Sh {{ number_format($invoice->balance, 2) }}</strong></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; text-align: right; padding-top: 30px; font-size: 9px;">
+                            Kauka medical equipment tanzania
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 5px 8px; text-align: right; font-size: 9px;">
+                            Signature
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 
-        <td class="totals-cell">
-            <table class="totals-table">
-                <tr>
-                    <td class="label">Sub Total :</td>
-                    <td class="value">Tsh {{ number_format($invoice->subtotal, 2) }}</td>
-                </tr>
-                <tr>
-                    <td class="label">VAT :</td>
-                    <td class="value">0.00</td>
-                </tr>
-                <tr>
-                    <td class="label">Transport :</td>
-                    <td class="value">Tsh {{ number_format($invoice->shipping_charges, 2) }}</td>
-                </tr>
-                <tr class="total-row">
-                    <td class="label">Total :</td>
-                    <td class="value">Tsh {{ number_format($invoice->balance, 2) }}</td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
+    {{-- Payment Details --}}
+    <table width="100%" cellpadding="8" cellspacing="0" style="margin-top: 15px; border-collapse: collapse; font-size: 8px;">
+        <tr>
+            <!-- Column 1: Payable To -->
+            <td width="33%" valign="top" style="border: 1px solid #343232; padding: 10px;">
+                <strong style="display: block; margin-bottom: 5px; font-size: 9px;">Payable To</strong>
+                <p style="margin: 3px 0;">NMB BANK CRDB BANK AND VODACOM LIPA</p>
+            </td>
+            
+            <!-- Column 2: Banking Details -->
+            <td width="33%" valign="top" style="border: 1px solid #343232; padding: 10px;">
+                <strong style="display: block; margin-bottom: 5px; font-size: 9px;">Banking Details</strong>
+                <p style="margin: 3px 0;"><strong>MARKS/PAYMENT INSTRUCTION</strong></p>
+                <p style="margin: 3px 0;"><strong>ACCOUNT NAME :</strong>KAUKA MEDICAL EQUIPMENT TANZANIA</p>
+                <p style="margin: 3px 0;"><strong>NMB BANK</strong></p>
+                <p style="margin: 3px 0;">ACCOUNT NO :25110033313</p>
+                <p style="margin: 3px 0;"><strong>CRDB BANK</strong></p>
+                <p style="margin: 3px 0;">ACCOUNT NO: 015C000T5WU00</p>
+                <p style="margin: 3px 0;">Or</p>
+                <p style="margin: 3px 0;">Vodacom lipa no</p>
+                <p style="margin: 3px 0;">50666500 kauka supply</p>
+            </td>
+            
+            <!-- Column 3: Other Details -->
+            <td width="33%" valign="top" style="border: 1px solid #343232; padding: 10px;">
+                <strong style="display: block; margin-bottom: 5px; font-size: 9px;">Other Details</strong>
+                <p style="margin: 3px 0;">Dar es salaam</p>
+                <p style="margin: 8px 0 3px 0;"><strong>Invoice Date:</strong> {{ $invoice->invoice_date->format('M d, Y') }}</p>
+                <p style="margin: 3px 0;"><strong>Due Date:</strong> {{ $invoice->due_date->format('M d, Y') }}</p>
+                @if($invoice->status)
+                <p style="margin: 3px 0;"><strong>Status:</strong> {{ ucfirst($invoice->status) }}</p>
+                @endif
+            </td>
+        </tr>
+    </table>
 
+    {{-- Footer --}}
+    <div style="margin-top: 20px; padding-top: 8px; border-top: 1px solid #000; font-size: 7px; text-align: center; color: #666;">
+        <p style="margin: 2px 0;">Thank You For Your Business!</p>
+        <p style="margin: 2px 0;">If you have any questions about this invoice, please contact us.</p>
     </div>
-
-</div>
-
 </body>
 </html>
