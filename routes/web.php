@@ -36,6 +36,8 @@ Route::get('/service', [PageController::class, 'service'])->name('service');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::get('/products', [PageController::class, 'products'])->name('products');
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
+Route::post('/newsletter/subscribe', [ContactController::class, 'subscribeNewsletter'])->name('newsletter.subscribe');
+
 
 Route::get('/products', [ProductController::class, 'index'])->name('products');
 Route::get('/cart', [ProductController::class, 'cart'])->name('cart');
