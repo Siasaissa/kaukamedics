@@ -2,7 +2,7 @@
     <div class="sidenav-header">
         <i class="fas fa-times p-3 cursor-pointer text-dark opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
         <a class="navbar-brand px-4 py-3 m-0" href="https://demos.creative-tim.com/material-dashboard/pages/dashboard" target="_blank">
-            <img src="{{ url('img/greatcare logo-02.png')}}" class="navbar-brand-img"  height="80" alt="main_logo">
+            <img src="{{ url('img/logo.png')}}" class="navbar-brand-img"  height="80" alt="main_logo">
         </a>
     </div>
     <hr class="horizontal dark mt-0 mb-2">
