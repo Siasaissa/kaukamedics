@@ -28,6 +28,70 @@
     <link rel="stylesheet" href="css/nouislider.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        .cart-product-cell .media {
+            align-items: center;
+        }
+
+        .cart-quantity-form {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .cart-quantity-form .quantity-input {
+            width: 90px;
+            min-width: 90px;
+        }
+
+        .cart-action-links {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .cart-summary-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .cart-summary-actions .primary-btn,
+        .cart-summary-actions .gray_btn {
+            margin-bottom: 0;
+        }
+
+        .cart-empty-state .btn {
+            min-width: 220px;
+        }
+
+        @media (max-width: 767px) {
+            .cart-product-cell .media {
+                align-items: flex-start;
+            }
+
+            .cart-quantity-form,
+            .cart-action-links,
+            .cart-summary-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .cart-quantity-form .quantity-input,
+            .cart-quantity-form .btn,
+            .cart-summary-actions .primary-btn,
+            .cart-summary-actions .gray_btn,
+            .cart-empty-state .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -88,7 +152,7 @@
                                     }
                                 @endphp
                                 <tr>
-                                    <td>
+                                    <td class="cart-product-cell">
                                         <div class="media">
                                             <div class="d-flex">
                                                 <img src="{{ $imageUrl }}" alt="{{ $item['name'] ?? 'Product' }}" style="width:80px; height:80px; object-fit:contain;">
@@ -105,16 +169,16 @@
                                         <h5>TZS {{ number_format($price, 2) }}</h5>
                                     </td>
                                     <td>
-                                        <form action="{{ route('update.cart', $id) }}" method="POST" class="d-flex align-items-center">
+                                        <form action="{{ route('update.cart', $id) }}" method="POST" class="cart-quantity-form">
                                             @csrf
-                                            <input type="number" name="quantity" value="{{ $qty }}" min="1" class="form-control" style="width:80px; margin-right:8px;">
-                                            <button type="submit" class="btn btn-sm btn-outline-secondary">Update</button>
+                                            <input type="number" name="quantity" value="{{ $qty }}" min="1" class="form-control quantity-input">
+                                            <button type="submit" class="btn btn-sm btn-outline-secondary">Update Quantity</button>
                                         </form>
                                     </td>
                                     <td>
                                         <h5>TZS {{ number_format($lineTotal, 2) }}</h5>
-                                        <div class="mt-2">
-                                            <a href="{{ route('remove.from.cart', $id) }}" class="text-danger" onclick="return confirm('Remove this item from cart?')">Remove</a>
+                                        <div class="cart-action-links">
+                                            <a href="{{ route('remove.from.cart', $id) }}" class="btn btn-sm btn-outline-danger" onclick="return confirm('Remove this item from cart?')">Remove Item</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -122,13 +186,13 @@
 
                             <!-- summary rows -->
                             <tr class="bottom_button">
-                                <td>
-                                    <a class="gray_btn" href="{{ route('products') }}">Continue Shopping</a>
-                                </td>
                                 <td></td>
                                 <td></td>
-                                <td>
-                                    
+                                <td colspan="2">
+                                    <div class="cart-summary-actions">
+                                        <a class="gray_btn" href="{{ route('products') }}">Continue Shopping</a>
+                                        <a class="primary-btn" href="{{ route('checkout') }}">Proceed to checkout</a>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -149,16 +213,12 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td>
-                                    <div class="checkout_btn_inner d-flex align-items-end">
-                                        <a class="primary-btn" href="{{ route('checkout') }}">Proceed to checkout</a>
-                                    </div>
-                                </td>
+                                <td></td>
                             </tr>
 
                         @else
                             <tr>
-                                <td colspan="4" class="text-center py-5">
+                                <td colspan="4" class="text-center py-5 cart-empty-state">
                                     <h5>Your cart is empty.</h5>
                                     <p><a href="{{ route('products') }}" class="btn btn-primary mt-3">Browse Products</a></p>
                                 </td>
