@@ -67,7 +67,7 @@ class InvoiceController extends Controller
             'paid_invoices' => Invoice::where('status', 'paid')->count(),
         ];
 
-        return view('admin.Invoice.index', compact('invoices', 'stats'));
+        return view('admin.invoice.index', compact('invoices', 'stats'));
     }
 
     /**
@@ -75,7 +75,7 @@ class InvoiceController extends Controller
      */
     public function create()
     {
-        return view('admin.Invoice.create');
+        return view('admin.invoice.create');
     }
 
     /**
@@ -176,7 +176,7 @@ class InvoiceController extends Controller
         $invoice->load('items');
         $company = CompanySetting::first();
         
-        return view('admin.Invoice.show', compact('invoice', 'company'));
+        return view('admin.invoice.show', compact('invoice', 'company'));
     }
 
     /**
@@ -185,7 +185,7 @@ class InvoiceController extends Controller
     public function edit(Invoice $invoice)
     {
         $invoice->load('items');
-        return view('admin.Invoice.edit', compact('invoice'));
+        return view('admin.invoice.edit', compact('invoice'));
     }
 
     /**
