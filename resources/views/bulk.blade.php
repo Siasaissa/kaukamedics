@@ -5,7 +5,7 @@
   
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
     <!-- Navbar -->
-    @include('layouts.navbar')
+    @include('layouts.adminavbar')
     <!-- End Navbar -->
     
     <div class="container-fluid py-4">
@@ -115,7 +115,7 @@
                         <!-- Sender ID -->
                         <div class="mb-3">
                           <div class="input-group input-group-outline">
-                            <input type="text" name="sender_id" class="form-control" maxlength="11" placeholder="Sender ID (max 11 chars)" value="GREATCARE" required>
+                            <input type="text" name="sender_id" class="form-control" maxlength="11" placeholder="Sender ID (max 11 chars)" value="KAUKAMEDICS" required>
                           </div>
                         </div>
 
