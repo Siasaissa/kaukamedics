@@ -171,24 +171,6 @@ public function index()
     return view('bulk', compact('messages', 'contacts','total'));
 }
 
-public function ajaxContacts(Request $request)
-{
-    $query = VcardContact::query();
-
-    if ($request->filled('search')) {
-        $search = $request->search;
-        $query->where(function ($q) use ($search) {
-            $q->where('full_name', 'like', "%{$search}%")
-                ->orWhere('phone_number', 'like', "%{$search}%")
-                ->orWhere('email', 'like', "%{$search}%");
-        });
-    }
-
-    return response()->json(
-        $query->orderBy('full_name')->limit(100)->get()
-    );
-}
-
 
     public function uploadVcard(Request $request)
     {
