@@ -1,0 +1,11 @@
+aidlc-docs/
+.ai/*
+docs/*
+node_modules/*
+package-lock.json
+package.json
+.github
+AIDLC-WORKFLOW-README.md
+AGENTS.md
+CLAUDE.md
+.gitnexus
