@@ -1,9 +1,9 @@
-@include('layouts.adminhead')
+<?php echo $__env->make('layouts.adminhead', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
 
 <body class="g-sidenav-show bg-gray-100">
-  @include('layouts.aside')
+  <?php echo $__env->make('layouts.aside', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
-    @include('layouts.navbar')
+    <?php echo $__env->make('layouts.navbar', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
     <div class="container-fluid py-2">
       <div class="row">
         <div class="ms-3">
@@ -16,7 +16,7 @@
               <div class="d-flex justify-content-between">
                 <div>
                   <p class="text-sm mb-0 text-capitalize">Total Sales</p>
-                  <h4 class="mb-0">Tsh {{ number_format($totalRevenue ?? 0, 0) }}</h4>
+                  <h4 class="mb-0">Tsh <?php echo e(number_format($totalRevenue ?? 0, 0)); ?></h4>
                 </div>
                 <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
                   <i class="material-symbols-rounded opacity-10">weekend</i>
@@ -33,7 +33,7 @@
               <div class="d-flex justify-content-between">
                 <div>
                   <p class="text-sm mb-0 text-capitalize">Total Orders</p>
-                  <h4 class="mb-0">{{ $totalOrders ?? 0 }}</h4>
+                  <h4 class="mb-0"><?php echo e($totalOrders ?? 0); ?></h4>
                 </div>
                 <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
                   <i class="material-symbols-rounded opacity-10">person</i>
@@ -50,7 +50,7 @@
               <div class="d-flex justify-content-between">
                 <div>
                   <p class="text-sm mb-0 text-capitalize">Total Products</p>
-                  <h4 class="mb-0">{{ $totalProducts ?? 0 }}</h4>
+                  <h4 class="mb-0"><?php echo e($totalProducts ?? 0); ?></h4>
                 </div>
                 <div class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
                   <i class="material-symbols-rounded opacity-10">leaderboard</i>
@@ -93,7 +93,7 @@
                   <h6>Recent Orders</h6>
                   <p class="text-sm mb-0">
                     <i class="fa fa-check text-info" aria-hidden="true"></i>
-                    <span class="font-weight-bold ms-1">{{ $recentOrders->count() ?? 0 }} recent orders</span> from latest activity
+                    <span class="font-weight-bold ms-1"><?php echo e($recentOrders->count() ?? 0); ?> recent orders</span> from latest activity
                   </p>
                 </div>
               </div>
@@ -108,8 +108,8 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @forelse($recentOrders ?? [] as $order)
-                      @foreach(($order->items ?? []) as $item)
+                    <?php $__empty_1 = true; $__currentLoopData = $recentOrders ?? []; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $order): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+                      <?php $__currentLoopData = ($order->items ?? []); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <tr>
                           <td>
                             <div class="d-flex px-2 py-1">
@@ -119,26 +119,27 @@
                                 </div>
                               </div>
                               <div class="d-flex flex-column justify-content-center ms-3">
-                                <h6 class="mb-0 text-sm">{{ $item['name'] ?? 'Item' }}</h6>
+                                <h6 class="mb-0 text-sm"><?php echo e($item['name'] ?? 'Item'); ?></h6>
                                 <p class="text-xs text-secondary mb-0">
-                                  {{ \Carbon\Carbon::parse($order->created_at)->format('M d, Y') }}
+                                  <?php echo e(\Carbon\Carbon::parse($order->created_at)->format('M d, Y')); ?>
+
                                 </p>
                               </div>
                             </div>
                           </td>
                           <td class="align-middle text-center text-sm">
-                            <span class="text-xs font-weight-bold">{{ $item['quantity'] ?? 0 }}</span>
+                            <span class="text-xs font-weight-bold"><?php echo e($item['quantity'] ?? 0); ?></span>
                           </td>
                         </tr>
-                      @endforeach
-                    @empty
+                      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
                       <tr>
                         <td colspan="2" class="text-center py-4">
                           <h6 class="mb-0 text-sm">No Recent Orders</h6>
                           <p class="text-xs text-secondary mb-0">When orders are placed, they'll appear here</p>
                         </td>
                       </tr>
-                    @endforelse
+                    <?php endif; ?>
                   </tbody>
                 </table>
               </div>
@@ -147,20 +148,20 @@
         </div>
       </div>
 
-      @include('layouts.adminfooter')
+      <?php echo $__env->make('layouts.adminfooter', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
     </div>
   </main>
 
-  <script src="{{ url('assets/js/core/popper.min.js') }}"></script>
-  <script src="{{ url('assets/js/core/bootstrap.min.js') }}"></script>
-  <script src="{{ url('assets/js/plugins/perfect-scrollbar.min.js') }}"></script>
-  <script src="{{ url('assets/js/plugins/smooth-scrollbar.min.js') }}"></script>
-  <script src="{{ url('assets/js/plugins/chartjs.min.js') }}"></script>
+  <script src="<?php echo e(url('assets/js/core/popper.min.js')); ?>"></script>
+  <script src="<?php echo e(url('assets/js/core/bootstrap.min.js')); ?>"></script>
+  <script src="<?php echo e(url('assets/js/plugins/perfect-scrollbar.min.js')); ?>"></script>
+  <script src="<?php echo e(url('assets/js/plugins/smooth-scrollbar.min.js')); ?>"></script>
+  <script src="<?php echo e(url('assets/js/plugins/chartjs.min.js')); ?>"></script>
 
   <script>
     var ctx = document.getElementById("salesChart").getContext("2d");
-    var salesMonths = @json($salesMonths ?? []);
-    var salesValues = @json($salesValues ?? []);
+    var salesMonths = <?php echo json_encode($salesMonths ?? [], 15, 512) ?>;
+    var salesValues = <?php echo json_encode($salesValues ?? [], 15, 512) ?>;
     var maxSalesValue = salesValues.length ? Math.max(...salesValues) : 0;
 
     new Chart(ctx, {
@@ -261,3 +262,4 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>
+<?php /**PATH /Users/dope/Downloads/public_html-6/resources/views/admin/dashboard.blade.php ENDPATH**/ ?>
