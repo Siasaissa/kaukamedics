@@ -1,0 +1,16 @@
+mode: guided
+tier: simple
+shape: single-repo
+project_track: fullstack
+addons: []
+skill_seed:
+  - laravel
+  - blade
+  - routing
+  - controllers
+  - views
+gitnexus:
+  status: unavailable
+  method: unavailable
+  notes: GitNexus MCP resources and local CLI were not available, so repo inspection fell back to filesystem scanning.
+workflow_note: AIDLC rule directories referenced by AGENTS.md were not present in this repository, so execution is using a local router-first fallback.

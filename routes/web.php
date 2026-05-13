@@ -22,10 +22,6 @@ use App\Http\Controllers\InvoiceController;
 Route::get('/', [IndexController::class, 'index'])->name('index');
 
 
-Route::get('/dashboard', [DashboardController::class, 'index'])
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -51,8 +47,9 @@ Route::post('/checkout/process', [CheckoutController::class, 'process'])->name('
 
 Route::post('/products/special', [ProductController::class, 'specialOrder'])->name('products.special');
 
-Route::middleware(['auth'])->group(function () { 
-    Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::middleware(['auth', 'verified'])->group(function () { 
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/admin/products/index', [ProductController::class, 'adminProduct'])->name('admin.products.index');
     
     // Product routes

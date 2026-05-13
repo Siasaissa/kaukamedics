@@ -1,0 +1,22 @@
+tier: simple
+selection_mode: guided
+repo_shape: single-repo
+project_track: fullstack
+addons: []
+stack:
+  backend: Laravel 12
+  frontend: Blade
+target_surface:
+  - routes/web.php
+  - app/Http/Controllers/DashboardController.php
+  - resources/views/dashboard.blade.php
+  - resources/views/layouts/aside.blade.php
+gitnexus:
+  status: unavailable
+  method: unavailable
+  notes: No MCP resources and no local CLI were available.
+current_task:
+  summary: Repair admin dashboard route and view resolution.
+  risks:
+    - stale compiled Blade or route cache may preserve old references
+    - duplicate route definitions may hide the intended dashboard mapping
